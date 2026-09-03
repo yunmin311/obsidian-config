@@ -1,0 +1,30 @@
+{
+  "data_version": 2,
+  "command_timeout": 5,
+  "templates_folder": "",
+  "templates_pairs": [],
+  "trigger_on_file_creation_mode": "none",
+  "auto_jump_to_cursor": false,
+  "jump_to_cursor_after_file_name": false,
+  "shell_path": "",
+  "user_scripts_folder": "",
+  "folder_templates": [],
+  "file_templates": [],
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
+  "enabled_templates_hotkeys": [],
+  "startup_templates": [
+    "daily_note"
+  ],
+  "intellisense_render": "1",
+  "ignore_folders_on_creation": [],
+  "template_folder": "templates",
+  "triggers_on_file_creation": true,
+  "system_templates": {
+    "daily_note": "templates/daily-note.md",
+    "weekly_note": "templates/weekly-note.md",
+    "project_note": "templates/project-note.md",
+    "literature_note": "templates/literature-note.md",
+    "meeting_note": "templates/meeting-note.md"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enableJavaScript": true,
+  "enableInlineQueries": true,
+  "renderMarkdownInline": true,
+  "parseFrontmatterDates": true,
+  "parseFrontmatterLinks": true,
+  "indexPreviews": false,
+  "maxQueryResults": 200,
+  "debounceTime": 500
+}

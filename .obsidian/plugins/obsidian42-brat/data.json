@@ -1,0 +1,64 @@
+{
+  "pluginList": [
+    "letschips/crisp-visual",
+    "letschips/crisp-recall",
+    "letschips/crisp-dsh",
+    "letschips/crisp-base",
+    "letschips/crisp-asr",
+    "letschips/crisp-annotations",
+    "letschips/crisp-focus",
+    "letschips/crisp-reading-rail",
+    "letschips/crisp-file-explorer"
+  ],
+  "pluginSubListFrozenVersion": [
+    {
+      "repo": "letschips/crisp-visual",
+      "version": ""
+    },
+    {
+      "repo": "letschips/crisp-recall",
+      "version": ""
+    },
+    {
+      "repo": "letschips/crisp-dsh",
+      "version": ""
+    },
+    {
+      "repo": "letschips/crisp-base",
+      "version": ""
+    },
+    {
+      "repo": "letschips/crisp-asr",
+      "version": ""
+    },
+    {
+      "repo": "letschips/crisp-annotations",
+      "version": ""
+    },
+    {
+      "repo": "letschips/crisp-focus",
+      "version": ""
+    },
+    {
+      "repo": "letschips/crisp-reading-rail",
+      "version": ""
+    },
+    {
+      "repo": "letschips/crisp-file-explorer",
+      "version": ""
+    }
+  ],
+  "themesList": [],
+  "updateAtStartup": false,
+  "updateThemesAtStartup": false,
+  "enableAfterInstall": true,
+  "loggingEnabled": false,
+  "loggingPath": "BRAT-log",
+  "loggingVerboseEnabled": false,
+  "debuggingMode": false,
+  "notificationsEnabled": false,
+  "globalTokenName": "",
+  "personalAccessToken": "",
+  "selectLatestPluginVersionByDefault": false,
+  "allowIncompatiblePlugins": false
+}

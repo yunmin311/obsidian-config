@@ -1,0 +1,4 @@
+/* 隐藏所有嵌入文件（包括图片）的标题 */
+.markdown-embed-title {
+  display: none;
+}

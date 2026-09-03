@@ -1,0 +1,53 @@
+MIT License
+
+Copyright (c) 2024
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## 例外说明
+
+以下内容 **不包含** 在 MIT 许可范围内，遵循各自原始许可：
+
+1. **Baseline Theme** - MIT License (by aaaalexis)
+2. **Style Settings Plugin** - MIT License (by mgmeyers)
+3. **All Community Plugins** - 各自原始许可 (多为 MIT)
+4. **letschips CSS Snippets** - 个人免费使用，需保留署名 (by letschips)
+5. **letschips Tutorials** - 免费学习，禁止转售 (by letschips)
+6. **Crisp Plugin Suite (9 plugins)** - 专有许可，需激活码 (by letschips)
+
+---
+
+## 署名要求
+
+再分发本配置包时，必须保留：
+1. `ATTRIBUTION.md` 完整署名清单
+2. CSS 文件头部的作者声明
+3. `README.md` 中的依赖链接与署名说明
+4. `INSTALL.md` 中的资源链接与授权获取方式
+
+---
+
+## 免责声明
+
+- Crisp 插件需单独获取授权码，本仓库仅提供配置文件
+- letschips 教程/CSS 仅限个人学习，禁止商业转售
+- AI 服务（GLM API、火山引擎 ASR）需自行申请账号与额度
+- 本配置包按"现状"提供，不承担任何明示或暗示的担保责任

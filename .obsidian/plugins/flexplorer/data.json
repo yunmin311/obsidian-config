@@ -1,0 +1,4818 @@
+{
+  "items": {
+    "/": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "docs",
+        "README.md",
+        "色彩系统预览.md",
+        "AI治理系统",
+        "clutter",
+        "Compound Interest",
+        "creative-os-notes",
+        "English Learning",
+        "Daily Desk Examples",
+        "Linear Calendar Events",
+        "operation-note",
+        "project",
+        "programming study",
+        "year2 final2",
+        "inbox.md",
+        "BASE.base",
+        "homepage.md"
+      ]
+    },
+    "AI治理系统": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-从这里开始.md",
+        "adapters",
+        "archive",
+        "core",
+        "AGENTS.md",
+        "CHANGELOG.md",
+        "portable",
+        "docs",
+        "profiles",
+        "projects",
+        "README.md",
+        "reviews",
+        "skills",
+        "templates",
+        "_镜像说明.md"
+      ]
+    },
+    "AI治理系统/00-从这里开始.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/adapters": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "claude",
+        "codex",
+        "generic"
+      ]
+    },
+    "AI治理系统/adapters/claude": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "README.md"
+      ]
+    },
+    "AI治理系统/adapters/claude/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/adapters/codex": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "README.md"
+      ]
+    },
+    "AI治理系统/adapters/codex/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/adapters/generic": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "README.md"
+      ]
+    },
+    "AI治理系统/adapters/generic/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/archive": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "v1"
+      ]
+    },
+    "AI治理系统/archive/v1": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "project-records"
+      ]
+    },
+    "AI治理系统/archive/v1/project-records": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-HTML纠偏系统设计说明.md",
+        "00-Obsidian知识库索引.md",
+        "00-先读我-明日启动说明.md",
+        "README.md",
+        "00-实施计划.md",
+        "00-实施计划-纠偏与输出工程.md"
+      ]
+    },
+    "AI治理系统/archive/v1/project-records/00-HTML纠偏系统设计说明.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/archive/v1/project-records/00-Obsidian知识库索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/archive/v1/project-records/00-先读我-明日启动说明.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/archive/v1/project-records/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/archive/v1/project-records/00-实施计划.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/archive/v1/project-records/00-实施计划-纠偏与输出工程.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/core": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "01-governance-charter-v2.md"
+      ]
+    },
+    "AI治理系统/core/01-governance-charter-v2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/AGENTS.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/CHANGELOG.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/portable": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "README.md"
+      ]
+    },
+    "AI治理系统/portable/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/docs": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "01-v2.2-已批准摘要.md",
+        "00-v2-使用指南.md",
+        "01-全域AI对话治理总宪章-v1.0.md",
+        "03-全量对话盘点迁移与归档手册.md",
+        "02-总管AI运行与应急处置手册.md",
+        "04-Creative-OS专项治理附录.md",
+        "06-总管AI启动提示词.md",
+        "07-明日第一轮全量盘点指令.md",
+        "05-设计系统恢复与冻结规范.md",
+        "08-文件使用与角色分发说明.md",
+        "09-宪章执行纠偏与HTML输出治理手册.md",
+        "evaluations",
+        "10-AI输出文件工程与交付治理手册.md",
+        "11-跨领域可复用的工程治理思维.md",
+        "superpowers"
+      ]
+    },
+    "AI治理系统/docs/01-v2.2-已批准摘要.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/docs/00-v2-使用指南.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/docs/01-全域AI对话治理总宪章-v1.0.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/docs/03-全量对话盘点迁移与归档手册.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/docs/02-总管AI运行与应急处置手册.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/docs/04-Creative-OS专项治理附录.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/docs/06-总管AI启动提示词.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/docs/07-明日第一轮全量盘点指令.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/docs/05-设计系统恢复与冻结规范.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/docs/08-文件使用与角色分发说明.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/docs/09-宪章执行纠偏与HTML输出治理手册.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/docs/evaluations": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "2026-08-02-governance-v2-1-visual-review.md",
+        "2026-08-02-governance-v2-2-visual-review.md",
+        "2026-07-31-governor-v2-evaluation.md",
+        "2026-08-02-handbook-v2-visual-review.md"
+      ]
+    },
+    "AI治理系统/docs/evaluations/2026-08-02-governance-v2-1-visual-review.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/docs/evaluations/2026-08-02-governance-v2-2-visual-review.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/docs/evaluations/2026-07-31-governor-v2-evaluation.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/docs/evaluations/2026-08-02-handbook-v2-visual-review.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/docs/10-AI输出文件工程与交付治理手册.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/docs/11-跨领域可复用的工程治理思维.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/docs/superpowers": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "plans",
+        "specs"
+      ]
+    },
+    "AI治理系统/docs/superpowers/plans": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "2026-08-02-governance-v2-1-lean-release.md",
+        "2026-07-31-personal-ai-governance-v2.md",
+        "2026-08-02-project-neutral-governance-v2-2.md"
+      ]
+    },
+    "AI治理系统/docs/superpowers/plans/2026-08-02-governance-v2-1-lean-release.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/docs/superpowers/plans/2026-07-31-personal-ai-governance-v2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/docs/superpowers/plans/2026-08-02-project-neutral-governance-v2-2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/docs/superpowers/specs": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "2026-08-02-governance-v2-1-lean-release-design.md",
+        "2026-08-02-project-neutral-governance-v2-2-design.md",
+        "2026-07-31-personal-ai-governance-v2-design.md"
+      ]
+    },
+    "AI治理系统/docs/superpowers/specs/2026-08-02-governance-v2-1-lean-release-design.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/docs/superpowers/specs/2026-08-02-project-neutral-governance-v2-2-design.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/docs/superpowers/specs/2026-07-31-personal-ai-governance-v2-design.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/profiles": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "machines",
+        "user"
+      ]
+    },
+    "AI治理系统/profiles/machines": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "README.md"
+      ]
+    },
+    "AI治理系统/profiles/machines/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/profiles/user": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "lqy-working-system.md"
+      ]
+    },
+    "AI治理系统/profiles/user/lqy-working-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/projects": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "instances",
+        "README.md"
+      ]
+    },
+    "AI治理系统/projects/instances": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "README.md"
+      ]
+    },
+    "AI治理系统/projects/instances/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/projects/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/reviews": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "01-用户审核清单-v2.1.md",
+        "02-用户批准与项目中立变更记录-v2.2.md",
+        "v2.0-final-review.md",
+        "v2.1-final-review.md"
+      ]
+    },
+    "AI治理系统/reviews/01-用户审核清单-v2.1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/reviews/02-用户批准与项目中立变更记录-v2.2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/reviews/v2.0-final-review.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/reviews/v2.1-final-review.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/skills": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "global-ai-dialogue-governor"
+      ]
+    },
+    "AI治理系统/skills/global-ai-dialogue-governor": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "references",
+        "SKILL.md"
+      ]
+    },
+    "AI治理系统/skills/global-ai-dialogue-governor/references": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "correction-prompts.md",
+        "governance-model.md",
+        "html-output-governance.md",
+        "output-engineering.md",
+        "layered-loading.md",
+        "templates.md",
+        "protocols.md",
+        "hard-permissions.md"
+      ]
+    },
+    "AI治理系统/skills/global-ai-dialogue-governor/references/correction-prompts.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/skills/global-ai-dialogue-governor/references/governance-model.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/skills/global-ai-dialogue-governor/references/html-output-governance.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/skills/global-ai-dialogue-governor/references/output-engineering.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/skills/global-ai-dialogue-governor/references/layered-loading.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/skills/global-ai-dialogue-governor/references/templates.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/skills/global-ai-dialogue-governor/references/protocols.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/skills/global-ai-dialogue-governor/references/hard-permissions.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/skills/global-ai-dialogue-governor/SKILL.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/templates": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "冲突事故报告.md",
+        "决策记录.md",
+        "开工声明卡-v2.md",
+        "汇报门禁清单.md",
+        "转发与报告格式-v2.md",
+        "项目治理绑定说明-v2.2.md"
+      ]
+    },
+    "AI治理系统/templates/冲突事故报告.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/templates/决策记录.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/templates/开工声明卡-v2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/templates/汇报门禁清单.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/templates/转发与报告格式-v2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/templates/项目治理绑定说明-v2.2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "AI治理系统/_镜像说明.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "03-self-check.html",
+        "daily",
+        "picture",
+        "tem",
+        "test",
+        "_Clutter Index.md",
+        "杂乱"
+      ]
+    },
+    "clutter/03-self-check.html": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/daily": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "2026-04-23.md",
+        "2026-04-24.md",
+        "2026-04-28.md",
+        "2026-05-05.md"
+      ]
+    },
+    "clutter/daily/2026-04-23.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/daily/2026-04-24.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/daily/2026-04-28.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/daily/2026-05-05.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/picture": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "1280px-Dunning–Kruger_Effect_01.svg.png",
+        "Formulas.pdf",
+        "Pasted image 20260530105950.png",
+        "Qiyu_Li_CV.pdf",
+        "Screenshot 2026-02-13 200419.png",
+        "Screenshot 2026-02-01 105526.png",
+        "Screenshot 2026-03-31 104913.png",
+        "Screenshot 2026-06-07 103228.png",
+        "Screenshot 2026-06-07 103241.png",
+        "新东方大愚英语学习丛书•IELTS剑桥雅思写作高分范文 (刘巍巍) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+        "THE_POLYMATH_FIELD_GUIDE_US_Letter.pdf",
+        "未命名.canvas",
+        "李骐宇简历 (2).pdf"
+      ]
+    },
+    "clutter/picture/1280px-Dunning–Kruger_Effect_01.svg.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/picture/Formulas.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/picture/Pasted image 20260530105950.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/picture/Qiyu_Li_CV.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/picture/Screenshot 2026-02-13 200419.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/picture/Screenshot 2026-02-01 105526.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/picture/Screenshot 2026-03-31 104913.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/picture/Screenshot 2026-06-07 103228.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/picture/Screenshot 2026-06-07 103241.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/picture/新东方大愚英语学习丛书•IELTS剑桥雅思写作高分范文 (刘巍巍) (z-library.sk, 1lib.sk, z-lib.sk).pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/picture/THE_POLYMATH_FIELD_GUIDE_US_Letter.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/picture/未命名.canvas": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/picture/李骐宇简历 (2).pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/tem": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "102.md",
+        "109.md",
+        "2026-07-29-Codex网络与VSCode修复实施计划.md",
+        "cc.md",
+        "Clash使用与Codex网络稳定手册.md",
+        "ws.md",
+        "Mock Test.md",
+        "未命名.md",
+        "课程.md"
+      ]
+    },
+    "clutter/tem/102.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/tem/109.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/tem/2026-07-29-Codex网络与VSCode修复实施计划.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/tem/cc.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/tem/Clash使用与Codex网络稳定手册.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/tem/ws.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/tem/Mock Test.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/tem/未命名.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/tem/课程.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/test": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "excalidraw 26-07-26 11.32.37.ex",
+        "Obsidian Personal Knowledge System Concept.md"
+      ]
+    },
+    "clutter/test/excalidraw 26-07-26 11.32.37.ex": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/test/Obsidian Personal Knowledge System Concept.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/_Clutter Index.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/杂乱": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "tenet.md",
+        "仿生阅读（Bionic Reading）全面详解.md"
+      ]
+    },
+    "clutter/杂乱/tenet.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/杂乱/仿生阅读（Bionic Reading）全面详解.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Aesthetic",
+        "AI",
+        "Business",
+        "CV",
+        "exercise",
+        "Naming rights",
+        "write",
+        "_Compound Interest Hub.md"
+      ]
+    },
+    "Compound Interest/Aesthetic": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Aesthetic Index.md",
+        "积累.md",
+        "知识",
+        "影记",
+        "软件"
+      ]
+    },
+    "Compound Interest/Aesthetic/_Aesthetic Index.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/积累.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/知识": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "第一章：光学的物理真理 (Phase I- Optical Truth).md",
+        "第二章：电磁波的几何与波动本质 (Phase II - Wave & Geometric Nature of Light).md"
+      ]
+    },
+    "Compound Interest/Aesthetic/知识/第一章：光学的物理真理 (Phase I- Optical Truth).md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/知识/第二章：电磁波的几何与波动本质 (Phase II - Wave & Geometric Nature of Light).md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "01_Layout",
+        "02_Typography",
+        "03_Texture",
+        "05_Color",
+        "04_Sticker",
+        "07_Mood",
+        "08_Ephemera",
+        "06_Editorial",
+        "Assets",
+        "09_Personal_Favorites",
+        "Photos",
+        "Projects",
+        "_Templates",
+        "_SOP",
+        "🏠_影记索引.md",
+        "🔑_搜索关键词库.md",
+        "📚_灵感资源库",
+        "🔗_资源链接库.md"
+      ]
+    },
+    "Compound Interest/Aesthetic/影记/01_Layout": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_版式索引.md"
+      ]
+    },
+    "Compound Interest/Aesthetic/影记/01_Layout/_版式索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/02_Typography": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_字体索引.md"
+      ]
+    },
+    "Compound Interest/Aesthetic/影记/02_Typography/_字体索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/03_Texture": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_材质索引.md"
+      ]
+    },
+    "Compound Interest/Aesthetic/影记/03_Texture/_材质索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/05_Color": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_配色索引.md"
+      ]
+    },
+    "Compound Interest/Aesthetic/影记/05_Color/_配色索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/04_Sticker": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_贴纸索引.md"
+      ]
+    },
+    "Compound Interest/Aesthetic/影记/04_Sticker/_贴纸索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/07_Mood": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_情绪索引.md"
+      ]
+    },
+    "Compound Interest/Aesthetic/影记/07_Mood/_情绪索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/08_Ephemera": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_生活碎片索引.md"
+      ]
+    },
+    "Compound Interest/Aesthetic/影记/08_Ephemera/_生活碎片索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/06_Editorial": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_杂志风格索引.md"
+      ]
+    },
+    "Compound Interest/Aesthetic/影记/06_Editorial/_杂志风格索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/Assets": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Film_Border",
+        "Handwriting",
+        "Noise",
+        "Paper",
+        "Stamp",
+        "Tape",
+        "_素材总索引.md"
+      ]
+    },
+    "Compound Interest/Aesthetic/影记/Assets/Film_Border": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_胶片边框索引.md"
+      ]
+    },
+    "Compound Interest/Aesthetic/影记/Assets/Film_Border/_胶片边框索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/Assets/Handwriting": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_手写索引.md"
+      ]
+    },
+    "Compound Interest/Aesthetic/影记/Assets/Handwriting/_手写索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/Assets/Noise": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_噪点索引.md"
+      ]
+    },
+    "Compound Interest/Aesthetic/影记/Assets/Noise/_噪点索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/Assets/Paper": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_纸张索引.md"
+      ]
+    },
+    "Compound Interest/Aesthetic/影记/Assets/Paper/_纸张索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/Assets/Stamp": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_印章索引.md"
+      ]
+    },
+    "Compound Interest/Aesthetic/影记/Assets/Stamp/_印章索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/Assets/Tape": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_胶带索引.md"
+      ]
+    },
+    "Compound Interest/Aesthetic/影记/Assets/Tape/_胶带索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/Assets/_素材总索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/09_Personal_Favorites": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_个人收藏索引.md"
+      ]
+    },
+    "Compound Interest/Aesthetic/影记/09_Personal_Favorites/_个人收藏索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/Photos": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Night",
+        "Story",
+        "Daily",
+        "Rain",
+        "Best_Of",
+        "Summer",
+        "Travel",
+        "_照片索引.md"
+      ]
+    },
+    "Compound Interest/Aesthetic/影记/Photos/Night": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_夜晚索引.md"
+      ]
+    },
+    "Compound Interest/Aesthetic/影记/Photos/Night/_夜晚索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/Photos/Story": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_故事索引.md"
+      ]
+    },
+    "Compound Interest/Aesthetic/影记/Photos/Story/_故事索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/Photos/Daily": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_日常索引.md"
+      ]
+    },
+    "Compound Interest/Aesthetic/影记/Photos/Daily/_日常索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/Photos/Rain": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_雨天索引.md"
+      ]
+    },
+    "Compound Interest/Aesthetic/影记/Photos/Rain/_雨天索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/Photos/Best_Of": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_精选索引.md"
+      ]
+    },
+    "Compound Interest/Aesthetic/影记/Photos/Best_Of/_精选索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/Photos/Summer": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_夏日索引.md"
+      ]
+    },
+    "Compound Interest/Aesthetic/影记/Photos/Summer/_夏日索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/Photos/Travel": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_旅行索引.md"
+      ]
+    },
+    "Compound Interest/Aesthetic/影记/Photos/Travel/_旅行索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/Photos/_照片索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/Projects": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_项目索引.md"
+      ]
+    },
+    "Compound Interest/Aesthetic/影记/Projects/_项目索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/_Templates": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "排版笔记模板.md"
+      ]
+    },
+    "Compound Interest/Aesthetic/影记/_Templates/排版笔记模板.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/_SOP": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "工具栈.md",
+        "手写字体制作流程.md",
+        "工作流.md"
+      ]
+    },
+    "Compound Interest/Aesthetic/影记/_SOP/工具栈.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/_SOP/手写字体制作流程.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/_SOP/工作流.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/🏠_影记索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/🔑_搜索关键词库.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/📚_灵感资源库": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "海报与艺术设计.md",
+        "私人物件系统.md",
+        "日本杂志体系.md",
+        "摄影与影集.md",
+        "电影参考.md",
+        "设计与排版平台.md"
+      ]
+    },
+    "Compound Interest/Aesthetic/影记/📚_灵感资源库/海报与艺术设计.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/📚_灵感资源库/私人物件系统.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/📚_灵感资源库/日本杂志体系.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/📚_灵感资源库/摄影与影集.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/📚_灵感资源库/电影参考.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/📚_灵感资源库/设计与排版平台.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/影记/🔗_资源链接库.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/软件": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "清晰度 (Clarity)、锐化 (Sharpening)、纹理 (Texture)、颗粒 +朦胧感 (Grain+ Softness).md"
+      ]
+    },
+    "Compound Interest/Aesthetic/软件/清晰度 (Clarity)、锐化 (Sharpening)、纹理 (Texture)、颗粒 +朦胧感 (Grain+ Softness).md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "AI 学科学习路线图与方法建议.md",
+        "Architectures",
+        "project",
+        "Cognitive Re-alignment Protocol.md",
+        "Foundations",
+        "_AI Hub.md",
+        "Extensions",
+        "未命名.md"
+      ]
+    },
+    "Compound Interest/AI/AI 学科学习路线图与方法建议.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/Architectures": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Attention 注意力机制详解.md",
+        "Autoencoder 自编码器.md",
+        "ResNet 残差网络.md",
+        "Diffusion Models 扩散模型.md",
+        "RNN LSTM GRU 序列模型.md",
+        "CNN 卷积神经网络.md",
+        "GAN 生成对抗网络.md",
+        "U-Net 架构.md",
+        "Transformer 架构 零基础超详解教科书（适配大一高数 线代基础）.md",
+        "ViT Vision Transformer.md",
+        "_Architectures Index.md"
+      ]
+    },
+    "Compound Interest/AI/Architectures/Attention 注意力机制详解.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/Architectures/Autoencoder 自编码器.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/Architectures/ResNet 残差网络.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/Architectures/Diffusion Models 扩散模型.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/Architectures/RNN LSTM GRU 序列模型.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/Architectures/CNN 卷积神经网络.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/Architectures/GAN 生成对抗网络.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/Architectures/U-Net 架构.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/Architectures/Transformer 架构 零基础超详解教科书（适配大一高数 线代基础）.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/Architectures/ViT Vision Transformer.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/Architectures/_Architectures Index.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/project": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Claudian + Obsidian Skills.md",
+        "talk-script.md",
+        "Claude Skill.md"
+      ]
+    },
+    "Compound Interest/AI/project/Claudian + Obsidian Skills.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/project/talk-script.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/project/Claude Skill.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/Cognitive Re-alignment Protocol.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/Foundations": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Books",
+        "Math",
+        "ML Fundamentals",
+        "_Foundations Index.md"
+      ]
+    },
+    "Compound Interest/AI/Foundations/Books": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "《数学之美》- 吴军 - 核心笔记框架.md",
+        "《线性代数及其应用》.md"
+      ]
+    },
+    "Compound Interest/AI/Foundations/Books/《数学之美》- 吴军 - 核心笔记框架.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/Foundations/Books/《线性代数及其应用》.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/Foundations/Math": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "KL 散度（Kullback-Leibler Divergence）.md",
+        "_Math Index.md",
+        "优化理论核心.md",
+        "线性代数核心.md",
+        "信息论核心.md",
+        "概率论与统计核心.md"
+      ]
+    },
+    "Compound Interest/AI/Foundations/Math/KL 散度（Kullback-Leibler Divergence）.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/Foundations/Math/_Math Index.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/Foundations/Math/优化理论核心.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/Foundations/Math/线性代数核心.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/Foundations/Math/信息论核心.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/Foundations/Math/概率论与统计核心.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/Foundations/ML Fundamentals": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_ML Fundamentals Index.md",
+        "偏差方差权衡.md",
+        "无监督学习.md",
+        "监督学习.md"
+      ]
+    },
+    "Compound Interest/AI/Foundations/ML Fundamentals/_ML Fundamentals Index.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/Foundations/ML Fundamentals/偏差方差权衡.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/Foundations/ML Fundamentals/无监督学习.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/Foundations/ML Fundamentals/监督学习.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/Foundations/_Foundations Index.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/_AI Hub.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/Extensions": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Essays",
+        "Frontiers",
+        "_Extensions Index.md",
+        "GitHub Repos"
+      ]
+    },
+    "Compound Interest/AI/Extensions/Essays": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Essays Index.md"
+      ]
+    },
+    "Compound Interest/AI/Extensions/Essays/_Essays Index.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/Extensions/Frontiers": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Frontiers Index.md"
+      ]
+    },
+    "Compound Interest/AI/Extensions/Frontiers/_Frontiers Index.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/Extensions/_Extensions Index.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/Extensions/GitHub Repos": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_GitHub Index.md"
+      ]
+    },
+    "Compound Interest/AI/Extensions/GitHub Repos/_GitHub Index.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/AI/未命名.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Business": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "books",
+        "class",
+        "common sense",
+        "frameworks",
+        "商业知识体系导航.md",
+        "page 0.md",
+        "完整商业学科体系全景 + 个人成长迁移全指南.md",
+        "notes"
+      ]
+    },
+    "Compound Interest/Business/books": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "README.md",
+        "《The Personal MBA》.md"
+      ]
+    },
+    "Compound Interest/Business/books/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Business/books/《The Personal MBA》.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Business/class": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "README.md",
+        "Personal MBA 5 大模块商业自检清单.md"
+      ]
+    },
+    "Compound Interest/Business/class/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Business/class/Personal MBA 5 大模块商业自检清单.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Business/common sense": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "README.md",
+        "SOP.md",
+        "零和博弈（含正和 + 负和博弈补充.md",
+        "第一性原理 vs 第二性原理.md",
+        "马太效应 vs 反马太效应.md"
+      ]
+    },
+    "Compound Interest/Business/common sense/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Business/common sense/SOP.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Business/common sense/零和博弈（含正和 + 负和博弈补充.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Business/common sense/第一性原理 vs 第二性原理.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Business/common sense/马太效应 vs 反马太效应.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Business/frameworks": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "README.md"
+      ]
+    },
+    "Compound Interest/Business/frameworks/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Business/商业知识体系导航.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Business/page 0.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Business/完整商业学科体系全景 + 个人成长迁移全指南.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Business/notes": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "README.md"
+      ]
+    },
+    "Compound Interest/Business/notes/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/CV": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "2026.4.29.md",
+        "_CV Index.md",
+        "2025.10.19.md"
+      ]
+    },
+    "Compound Interest/CV/2026.4.29.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/CV/_CV Index.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/CV/2025.10.19.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/exercise": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "《如何用2天休息够7天》.md",
+        "全身拉伸与恢复完整方案.md",
+        "尺侧腕伸肌  屈肌肌腱病.md",
+        "日本顶级耐力选手可迁移底层逻辑.md",
+        "脊柱侧弯.md",
+        "神经募集.md",
+        "运动后完整恢复流程.md",
+        "缓解小腿抽筋前兆 + 预防竖脊肌爆发性酸痛.md"
+      ]
+    },
+    "Compound Interest/exercise/《如何用2天休息够7天》.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/exercise/全身拉伸与恢复完整方案.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/exercise/尺侧腕伸肌  屈肌肌腱病.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/exercise/日本顶级耐力选手可迁移底层逻辑.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/exercise/脊柱侧弯.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/exercise/神经募集.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/exercise/运动后完整恢复流程.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/exercise/缓解小腿抽筋前兆 + 预防竖脊肌爆发性酸痛.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Fragment–Resonance Cognitive Iteration System（FRCIS）",
+        "neuroscience",
+        "niksen",
+        "project 0",
+        "_Naming Rights Hub.md",
+        "开声",
+        "皮肤",
+        "语言型",
+        "视频里的"
+      ]
+    },
+    "Compound Interest/Naming rights/Fragment–Resonance Cognitive Iteration System（FRCIS）": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Page 0 · Meta-Preface.md",
+        "2025 SUMMERY"
+      ]
+    },
+    "Compound Interest/Naming rights/Fragment–Resonance Cognitive Iteration System（FRCIS）/Page 0 · Meta-Preface.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/Fragment–Resonance Cognitive Iteration System（FRCIS）/2025 SUMMERY": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Action & Energy Containers.md",
+        "Awareness & Inner Cognition.md",
+        "Creativity & Inner Space Management.md",
+        "System Cognition & Mechanism Analysis.md"
+      ]
+    },
+    "Compound Interest/Naming rights/Fragment–Resonance Cognitive Iteration System（FRCIS）/2025 SUMMERY/Action & Energy Containers.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/Fragment–Resonance Cognitive Iteration System（FRCIS）/2025 SUMMERY/Awareness & Inner Cognition.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/Fragment–Resonance Cognitive Iteration System（FRCIS）/2025 SUMMERY/Creativity & Inner Space Management.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/Fragment–Resonance Cognitive Iteration System（FRCIS）/2025 SUMMERY/System Cognition & Mechanism Analysis.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/neuroscience": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "eeg.md",
+        "丹田.md",
+        "传统修行 +内家拳的深层科学原理.md",
+        "分析瘫痪（Analysis Paralysis）：专业深度解析.md",
+        "前额叶精准锻炼方案.md",
+        "回笼觉.md",
+        "心率变异性（HRV）：生命力的黄金量化指标.md",
+        "恋爱方面.md",
+        "杏仁核修补.md",
+        "穴位的科学本质：神经筋膜系统的关键节点.md",
+        "肠神经系统（ENS）-人体真正的 -第二大脑.md",
+        "自信姿势.md",
+        "脑科学 +神经科学 系统化学习全方案.md",
+        "松果体.md",
+        "降皮质醇原理.md",
+        "降皮质醇终极执行手册.md"
+      ]
+    },
+    "Compound Interest/Naming rights/neuroscience/eeg.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/neuroscience/丹田.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/neuroscience/传统修行 +内家拳的深层科学原理.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/neuroscience/分析瘫痪（Analysis Paralysis）：专业深度解析.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/neuroscience/前额叶精准锻炼方案.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/neuroscience/回笼觉.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/neuroscience/心率变异性（HRV）：生命力的黄金量化指标.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/neuroscience/恋爱方面.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/neuroscience/杏仁核修补.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/neuroscience/穴位的科学本质：神经筋膜系统的关键节点.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/neuroscience/肠神经系统（ENS）-人体真正的 -第二大脑.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/neuroscience/自信姿势.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/neuroscience/脑科学 +神经科学 系统化学习全方案.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/neuroscience/松果体.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/neuroscience/降皮质醇原理.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/neuroscience/降皮质醇终极执行手册.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/niksen": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "做梦.md",
+        "前额叶・杏仁核・皮质醇 制衡系统.md",
+        "助眠.md",
+        "《观呼吸：平静的第一堂课》全书完整框架 + 系统学习指南.md",
+        "睡眠三个阶段.md",
+        "压力监测.md"
+      ]
+    },
+    "Compound Interest/Naming rights/niksen/做梦.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/niksen/前额叶・杏仁核・皮质醇 制衡系统.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/niksen/助眠.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/niksen/《观呼吸：平静的第一堂课》全书完整框架 + 系统学习指南.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/niksen/睡眠三个阶段.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/niksen/压力监测.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/project 0": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Project 0  Reconstructive Balance.md",
+        "Project 0：The Language Circuit.md",
+        "Project ∞：The Mirror System.md"
+      ]
+    },
+    "Compound Interest/Naming rights/project 0/Project 0  Reconstructive Balance.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/project 0/Project 0：The Language Circuit.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/project 0/Project ∞：The Mirror System.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/_Naming Rights Hub.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/开声": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "优化版 口语发音 + 下颌友好训练方案.md",
+        "测试.md",
+        "清晰.md",
+        "声乐生开嗓训练法（适配下颌紊乱）.md"
+      ]
+    },
+    "Compound Interest/Naming rights/开声/优化版 口语发音 + 下颌友好训练方案.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/开声/测试.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/开声/清晰.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/开声/声乐生开嗓训练法（适配下颌紊乱）.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/皮肤": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "油敏肌祛痘.md",
+        "「视觉对比度拉低了整体亮度」+「慢性疲劳态盖过了年轻」.md",
+        "颈部皮肤.md"
+      ]
+    },
+    "Compound Interest/Naming rights/皮肤/油敏肌祛痘.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/皮肤/「视觉对比度拉低了整体亮度」+「慢性疲劳态盖过了年轻」.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/皮肤/颈部皮肤.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/语言型": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "杰文斯悖论.md",
+        "Aaron Levie（Box 公司创始人兼 CEO）正文.md",
+        "语言型人才.md"
+      ]
+    },
+    "Compound Interest/Naming rights/语言型/杰文斯悖论.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/语言型/Aaron Levie（Box 公司创始人兼 CEO）正文.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/语言型/语言型人才.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/视频里的": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "影视飓风.md",
+        "思考类.md"
+      ]
+    },
+    "Compound Interest/Naming rights/视频里的/影视飓风.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Naming rights/视频里的/思考类.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "book notes",
+        "log",
+        "templates",
+        "_Write Index.md",
+        "剧本",
+        "未命名"
+      ]
+    },
+    "Compound Interest/write/book notes": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "导图",
+        "笔记"
+      ]
+    },
+    "Compound Interest/write/book notes/导图": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "超高效时间管理，用12周完成12月的工作.canvas",
+        "如何成为不完美主义者.canvas"
+      ]
+    },
+    "Compound Interest/write/book notes/导图/超高效时间管理，用12周完成12月的工作.canvas": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/导图/如何成为不完美主义者.canvas": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "02_无语.png",
+        "01_开心.png",
+        "05_OK.png",
+        "04_震惊.png",
+        "07_汗流浃背.png",
+        "03_疑惑.png",
+        "06_点赞.png",
+        "09_摸鱼.png",
+        "08_崩溃.png",
+        "10_睡觉.png",
+        "11_委屈.png",
+        "12_已读不回.png",
+        "ChatGPT Image 2026年8月24日 19_07_15 (2).png",
+        "ChatGPT Image 2026年8月24日 19_07_15 (5).png",
+        "ChatGPT Image 2026年8月24日 19_07_15 (3).png",
+        "ChatGPT Image 2026年8月24日 19_07_15 (6).png",
+        "ChatGPT Image 2026年8月24日 19_07_15 (4).png",
+        "ChatGPT Image 2026年8月24日 19_07_15 (7).png",
+        "ChatGPT Image 2026年8月24日 19_07_15 (8).png",
+        "ChatGPT Image 2026年8月24日 19_07_15 (9).png",
+        "ChatGPT Image 2026年8月24日 19_07_49 (2).png",
+        "ChatGPT Image 2026年8月24日 19_07_49 (1).png",
+        "ChatGPT Image 2026年8月24日 19_07_49 (10).png",
+        "ChatGPT Image 2026年8月24日 19_07_49 (4).png",
+        "ChatGPT Image 2026年8月24日 19_07_49 (5).png",
+        "ChatGPT Image 2026年8月24日 19_07_49 (3).png",
+        "ChatGPT Image 2026年8月24日 19_07_49 (7).png",
+        "ChatGPT Image 2026年8月24日 19_08_04 (1).png",
+        "ChatGPT Image 2026年8月24日 19_07_49 (8).png",
+        "ChatGPT Image 2026年8月24日 19_08_05 (10).png",
+        "ChatGPT Image 2026年8月24日 19_07_49 (6).png",
+        "ChatGPT Image 2026年8月24日 19_07_49 (9).png",
+        "ChatGPT Image 2026年8月24日 19_08_05 (3).png",
+        "ChatGPT Image 2026年8月24日 19_08_05 (2).png",
+        "ChatGPT Image 2026年8月24日 19_08_05 (6).png",
+        "ChatGPT Image 2026年8月24日 19_08_05 (5).png",
+        "ChatGPT Image 2026年8月24日 19_08_05 (4).png",
+        "ChatGPT Image 2026年8月24日 19_08_05 (8).png",
+        "ChatGPT Image 2026年8月24日 19_08_05 (7).png",
+        "ChatGPT Image 2026年8月24日 19_08_05 (9).png",
+        "ChatGPT Image 2026年8月24日 19_08_29 (1).png",
+        "ChatGPT Image 2026年8月24日 19_08_29 (10).png",
+        "ChatGPT Image 2026年8月24日 19_08_29 (4).png",
+        "ChatGPT Image 2026年8月24日 19_08_29 (3).png",
+        "ChatGPT Image 2026年8月24日 19_08_29 (6).png",
+        "ChatGPT Image 2026年8月24日 19_08_29 (2).png",
+        "ChatGPT Image 2026年8月24日 19_08_29 (5).png",
+        "ChatGPT Image 2026年8月24日 19_08_29 (7).png",
+        "ChatGPT Image 2026年8月24日 19_08_29 (8).png",
+        "ChatGPT Image 2026年8月24日 19_29_16.png",
+        "ChatGPT Image 2026年8月24日 19_29_26.png",
+        "ChatGPT Image 2026年8月24日 19_08_29 (9).png",
+        "ChatGPT Image 2026年8月24日 19_29_34.png",
+        "《多模态与认知语言学》超深度全详解.md",
+        "ChatGPT Image 2026年8月24日 19_32_42.png",
+        "《如何成为不完美主义者：哪怕在状态不佳的时候，也轻松找到做事的力量》.md",
+        "程序员修炼之道_第2版_高密度工程化笔记.md",
+        "《超高效时间管理，用12周完成12月的工作》.md"
+      ]
+    },
+    "Compound Interest/write/book notes/笔记/02_无语.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/01_开心.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/05_OK.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/04_震惊.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/07_汗流浃背.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/03_疑惑.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/06_点赞.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/09_摸鱼.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/08_崩溃.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/10_睡觉.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/11_委屈.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/12_已读不回.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_07_15 (2).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_07_15 (5).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_07_15 (3).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_07_15 (6).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_07_15 (4).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_07_15 (7).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_07_15 (8).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_07_15 (9).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_07_49 (2).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_07_49 (1).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_07_49 (10).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_07_49 (4).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_07_49 (5).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_07_49 (3).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_07_49 (7).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_08_04 (1).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_07_49 (8).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_08_05 (10).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_07_49 (6).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_07_49 (9).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_08_05 (3).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_08_05 (2).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_08_05 (6).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_08_05 (5).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_08_05 (4).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_08_05 (8).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_08_05 (7).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_08_05 (9).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_08_29 (1).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_08_29 (10).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_08_29 (4).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_08_29 (3).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_08_29 (6).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_08_29 (2).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_08_29 (5).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_08_29 (7).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_08_29 (8).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_29_16.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_29_26.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_08_29 (9).png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_29_34.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/《多模态与认知语言学》超深度全详解.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/ChatGPT Image 2026年8月24日 19_32_42.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/《如何成为不完美主义者：哪怕在状态不佳的时候，也轻松找到做事的力量》.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/程序员修炼之道_第2版_高密度工程化笔记.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/book notes/笔记/《超高效时间管理，用12周完成12月的工作》.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/log": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "12wyear 1.md",
+        "复盘.md",
+        "复盘2.md",
+        "复盘4.md",
+        "复盘3.md",
+        "致电影社.md",
+        "致运气好.md",
+        "致.md"
+      ]
+    },
+    "Compound Interest/write/log/12wyear 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/log/复盘.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/log/复盘2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/log/复盘4.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/log/复盘3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/log/致电影社.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/log/致运气好.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/log/致.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/templates": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "视频学习笔记模板-深度分析类.md"
+      ]
+    },
+    "Compound Interest/write/templates/视频学习笔记模板-深度分析类.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/_Write Index.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/剧本": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "《红拂夜奔》AI视频制作完整工作流.md",
+        "剧本改进.md",
+        "红拂夜奔.md"
+      ]
+    },
+    "Compound Interest/write/剧本/《红拂夜奔》AI视频制作完整工作流.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/剧本/剧本改进.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/剧本/红拂夜奔.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/未命名": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "1.md",
+        "循恒.md",
+        "灰色.md"
+      ]
+    },
+    "Compound Interest/write/未命名/1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/未命名/循恒.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/未命名/灰色.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/_Compound Interest Hub.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-目录.md",
+        "01-系统是怎么分层的.md",
+        "98-写作规矩.md",
+        "99-我的批注.md",
+        "知识库"
+      ]
+    },
+    "creative-os-notes/00-目录.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/01-系统是怎么分层的.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/98-写作规矩.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/99-我的批注.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Creative-OS-项目",
+        "全栈基础",
+        "参考",
+        "工作流"
+      ]
+    },
+    "creative-os-notes/知识库/Creative-OS-项目": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "1-前端（前厅）",
+        "2-进程通信（传菜口）",
+        "4-数据存储（冰箱）",
+        "3-后端（后厨）",
+        "5-网络（对外电话）",
+        "6-测试与验证",
+        "7-版本控制与协作",
+        "8-SDD规格",
+        "9-词汇与事故"
+      ]
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/1-前端（前厅）": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "11-我点的那一下.md",
+        "13-界面的样子从哪来.md",
+        "14-我写的字怎么变成能跑的东西.md",
+        "12-为什么要给每样东西贴标签.md"
+      ]
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/1-前端（前厅）/11-我点的那一下.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/1-前端（前厅）/13-界面的样子从哪来.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/1-前端（前厅）/14-我写的字怎么变成能跑的东西.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/1-前端（前厅）/12-为什么要给每样东西贴标签.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/2-进程通信（传菜口）": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "21-为什么有两个世界.md",
+        "22-传菜口那道门.md",
+        "23-说好同一种话.md"
+      ]
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/2-进程通信（传菜口）/21-为什么有两个世界.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/2-进程通信（传菜口）/22-传菜口那道门.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/2-进程通信（传菜口）/23-说好同一种话.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/4-数据存储（冰箱）": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "41-数据库到底是什么.md",
+        "43-要么全成要么全不成.md",
+        "44-怎么认出同一张图.md",
+        "42-我的九张表长什么样.md",
+        "45-插头形状对不上.md"
+      ]
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/4-数据存储（冰箱）/41-数据库到底是什么.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/4-数据存储（冰箱）/43-要么全成要么全不成.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/4-数据存储（冰箱）/44-怎么认出同一张图.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/4-数据存储（冰箱）/42-我的九张表长什么样.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/4-数据存储（冰箱）/45-插头形状对不上.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/3-后端（后厨）": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "31-后厨用的是什么炉子.md",
+        "32-为什么菜谱不认识冰箱.md",
+        "33-一条灵感只能走哪几条路.md",
+        "34-为什么不能当场做完.md"
+      ]
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/3-后端（后厨）/31-后厨用的是什么炉子.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/3-后端（后厨）/32-为什么菜谱不认识冰箱.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/3-后端（后厨）/33-一条灵感只能走哪几条路.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/3-后端（后厨）/34-为什么不能当场做完.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/5-网络（对外电话）": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "51-一次网络请求发生了什么.md",
+        "52-怎么跟AI说话.md",
+        "53-钥匙放哪.md",
+        "54-外面靠不住的时候.md",
+        "55-图片是怎么被处理的.md"
+      ]
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/5-网络（对外电话）/51-一次网络请求发生了什么.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/5-网络（对外电话）/52-怎么跟AI说话.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/5-网络（对外电话）/53-钥匙放哪.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/5-网络（对外电话）/54-外面靠不住的时候.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/5-网络（对外电话）/55-图片是怎么被处理的.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/6-测试与验证": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "60-代码写完了不等于跑通了.md",
+        "61-三种测试各在测什么.md",
+        "62-怎么让撒谎做不到.md",
+        "63-防护做在想到的方向上.md",
+        "64-什么才算证据.md"
+      ]
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/6-测试与验证/60-代码写完了不等于跑通了.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/6-测试与验证/61-三种测试各在测什么.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/6-测试与验证/62-怎么让撒谎做不到.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/6-测试与验证/63-防护做在想到的方向上.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/6-测试与验证/64-什么才算证据.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/7-版本控制与协作": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "71-六个对话为什么会互相污染.md",
+        "70-Git-和我的后悔药.md",
+        "72-一个只拦得住记录自己的规则.md"
+      ]
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/7-版本控制与协作/71-六个对话为什么会互相污染.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/7-版本控制与协作/70-Git-和我的后悔药.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/7-版本控制与协作/72-一个只拦得住记录自己的规则.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/8-SDD规格": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "80-SDD全流程-从宪法到推送.md",
+        "82-那些门为什么在那儿.md",
+        "81-为什么一份spec好过十轮对话.md",
+        "83-SDD什么时候不该用.md",
+        "84-我们站在哪一级.md"
+      ]
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/8-SDD规格/80-SDD全流程-从宪法到推送.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/8-SDD规格/82-那些门为什么在那儿.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/8-SDD规格/81-为什么一份spec好过十轮对话.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/8-SDD规格/83-SDD什么时候不该用.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/8-SDD规格/84-我们站在哪一级.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/9-词汇与事故": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "91-认得出就行.md",
+        "90-事故档案.md"
+      ]
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/9-词汇与事故/91-认得出就行.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/Creative-OS-项目/9-词汇与事故/90-事故档案.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/全栈基础": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-全栈地图.md",
+        "01-全栈的全景框架.md",
+        "10-网页是怎么显示出来的.md",
+        "11-前端框架为什么存在.md",
+        "12-源码怎么变成浏览器能跑的.md",
+        "13-前端怎么管住一堆状态.md",
+        "14-界面怎么排版.md",
+        "15-浏览器怎么把页面画出来.md",
+        "16-异步与事件循环.md",
+        "17-React到底怎么工作.md",
+        "20-一次网络请求的全过程.md",
+        "21-前后端怎么约定.md",
+        "22-服务器怎么主动找我.md",
+        "23-HTTP到底是什么.md",
+        "30-后端到底在干嘛.md",
+        "31-登录之后它怎么记得我.md",
+        "32-进程线程和两个世界.md",
+        "33-鉴权机制深挖.md",
+        "41-为什么数据库全是表.md",
+        "42-关系型之外还有什么.md",
+        "43-数据库服务器跟SQLite差在哪.md",
+        "50-部署上线到底在干嘛.md",
+        "51-配置与环境变量.md",
+        "52-日志与监控.md",
+        "60-常见的安全坑.md",
+        "61-性能慢在哪怎么快.md"
+      ]
+    },
+    "creative-os-notes/知识库/全栈基础/00-全栈地图.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/全栈基础/01-全栈的全景框架.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/全栈基础/10-网页是怎么显示出来的.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/全栈基础/11-前端框架为什么存在.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/全栈基础/12-源码怎么变成浏览器能跑的.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/全栈基础/13-前端怎么管住一堆状态.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/全栈基础/14-界面怎么排版.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/全栈基础/15-浏览器怎么把页面画出来.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/全栈基础/16-异步与事件循环.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/全栈基础/17-React到底怎么工作.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/全栈基础/20-一次网络请求的全过程.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/全栈基础/21-前后端怎么约定.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/全栈基础/22-服务器怎么主动找我.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/全栈基础/23-HTTP到底是什么.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/全栈基础/30-后端到底在干嘛.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/全栈基础/31-登录之后它怎么记得我.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/全栈基础/32-进程线程和两个世界.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/全栈基础/33-鉴权机制深挖.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/全栈基础/41-为什么数据库全是表.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/全栈基础/42-关系型之外还有什么.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/全栈基础/43-数据库服务器跟SQLite差在哪.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/全栈基础/50-部署上线到底在干嘛.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/全栈基础/51-配置与环境变量.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/全栈基础/52-日志与监控.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/全栈基础/60-常见的安全坑.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/全栈基础/61-性能慢在哪怎么快.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/参考": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "SDD教程-00-起点.md",
+        "SDD教程-01-核心概念.md",
+        "SDD教程-03-自测题库.md",
+        "SDD教程-02-工作原理与边界.md"
+      ]
+    },
+    "creative-os-notes/知识库/参考/SDD教程-00-起点.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/参考/SDD教程-01-核心概念.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/参考/SDD教程-03-自测题库.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/参考/SDD教程-02-工作原理与边界.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/工作流": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-这份手册怎么用.md",
+        "01-花名册.md",
+        "02-宪法与规则体系.md",
+        "03-工作区协同.md",
+        "04-同步与备份.md",
+        "05-知识怎么学.md",
+        "06-干法复盘.md",
+        "07-可粘的启动提示词.md"
+      ]
+    },
+    "creative-os-notes/知识库/工作流/00-这份手册怎么用.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/工作流/01-花名册.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/工作流/02-宪法与规则体系.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/工作流/03-工作区协同.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/工作流/04-同步与备份.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/工作流/05-知识怎么学.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/工作流/06-干法复盘.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "creative-os-notes/知识库/工作流/07-可粘的启动提示词.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Active Vocabulary",
+        "Daily Output",
+        "English books",
+        "ielts",
+        "listening article",
+        "reading vocabulary",
+        "vocabulary article",
+        "writing part",
+        "YouTube video",
+        "_English Learning Hub.md"
+      ]
+    },
+    "English Learning/Active Vocabulary": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "baicizhan vocabulary.md",
+        "baicizhan vocabulary2.md",
+        "books",
+        "vocabulary part1.md",
+        "vocabulary part10.md",
+        "vocabulary part11.md",
+        "vocabulary part13.md",
+        "vocabulary part12.md",
+        "vocabulary part15.md",
+        "vocabulary part14.md",
+        "vocabulary part16.md",
+        "vocabulary part2.md",
+        "vocabulary part3.md",
+        "vocabulary part17.md",
+        "vocabulary part5.md",
+        "vocabulary part4.md",
+        "vocabulary part6.md",
+        "vocabulary part8.md",
+        "vocabulary part7.md",
+        "_Active Vocabulary Index.md",
+        "vocabulary part9.md"
+      ]
+    },
+    "English Learning/Active Vocabulary/baicizhan vocabulary.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/Active Vocabulary/baicizhan vocabulary2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/Active Vocabulary/books": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Greenlights.md",
+        "_Books Index.md"
+      ]
+    },
+    "English Learning/Active Vocabulary/books/Greenlights.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/Active Vocabulary/books/_Books Index.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/Active Vocabulary/vocabulary part1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/Active Vocabulary/vocabulary part10.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/Active Vocabulary/vocabulary part11.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/Active Vocabulary/vocabulary part13.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/Active Vocabulary/vocabulary part12.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/Active Vocabulary/vocabulary part15.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/Active Vocabulary/vocabulary part14.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/Active Vocabulary/vocabulary part16.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/Active Vocabulary/vocabulary part2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/Active Vocabulary/vocabulary part3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/Active Vocabulary/vocabulary part17.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/Active Vocabulary/vocabulary part5.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/Active Vocabulary/vocabulary part4.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/Active Vocabulary/vocabulary part6.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/Active Vocabulary/vocabulary part8.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/Active Vocabulary/vocabulary part7.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/Active Vocabulary/_Active Vocabulary Index.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/Active Vocabulary/vocabulary part9.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/Daily Output": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "speaking.md",
+        "speaking practice.md",
+        "writing practice.md",
+        "_Daily Output Index.md"
+      ]
+    },
+    "English Learning/Daily Output/speaking.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/Daily Output/speaking practice.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/Daily Output/writing practice.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/Daily Output/_Daily Output Index.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/English books": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_English Books Index.md",
+        "《Greenlights》.md"
+      ]
+    },
+    "English Learning/English books/_English Books Index.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/English books/《Greenlights》.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/ielts": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "IELTS_worksho_materials.pptx",
+        "xjtlu ppt.md",
+        "_IELTS Index.md"
+      ]
+    },
+    "English Learning/ielts/IELTS_worksho_materials.pptx": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/ielts/xjtlu ppt.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/ielts/_IELTS Index.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/listening article": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Listening Article Index.md",
+        "Healthcare Is AI's Hardest Test.md"
+      ]
+    },
+    "English Learning/listening article/_Listening Article Index.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/listening article/Healthcare Is AI's Hardest Test.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/reading vocabulary": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "test1.md",
+        "test2.md",
+        "_Reading Vocabulary Index.md"
+      ]
+    },
+    "English Learning/reading vocabulary/test1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/reading vocabulary/test2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/reading vocabulary/_Reading Vocabulary Index.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/vocabulary article": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "article1.md",
+        "article3.md",
+        "article4.md",
+        "article2.md",
+        "_Vocabulary Article Index.md"
+      ]
+    },
+    "English Learning/vocabulary article/article1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/vocabulary article/article3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/vocabulary article/article4.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/vocabulary article/article2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/vocabulary article/_Vocabulary Article Index.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/writing part": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "book",
+        "universities vs colleges.md",
+        "_Writing Part Index.md",
+        "food.md"
+      ]
+    },
+    "English Learning/writing part/book": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "剑桥雅思写作.md"
+      ]
+    },
+    "English Learning/writing part/book/剑桥雅思写作.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/writing part/universities vs colleges.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/writing part/_Writing Part Index.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/writing part/food.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/YouTube video": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Career Strategy For People With Too Many Interests.md",
+        "Career Strategy For People With Too Many Interests (The M-Shaped Future).md",
+        "Skills to Learn in 2026.md",
+        "This Is How Geniuses Train Their Mind — IQ Is Not Fixed.md",
+        "template.md",
+        "_YouTube Video Index.md"
+      ]
+    },
+    "English Learning/YouTube video/Career Strategy For People With Too Many Interests.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/YouTube video/Career Strategy For People With Too Many Interests (The M-Shaped Future).md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/YouTube video/Skills to Learn in 2026.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/YouTube video/This Is How Geniuses Train Their Mind — IQ Is Not Fixed.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/YouTube video/template.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/YouTube video/_YouTube Video Index.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/_English Learning Hub.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Daily Desk Examples": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "images",
+        "晨光花树.md",
+        "雨夜城市.md"
+      ]
+    },
+    "Daily Desk Examples/images": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "morning-blossom.webp",
+        "rainy-city.webp"
+      ]
+    },
+    "Daily Desk Examples/images/morning-blossom.webp": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Daily Desk Examples/images/rainy-city.webp": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Daily Desk Examples/晨光花树.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Daily Desk Examples/雨夜城市.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Linear Calendar Events": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "12weeks 1.md",
+        "birthday.md",
+        "_Linear Calendar Index.md",
+        "丙午.md"
+      ]
+    },
+    "Linear Calendar Events/12weeks 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Linear Calendar Events/birthday.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Linear Calendar Events/_Linear Calendar Index.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Linear Calendar Events/丙午.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "README.md",
+        "写作规矩.md",
+        "我的批注.md",
+        "知识库"
+      ]
+    },
+    "operation-note/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/写作规矩.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/我的批注.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "01-认识operation-platform",
+        "03-计量计费流水线",
+        "02-第一条链路-登录",
+        "04-贯穿全局的核心机制",
+        "06-SDD-规格驱动开发",
+        "07-Layer0-工作台-Git与Worktree",
+        "08-Layer1-前端-Vue",
+        "09-Layer2-前后端之间-API",
+        "10-Layer4-数据-PostgreSQL",
+        "11-Layer5-质量-测试与调试",
+        "12-Layer6-运行运维-Docker与k3s",
+        "深度篇",
+        "05-在成熟项目里找bug"
+      ]
+    },
+    "operation-note/知识库/01-认识operation-platform": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "01-operation-platform是什么.md",
+        "02-架构骨架与技术栈.md",
+        "00-索引.md",
+        "03-Flyway管理数据库结构.md",
+        "04-RBAC认证与授权.md",
+        "05-怎么跑起来与监控.md"
+      ]
+    },
+    "operation-note/知识库/01-认识operation-platform/01-operation-platform是什么.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/01-认识operation-platform/02-架构骨架与技术栈.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/01-认识operation-platform/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/01-认识operation-platform/03-Flyway管理数据库结构.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/01-认识operation-platform/04-RBAC认证与授权.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/01-认识operation-platform/05-怎么跑起来与监控.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/03-计量计费流水线": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-索引.md",
+        "01-计量计费流水线.md",
+        "02-项目全貌.md"
+      ]
+    },
+    "operation-note/知识库/03-计量计费流水线/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/03-计量计费流水线/01-计量计费流水线.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/03-计量计费流水线/02-项目全貌.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/02-第一条链路-登录": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "01-后端代码怎么组织.md",
+        "02-登录链路.md",
+        "00-索引.md"
+      ]
+    },
+    "operation-note/知识库/02-第一条链路-登录/01-后端代码怎么组织.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/02-第一条链路-登录/02-登录链路.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/02-第一条链路-登录/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/04-贯穿全局的核心机制": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-索引.md",
+        "01-三个核心机制-状态机幂等终态.md",
+        "02-功能地图速查.md"
+      ]
+    },
+    "operation-note/知识库/04-贯穿全局的核心机制/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/04-贯穿全局的核心机制/01-三个核心机制-状态机幂等终态.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/04-贯穿全局的核心机制/02-功能地图速查.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/06-SDD-规格驱动开发": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-索引.md",
+        "01-SDD是什么为什么成了标配.md",
+        "02-OpenSpec-把一次改动结构化.md",
+        "03-Superpowers-给AI立工程纪律.md",
+        "04-三个工具在本项目各写了什么.md"
+      ]
+    },
+    "operation-note/知识库/06-SDD-规格驱动开发/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/06-SDD-规格驱动开发/01-SDD是什么为什么成了标配.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/06-SDD-规格驱动开发/02-OpenSpec-把一次改动结构化.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/06-SDD-规格驱动开发/03-Superpowers-给AI立工程纪律.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/06-SDD-规格驱动开发/04-三个工具在本项目各写了什么.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/07-Layer0-工作台-Git与Worktree": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "01-Git与Worktree-一个仓库多张桌子.md",
+        "00-索引.md"
+      ]
+    },
+    "operation-note/知识库/07-Layer0-工作台-Git与Worktree/01-Git与Worktree-一个仓库多张桌子.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/07-Layer0-工作台-Git与Worktree/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/08-Layer1-前端-Vue": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-索引.md",
+        "01-前端怎么运转-一个vue文件.md",
+        "02-前端层的找bug与加功能.md"
+      ]
+    },
+    "operation-note/知识库/08-Layer1-前端-Vue/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/08-Layer1-前端-Vue/01-前端怎么运转-一个vue文件.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/08-Layer1-前端-Vue/02-前端层的找bug与加功能.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/09-Layer2-前后端之间-API": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-索引.md",
+        "01-前后端怎么对话.md",
+        "02-鉴权拆包与请求转发.md",
+        "03-api层的找bug猎场.md"
+      ]
+    },
+    "operation-note/知识库/09-Layer2-前后端之间-API/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/09-Layer2-前后端之间-API/01-前后端怎么对话.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/09-Layer2-前后端之间-API/02-鉴权拆包与请求转发.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/09-Layer2-前后端之间-API/03-api层的找bug猎场.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/10-Layer4-数据-PostgreSQL": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-索引.md",
+        "01-数据怎么存与取-表SQL与ORM.md",
+        "02-全栈骨架走通-一次请求的全链路.md",
+        "03-数据层的找bug猎场.md"
+      ]
+    },
+    "operation-note/知识库/10-Layer4-数据-PostgreSQL/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/10-Layer4-数据-PostgreSQL/01-数据怎么存与取-表SQL与ORM.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/10-Layer4-数据-PostgreSQL/02-全栈骨架走通-一次请求的全链路.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/10-Layer4-数据-PostgreSQL/03-数据层的找bug猎场.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/11-Layer5-质量-测试与调试": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-索引.md",
+        "01-测试是安全网-金字塔与绿红.md",
+        "02-系统化调试-修bug的正规姿势.md",
+        "03-质量层的找bug猎场.md"
+      ]
+    },
+    "operation-note/知识库/11-Layer5-质量-测试与调试/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/11-Layer5-质量-测试与调试/01-测试是安全网-金字塔与绿红.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/11-Layer5-质量-测试与调试/02-系统化调试-修bug的正规姿势.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/11-Layer5-质量-测试与调试/03-质量层的找bug猎场.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/12-Layer6-运行运维-Docker与k3s": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "01-Docker-把程序打包成集装箱.md",
+        "02-k3s-声明式编排与访问闭环.md",
+        "00-索引.md",
+        "03-观测与七层地图合拢.md"
+      ]
+    },
+    "operation-note/知识库/12-Layer6-运行运维-Docker与k3s/01-Docker-把程序打包成集装箱.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/12-Layer6-运行运维-Docker与k3s/02-k3s-声明式编排与访问闭环.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/12-Layer6-运行运维-Docker与k3s/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/12-Layer6-运行运维-Docker与k3s/03-观测与七层地图合拢.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/深度篇": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-索引.md",
+        "A2-Layer2深挖-API",
+        "A3-Layer3深挖-后端",
+        "A4-Layer4深挖-数据",
+        "A5-Layer5深挖-质量",
+        "A6-Layer6深挖-运维"
+      ]
+    },
+    "operation-note/知识库/深度篇/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/深度篇/A2-Layer2深挖-API": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "01-报文-状态码-JSON.md",
+        "02-JWT与拦截器收发室.md",
+        "00-索引.md",
+        "03-统一信封与关注点分离.md"
+      ]
+    },
+    "operation-note/知识库/深度篇/A2-Layer2深挖-API/01-报文-状态码-JSON.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/深度篇/A2-Layer2深挖-API/02-JWT与拦截器收发室.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/深度篇/A2-Layer2深挖-API/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/深度篇/A2-Layer2深挖-API/03-统一信封与关注点分离.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/深度篇/A3-Layer3深挖-后端": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-索引.md",
+        "01-后端的性格与读Java便利贴.md",
+        "02-IoC容器-你不new我来发.md",
+        "03-三层分工-接待员大厨仓管.md",
+        "04-事务异常权限-后端的三条纪律.md",
+        "05-六部门与九站全链路.md"
+      ]
+    },
+    "operation-note/知识库/深度篇/A3-Layer3深挖-后端/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/深度篇/A3-Layer3深挖-后端/01-后端的性格与读Java便利贴.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/深度篇/A3-Layer3深挖-后端/02-IoC容器-你不new我来发.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/深度篇/A3-Layer3深挖-后端/03-三层分工-接待员大厨仓管.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/深度篇/A3-Layer3深挖-后端/04-事务异常权限-后端的三条纪律.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/深度篇/A3-Layer3深挖-后端/05-六部门与九站全链路.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/深度篇/A4-Layer4深挖-数据": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "01-数据是唯一真相账本.md",
+        "02-关系模型-表约束与外键.md",
+        "00-索引.md",
+        "03-SQL四金刚-JOIN与索引.md",
+        "04-类型的坑与ORM的边界.md",
+        "05-Flyway与三次迁移现场.md"
+      ]
+    },
+    "operation-note/知识库/深度篇/A4-Layer4深挖-数据/01-数据是唯一真相账本.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/深度篇/A4-Layer4深挖-数据/02-关系模型-表约束与外键.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/深度篇/A4-Layer4深挖-数据/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/深度篇/A4-Layer4深挖-数据/03-SQL四金刚-JOIN与索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/深度篇/A4-Layer4深挖-数据/04-类型的坑与ORM的边界.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/深度篇/A4-Layer4深挖-数据/05-Flyway与三次迁移现场.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/深度篇/A5-Layer5深挖-质量": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-索引.md",
+        "01-测试是让你敢改的安全网.md",
+        "03-单元测试与Mock.md",
+        "05-红绿-系统排错-与质量流程.md",
+        "04-集成测试-e2e-与测什么.md",
+        "02-测试金字塔的经济学.md"
+      ]
+    },
+    "operation-note/知识库/深度篇/A5-Layer5深挖-质量/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/深度篇/A5-Layer5深挖-质量/01-测试是让你敢改的安全网.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/深度篇/A5-Layer5深挖-质量/03-单元测试与Mock.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/深度篇/A5-Layer5深挖-质量/05-红绿-系统排错-与质量流程.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/深度篇/A5-Layer5深挖-质量/04-集成测试-e2e-与测什么.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/深度篇/A5-Layer5深挖-质量/02-测试金字塔的经济学.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/深度篇/A6-Layer6深挖-运维": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-索引.md",
+        "01-值班人三问与镜像千层饼.md",
+        "02-真Dockerfile与compose开发环境.md",
+        "03-k3s收敛循环与对象模型.md",
+        "05-发布-观测-与收官会师.md",
+        "04-Deployment决策-探针-与Service.md"
+      ]
+    },
+    "operation-note/知识库/深度篇/A6-Layer6深挖-运维/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/深度篇/A6-Layer6深挖-运维/01-值班人三问与镜像千层饼.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/深度篇/A6-Layer6深挖-运维/02-真Dockerfile与compose开发环境.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/深度篇/A6-Layer6深挖-运维/03-k3s收敛循环与对象模型.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/深度篇/A6-Layer6深挖-运维/05-发布-观测-与收官会师.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/深度篇/A6-Layer6深挖-运维/04-Deployment决策-探针-与Service.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/05-在成熟项目里找bug": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "01-在成熟项目里找刁钻bug.md",
+        "02-加小功能的入口.md",
+        "00-索引.md"
+      ]
+    },
+    "operation-note/知识库/05-在成熟项目里找bug/01-在成熟项目里找刁钻bug.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/05-在成熟项目里找bug/02-加小功能的入口.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "operation-note/知识库/05-在成熟项目里找bug/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "homepage.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "12WY2 项目执行计划.md",
+        "github项目",
+        "_Project Index.md",
+        "一些手工小玩意"
+      ]
+    },
+    "project/12WY2 项目执行计划.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/github项目": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "heatmap",
+        "Lumenflow",
+        "lut",
+        "想法.md"
+      ]
+    },
+    "project/github项目/heatmap": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Heatmap Vibe 仓库全面知识梳理.md",
+        "Project Log — heatmap.md"
+      ]
+    },
+    "project/github项目/heatmap/Heatmap Vibe 仓库全面知识梳理.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/github项目/heatmap/Project Log — heatmap.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/github项目/Lumenflow": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Project Log — lumenflow.md",
+        "Lumenflow 仓库全面梳理与学习路径.md"
+      ]
+    },
+    "project/github项目/Lumenflow/Project Log — lumenflow.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/github项目/Lumenflow/Lumenflow 仓库全面梳理与学习路径.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/github项目/lut": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "np3或lut.md"
+      ]
+    },
+    "project/github项目/lut/np3或lut.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/github项目/想法.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/_Project Index.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/一些手工小玩意": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": []
+    },
+    "programming study": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "000_Index.md",
+        "algorithms",
+        "artificial-intelligence",
+        "assembly",
+        "blockchain",
+        "cloud-computing",
+        "compilers",
+        "computer-organization",
+        "computer-graphics",
+        "computer-networks",
+        "cyber-security",
+        "computer-science",
+        "data-structures",
+        "design-patterns",
+        "database",
+        "distributed-systems",
+        "devops",
+        "embedded-systems",
+        "git",
+        "game-development",
+        "mobile-development",
+        "java",
+        "programming-languages",
+        "linux",
+        "python",
+        "prompt engineering",
+        "operating-systems",
+        "system-design",
+        "software-engineering",
+        "testing",
+        "web-development"
+      ]
+    },
+    "programming study/000_Index.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/algorithms": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Algorithms MOC.md"
+      ]
+    },
+    "programming study/algorithms/_Algorithms MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/artificial-intelligence": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Artificial Intelligence MOC.md"
+      ]
+    },
+    "programming study/artificial-intelligence/_Artificial Intelligence MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/assembly": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "第一章.md",
+        "_Assembly MOC.md"
+      ]
+    },
+    "programming study/assembly/第一章.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/assembly/_Assembly MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/blockchain": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Blockchain MOC.md"
+      ]
+    },
+    "programming study/blockchain/_Blockchain MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/cloud-computing": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Cloud Computing MOC.md"
+      ]
+    },
+    "programming study/cloud-computing/_Cloud Computing MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/compilers": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Compilers MOC.md"
+      ]
+    },
+    "programming study/compilers/_Compilers MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/computer-organization": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Computer Organization MOC.md",
+        "cpu.md",
+        "计算机组成原理plan.md",
+        "计算机网络.md"
+      ]
+    },
+    "programming study/computer-organization/_Computer Organization MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/computer-organization/cpu.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/computer-organization/计算机组成原理plan.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/computer-organization/计算机网络.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/computer-graphics": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "专业影视 + 图片调色环境标准化设置与防色彩疲劳全流程工作笔记.md",
+        "图像格式.md",
+        "所有生成 .cube+.np3 文件的方式（完整清单）.md",
+        "_Computer Graphics MOC.md"
+      ]
+    },
+    "programming study/computer-graphics/专业影视 + 图片调色环境标准化设置与防色彩疲劳全流程工作笔记.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/computer-graphics/图像格式.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/computer-graphics/所有生成 .cube+.np3 文件的方式（完整清单）.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/computer-graphics/_Computer Graphics MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/computer-networks": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Computer Networks MOC.md"
+      ]
+    },
+    "programming study/computer-networks/_Computer Networks MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/cyber-security": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Cyber Security MOC.md"
+      ]
+    },
+    "programming study/cyber-security/_Cyber Security MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/computer-science": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Computer Science MOC.md",
+        "计算机核心架构：统一内存 UMA、PCIe 总线与 CPU 指令集详解.md"
+      ]
+    },
+    "programming study/computer-science/_Computer Science MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/computer-science/计算机核心架构：统一内存 UMA、PCIe 总线与 CPU 指令集详解.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/data-structures": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "w1 w2.md",
+        "_Data Structures MOC.md",
+        "cw2.md"
+      ]
+    },
+    "programming study/data-structures/w1 w2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/data-structures/_Data Structures MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/data-structures/cw2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/design-patterns": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Design Patterns MOC.md"
+      ]
+    },
+    "programming study/design-patterns/_Design Patterns MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/database": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "CPT103 Mock Exam 知识点展开笔记.md",
+        "MySQL 常用数据类型表格.md",
+        "_Database MOC.md",
+        "key.md"
+      ]
+    },
+    "programming study/database/CPT103 Mock Exam 知识点展开笔记.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/database/MySQL 常用数据类型表格.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/database/_Database MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/database/key.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/distributed-systems": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Distributed Systems MOC.md"
+      ]
+    },
+    "programming study/distributed-systems/_Distributed Systems MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/devops": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_DevOps MOC.md"
+      ]
+    },
+    "programming study/devops/_DevOps MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/embedded-systems": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Embedded Systems MOC.md"
+      ]
+    },
+    "programming study/embedded-systems/_Embedded Systems MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/git": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Git 超详细完整指南（中英双语）.md",
+        "_Git MOC.md"
+      ]
+    },
+    "programming study/git/Git 超详细完整指南（中英双语）.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/git/_Git MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/game-development": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Game Development MOC.md"
+      ]
+    },
+    "programming study/game-development/_Game Development MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/mobile-development": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Mobile Development MOC.md"
+      ]
+    },
+    "programming study/mobile-development/_Mobile Development MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/java": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "plan.md",
+        "_Java MOC.md",
+        "全周期学习.md",
+        "全栈 + AI.md",
+        "全阶段学习资源精准链接汇总.md",
+        "总体框架.md",
+        "逻辑框架.md",
+        "统一底层逻辑.md"
+      ]
+    },
+    "programming study/java/plan.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/java/_Java MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/java/全周期学习.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/java/全栈 + AI.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/java/全阶段学习资源精准链接汇总.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/java/总体框架.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/java/逻辑框架.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/java/统一底层逻辑.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/programming-languages": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Programming Languages MOC.md"
+      ]
+    },
+    "programming study/programming-languages/_Programming Languages MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/linux": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Linux MOC.md"
+      ]
+    },
+    "programming study/linux/_Linux MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/python": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Python MOC.md"
+      ]
+    },
+    "programming study/python/_Python MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/prompt engineering": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "AI 使用实战清单（提炼自 promptingguide.ai，不用回网站）.md",
+        "Prompt Engineering 学习指南.md",
+        "Prompt Engineering 技术.md"
+      ]
+    },
+    "programming study/prompt engineering/AI 使用实战清单（提炼自 promptingguide.ai，不用回网站）.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/prompt engineering/Prompt Engineering 学习指南.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/prompt engineering/Prompt Engineering 技术.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/operating-systems": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Operating Systems MOC.md"
+      ]
+    },
+    "programming study/operating-systems/_Operating Systems MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/system-design": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_System Design MOC.md"
+      ]
+    },
+    "programming study/system-design/_System Design MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/software-engineering": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Software Engineering MOC.md"
+      ]
+    },
+    "programming study/software-engineering/_Software Engineering MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/testing": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Testing MOC.md"
+      ]
+    },
+    "programming study/testing/_Testing MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "programming study/web-development": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Web Development MOC.md"
+      ]
+    },
+    "programming study/web-development/_Web Development MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "CPT103",
+        "INT104",
+        "MTH102",
+        "SAT102",
+        "_Year2 Final Index.md",
+        "EEE109",
+        "CPT102"
+      ]
+    },
+    "year2 final2/CPT103": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "1 Introduction-spring lect 1.md",
+        "2 SQL data and table w2-3.md",
+        "4 Set Operations and Missing Info w6.md",
+        "3 SQL select w4-5.md",
+        "6 ER modelling w9.md",
+        "7 normalisation w10.md",
+        "5 develop database app w8.md",
+        "CPT103 数据库期末复习完整知识点整理（按周划分）.md",
+        "多表连接.md",
+        "8 JDBC transactions and recovery w12.md"
+      ]
+    },
+    "year2 final2/CPT103/1 Introduction-spring lect 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/CPT103/2 SQL data and table w2-3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/CPT103/4 Set Operations and Missing Info w6.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/CPT103/3 SQL select w4-5.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/CPT103/6 ER modelling w9.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/CPT103/7 normalisation w10.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/CPT103/5 develop database app w8.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/CPT103/CPT103 数据库期末复习完整知识点整理（按周划分）.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/CPT103/多表连接.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/CPT103/8 JDBC transactions and recovery w12.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/INT104": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "lect 1-2.md",
+        "lect 12.md",
+        "lect 3-4.md",
+        "lect 5-6.md",
+        "lect 7-8.md",
+        "lect 9-11.md"
+      ]
+    },
+    "year2 final2/INT104/lect 1-2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/INT104/lect 12.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/INT104/lect 3-4.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/INT104/lect 5-6.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/INT104/lect 7-8.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/INT104/lect 9-11.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/MTH102": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "0 formula.md",
+        "0 MTH102 工程数学II 笔记整理（西交利物浦大学）.md",
+        "1排列组合与概率论基础（Lecture 1-2）.md",
+        "3离散随机变量（Lecture 5-6）.md",
+        "2条件概率与贝叶斯（Lecture 3-4）.md",
+        "5联合分布与极限定理（Lecture 9-10）.md",
+        "6随机过程与课程复习（Lecture 11-12）.md",
+        "4连续随机变量（Lecture 7-8）.md"
+      ]
+    },
+    "year2 final2/MTH102/0 formula.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/MTH102/0 MTH102 工程数学II 笔记整理（西交利物浦大学）.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/MTH102/1排列组合与概率论基础（Lecture 1-2）.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/MTH102/3离散随机变量（Lecture 5-6）.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/MTH102/2条件概率与贝叶斯（Lecture 3-4）.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/MTH102/5联合分布与极限定理（Lecture 9-10）.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/MTH102/6随机过程与课程复习（Lecture 11-12）.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/MTH102/4连续随机变量（Lecture 7-8）.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/SAT102": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "0 SAT102 CW002 Hackathon 最终完整版执行方案.md",
+        "1 G129 组 第四部分（Key Advantages & User Benefits） 三评估方专属准备.md",
+        "2 sat问答补充.md",
+        "4 cw3.md",
+        "3 alc.md",
+        "5 cw.md"
+      ]
+    },
+    "year2 final2/SAT102/0 SAT102 CW002 Hackathon 最终完整版执行方案.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/SAT102/1 G129 组 第四部分（Key Advantages & User Benefits） 三评估方专属准备.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/SAT102/2 sat问答补充.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/SAT102/4 cw3.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/SAT102/3 alc.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/SAT102/5 cw.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/_Year2 Final Index.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/EEE109": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "chapter1 知识点补充.md",
+        "MOSFET三种放大组态全解析（RD RS 接法）.md",
+        "MOSFET与BJT放大电路核心知识点.md",
+        "EEE109 全电路体系整理（考试版）.md",
+        "未命名.md"
+      ]
+    },
+    "year2 final2/EEE109/chapter1 知识点补充.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/EEE109/MOSFET三种放大组态全解析（RD RS 接法）.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/EEE109/MOSFET与BJT放大电路核心知识点.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/EEE109/EEE109 全电路体系整理（考试版）.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/EEE109/未命名.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/CPT102": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "1数据结构与算法导论（Week 1-2）.md",
+        "2线性数据结构与递归（Week 3-4）.md",
+        "3搜索与排序算法（Week 5-6）.md",
+        "5图论算法全解（Week 9-11）.md",
+        "6二叉搜索树与红黑树，哈希表（Week 12-13）.md",
+        "4并查集与二叉堆（Week 8）.md",
+        "java代码.md",
+        "复杂度速查表.md",
+        "Java 序实现补充（考试高频考点）.md",
+        "补充.md",
+        "大题.md"
+      ]
+    },
+    "year2 final2/CPT102/1数据结构与算法导论（Week 1-2）.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/CPT102/2线性数据结构与递归（Week 3-4）.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/CPT102/3搜索与排序算法（Week 5-6）.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/CPT102/5图论算法全解（Week 9-11）.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/CPT102/6二叉搜索树与红黑树，哈希表（Week 12-13）.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/CPT102/4并查集与二叉堆（Week 8）.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/CPT102/java代码.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/CPT102/复杂度速查表.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/CPT102/Java 序实现补充（考试高频考点）.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/CPT102/补充.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "year2 final2/CPT102/大题.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "BASE.base": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "inbox.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "色彩系统预览.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "docs": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "plugins.md",
+        "css-guide.md"
+      ]
+    },
+    "docs/css-guide.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "docs/plugins.md": {
+      "isPinned": false,
+      "isHidden": false
+    }
+  },
+  "pinnedFiles": [],
+  "showHidden": false,
+  "newItemPlacement": "top",
+  "persistOrderOnCreateDelete": true,
+  "debugMode": false
+}

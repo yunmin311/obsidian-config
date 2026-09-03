@@ -1,0 +1,7 @@
+/* 仅隐藏带 no-editing-toolbar 的笔记自己的 Editing Toolbar */
+.workspace-leaf:has(.no-editing-toolbar)
+.editingToolbarModalBar[data-toolbar-style="top"],
+.workspace-leaf:has(.no-editing-toolbar)
+.editingToolbarPopoverBar[data-toolbar-style="top"] {
+    display: none !important;
+}

@@ -1,0 +1,20 @@
+{
+  "globalFilter": "path includes Daily or path includes Project",
+  "showDoneDate": true,
+  "showCreatedDate": false,
+  "showPriority": true,
+  "showRecurrence": true,
+  "dateFormat": "YYYY-MM-DD",
+  "timeFormat": "HH:mm",
+  "firstDayOfWeek": 1,
+  "autoRefresh": true,
+  "refreshInterval": 60000,
+  "groupByFilename": true,
+  "sortOrder": [
+    { "field": "status", "direction": "ASC" },
+    { "field": "priority", "direction": "DESC" },
+    { "field": "due", "direction": "ASC" },
+    { "field": "scheduled", "direction": "ASC" }
+  ],
+  "defaultQuery": "not done\nshort mode\nsort by priority, due, scheduled\nlimit 50"
+}

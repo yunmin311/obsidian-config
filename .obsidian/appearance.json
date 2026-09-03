@@ -1,0 +1,16 @@
+{
+  "cssTheme": "Border",
+  "theme": "moonstone",
+  "enabledCssSnippets": [
+    "hide-embed-titles",
+    "baseline-optimized.minimal.active",
+    "baseline-translucent-window.active",
+    "pin-spacing",
+    "hide-editing-toolbar",
+    "border-polished.active"
+  ],
+  "accentColor": "",
+  "interfaceFontFamily": "方正屏显雅宋简体",
+  "textFontFamily": "iA Writer Quattro S",
+  "monospaceFontFamily": "Fira Code"
+}

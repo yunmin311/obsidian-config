@@ -1,0 +1,21 @@
+{
+  "defaultPlace": "bottom",
+  "defaultColor": "amber",
+  "defaultMark": true,
+  "editorPreview": true,
+  "annotationFontMode": "handwritten",
+  "customFontFamily": "",
+  "arrowStyle": "hand-drawn",
+  "arrowStrokeStyle": "solid",
+  "arrowCurve": 35,
+  "customColor": "#3b82f6",
+  "colorTheme": "modern",
+  "annotationLayout": "inline",
+  "marginNoteWidth": 180,
+  "rememberLastChoice": true,
+  "lastUsedPlace": "bottom",
+  "lastUsedColor": "amber",
+  "lastUsedMark": true,
+  "recallMode": false,
+  "licenseCode": "eyJwcm9kdWN0IjoiQ3Jpc3AgU3VpdGUiLCJsaWNlbnNlSWQiOiJDUklTUC1NVEpOUk82ViIsInVzZXJOYW1lIjoieXVubWluIiwiaXNzdWVkQXQiOiIyMDI2LTA5LTAyVDA1OjMxOjE3LjQzMVoiLCJleHBpcmVzQXQiOiIyMTI2LTA4LTA5VDA1OjMxOjE3LjQzMVoiLCJtYXhEZXZpY2VzIjozLCJmZWF0dXJlcyI6WyJhbGwiXX0.-6s_70J6AaORk94Brj6IvozdcBf6JGBXnPfmAoMJpolUPCfTjtGcIo0qvA3EImNoUHl1WkOx4GlFFv1OqHnNDg"
+}

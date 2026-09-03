@@ -1,0 +1,43 @@
+# Obsidian 配置包 .gitignore
+# 原则：只追踪配置与文档；插件本体、运行时文件、任何笔记一律不入库
+
+# --- 全部忽略，然后白名单放行（防笔记泄漏的写法）---
+/*
+
+# 允许入库
+!.gitignore
+!README.md
+!ATTRIBUTION.md
+!LICENSE
+!/docs/
+!/scripts/
+!/templates/
+!/.obsidian/
+.obsidian/*
+!.obsidian/appearance.json
+!.obsidian/community-plugins.json
+!.obsidian/core-plugins.json
+!.obsidian/graph.json
+!.obsidian/hotkeys.json
+!.obsidian/snippets/
+!.obsidian/plugins/
+# 插件目录内只排除本体文件，data.json 设置默认放行
+
+# 插件本体与运行时文件（即使被复制进来也不入库）
+.obsidian/workspace.json
+.obsidian/workspace-*.json
+.obsidian/themes/
+.obsidian/app.json
+.obsidian/bookmarks.json
+.obsidian/plugins/*/main.js
+.obsidian/plugins/*/styles.css
+.obsidian/plugins/*/manifest.json
+.obsidian/plugins/*/data.json.backup
+
+# 大文件 / 敏感信息
+*.zip
+*.rar
+*.key
+*.pem
+.env*
+*.log

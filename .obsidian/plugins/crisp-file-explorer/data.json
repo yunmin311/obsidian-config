@@ -1,0 +1,284 @@
+{
+  "includeFolders": true,
+  "openOnDragRelease": true,
+  "soundEnabled": false,
+  "soundStyle": "soft",
+  "pitchScaleEnabled": false,
+  "releaseSoundEnabled": false,
+  "orbStyle": "default",
+  "todayTrailEnabled": true,
+  "frequentMagnetsEnabled": true,
+  "autoExpandFoldersOnDrag": true,
+  "activity": {
+    "todayKey": "2026-09-03",
+    "todayPaths": [
+      "BASE.base",
+      "inbox.md",
+      "色彩系统预览.md",
+      "README.md",
+      "docs/css-guide.md",
+      "docs/plugins.md",
+      "homepage.md"
+    ],
+    "pinnedPaths": [],
+    "fileStats": {
+      "homepage.md": {
+        "count": 69,
+        "lastOpened": 1788425666824
+      },
+      "inbox.md": {
+        "count": 3,
+        "lastOpened": 1788422271577
+      },
+      "色彩系统预览.md": {
+        "count": 2,
+        "lastOpened": 1788425660907
+      },
+      "BASE.base": {
+        "count": 22,
+        "lastOpened": 1788421199080
+      },
+      "year2 final2/CPT103/1 Introduction-spring lect 1.md": {
+        "count": 1,
+        "lastOpened": 1788344449114
+      },
+      "project/_Project Index.md": {
+        "count": 2,
+        "lastOpened": 1788343470573
+      },
+      "project/12WY2 项目执行计划.md": {
+        "count": 3,
+        "lastOpened": 1788343468068
+      },
+      "AI治理系统/00-从这里开始.md": {
+        "count": 3,
+        "lastOpened": 1788342724671
+      },
+      "programming study/algorithms/_Algorithms MOC.md": {
+        "count": 1,
+        "lastOpened": 1788342717924
+      },
+      "Daily Desk Examples/晨光花树.md": {
+        "count": 1,
+        "lastOpened": 1788342439392
+      },
+      "English Learning/Daily Output/_Daily Output Index.md": {
+        "count": 2,
+        "lastOpened": 1788333641100
+      },
+      "year2 final2/CPT102/4并查集与二叉堆（Week 8）.md": {
+        "count": 1,
+        "lastOpened": 1788328733241
+      },
+      "year2 final2/CPT102/2线性数据结构与递归（Week 3-4）.md": {
+        "count": 1,
+        "lastOpened": 1788328723530
+      },
+      "clutter/杂乱/仿生阅读（Bionic Reading）全面详解.md": {
+        "count": 1,
+        "lastOpened": 1788328712764
+      },
+      "English Learning/Daily Output/speaking.md": {
+        "count": 1,
+        "lastOpened": 1788322060840
+      },
+      "Linear Calendar Events/丙午.md": {
+        "count": 1,
+        "lastOpened": 1788322056605
+      },
+      "Linear Calendar Events/12weeks 1.md": {
+        "count": 1,
+        "lastOpened": 1788322055320
+      },
+      "year2 final2/CPT103/2 SQL data and table w2-3.md": {
+        "count": 1,
+        "lastOpened": 1788243273666
+      },
+      "Linear Calendar Events/_Linear Calendar Index.md": {
+        "count": 1,
+        "lastOpened": 1788239249654
+      },
+      "clutter/tem/课程.md": {
+        "count": 1,
+        "lastOpened": 1788228636463
+      },
+      "clutter/tem/未命名 1.md": {
+        "count": 2,
+        "lastOpened": 1788226307796
+      },
+      "Compound Interest/exercise/《如何用2天休息够7天》.md": {
+        "count": 3,
+        "lastOpened": 1786533367455
+      },
+      "Compound Interest/exercise/未命名.md": {
+        "count": 2,
+        "lastOpened": 1786533332913
+      },
+      "Compound Interest/write/未命名/1.md": {
+        "count": 1,
+        "lastOpened": 1786533258070
+      },
+      "Compound Interest/exercise/日本顶级耐力选手可迁移底层逻辑.md": {
+        "count": 1,
+        "lastOpened": 1786533245119
+      },
+      "Compound Interest/exercise/尺侧腕伸肌  屈肌肌腱病.md": {
+        "count": 1,
+        "lastOpened": 1786533244115
+      },
+      "Compound Interest/exercise/全身拉伸与恢复完整方案.md": {
+        "count": 1,
+        "lastOpened": 1786533243369
+      },
+      "programming study/000_Index.md": {
+        "count": 1,
+        "lastOpened": 1786242764769
+      },
+      "Compound Interest/write/book notes/笔记/程序员修炼之道_第2版_高密度工程化笔记.md": {
+        "count": 1,
+        "lastOpened": 1785641727317
+      },
+      "creative-os-notes/知识库/全栈基础/16-异步与事件循环.md": {
+        "count": 1,
+        "lastOpened": 1785636125636
+      },
+      "operation-note/写作规矩.md": {
+        "count": 1,
+        "lastOpened": 1785636096556
+      },
+      "AI治理系统/skills/global-ai-dialogue-governor/references/output-engineering.md": {
+        "count": 2,
+        "lastOpened": 1785636082925
+      },
+      "AI治理系统/skills/global-ai-dialogue-governor/references/governance-model.md": {
+        "count": 1,
+        "lastOpened": 1785636082025
+      },
+      "AI治理系统/skills/global-ai-dialogue-governor/references/correction-prompts.md": {
+        "count": 1,
+        "lastOpened": 1785636080928
+      },
+      "AI治理系统/skills/global-ai-dialogue-governor/references/protocols.md": {
+        "count": 1,
+        "lastOpened": 1785636079541
+      },
+      "AI治理系统/skills/global-ai-dialogue-governor/references/html-output-governance.md": {
+        "count": 1,
+        "lastOpened": 1785636078788
+      },
+      "AI治理系统/skills/global-ai-dialogue-governor/references/templates.md": {
+        "count": 1,
+        "lastOpened": 1785636076827
+      },
+      "AI治理系统/00-先读我-明日启动说明.md": {
+        "count": 1,
+        "lastOpened": 1785636058985
+      },
+      "AI治理系统/00-实施计划-纠偏与输出工程.md": {
+        "count": 1,
+        "lastOpened": 1785636058463
+      },
+      "AI治理系统/00-实施计划.md": {
+        "count": 1,
+        "lastOpened": 1785636051833
+      },
+      "clutter/tem/Clash使用与Codex网络稳定手册.md": {
+        "count": 1,
+        "lastOpened": 1785331829228
+      },
+      "clutter/tem/cc.md": {
+        "count": 1,
+        "lastOpened": 1785331401611
+      },
+      "clutter/tem/102.md": {
+        "count": 1,
+        "lastOpened": 1785331400863
+      },
+      "clutter/tem/Mock Test.md": {
+        "count": 2,
+        "lastOpened": 1785331399934
+      },
+      "clutter/tem/ws.md": {
+        "count": 1,
+        "lastOpened": 1785331399249
+      },
+      "clutter/tem/109.md": {
+        "count": 1,
+        "lastOpened": 1785331398466
+      },
+      "clutter/tem/未命名.md": {
+        "count": 1,
+        "lastOpened": 1785331393643
+      },
+      "creative-os-notes/00-目录.md": {
+        "count": 1,
+        "lastOpened": 1785164041105
+      },
+      "2026-07-25.md": {
+        "count": 1,
+        "lastOpened": 1785080247408
+      },
+      "clutter/test/excalidraw 26-07-26 11.32.37.ex": {
+        "count": 5,
+        "lastOpened": 1785080223677
+      },
+      "clutter/test/未命名.md": {
+        "count": 3,
+        "lastOpened": 1785080011477
+      },
+      "excalidraw 26-07-26 11.32.37.ex": {
+        "count": 1,
+        "lastOpened": 1785079957880
+      },
+      "Untitled.md": {
+        "count": 1,
+        "lastOpened": 1785079569360
+      },
+      "clutter/test/Obsidian Personal Knowledge System Concept.md": {
+        "count": 1,
+        "lastOpened": 1784905866737
+      },
+      "English Learning/writing part/book/剑桥雅思写作.md": {
+        "count": 3,
+        "lastOpened": 1784339127480
+      },
+      "07-事故档案.md": {
+        "count": 1,
+        "lastOpened": 1784339070881
+      },
+      "04-Git-和你的后悔药.md": {
+        "count": 1,
+        "lastOpened": 1784339063148
+      },
+      "02-代码写完了不等于跑通了.md": {
+        "count": 2,
+        "lastOpened": 1784274370143
+      },
+      "01-系统是怎么分层的.md": {
+        "count": 1,
+        "lastOpened": 1784274353045
+      },
+      "00-目录.md": {
+        "count": 1,
+        "lastOpened": 1784127429365
+      },
+      "05-六个对话为什么会互相污染.md": {
+        "count": 1,
+        "lastOpened": 1784127411964
+      },
+      "docs/plugins.md": {
+        "count": 2,
+        "lastOpened": 1788425663731
+      },
+      "docs/css-guide.md": {
+        "count": 2,
+        "lastOpened": 1788425662971
+      },
+      "README.md": {
+        "count": 2,
+        "lastOpened": 1788425662397
+      }
+    }
+  },
+  "licenseCode": "eyJwcm9kdWN0IjoiQ3Jpc3AgU3VpdGUiLCJsaWNlbnNlSWQiOiJDUklTUC1NVEpOUk82ViIsInVzZXJOYW1lIjoieXVubWluIiwiaXNzdWVkQXQiOiIyMDI2LTA5LTAyVDA1OjMxOjE3LjQzMVoiLCJleHBpcmVzQXQiOiIyMTI2LTA4LTA5VDA1OjMxOjE3LjQzMVoiLCJtYXhEZXZpY2VzIjozLCJmZWF0dXJlcyI6WyJhbGwiXX0.-6s_70J6AaORk94Brj6IvozdcBf6JGBXnPfmAoMJpolUPCfTjtGcIo0qvA3EImNoUHl1WkOx4GlFFv1OqHnNDg"
+}

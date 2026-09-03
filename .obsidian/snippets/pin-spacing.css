@@ -1,0 +1,26 @@
+/* Pin 间距修复 - 文件夹 pinned 间距完全不变，仅文件 pinned 加大 */
+
+/* 基础：文件和文件夹默认间距一致 */
+.nav-file-title::before,
+.nav-folder-title::before {
+  margin-right: 8px !important;
+  font-size: 12px !important;
+  width: 16px !important;
+  text-align: center !important;
+}
+
+/* 仅文件 pinned 加大间距 */
+.nav-file-title.is-pinned::before,
+.nav-file-title.mod-pinned::before,
+.nav-file-title[aria-pinned="true"]::before {
+  margin-right: 12px !important;
+  color: var(--text-accent) !important;
+}
+
+/* 文件夹 pinned 强制保持默认间距，不加大 */
+.nav-folder-title.is-pinned::before,
+.nav-folder-title.mod-pinned::before,
+.nav-folder-title[aria-pinned="true"]::before {
+  margin-right: 8px !important;
+  color: var(--text-muted) !important;
+}
