@@ -11,7 +11,7 @@ Obsidian 外壳配置包：主题、CSS 片段、插件设置与说明文档。*
 | 主题 | Border（`cssTheme: "Border"`，基础模式 moonstone） |
 | 配色 | 灰青蓝：浅色 `#5A7F9A` / 深色 `#6B9FE8`，深色背景 `#0A0E1A` |
 | 大 CSS | `baseline-optimized.minimal.active.css` + `border-polished.active.css`（均为 letschips 作品，勿改） |
-| 小片段 | `pin-spacing.css` / `hide-editing-toolbar.css` / `hide-embed-titles.css`（可按需改） |
+| 覆盖片段 | `blue-gray-dark-fix.css`（暖色→蓝灰）+ `graph-blue-gray.css`（关系图蓝灰），自写可改 |
 | 字体 | 界面：方正屏显雅宋简体 · 正文：iA Writer Quattro S · 等宽：Fira Code |
 | 插件 | 24 个已安装（crisp 系列 9 个通过 BRAT 安装），18 个有自定义设置 |
 
@@ -23,7 +23,7 @@ Obsidian 外壳配置包：主题、CSS 片段、插件设置与说明文档。*
   community-plugins.json 已启用插件清单
   graph.json             关系图配色
   hotkeys.json           快捷键
-  snippets/              5 个 CSS 片段（见 docs/css-guide.md）
+  snippets/              7 个 CSS 片段（见 docs/css-guide.md）
   plugins/*/data.json    各插件设置（见 docs/plugins.md）
 docs/
   css-guide.md           CSS 外壳怎么改（逐文件说明）

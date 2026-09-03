@@ -1,0 +1,36 @@
+/* ============================================================
+   graph-blue-gray.css — 关系图蓝灰化（自写，可改）
+   作用：覆盖 border-polished.active.css 第 8 节的硬编码
+         graph 配色（绿节点/红聚焦/紫标签/橙附件）。
+   启用顺序：必须排在 border-polished.active 之后。
+   ============================================================ */
+
+/* ---------- 变量：想调色只改这里 ---------- */
+body {
+  --bgg-node: #5A7F9A;          /* 普通节点（浅） */
+  --bgg-node-focused: #205EA6;  /* 聚焦节点 */
+  --bgg-node-tag: #24837B;      /* 标签节点（青，与蓝区分） */
+  --bgg-node-attachment: #8A9BC0; /* 附件节点（蓝灰） */
+}
+
+body.theme-dark {
+  --bgg-node: #6B9FE8;
+  --bgg-node-focused: #89BDF4;
+  --bgg-node-tag: #86DFE2;
+  --bgg-node-attachment: #587DA8;
+}
+
+/* ---------- 应用（同名选择器，靠加载顺序覆盖） ---------- */
+.graph-view.color-fill {
+  color: var(--bgg-node);
+}
+.graph-view.color-fill-focused {
+  color: var(--bgg-node-focused);
+}
+.graph-view.color-fill-tag {
+  color: var(--bgg-node-tag);
+}
+.graph-view.color-fill-attachment {
+  color: var(--bgg-node-attachment);
+}
+/* 未解析节点保持灰色，不覆盖 */

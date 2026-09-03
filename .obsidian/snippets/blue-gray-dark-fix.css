@@ -1,0 +1,28 @@
+/* ============================================================
+   blue-gray-dark-fix.css — 蓝灰化覆盖层（自写，可改）
+   作用：覆盖 letschips CSS 中硬编码的暖色 --hv-* 变量。
+   本文件只在外部覆盖变量，不修改 letschips 原文件。
+   启用顺序：必须排在 border-polished.active 之后。
+   ============================================================ */
+
+/* ---------- 浅色模式：暖橙棕 → 蓝灰 ---------- */
+body {
+  --hv-accent-primary: #5A7F9A;              /* 原 #D87757 暖橙 */
+  --hv-accent-primary-strong: #4A6F8A;       /* 原 #C45F40 */
+  --hv-color-emphasis: #4A6F8A;              /* 原 #B45309 暖橙棕 */
+  --hv-inline-code-color: #4A6F8A;
+  --hv-inline-code-bg: rgba(90, 127, 154, 0.08);
+  --hv-selection-bg: rgba(90, 127, 154, 0.30); /* 原 rgba(216,119,87) 暖橙 */
+  --hv-mark-bg: rgba(107, 159, 232, 0.35);     /* 原 rgba(57,212,83) 亮绿 */
+}
+
+/* ---------- 深色模式：暖金 → 蓝 ---------- */
+.theme-dark {
+  --hv-accent-primary: #6B9FE8;
+  --hv-accent-primary-strong: #89BDF4;
+  --hv-color-emphasis: #6BA3C8;              /* 原 #E2A336 暖金 */
+  --hv-inline-code-color: #6BA3C8;
+  --hv-inline-code-bg: rgba(107, 159, 232, 0.12);
+  --hv-codeblock-bg: #131926;                /* 原 #1c1e29 中性灰 */
+  --hv-selection-bg: rgba(107, 159, 232, 0.28);
+}
