@@ -2,6 +2,8 @@
 
 Obsidian 外壳配置包：主题、CSS 片段、插件设置与说明文档。**不含任何笔记内容**。
 
+配色为自制**灰青蓝蓝灰体系**：浅色主蓝 `#5A7F9A` / 深色主蓝 `#6B9FE8`，深色模式围绕色相 215° 的蓝黑梯子（纯净背景 `#0A0E1A`，无纹理），关系图、行内代码、选中、高亮全部并入蓝灰系。实际渲染效果见 [docs/色彩系统预览.md](docs/色彩系统预览.md)（在 Obsidian 中打开可实时查看浅/深两版）。
+
 正式项目地址：`E:\1project\obsidian-config`（与日常使用的 vault 分离；vault 只作为配置来源）。
 
 ## 当前配置栈
@@ -9,7 +11,7 @@ Obsidian 外壳配置包：主题、CSS 片段、插件设置与说明文档。*
 | 层 | 内容 |
 |---|---|
 | 主题 | Border（`cssTheme: "Border"`，基础模式 moonstone） |
-| 配色 | 灰青蓝：浅色 `#5A7F9A` / 深色 `#6B9FE8`，深色背景 `#0A0E1A` |
+| 配色 | 灰青蓝：浅色 `#5A7F9A` / 深色 `#6B9FE8`；深色面板为蓝黑梯子（见 [docs/css-guide.md](docs/css-guide.md) 定稿表） |
 | 大 CSS | `baseline-optimized.minimal.active.css` + `border-polished.active.css`（均为 letschips 作品，勿改） |
 | 覆盖片段 | `blue-gray-dark-fix.css`（暖色→蓝灰）+ `graph-blue-gray.css`（关系图蓝灰），自写可改 |
 | 字体 | 界面：方正屏显雅宋简体 · 正文：iA Writer Quattro S · 等宽：Fira Code |
@@ -26,8 +28,9 @@ Obsidian 外壳配置包：主题、CSS 片段、插件设置与说明文档。*
   snippets/              7 个 CSS 片段（见 docs/css-guide.md）
   plugins/*/data.json    各插件设置（见 docs/plugins.md）
 docs/
-  css-guide.md           CSS 外壳怎么改（逐文件说明）
+  css-guide.md           CSS 外壳怎么改（逐文件说明）+ 深色蓝灰色板定稿
   plugins.md             插件设置方式 + 来源链接
+  色彩系统预览.md         色彩系统测试页（放进 vault 根目录可实时预览）
 scripts/
   install.ps1            一键安装：把配置装进指定 vault（自动备份现有配置）
 templates/README.md      5 个 Templater 模板参考（日记/周记/项目/文献/会议）
