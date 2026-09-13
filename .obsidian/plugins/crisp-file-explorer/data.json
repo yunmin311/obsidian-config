@@ -10,33 +10,264 @@
   "frequentMagnetsEnabled": true,
   "autoExpandFoldersOnDrag": true,
   "activity": {
-    "todayKey": "2026-09-03",
+    "todayKey": "2026-09-13",
     "todayPaths": [
-      "BASE.base",
-      "inbox.md",
-      "色彩系统预览.md",
-      "README.md",
-      "docs/css-guide.md",
-      "docs/plugins.md",
-      "homepage.md"
+      "English Learning/online class/reading.md",
+      "clutter/picture/THE_POLYMATH_FIELD_GUIDE_US_Letter.pdf",
+      "clutter/texture-preview/04-matte-depth.png",
+      "clutter/texture-preview/03-linen.png",
+      "clutter/texture-preview/02-laid.png",
+      "clutter/texture-preview/01-matte.png",
+      "clutter/texture-preview/06-wove.png",
+      "clutter/texture-preview/05-fiber.png",
+      "clutter/texture-preview/08-felt.png",
+      "clutter/texture-preview/07-laid2.png",
+      "YEAR3/COS202_Week01_Delivery/Week01/Lecture 01 - Introduction to Signals and Systems.md",
+      "homepage.md",
+      "Compound Interest/write/未命名/1.md",
+      "Compound Interest/write/未命名/未命名.md"
     ],
     "pinnedPaths": [],
     "fileStats": {
-      "homepage.md": {
-        "count": 69,
-        "lastOpened": 1788425666824
-      },
-      "inbox.md": {
+      "Compound Interest/write/未命名/1.md": {
         "count": 3,
-        "lastOpened": 1788422271577
+        "lastOpened": 1789312543814
       },
-      "色彩系统预览.md": {
+      "homepage.md": {
+        "count": 90,
+        "lastOpened": 1789308946356
+      },
+      "YEAR3/COS202_Week01_Delivery/Week01/Lecture 01 - Introduction to Signals and Systems.md": {
+        "count": 4,
+        "lastOpened": 1789305117218
+      },
+      "clutter/texture-preview/07-laid2.png": {
+        "count": 3,
+        "lastOpened": 1789304532501
+      },
+      "clutter/texture-preview/08-felt.png": {
         "count": 2,
-        "lastOpened": 1788425660907
+        "lastOpened": 1789304529421
+      },
+      "clutter/texture-preview/05-fiber.png": {
+        "count": 1,
+        "lastOpened": 1789304521225
+      },
+      "clutter/texture-preview/06-wove.png": {
+        "count": 1,
+        "lastOpened": 1789304519665
+      },
+      "clutter/texture-preview/01-matte.png": {
+        "count": 3,
+        "lastOpened": 1789304484522
+      },
+      "clutter/texture-preview/02-laid.png": {
+        "count": 3,
+        "lastOpened": 1789303934929
+      },
+      "clutter/texture-preview/03-linen.png": {
+        "count": 3,
+        "lastOpened": 1789303932296
+      },
+      "clutter/texture-preview/04-matte-depth.png": {
+        "count": 2,
+        "lastOpened": 1789303922162
+      },
+      "clutter/picture/THE_POLYMATH_FIELD_GUIDE_US_Letter.pdf": {
+        "count": 1,
+        "lastOpened": 1789303893808
+      },
+      "English Learning/online class/reading.md": {
+        "count": 1,
+        "lastOpened": 1789266163526
+      },
+      "YEAR3/CSI201_Week01_Delivery/Week01/Lecture 01 - Introduction to the Modern Internet.md": {
+        "count": 5,
+        "lastOpened": 1789218916265
+      },
+      "YEAR3/CSI201_Week01_Delivery/Week01/assets/07-llm-request-path.svg": {
+        "count": 1,
+        "lastOpened": 1789218913456
+      },
+      "YEAR3/CSI201_Week01_Delivery/README.md": {
+        "count": 3,
+        "lastOpened": 1789178937187
+      },
+      "YEAR3/SOE205_Week01_Delivery/Week01/Lecture 01 - Introduction, Hardware and Software.md": {
+        "count": 2,
+        "lastOpened": 1789177696365
+      },
+      "YEAR3/COS202_Week01_Delivery/Week01/Lecture 02 - Introduction to Signals Part 1.md": {
+        "count": 2,
+        "lastOpened": 1789177692163
+      },
+      "YEAR3/EEE211_Week01_Delivery/Week01/Lecture 01 - Semiconductor Materials and Diodes.md": {
+        "count": 2,
+        "lastOpened": 1789177669490
+      },
+      "YEAR3/SOE205_Week01_Delivery/Week01/Lecture 02 - Mathematics for Computer Graphics.md": {
+        "count": 1,
+        "lastOpened": 1789105290689
+      },
+      "YEAR3/EEE211_Week01_Delivery/Week01/Tutorial 01 - Diode Circuit Analysis.md": {
+        "count": 1,
+        "lastOpened": 1789105255750
+      },
+      "OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL/SOP_WEEKLY_CONTINUATION.md": {
+        "count": 1,
+        "lastOpened": 1789092963783
+      },
+      "clutter/杂乱/tenet.md": {
+        "count": 1,
+        "lastOpened": 1789092619246
+      },
+      "clutter/test/Obsidian Personal Knowledge System Concept.md": {
+        "count": 2,
+        "lastOpened": 1789092595936
+      },
+      "clutter/test/Clash使用与Codex网络稳定手册.md": {
+        "count": 2,
+        "lastOpened": 1789092576797
+      },
+      "clutter/tem/课程.md": {
+        "count": 2,
+        "lastOpened": 1789092570740
+      },
+      "clutter/tem/未命名.md": {
+        "count": 2,
+        "lastOpened": 1789092568413
+      },
+      "clutter/tem/Mock Test.md": {
+        "count": 3,
+        "lastOpened": 1789092565419
+      },
+      "clutter/tem/ws.md": {
+        "count": 2,
+        "lastOpened": 1789092564181
+      },
+      "clutter/OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL_FROZEN/OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL/HANDOFF_PROMPTS.md": {
+        "count": 1,
+        "lastOpened": 1789091806980
+      },
+      "clutter/OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL_FROZEN/OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL/Obsidian_Course_Notes_Standard_v2.1.md": {
+        "count": 1,
+        "lastOpened": 1789091802224
+      },
+      "clutter/OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL_FROZEN/OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL/README.md": {
+        "count": 1,
+        "lastOpened": 1789091798983
+      },
+      "clutter/OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL_FROZEN/OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL/SKILL.md": {
+        "count": 1,
+        "lastOpened": 1789091794066
+      },
+      "clutter/OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL_FROZEN/OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL/TEMPLATE.md": {
+        "count": 2,
+        "lastOpened": 1789091790317
+      },
+      "clutter/OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL_FROZEN/OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL/SOP_WEEKLY_CONTINUATION.md": {
+        "count": 1,
+        "lastOpened": 1789091788375
+      },
+      "project/creative-os-notes/98-写作规矩.md": {
+        "count": 1,
+        "lastOpened": 1789051558125
+      },
+      "project/creative-os-notes/01-系统是怎么分层的.md": {
+        "count": 1,
+        "lastOpened": 1789051555842
+      },
+      "project/creative-os-notes/00-目录.md": {
+        "count": 2,
+        "lastOpened": 1789051554981
+      },
+      "YEAR3 OBS/EEE211/Week01/Lecture 01 - Semiconductor Materials and Diodes.md": {
+        "count": 1,
+        "lastOpened": 1789024151582
+      },
+      "YEAR3 OBS 1/CSI201_Lecture_1_Obsidian_v5/CSI201 Lecture 1 - Introduction to the Modern Internet v5.md": {
+        "count": 1,
+        "lastOpened": 1789024145236
+      },
+      "YEAR3 OBS/CSI201_Lecture_1_Obsidian_v5/CSI201 Lecture 1 - Introduction to the Modern Internet v5.md": {
+        "count": 1,
+        "lastOpened": 1789024125644
+      },
+      "clutter/test/色彩系统预览.md": {
+        "count": 6,
+        "lastOpened": 1788965668830
+      },
+      "project/github项目/想法.md": {
+        "count": 1,
+        "lastOpened": 1788965390515
+      },
+      "project/github项目/lut/np3或lut.md": {
+        "count": 1,
+        "lastOpened": 1788965384696
+      },
+      "project/github项目/Lumenflow/Project Log — lumenflow.md": {
+        "count": 1,
+        "lastOpened": 1788965373556
+      },
+      "project/github项目/heatmap/Project Log — heatmap.md": {
+        "count": 1,
+        "lastOpened": 1788965368416
+      },
+      "project/github项目/heatmap/Heatmap Vibe 仓库全面知识梳理.md": {
+        "count": 1,
+        "lastOpened": 1788965358154
+      },
+      "project/12WY2 项目执行计划.md": {
+        "count": 5,
+        "lastOpened": 1788965352084
+      },
+      "clutter/test/网络故障排查手册-Codex-ChatGPT.md": {
+        "count": 3,
+        "lastOpened": 1788965332748
+      },
+      "project/AI治理系统/00-从这里开始.md": {
+        "count": 5,
+        "lastOpened": 1788965213894
       },
       "BASE.base": {
-        "count": 22,
-        "lastOpened": 1788421199080
+        "count": 24,
+        "lastOpened": 1788965180580
+      },
+      "inbox.md": {
+        "count": 8,
+        "lastOpened": 1788965179139
+      },
+      "project/AI治理系统/archive/v1/project-records/00-Obsidian知识库索引.md": {
+        "count": 1,
+        "lastOpened": 1788964995517
+      },
+      "project/AI治理系统/archive/v1/project-records/00-HTML纠偏系统设计说明.md": {
+        "count": 1,
+        "lastOpened": 1788964993726
+      },
+      "programming study/000_Index.md": {
+        "count": 2,
+        "lastOpened": 1788527348322
+      },
+      "clutter/Linear Calendar Events/丙午.md": {
+        "count": 2,
+        "lastOpened": 1788527334519
+      },
+      "clutter/Linear Calendar Events/_Linear Calendar Index.md": {
+        "count": 2,
+        "lastOpened": 1788527332654
+      },
+      "clutter/Linear Calendar Events/birthday.md": {
+        "count": 1,
+        "lastOpened": 1788527331454
+      },
+      "clutter/Linear Calendar Events/12weeks 1.md": {
+        "count": 2,
+        "lastOpened": 1788527330621
+      },
+      "project/AI治理系统/AGENTS.md": {
+        "count": 1,
+        "lastOpened": 1788527306405
       },
       "year2 final2/CPT103/1 Introduction-spring lect 1.md": {
         "count": 1,
@@ -46,21 +277,9 @@
         "count": 2,
         "lastOpened": 1788343470573
       },
-      "project/12WY2 项目执行计划.md": {
-        "count": 3,
-        "lastOpened": 1788343468068
-      },
-      "AI治理系统/00-从这里开始.md": {
-        "count": 3,
-        "lastOpened": 1788342724671
-      },
       "programming study/algorithms/_Algorithms MOC.md": {
         "count": 1,
         "lastOpened": 1788342717924
-      },
-      "Daily Desk Examples/晨光花树.md": {
-        "count": 1,
-        "lastOpened": 1788342439392
       },
       "English Learning/Daily Output/_Daily Output Index.md": {
         "count": 2,
@@ -82,25 +301,9 @@
         "count": 1,
         "lastOpened": 1788322060840
       },
-      "Linear Calendar Events/丙午.md": {
-        "count": 1,
-        "lastOpened": 1788322056605
-      },
-      "Linear Calendar Events/12weeks 1.md": {
-        "count": 1,
-        "lastOpened": 1788322055320
-      },
       "year2 final2/CPT103/2 SQL data and table w2-3.md": {
         "count": 1,
         "lastOpened": 1788243273666
-      },
-      "Linear Calendar Events/_Linear Calendar Index.md": {
-        "count": 1,
-        "lastOpened": 1788239249654
-      },
-      "clutter/tem/课程.md": {
-        "count": 1,
-        "lastOpened": 1788228636463
       },
       "clutter/tem/未命名 1.md": {
         "count": 2,
@@ -114,10 +317,6 @@
         "count": 2,
         "lastOpened": 1786533332913
       },
-      "Compound Interest/write/未命名/1.md": {
-        "count": 1,
-        "lastOpened": 1786533258070
-      },
       "Compound Interest/exercise/日本顶级耐力选手可迁移底层逻辑.md": {
         "count": 1,
         "lastOpened": 1786533245119
@@ -130,61 +329,53 @@
         "count": 1,
         "lastOpened": 1786533243369
       },
-      "programming study/000_Index.md": {
-        "count": 1,
-        "lastOpened": 1786242764769
-      },
       "Compound Interest/write/book notes/笔记/程序员修炼之道_第2版_高密度工程化笔记.md": {
         "count": 1,
         "lastOpened": 1785641727317
       },
-      "creative-os-notes/知识库/全栈基础/16-异步与事件循环.md": {
+      "project/creative-os-notes/知识库/全栈基础/16-异步与事件循环.md": {
         "count": 1,
         "lastOpened": 1785636125636
       },
-      "operation-note/写作规矩.md": {
+      "project/operation-note/写作规矩.md": {
         "count": 1,
         "lastOpened": 1785636096556
       },
-      "AI治理系统/skills/global-ai-dialogue-governor/references/output-engineering.md": {
+      "project/AI治理系统/skills/global-ai-dialogue-governor/references/output-engineering.md": {
         "count": 2,
         "lastOpened": 1785636082925
       },
-      "AI治理系统/skills/global-ai-dialogue-governor/references/governance-model.md": {
+      "project/AI治理系统/skills/global-ai-dialogue-governor/references/governance-model.md": {
         "count": 1,
         "lastOpened": 1785636082025
       },
-      "AI治理系统/skills/global-ai-dialogue-governor/references/correction-prompts.md": {
+      "project/AI治理系统/skills/global-ai-dialogue-governor/references/correction-prompts.md": {
         "count": 1,
         "lastOpened": 1785636080928
       },
-      "AI治理系统/skills/global-ai-dialogue-governor/references/protocols.md": {
+      "project/AI治理系统/skills/global-ai-dialogue-governor/references/protocols.md": {
         "count": 1,
         "lastOpened": 1785636079541
       },
-      "AI治理系统/skills/global-ai-dialogue-governor/references/html-output-governance.md": {
+      "project/AI治理系统/skills/global-ai-dialogue-governor/references/html-output-governance.md": {
         "count": 1,
         "lastOpened": 1785636078788
       },
-      "AI治理系统/skills/global-ai-dialogue-governor/references/templates.md": {
+      "project/AI治理系统/skills/global-ai-dialogue-governor/references/templates.md": {
         "count": 1,
         "lastOpened": 1785636076827
       },
-      "AI治理系统/00-先读我-明日启动说明.md": {
+      "project/AI治理系统/00-先读我-明日启动说明.md": {
         "count": 1,
         "lastOpened": 1785636058985
       },
-      "AI治理系统/00-实施计划-纠偏与输出工程.md": {
+      "project/AI治理系统/00-实施计划-纠偏与输出工程.md": {
         "count": 1,
         "lastOpened": 1785636058463
       },
-      "AI治理系统/00-实施计划.md": {
+      "project/AI治理系统/00-实施计划.md": {
         "count": 1,
         "lastOpened": 1785636051833
-      },
-      "clutter/tem/Clash使用与Codex网络稳定手册.md": {
-        "count": 1,
-        "lastOpened": 1785331829228
       },
       "clutter/tem/cc.md": {
         "count": 1,
@@ -194,25 +385,9 @@
         "count": 1,
         "lastOpened": 1785331400863
       },
-      "clutter/tem/Mock Test.md": {
-        "count": 2,
-        "lastOpened": 1785331399934
-      },
-      "clutter/tem/ws.md": {
-        "count": 1,
-        "lastOpened": 1785331399249
-      },
       "clutter/tem/109.md": {
         "count": 1,
         "lastOpened": 1785331398466
-      },
-      "clutter/tem/未命名.md": {
-        "count": 1,
-        "lastOpened": 1785331393643
-      },
-      "creative-os-notes/00-目录.md": {
-        "count": 1,
-        "lastOpened": 1785164041105
       },
       "2026-07-25.md": {
         "count": 1,
@@ -233,10 +408,6 @@
       "Untitled.md": {
         "count": 1,
         "lastOpened": 1785079569360
-      },
-      "clutter/test/Obsidian Personal Knowledge System Concept.md": {
-        "count": 1,
-        "lastOpened": 1784905866737
       },
       "English Learning/writing part/book/剑桥雅思写作.md": {
         "count": 3,
@@ -266,17 +437,9 @@
         "count": 1,
         "lastOpened": 1784127411964
       },
-      "docs/plugins.md": {
-        "count": 2,
-        "lastOpened": 1788425663731
-      },
-      "docs/css-guide.md": {
-        "count": 2,
-        "lastOpened": 1788425662971
-      },
-      "README.md": {
-        "count": 2,
-        "lastOpened": 1788425662397
+      "Compound Interest/write/未命名/未命名.md": {
+        "count": 1,
+        "lastOpened": 1789312546171
       }
     }
   },

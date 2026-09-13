@@ -65,7 +65,7 @@
   "Appearance-light@@color-activated-tab-header-underline-light": "transparent",
   "Appearance-light@@workspace-divider-transparent-light": true,
   "Appearance-dark@@card-layout-open-dark": false,
-  "Appearance-dark@@theme-dark-style-select": "theme-dark-background-default",
+  "Appearance-dark@@theme-dark-style-select": "theme-dark-background-black",
   "Appearance-dark@@accent-dark": "#6B9FE8",
   "Appearance-dark@@accent-color-override-dark": false,
   "Appearance-dark@@color-red-rgb@@dark": "#FF7881",
@@ -135,5 +135,7 @@
   "Editor@@table-width": 100,
   "Editor@@table-header-color@@light": "#127A4D",
   "Editor@@table-header-color@@dark": "#7CD37C",
-  "Editor@@callout-style-select": "callout-style-3"
+  "Editor@@callout-style-select": "callout-style-3",
+  "dense-reading@@dense-width": "dense-w-custom",
+  "dense-reading@@dense-width-value": 96
 }

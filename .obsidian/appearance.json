@@ -1,15 +1,16 @@
 {
   "cssTheme": "Border",
-  "theme": "moonstone",
+  "theme": "obsidian",
   "enabledCssSnippets": [
     "hide-embed-titles",
     "baseline-optimized.minimal.active",
-    "baseline-translucent-window.active",
     "pin-spacing",
     "hide-editing-toolbar",
     "border-polished.active",
     "blue-gray-dark-fix",
-    "graph-blue-gray"
+    "graph-blue-gray",
+    "dense-reading",
+    "dark-paper-texture"
   ],
   "accentColor": "",
   "interfaceFontFamily": "方正屏显雅宋简体",

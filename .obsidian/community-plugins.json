@@ -1,6 +1,5 @@
 [
   "editing-toolbar",
-  "calendar",
   "obsidian-plugin-update-tracker",
   "obsidian-git",
   "templater-obsidian",
@@ -14,14 +13,13 @@
   "crisp-focus",
   "obsidian42-brat",
   "crisp-reading-rail",
-  "crisp-annotations",
-  "crisp-asr",
   "crisp-base",
   "crisp-recall",
   "crisp-visual",
-  "contribution-graph",
   "crisp-dsh",
   "widgets",
-  "realclaudian",
-  "flexplorer"
+  "flexplorer",
+  "calendar",
+  "immersive-folder",
+  "toolbar-pin-toggle"
 ]

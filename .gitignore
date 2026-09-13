@@ -22,6 +22,9 @@
 !.obsidian/snippets/
 !.obsidian/plugins/
 # 插件目录内只排除本体文件，data.json 设置默认放行
+# 例外：自研插件整体入库
+!.obsidian/plugins/toolbar-pin-toggle/
+!.obsidian/plugins/toolbar-pin-toggle/**
 
 # 插件本体与运行时文件（即使被复制进来也不入库）
 .obsidian/workspace.json

@@ -15,6 +15,7 @@ Obsidian 外壳配置包：主题、CSS 片段、插件设置与说明文档。*
 | 大 CSS | `baseline-optimized.minimal.active.css` + `border-polished.active.css`（均为 letschips 作品，勿改） |
 | 覆盖片段 | `blue-gray-dark-fix.css`（暖色→蓝灰）+ `graph-blue-gray.css`（关系图蓝灰），自写可改 |
 | 字体 | 界面：方正屏显雅宋简体 · 正文：iA Writer Quattro S · 等宽：Fira Code |
+| 自研插件 | `toolbar-pin-toggle`（Alt+Q 工具栏常驻双模式，含全部 Editing Toolbar 外观修正，见 styles.css） |
 | 插件 | 24 个已安装（crisp 系列 9 个通过 BRAT 安装），18 个有自定义设置 |
 
 ## 目录结构
@@ -60,7 +61,7 @@ LICENSE                  MIT
 
 - `baseline-optimized.minimal.active.css`、`border-polished.active.css` 是 letschips 的原版作品，**不要直接编辑**，改坏了整个外壳会塌。要微调色系走 Style Settings（见 [docs/css-guide.md](docs/css-guide.md)）。
 - 本仓库推送前必须确认没有笔记内容被暂存：`git status` 里只应出现 `.obsidian/`、`docs/`、`scripts/`、`templates/`、根目录文档。
-- 已知小问题：vault 的 `appearance.json` 引用了已不存在的片段 `baseline-translucent-window.active`（无效引用，不影响使用，可择机清理）。
+- 2026-09-13：已清理 `appearance.json` 中失效片段引用 `baseline-translucent-window.active`。
 
 ## 署名
 

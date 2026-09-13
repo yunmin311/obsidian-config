@@ -5,17 +5,11 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "docs",
-        "README.md",
-        "色彩系统预览.md",
-        "AI治理系统",
+        "OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL",
+        "YEAR3",
         "clutter",
         "Compound Interest",
-        "creative-os-notes",
         "English Learning",
-        "Daily Desk Examples",
-        "Linear Calendar Events",
-        "operation-note",
         "project",
         "programming study",
         "year2 final2",
@@ -24,527 +18,21 @@
         "homepage.md"
       ]
     },
-    "AI治理系统": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "00-从这里开始.md",
-        "adapters",
-        "archive",
-        "core",
-        "AGENTS.md",
-        "CHANGELOG.md",
-        "portable",
-        "docs",
-        "profiles",
-        "projects",
-        "README.md",
-        "reviews",
-        "skills",
-        "templates",
-        "_镜像说明.md"
-      ]
-    },
-    "AI治理系统/00-从这里开始.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/adapters": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "claude",
-        "codex",
-        "generic"
-      ]
-    },
-    "AI治理系统/adapters/claude": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "README.md"
-      ]
-    },
-    "AI治理系统/adapters/claude/README.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/adapters/codex": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "README.md"
-      ]
-    },
-    "AI治理系统/adapters/codex/README.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/adapters/generic": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "README.md"
-      ]
-    },
-    "AI治理系统/adapters/generic/README.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/archive": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "v1"
-      ]
-    },
-    "AI治理系统/archive/v1": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "project-records"
-      ]
-    },
-    "AI治理系统/archive/v1/project-records": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "00-HTML纠偏系统设计说明.md",
-        "00-Obsidian知识库索引.md",
-        "00-先读我-明日启动说明.md",
-        "README.md",
-        "00-实施计划.md",
-        "00-实施计划-纠偏与输出工程.md"
-      ]
-    },
-    "AI治理系统/archive/v1/project-records/00-HTML纠偏系统设计说明.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/archive/v1/project-records/00-Obsidian知识库索引.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/archive/v1/project-records/00-先读我-明日启动说明.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/archive/v1/project-records/README.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/archive/v1/project-records/00-实施计划.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/archive/v1/project-records/00-实施计划-纠偏与输出工程.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/core": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "01-governance-charter-v2.md"
-      ]
-    },
-    "AI治理系统/core/01-governance-charter-v2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/AGENTS.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/CHANGELOG.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/portable": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "README.md"
-      ]
-    },
-    "AI治理系统/portable/README.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/docs": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "01-v2.2-已批准摘要.md",
-        "00-v2-使用指南.md",
-        "01-全域AI对话治理总宪章-v1.0.md",
-        "03-全量对话盘点迁移与归档手册.md",
-        "02-总管AI运行与应急处置手册.md",
-        "04-Creative-OS专项治理附录.md",
-        "06-总管AI启动提示词.md",
-        "07-明日第一轮全量盘点指令.md",
-        "05-设计系统恢复与冻结规范.md",
-        "08-文件使用与角色分发说明.md",
-        "09-宪章执行纠偏与HTML输出治理手册.md",
-        "evaluations",
-        "10-AI输出文件工程与交付治理手册.md",
-        "11-跨领域可复用的工程治理思维.md",
-        "superpowers"
-      ]
-    },
-    "AI治理系统/docs/01-v2.2-已批准摘要.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/docs/00-v2-使用指南.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/docs/01-全域AI对话治理总宪章-v1.0.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/docs/03-全量对话盘点迁移与归档手册.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/docs/02-总管AI运行与应急处置手册.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/docs/04-Creative-OS专项治理附录.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/docs/06-总管AI启动提示词.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/docs/07-明日第一轮全量盘点指令.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/docs/05-设计系统恢复与冻结规范.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/docs/08-文件使用与角色分发说明.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/docs/09-宪章执行纠偏与HTML输出治理手册.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/docs/evaluations": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "2026-08-02-governance-v2-1-visual-review.md",
-        "2026-08-02-governance-v2-2-visual-review.md",
-        "2026-07-31-governor-v2-evaluation.md",
-        "2026-08-02-handbook-v2-visual-review.md"
-      ]
-    },
-    "AI治理系统/docs/evaluations/2026-08-02-governance-v2-1-visual-review.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/docs/evaluations/2026-08-02-governance-v2-2-visual-review.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/docs/evaluations/2026-07-31-governor-v2-evaluation.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/docs/evaluations/2026-08-02-handbook-v2-visual-review.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/docs/10-AI输出文件工程与交付治理手册.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/docs/11-跨领域可复用的工程治理思维.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/docs/superpowers": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "plans",
-        "specs"
-      ]
-    },
-    "AI治理系统/docs/superpowers/plans": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "2026-08-02-governance-v2-1-lean-release.md",
-        "2026-07-31-personal-ai-governance-v2.md",
-        "2026-08-02-project-neutral-governance-v2-2.md"
-      ]
-    },
-    "AI治理系统/docs/superpowers/plans/2026-08-02-governance-v2-1-lean-release.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/docs/superpowers/plans/2026-07-31-personal-ai-governance-v2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/docs/superpowers/plans/2026-08-02-project-neutral-governance-v2-2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/docs/superpowers/specs": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "2026-08-02-governance-v2-1-lean-release-design.md",
-        "2026-08-02-project-neutral-governance-v2-2-design.md",
-        "2026-07-31-personal-ai-governance-v2-design.md"
-      ]
-    },
-    "AI治理系统/docs/superpowers/specs/2026-08-02-governance-v2-1-lean-release-design.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/docs/superpowers/specs/2026-08-02-project-neutral-governance-v2-2-design.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/docs/superpowers/specs/2026-07-31-personal-ai-governance-v2-design.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/profiles": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "machines",
-        "user"
-      ]
-    },
-    "AI治理系统/profiles/machines": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "README.md"
-      ]
-    },
-    "AI治理系统/profiles/machines/README.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/profiles/user": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "lqy-working-system.md"
-      ]
-    },
-    "AI治理系统/profiles/user/lqy-working-system.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/projects": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "instances",
-        "README.md"
-      ]
-    },
-    "AI治理系统/projects/instances": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "README.md"
-      ]
-    },
-    "AI治理系统/projects/instances/README.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/projects/README.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/README.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/reviews": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "01-用户审核清单-v2.1.md",
-        "02-用户批准与项目中立变更记录-v2.2.md",
-        "v2.0-final-review.md",
-        "v2.1-final-review.md"
-      ]
-    },
-    "AI治理系统/reviews/01-用户审核清单-v2.1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/reviews/02-用户批准与项目中立变更记录-v2.2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/reviews/v2.0-final-review.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/reviews/v2.1-final-review.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/skills": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "global-ai-dialogue-governor"
-      ]
-    },
-    "AI治理系统/skills/global-ai-dialogue-governor": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "references",
-        "SKILL.md"
-      ]
-    },
-    "AI治理系统/skills/global-ai-dialogue-governor/references": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "correction-prompts.md",
-        "governance-model.md",
-        "html-output-governance.md",
-        "output-engineering.md",
-        "layered-loading.md",
-        "templates.md",
-        "protocols.md",
-        "hard-permissions.md"
-      ]
-    },
-    "AI治理系统/skills/global-ai-dialogue-governor/references/correction-prompts.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/skills/global-ai-dialogue-governor/references/governance-model.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/skills/global-ai-dialogue-governor/references/html-output-governance.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/skills/global-ai-dialogue-governor/references/output-engineering.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/skills/global-ai-dialogue-governor/references/layered-loading.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/skills/global-ai-dialogue-governor/references/templates.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/skills/global-ai-dialogue-governor/references/protocols.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/skills/global-ai-dialogue-governor/references/hard-permissions.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/skills/global-ai-dialogue-governor/SKILL.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/templates": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "冲突事故报告.md",
-        "决策记录.md",
-        "开工声明卡-v2.md",
-        "汇报门禁清单.md",
-        "转发与报告格式-v2.md",
-        "项目治理绑定说明-v2.2.md"
-      ]
-    },
-    "AI治理系统/templates/冲突事故报告.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/templates/决策记录.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/templates/开工声明卡-v2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/templates/汇报门禁清单.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/templates/转发与报告格式-v2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/templates/项目治理绑定说明-v2.2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "AI治理系统/_镜像说明.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "clutter": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "texture-preview",
+        "OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL_FROZEN",
+        "Linear Calendar Events",
         "03-self-check.html",
         "daily",
         "picture",
         "tem",
         "test",
-        "_Clutter Index.md",
-        "杂乱"
+        "杂乱",
+        "_Clutter Index.md"
       ]
     },
     "clutter/03-self-check.html": {
@@ -659,7 +147,6 @@
         "109.md",
         "2026-07-29-Codex网络与VSCode修复实施计划.md",
         "cc.md",
-        "Clash使用与Codex网络稳定手册.md",
         "ws.md",
         "Mock Test.md",
         "未命名.md",
@@ -679,10 +166,6 @@
       "isHidden": false
     },
     "clutter/tem/cc.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "clutter/tem/Clash使用与Codex网络稳定手册.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -707,6 +190,9 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "色彩系统预览.md",
+        "网络故障排查手册-Codex-ChatGPT.md",
+        "Clash使用与Codex网络稳定手册.md",
         "excalidraw 26-07-26 11.32.37.ex",
         "Obsidian Personal Knowledge System Concept.md"
       ]
@@ -2393,6 +1879,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "未命名.md",
         "1.md",
         "循恒.md",
         "灰色.md"
@@ -2414,520 +1901,12 @@
       "isPinned": false,
       "isHidden": false
     },
-    "creative-os-notes": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "00-目录.md",
-        "01-系统是怎么分层的.md",
-        "98-写作规矩.md",
-        "99-我的批注.md",
-        "知识库"
-      ]
-    },
-    "creative-os-notes/00-目录.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/01-系统是怎么分层的.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/98-写作规矩.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/99-我的批注.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Creative-OS-项目",
-        "全栈基础",
-        "参考",
-        "工作流"
-      ]
-    },
-    "creative-os-notes/知识库/Creative-OS-项目": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "1-前端（前厅）",
-        "2-进程通信（传菜口）",
-        "4-数据存储（冰箱）",
-        "3-后端（后厨）",
-        "5-网络（对外电话）",
-        "6-测试与验证",
-        "7-版本控制与协作",
-        "8-SDD规格",
-        "9-词汇与事故"
-      ]
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/1-前端（前厅）": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "11-我点的那一下.md",
-        "13-界面的样子从哪来.md",
-        "14-我写的字怎么变成能跑的东西.md",
-        "12-为什么要给每样东西贴标签.md"
-      ]
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/1-前端（前厅）/11-我点的那一下.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/1-前端（前厅）/13-界面的样子从哪来.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/1-前端（前厅）/14-我写的字怎么变成能跑的东西.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/1-前端（前厅）/12-为什么要给每样东西贴标签.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/2-进程通信（传菜口）": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "21-为什么有两个世界.md",
-        "22-传菜口那道门.md",
-        "23-说好同一种话.md"
-      ]
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/2-进程通信（传菜口）/21-为什么有两个世界.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/2-进程通信（传菜口）/22-传菜口那道门.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/2-进程通信（传菜口）/23-说好同一种话.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/4-数据存储（冰箱）": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "41-数据库到底是什么.md",
-        "43-要么全成要么全不成.md",
-        "44-怎么认出同一张图.md",
-        "42-我的九张表长什么样.md",
-        "45-插头形状对不上.md"
-      ]
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/4-数据存储（冰箱）/41-数据库到底是什么.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/4-数据存储（冰箱）/43-要么全成要么全不成.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/4-数据存储（冰箱）/44-怎么认出同一张图.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/4-数据存储（冰箱）/42-我的九张表长什么样.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/4-数据存储（冰箱）/45-插头形状对不上.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/3-后端（后厨）": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "31-后厨用的是什么炉子.md",
-        "32-为什么菜谱不认识冰箱.md",
-        "33-一条灵感只能走哪几条路.md",
-        "34-为什么不能当场做完.md"
-      ]
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/3-后端（后厨）/31-后厨用的是什么炉子.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/3-后端（后厨）/32-为什么菜谱不认识冰箱.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/3-后端（后厨）/33-一条灵感只能走哪几条路.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/3-后端（后厨）/34-为什么不能当场做完.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/5-网络（对外电话）": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "51-一次网络请求发生了什么.md",
-        "52-怎么跟AI说话.md",
-        "53-钥匙放哪.md",
-        "54-外面靠不住的时候.md",
-        "55-图片是怎么被处理的.md"
-      ]
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/5-网络（对外电话）/51-一次网络请求发生了什么.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/5-网络（对外电话）/52-怎么跟AI说话.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/5-网络（对外电话）/53-钥匙放哪.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/5-网络（对外电话）/54-外面靠不住的时候.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/5-网络（对外电话）/55-图片是怎么被处理的.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/6-测试与验证": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "60-代码写完了不等于跑通了.md",
-        "61-三种测试各在测什么.md",
-        "62-怎么让撒谎做不到.md",
-        "63-防护做在想到的方向上.md",
-        "64-什么才算证据.md"
-      ]
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/6-测试与验证/60-代码写完了不等于跑通了.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/6-测试与验证/61-三种测试各在测什么.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/6-测试与验证/62-怎么让撒谎做不到.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/6-测试与验证/63-防护做在想到的方向上.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/6-测试与验证/64-什么才算证据.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/7-版本控制与协作": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "71-六个对话为什么会互相污染.md",
-        "70-Git-和我的后悔药.md",
-        "72-一个只拦得住记录自己的规则.md"
-      ]
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/7-版本控制与协作/71-六个对话为什么会互相污染.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/7-版本控制与协作/70-Git-和我的后悔药.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/7-版本控制与协作/72-一个只拦得住记录自己的规则.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/8-SDD规格": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "80-SDD全流程-从宪法到推送.md",
-        "82-那些门为什么在那儿.md",
-        "81-为什么一份spec好过十轮对话.md",
-        "83-SDD什么时候不该用.md",
-        "84-我们站在哪一级.md"
-      ]
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/8-SDD规格/80-SDD全流程-从宪法到推送.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/8-SDD规格/82-那些门为什么在那儿.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/8-SDD规格/81-为什么一份spec好过十轮对话.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/8-SDD规格/83-SDD什么时候不该用.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/8-SDD规格/84-我们站在哪一级.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/9-词汇与事故": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "91-认得出就行.md",
-        "90-事故档案.md"
-      ]
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/9-词汇与事故/91-认得出就行.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/Creative-OS-项目/9-词汇与事故/90-事故档案.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/全栈基础": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "00-全栈地图.md",
-        "01-全栈的全景框架.md",
-        "10-网页是怎么显示出来的.md",
-        "11-前端框架为什么存在.md",
-        "12-源码怎么变成浏览器能跑的.md",
-        "13-前端怎么管住一堆状态.md",
-        "14-界面怎么排版.md",
-        "15-浏览器怎么把页面画出来.md",
-        "16-异步与事件循环.md",
-        "17-React到底怎么工作.md",
-        "20-一次网络请求的全过程.md",
-        "21-前后端怎么约定.md",
-        "22-服务器怎么主动找我.md",
-        "23-HTTP到底是什么.md",
-        "30-后端到底在干嘛.md",
-        "31-登录之后它怎么记得我.md",
-        "32-进程线程和两个世界.md",
-        "33-鉴权机制深挖.md",
-        "41-为什么数据库全是表.md",
-        "42-关系型之外还有什么.md",
-        "43-数据库服务器跟SQLite差在哪.md",
-        "50-部署上线到底在干嘛.md",
-        "51-配置与环境变量.md",
-        "52-日志与监控.md",
-        "60-常见的安全坑.md",
-        "61-性能慢在哪怎么快.md"
-      ]
-    },
-    "creative-os-notes/知识库/全栈基础/00-全栈地图.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/全栈基础/01-全栈的全景框架.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/全栈基础/10-网页是怎么显示出来的.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/全栈基础/11-前端框架为什么存在.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/全栈基础/12-源码怎么变成浏览器能跑的.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/全栈基础/13-前端怎么管住一堆状态.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/全栈基础/14-界面怎么排版.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/全栈基础/15-浏览器怎么把页面画出来.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/全栈基础/16-异步与事件循环.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/全栈基础/17-React到底怎么工作.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/全栈基础/20-一次网络请求的全过程.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/全栈基础/21-前后端怎么约定.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/全栈基础/22-服务器怎么主动找我.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/全栈基础/23-HTTP到底是什么.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/全栈基础/30-后端到底在干嘛.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/全栈基础/31-登录之后它怎么记得我.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/全栈基础/32-进程线程和两个世界.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/全栈基础/33-鉴权机制深挖.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/全栈基础/41-为什么数据库全是表.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/全栈基础/42-关系型之外还有什么.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/全栈基础/43-数据库服务器跟SQLite差在哪.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/全栈基础/50-部署上线到底在干嘛.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/全栈基础/51-配置与环境变量.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/全栈基础/52-日志与监控.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/全栈基础/60-常见的安全坑.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/全栈基础/61-性能慢在哪怎么快.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/参考": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "SDD教程-00-起点.md",
-        "SDD教程-01-核心概念.md",
-        "SDD教程-03-自测题库.md",
-        "SDD教程-02-工作原理与边界.md"
-      ]
-    },
-    "creative-os-notes/知识库/参考/SDD教程-00-起点.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/参考/SDD教程-01-核心概念.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/参考/SDD教程-03-自测题库.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/参考/SDD教程-02-工作原理与边界.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/工作流": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "00-这份手册怎么用.md",
-        "01-花名册.md",
-        "02-宪法与规则体系.md",
-        "03-工作区协同.md",
-        "04-同步与备份.md",
-        "05-知识怎么学.md",
-        "06-干法复盘.md",
-        "07-可粘的启动提示词.md"
-      ]
-    },
-    "creative-os-notes/知识库/工作流/00-这份手册怎么用.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/工作流/01-花名册.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/工作流/02-宪法与规则体系.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/工作流/03-工作区协同.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/工作流/04-同步与备份.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/工作流/05-知识怎么学.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/工作流/06-干法复盘.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "creative-os-notes/知识库/工作流/07-可粘的启动提示词.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "English Learning": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "online class",
         "Active Vocabulary",
         "Daily Output",
         "English books",
@@ -3278,607 +2257,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "Daily Desk Examples": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "images",
-        "晨光花树.md",
-        "雨夜城市.md"
-      ]
-    },
-    "Daily Desk Examples/images": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "morning-blossom.webp",
-        "rainy-city.webp"
-      ]
-    },
-    "Daily Desk Examples/images/morning-blossom.webp": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Daily Desk Examples/images/rainy-city.webp": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Daily Desk Examples/晨光花树.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Daily Desk Examples/雨夜城市.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Linear Calendar Events": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "12weeks 1.md",
-        "birthday.md",
-        "_Linear Calendar Index.md",
-        "丙午.md"
-      ]
-    },
-    "Linear Calendar Events/12weeks 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Linear Calendar Events/birthday.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Linear Calendar Events/_Linear Calendar Index.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Linear Calendar Events/丙午.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "README.md",
-        "写作规矩.md",
-        "我的批注.md",
-        "知识库"
-      ]
-    },
-    "operation-note/README.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/写作规矩.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/我的批注.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "01-认识operation-platform",
-        "03-计量计费流水线",
-        "02-第一条链路-登录",
-        "04-贯穿全局的核心机制",
-        "06-SDD-规格驱动开发",
-        "07-Layer0-工作台-Git与Worktree",
-        "08-Layer1-前端-Vue",
-        "09-Layer2-前后端之间-API",
-        "10-Layer4-数据-PostgreSQL",
-        "11-Layer5-质量-测试与调试",
-        "12-Layer6-运行运维-Docker与k3s",
-        "深度篇",
-        "05-在成熟项目里找bug"
-      ]
-    },
-    "operation-note/知识库/01-认识operation-platform": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "01-operation-platform是什么.md",
-        "02-架构骨架与技术栈.md",
-        "00-索引.md",
-        "03-Flyway管理数据库结构.md",
-        "04-RBAC认证与授权.md",
-        "05-怎么跑起来与监控.md"
-      ]
-    },
-    "operation-note/知识库/01-认识operation-platform/01-operation-platform是什么.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/01-认识operation-platform/02-架构骨架与技术栈.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/01-认识operation-platform/00-索引.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/01-认识operation-platform/03-Flyway管理数据库结构.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/01-认识operation-platform/04-RBAC认证与授权.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/01-认识operation-platform/05-怎么跑起来与监控.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/03-计量计费流水线": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "00-索引.md",
-        "01-计量计费流水线.md",
-        "02-项目全貌.md"
-      ]
-    },
-    "operation-note/知识库/03-计量计费流水线/00-索引.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/03-计量计费流水线/01-计量计费流水线.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/03-计量计费流水线/02-项目全貌.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/02-第一条链路-登录": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "01-后端代码怎么组织.md",
-        "02-登录链路.md",
-        "00-索引.md"
-      ]
-    },
-    "operation-note/知识库/02-第一条链路-登录/01-后端代码怎么组织.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/02-第一条链路-登录/02-登录链路.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/02-第一条链路-登录/00-索引.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/04-贯穿全局的核心机制": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "00-索引.md",
-        "01-三个核心机制-状态机幂等终态.md",
-        "02-功能地图速查.md"
-      ]
-    },
-    "operation-note/知识库/04-贯穿全局的核心机制/00-索引.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/04-贯穿全局的核心机制/01-三个核心机制-状态机幂等终态.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/04-贯穿全局的核心机制/02-功能地图速查.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/06-SDD-规格驱动开发": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "00-索引.md",
-        "01-SDD是什么为什么成了标配.md",
-        "02-OpenSpec-把一次改动结构化.md",
-        "03-Superpowers-给AI立工程纪律.md",
-        "04-三个工具在本项目各写了什么.md"
-      ]
-    },
-    "operation-note/知识库/06-SDD-规格驱动开发/00-索引.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/06-SDD-规格驱动开发/01-SDD是什么为什么成了标配.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/06-SDD-规格驱动开发/02-OpenSpec-把一次改动结构化.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/06-SDD-规格驱动开发/03-Superpowers-给AI立工程纪律.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/06-SDD-规格驱动开发/04-三个工具在本项目各写了什么.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/07-Layer0-工作台-Git与Worktree": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "01-Git与Worktree-一个仓库多张桌子.md",
-        "00-索引.md"
-      ]
-    },
-    "operation-note/知识库/07-Layer0-工作台-Git与Worktree/01-Git与Worktree-一个仓库多张桌子.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/07-Layer0-工作台-Git与Worktree/00-索引.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/08-Layer1-前端-Vue": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "00-索引.md",
-        "01-前端怎么运转-一个vue文件.md",
-        "02-前端层的找bug与加功能.md"
-      ]
-    },
-    "operation-note/知识库/08-Layer1-前端-Vue/00-索引.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/08-Layer1-前端-Vue/01-前端怎么运转-一个vue文件.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/08-Layer1-前端-Vue/02-前端层的找bug与加功能.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/09-Layer2-前后端之间-API": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "00-索引.md",
-        "01-前后端怎么对话.md",
-        "02-鉴权拆包与请求转发.md",
-        "03-api层的找bug猎场.md"
-      ]
-    },
-    "operation-note/知识库/09-Layer2-前后端之间-API/00-索引.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/09-Layer2-前后端之间-API/01-前后端怎么对话.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/09-Layer2-前后端之间-API/02-鉴权拆包与请求转发.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/09-Layer2-前后端之间-API/03-api层的找bug猎场.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/10-Layer4-数据-PostgreSQL": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "00-索引.md",
-        "01-数据怎么存与取-表SQL与ORM.md",
-        "02-全栈骨架走通-一次请求的全链路.md",
-        "03-数据层的找bug猎场.md"
-      ]
-    },
-    "operation-note/知识库/10-Layer4-数据-PostgreSQL/00-索引.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/10-Layer4-数据-PostgreSQL/01-数据怎么存与取-表SQL与ORM.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/10-Layer4-数据-PostgreSQL/02-全栈骨架走通-一次请求的全链路.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/10-Layer4-数据-PostgreSQL/03-数据层的找bug猎场.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/11-Layer5-质量-测试与调试": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "00-索引.md",
-        "01-测试是安全网-金字塔与绿红.md",
-        "02-系统化调试-修bug的正规姿势.md",
-        "03-质量层的找bug猎场.md"
-      ]
-    },
-    "operation-note/知识库/11-Layer5-质量-测试与调试/00-索引.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/11-Layer5-质量-测试与调试/01-测试是安全网-金字塔与绿红.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/11-Layer5-质量-测试与调试/02-系统化调试-修bug的正规姿势.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/11-Layer5-质量-测试与调试/03-质量层的找bug猎场.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/12-Layer6-运行运维-Docker与k3s": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "01-Docker-把程序打包成集装箱.md",
-        "02-k3s-声明式编排与访问闭环.md",
-        "00-索引.md",
-        "03-观测与七层地图合拢.md"
-      ]
-    },
-    "operation-note/知识库/12-Layer6-运行运维-Docker与k3s/01-Docker-把程序打包成集装箱.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/12-Layer6-运行运维-Docker与k3s/02-k3s-声明式编排与访问闭环.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/12-Layer6-运行运维-Docker与k3s/00-索引.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/12-Layer6-运行运维-Docker与k3s/03-观测与七层地图合拢.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/深度篇": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "00-索引.md",
-        "A2-Layer2深挖-API",
-        "A3-Layer3深挖-后端",
-        "A4-Layer4深挖-数据",
-        "A5-Layer5深挖-质量",
-        "A6-Layer6深挖-运维"
-      ]
-    },
-    "operation-note/知识库/深度篇/00-索引.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/深度篇/A2-Layer2深挖-API": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "01-报文-状态码-JSON.md",
-        "02-JWT与拦截器收发室.md",
-        "00-索引.md",
-        "03-统一信封与关注点分离.md"
-      ]
-    },
-    "operation-note/知识库/深度篇/A2-Layer2深挖-API/01-报文-状态码-JSON.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/深度篇/A2-Layer2深挖-API/02-JWT与拦截器收发室.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/深度篇/A2-Layer2深挖-API/00-索引.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/深度篇/A2-Layer2深挖-API/03-统一信封与关注点分离.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/深度篇/A3-Layer3深挖-后端": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "00-索引.md",
-        "01-后端的性格与读Java便利贴.md",
-        "02-IoC容器-你不new我来发.md",
-        "03-三层分工-接待员大厨仓管.md",
-        "04-事务异常权限-后端的三条纪律.md",
-        "05-六部门与九站全链路.md"
-      ]
-    },
-    "operation-note/知识库/深度篇/A3-Layer3深挖-后端/00-索引.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/深度篇/A3-Layer3深挖-后端/01-后端的性格与读Java便利贴.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/深度篇/A3-Layer3深挖-后端/02-IoC容器-你不new我来发.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/深度篇/A3-Layer3深挖-后端/03-三层分工-接待员大厨仓管.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/深度篇/A3-Layer3深挖-后端/04-事务异常权限-后端的三条纪律.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/深度篇/A3-Layer3深挖-后端/05-六部门与九站全链路.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/深度篇/A4-Layer4深挖-数据": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "01-数据是唯一真相账本.md",
-        "02-关系模型-表约束与外键.md",
-        "00-索引.md",
-        "03-SQL四金刚-JOIN与索引.md",
-        "04-类型的坑与ORM的边界.md",
-        "05-Flyway与三次迁移现场.md"
-      ]
-    },
-    "operation-note/知识库/深度篇/A4-Layer4深挖-数据/01-数据是唯一真相账本.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/深度篇/A4-Layer4深挖-数据/02-关系模型-表约束与外键.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/深度篇/A4-Layer4深挖-数据/00-索引.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/深度篇/A4-Layer4深挖-数据/03-SQL四金刚-JOIN与索引.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/深度篇/A4-Layer4深挖-数据/04-类型的坑与ORM的边界.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/深度篇/A4-Layer4深挖-数据/05-Flyway与三次迁移现场.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/深度篇/A5-Layer5深挖-质量": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "00-索引.md",
-        "01-测试是让你敢改的安全网.md",
-        "03-单元测试与Mock.md",
-        "05-红绿-系统排错-与质量流程.md",
-        "04-集成测试-e2e-与测什么.md",
-        "02-测试金字塔的经济学.md"
-      ]
-    },
-    "operation-note/知识库/深度篇/A5-Layer5深挖-质量/00-索引.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/深度篇/A5-Layer5深挖-质量/01-测试是让你敢改的安全网.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/深度篇/A5-Layer5深挖-质量/03-单元测试与Mock.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/深度篇/A5-Layer5深挖-质量/05-红绿-系统排错-与质量流程.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/深度篇/A5-Layer5深挖-质量/04-集成测试-e2e-与测什么.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/深度篇/A5-Layer5深挖-质量/02-测试金字塔的经济学.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/深度篇/A6-Layer6深挖-运维": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "00-索引.md",
-        "01-值班人三问与镜像千层饼.md",
-        "02-真Dockerfile与compose开发环境.md",
-        "03-k3s收敛循环与对象模型.md",
-        "05-发布-观测-与收官会师.md",
-        "04-Deployment决策-探针-与Service.md"
-      ]
-    },
-    "operation-note/知识库/深度篇/A6-Layer6深挖-运维/00-索引.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/深度篇/A6-Layer6深挖-运维/01-值班人三问与镜像千层饼.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/深度篇/A6-Layer6深挖-运维/02-真Dockerfile与compose开发环境.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/深度篇/A6-Layer6深挖-运维/03-k3s收敛循环与对象模型.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/深度篇/A6-Layer6深挖-运维/05-发布-观测-与收官会师.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/深度篇/A6-Layer6深挖-运维/04-Deployment决策-探针-与Service.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/05-在成熟项目里找bug": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "01-在成熟项目里找刁钻bug.md",
-        "02-加小功能的入口.md",
-        "00-索引.md"
-      ]
-    },
-    "operation-note/知识库/05-在成熟项目里找bug/01-在成熟项目里找刁钻bug.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/05-在成熟项目里找bug/02-加小功能的入口.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "operation-note/知识库/05-在成熟项目里找bug/00-索引.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "homepage.md": {
       "isPinned": false,
       "isHidden": false
@@ -3888,8 +2266,11 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "12WY2 项目执行计划.md",
+        "creative-os-notes",
+        "AI治理系统",
+        "operation-note",
         "github项目",
+        "12WY2 项目执行计划.md",
         "_Project Index.md",
         "一些手工小玩意"
       ]
@@ -4495,9 +2876,9 @@
         "INT104",
         "MTH102",
         "SAT102",
-        "_Year2 Final Index.md",
         "EEE109",
-        "CPT102"
+        "CPT102",
+        "_Year2 Final Index.md"
       ]
     },
     "year2 final2/CPT103": {
@@ -4784,28 +3165,2205 @@
       "isPinned": false,
       "isHidden": false
     },
-    "色彩系统预览.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "README.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "docs": {
+    "YEAR3": {
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "plugins.md",
-        "css-guide.md"
+        "EEE211_Week01_Delivery",
+        "COS202_Week01_Delivery",
+        "SOE205_Week01_Delivery",
+        "CSI201_Week01_Delivery"
       ]
     },
-    "docs/css-guide.md": {
+    "YEAR3/CSI201_Week01_Delivery": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Week01",
+        "README.md",
+        "COURSE_STATE.yaml"
+      ]
+    },
+    "YEAR3/CSI201_Week01_Delivery/COURSE_STATE.yaml": {
       "isPinned": false,
       "isHidden": false
     },
-    "docs/plugins.md": {
+    "YEAR3/CSI201_Week01_Delivery/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/CSI201_Week01_Delivery/Week01": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Lecture 01 - Introduction to the Modern Internet.md",
+        "assets"
+      ]
+    },
+    "YEAR3/CSI201_Week01_Delivery/Week01/assets": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "07-llm-request-path.svg",
+        "06-store-and-forward.svg",
+        "05-modern-network-of-networks.png",
+        "04-packet-vs-circuit.png",
+        "03-forwarding-routing.png",
+        "02-tunnel-hybrid-design.png",
+        "01-campus-access-path.png"
+      ]
+    },
+    "YEAR3/CSI201_Week01_Delivery/Week01/assets/01-campus-access-path.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/CSI201_Week01_Delivery/Week01/assets/02-tunnel-hybrid-design.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/CSI201_Week01_Delivery/Week01/assets/03-forwarding-routing.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/CSI201_Week01_Delivery/Week01/assets/04-packet-vs-circuit.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/CSI201_Week01_Delivery/Week01/assets/05-modern-network-of-networks.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/CSI201_Week01_Delivery/Week01/assets/06-store-and-forward.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/CSI201_Week01_Delivery/Week01/assets/07-llm-request-path.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205_Week01_Delivery": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Week01",
+        "COURSE_STATE.yaml"
+      ]
+    },
+    "YEAR3/SOE205_Week01_Delivery/COURSE_STATE.yaml": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205_Week01_Delivery/Week01": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Lecture 01 - Introduction, Hardware and Software.md",
+        "Lecture 02 - Mathematics for Computer Graphics.md",
+        "assets"
+      ]
+    },
+    "YEAR3/SOE205_Week01_Delivery/Week01/assets": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "L02-p27-matrix-multiplication.png",
+        "L02-p17-cross-product-normal.png",
+        "L02-p10-vector-components-unit-vector.png",
+        "L02-p04-cartesian-screen-coordinates.png",
+        "L02-p03-object-representation-flow.png",
+        "L01-p43-lcd-light-control.png",
+        "L01-p41-crt-operation.png",
+        "L01-p34-framebuffer-rgb-memory.png",
+        "L01-p27-framebuffer-pixels.png"
+      ]
+    },
+    "YEAR3/SOE205_Week01_Delivery/Week01/assets/L01-p27-framebuffer-pixels.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205_Week01_Delivery/Week01/assets/L01-p34-framebuffer-rgb-memory.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205_Week01_Delivery/Week01/assets/L01-p41-crt-operation.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205_Week01_Delivery/Week01/assets/L01-p43-lcd-light-control.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205_Week01_Delivery/Week01/assets/L02-p03-object-representation-flow.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205_Week01_Delivery/Week01/assets/L02-p04-cartesian-screen-coordinates.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205_Week01_Delivery/Week01/assets/L02-p10-vector-components-unit-vector.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205_Week01_Delivery/Week01/assets/L02-p17-cross-product-normal.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205_Week01_Delivery/Week01/assets/L02-p27-matrix-multiplication.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205_Week01_Delivery/Week01/Lecture 01 - Introduction, Hardware and Software.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205_Week01_Delivery/Week01/Lecture 02 - Mathematics for Computer Graphics.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202_Week01_Delivery": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Week01",
+        "COURSE_STATE.yaml"
+      ]
+    },
+    "YEAR3/COS202_Week01_Delivery/COURSE_STATE.yaml": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202_Week01_Delivery/Week01": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Lecture 01 - Introduction to Signals and Systems.md",
+        "Lecture 02 - Introduction to Signals Part 1.md",
+        "assets"
+      ]
+    },
+    "YEAR3/COS202_Week01_Delivery/Week01/assets": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "L02-p34-energy-power-classification.png",
+        "L02-p26-even-odd-example.png",
+        "L02-p25-even-odd-decomposition.png",
+        "L02-p19-dt-oscillation-rate.png",
+        "L02-p16-dt-periodic-sequence.png",
+        "L02-p11-sinusoid-parameters.png",
+        "L02-p06-signal-dimensions.png",
+        "L01-p26-adc-chain.png",
+        "L01-p25-ct-dt-sampling.png",
+        "L01-p19-cross-domain-abstraction.png",
+        "L01-p15-input-system-output.png",
+        "L01-p09-course-map.png"
+      ]
+    },
+    "YEAR3/COS202_Week01_Delivery/Week01/assets/L01-p09-course-map.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202_Week01_Delivery/Week01/assets/L01-p15-input-system-output.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202_Week01_Delivery/Week01/assets/L01-p19-cross-domain-abstraction.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202_Week01_Delivery/Week01/assets/L01-p25-ct-dt-sampling.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202_Week01_Delivery/Week01/assets/L01-p26-adc-chain.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202_Week01_Delivery/Week01/assets/L02-p06-signal-dimensions.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202_Week01_Delivery/Week01/assets/L02-p11-sinusoid-parameters.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202_Week01_Delivery/Week01/assets/L02-p16-dt-periodic-sequence.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202_Week01_Delivery/Week01/assets/L02-p19-dt-oscillation-rate.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202_Week01_Delivery/Week01/assets/L02-p25-even-odd-decomposition.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202_Week01_Delivery/Week01/assets/L02-p26-even-odd-example.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202_Week01_Delivery/Week01/assets/L02-p34-energy-power-classification.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202_Week01_Delivery/Week01/Lecture 01 - Introduction to Signals and Systems.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202_Week01_Delivery/Week01/Lecture 02 - Introduction to Signals Part 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211_Week01_Delivery": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Week01",
+        "COURSE_STATE.yaml"
+      ]
+    },
+    "YEAR3/EEE211_Week01_Delivery/COURSE_STATE.yaml": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211_Week01_Delivery/Week01": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Lecture 01 - Semiconductor Materials and Diodes.md",
+        "Tutorial 01 - Diode Circuit Analysis.md",
+        "sources",
+        "assets"
+      ]
+    },
+    "YEAR3/EEE211_Week01_Delivery/Week01/assets": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "T01-p16-mixed-circuit.png",
+        "T01-p10-piecewise-equivalent.png",
+        "T01-p08-load-line.png",
+        "L01-p35-dc-ac-equivalent.png",
+        "L01-p30-piecewise-model.png",
+        "L01-p29-load-line-qpoint.png",
+        "L01-p27-rectifier.png",
+        "L01-p25-diode-iv.png",
+        "L01-p24-forward-bias.png",
+        "L01-p23-reverse-bias.png",
+        "L01-p22-pn-junction.png",
+        "L01-p20-p-type.png",
+        "L01-p19-n-type.png",
+        "L01-p18-hole-motion.png",
+        "L01-p17-bandgap.png",
+        "L01-p15-covalent-bond.png"
+      ]
+    },
+    "YEAR3/EEE211_Week01_Delivery/Week01/assets/L01-p15-covalent-bond.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211_Week01_Delivery/Week01/assets/L01-p17-bandgap.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211_Week01_Delivery/Week01/assets/L01-p18-hole-motion.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211_Week01_Delivery/Week01/assets/L01-p19-n-type.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211_Week01_Delivery/Week01/assets/L01-p20-p-type.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211_Week01_Delivery/Week01/assets/L01-p22-pn-junction.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211_Week01_Delivery/Week01/assets/L01-p23-reverse-bias.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211_Week01_Delivery/Week01/assets/L01-p24-forward-bias.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211_Week01_Delivery/Week01/assets/L01-p25-diode-iv.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211_Week01_Delivery/Week01/assets/L01-p27-rectifier.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211_Week01_Delivery/Week01/assets/L01-p29-load-line-qpoint.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211_Week01_Delivery/Week01/assets/L01-p30-piecewise-model.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211_Week01_Delivery/Week01/assets/L01-p35-dc-ac-equivalent.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211_Week01_Delivery/Week01/assets/T01-p08-load-line.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211_Week01_Delivery/Week01/assets/T01-p10-piecewise-equivalent.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211_Week01_Delivery/Week01/assets/T01-p16-mixed-circuit.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211_Week01_Delivery/Week01/Lecture 01 - Semiconductor Materials and Diodes.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211_Week01_Delivery/Week01/sources": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Tutorial01.pdf",
+        "Lecture01.pdf"
+      ]
+    },
+    "YEAR3/EEE211_Week01_Delivery/Week01/sources/Lecture01.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211_Week01_Delivery/Week01/sources/Tutorial01.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211_Week01_Delivery/Week01/Tutorial 01 - Diode Circuit Analysis.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "README.md",
+        "写作规矩.md",
+        "我的批注.md",
+        "知识库"
+      ]
+    },
+    "project/operation-note/写作规矩.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/我的批注.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "01-认识operation-platform",
+        "03-计量计费流水线",
+        "02-第一条链路-登录",
+        "04-贯穿全局的核心机制",
+        "06-SDD-规格驱动开发",
+        "07-Layer0-工作台-Git与Worktree",
+        "08-Layer1-前端-Vue",
+        "09-Layer2-前后端之间-API",
+        "10-Layer4-数据-PostgreSQL",
+        "11-Layer5-质量-测试与调试",
+        "12-Layer6-运行运维-Docker与k3s",
+        "深度篇",
+        "05-在成熟项目里找bug"
+      ]
+    },
+    "project/operation-note/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/01-认识operation-platform": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "01-operation-platform是什么.md",
+        "02-架构骨架与技术栈.md",
+        "00-索引.md",
+        "03-Flyway管理数据库结构.md",
+        "04-RBAC认证与授权.md",
+        "05-怎么跑起来与监控.md"
+      ]
+    },
+    "project/operation-note/知识库/02-第一条链路-登录": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "01-后端代码怎么组织.md",
+        "02-登录链路.md",
+        "00-索引.md"
+      ]
+    },
+    "project/operation-note/知识库/04-贯穿全局的核心机制": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-索引.md",
+        "01-三个核心机制-状态机幂等终态.md",
+        "02-功能地图速查.md"
+      ]
+    },
+    "project/operation-note/知识库/05-在成熟项目里找bug": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "01-在成熟项目里找刁钻bug.md",
+        "02-加小功能的入口.md",
+        "00-索引.md"
+      ]
+    },
+    "project/operation-note/知识库/03-计量计费流水线": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-索引.md",
+        "01-计量计费流水线.md",
+        "02-项目全貌.md"
+      ]
+    },
+    "project/operation-note/知识库/06-SDD-规格驱动开发": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-索引.md",
+        "01-SDD是什么为什么成了标配.md",
+        "02-OpenSpec-把一次改动结构化.md",
+        "03-Superpowers-给AI立工程纪律.md",
+        "04-三个工具在本项目各写了什么.md"
+      ]
+    },
+    "project/operation-note/知识库/07-Layer0-工作台-Git与Worktree": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "01-Git与Worktree-一个仓库多张桌子.md",
+        "00-索引.md"
+      ]
+    },
+    "project/operation-note/知识库/08-Layer1-前端-Vue": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-索引.md",
+        "01-前端怎么运转-一个vue文件.md",
+        "02-前端层的找bug与加功能.md"
+      ]
+    },
+    "project/operation-note/知识库/09-Layer2-前后端之间-API": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-索引.md",
+        "01-前后端怎么对话.md",
+        "02-鉴权拆包与请求转发.md",
+        "03-api层的找bug猎场.md"
+      ]
+    },
+    "project/operation-note/知识库/10-Layer4-数据-PostgreSQL": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-索引.md",
+        "01-数据怎么存与取-表SQL与ORM.md",
+        "02-全栈骨架走通-一次请求的全链路.md",
+        "03-数据层的找bug猎场.md"
+      ]
+    },
+    "project/operation-note/知识库/11-Layer5-质量-测试与调试": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-索引.md",
+        "01-测试是安全网-金字塔与绿红.md",
+        "02-系统化调试-修bug的正规姿势.md",
+        "03-质量层的找bug猎场.md"
+      ]
+    },
+    "project/operation-note/知识库/深度篇": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-索引.md",
+        "A2-Layer2深挖-API",
+        "A3-Layer3深挖-后端",
+        "A4-Layer4深挖-数据",
+        "A5-Layer5深挖-质量",
+        "A6-Layer6深挖-运维"
+      ]
+    },
+    "project/operation-note/知识库/12-Layer6-运行运维-Docker与k3s": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "01-Docker-把程序打包成集装箱.md",
+        "02-k3s-声明式编排与访问闭环.md",
+        "00-索引.md",
+        "03-观测与七层地图合拢.md"
+      ]
+    },
+    "project/operation-note/知识库/02-第一条链路-登录/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/02-第一条链路-登录/01-后端代码怎么组织.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/02-第一条链路-登录/02-登录链路.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/04-贯穿全局的核心机制/01-三个核心机制-状态机幂等终态.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/04-贯穿全局的核心机制/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/05-在成熟项目里找bug/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/04-贯穿全局的核心机制/02-功能地图速查.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/05-在成熟项目里找bug/01-在成熟项目里找刁钻bug.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/05-在成熟项目里找bug/02-加小功能的入口.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/03-计量计费流水线/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/03-计量计费流水线/01-计量计费流水线.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/03-计量计费流水线/02-项目全貌.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/06-SDD-规格驱动开发/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/06-SDD-规格驱动开发/01-SDD是什么为什么成了标配.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/07-Layer0-工作台-Git与Worktree/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/06-SDD-规格驱动开发/02-OpenSpec-把一次改动结构化.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/07-Layer0-工作台-Git与Worktree/01-Git与Worktree-一个仓库多张桌子.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/08-Layer1-前端-Vue/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/08-Layer1-前端-Vue/02-前端层的找bug与加功能.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/08-Layer1-前端-Vue/01-前端怎么运转-一个vue文件.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/06-SDD-规格驱动开发/04-三个工具在本项目各写了什么.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/06-SDD-规格驱动开发/03-Superpowers-给AI立工程纪律.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/09-Layer2-前后端之间-API/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/09-Layer2-前后端之间-API/03-api层的找bug猎场.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/11-Layer5-质量-测试与调试/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/11-Layer5-质量-测试与调试/01-测试是安全网-金字塔与绿红.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/09-Layer2-前后端之间-API/01-前后端怎么对话.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/11-Layer5-质量-测试与调试/02-系统化调试-修bug的正规姿势.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/09-Layer2-前后端之间-API/02-鉴权拆包与请求转发.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/11-Layer5-质量-测试与调试/03-质量层的找bug猎场.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/10-Layer4-数据-PostgreSQL/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/10-Layer4-数据-PostgreSQL/01-数据怎么存与取-表SQL与ORM.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/10-Layer4-数据-PostgreSQL/03-数据层的找bug猎场.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/10-Layer4-数据-PostgreSQL/02-全栈骨架走通-一次请求的全链路.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/深度篇/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/深度篇/A2-Layer2深挖-API": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "01-报文-状态码-JSON.md",
+        "02-JWT与拦截器收发室.md",
+        "00-索引.md",
+        "03-统一信封与关注点分离.md"
+      ]
+    },
+    "project/operation-note/知识库/深度篇/A3-Layer3深挖-后端": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-索引.md",
+        "01-后端的性格与读Java便利贴.md",
+        "02-IoC容器-你不new我来发.md",
+        "03-三层分工-接待员大厨仓管.md",
+        "04-事务异常权限-后端的三条纪律.md",
+        "05-六部门与九站全链路.md"
+      ]
+    },
+    "project/operation-note/知识库/深度篇/A5-Layer5深挖-质量": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-索引.md",
+        "01-测试是让你敢改的安全网.md",
+        "03-单元测试与Mock.md",
+        "05-红绿-系统排错-与质量流程.md",
+        "04-集成测试-e2e-与测什么.md",
+        "02-测试金字塔的经济学.md"
+      ]
+    },
+    "project/operation-note/知识库/深度篇/A4-Layer4深挖-数据": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "01-数据是唯一真相账本.md",
+        "02-关系模型-表约束与外键.md",
+        "00-索引.md",
+        "03-SQL四金刚-JOIN与索引.md",
+        "04-类型的坑与ORM的边界.md",
+        "05-Flyway与三次迁移现场.md"
+      ]
+    },
+    "project/operation-note/知识库/深度篇/A6-Layer6深挖-运维": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-索引.md",
+        "01-值班人三问与镜像千层饼.md",
+        "02-真Dockerfile与compose开发环境.md",
+        "03-k3s收敛循环与对象模型.md",
+        "05-发布-观测-与收官会师.md",
+        "04-Deployment决策-探针-与Service.md"
+      ]
+    },
+    "project/operation-note/知识库/12-Layer6-运行运维-Docker与k3s/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/12-Layer6-运行运维-Docker与k3s/02-k3s-声明式编排与访问闭环.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/12-Layer6-运行运维-Docker与k3s/01-Docker-把程序打包成集装箱.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/12-Layer6-运行运维-Docker与k3s/03-观测与七层地图合拢.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/01-认识operation-platform/01-operation-platform是什么.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/01-认识operation-platform/04-RBAC认证与授权.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/01-认识operation-platform/02-架构骨架与技术栈.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/01-认识operation-platform/05-怎么跑起来与监控.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/01-认识operation-platform/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/01-认识operation-platform/03-Flyway管理数据库结构.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/深度篇/A2-Layer2深挖-API/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/深度篇/A2-Layer2深挖-API/01-报文-状态码-JSON.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/深度篇/A2-Layer2深挖-API/02-JWT与拦截器收发室.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/深度篇/A2-Layer2深挖-API/03-统一信封与关注点分离.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/深度篇/A3-Layer3深挖-后端/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/深度篇/A3-Layer3深挖-后端/01-后端的性格与读Java便利贴.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/深度篇/A3-Layer3深挖-后端/04-事务异常权限-后端的三条纪律.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/深度篇/A3-Layer3深挖-后端/05-六部门与九站全链路.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/深度篇/A4-Layer4深挖-数据/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/深度篇/A4-Layer4深挖-数据/01-数据是唯一真相账本.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/深度篇/A3-Layer3深挖-后端/02-IoC容器-你不new我来发.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/深度篇/A3-Layer3深挖-后端/03-三层分工-接待员大厨仓管.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/深度篇/A4-Layer4深挖-数据/02-关系模型-表约束与外键.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/深度篇/A5-Layer5深挖-质量/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/深度篇/A4-Layer4深挖-数据/04-类型的坑与ORM的边界.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/深度篇/A5-Layer5深挖-质量/01-测试是让你敢改的安全网.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/深度篇/A4-Layer4深挖-数据/03-SQL四金刚-JOIN与索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/深度篇/A5-Layer5深挖-质量/02-测试金字塔的经济学.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/深度篇/A4-Layer4深挖-数据/05-Flyway与三次迁移现场.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/深度篇/A5-Layer5深挖-质量/03-单元测试与Mock.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/深度篇/A5-Layer5深挖-质量/04-集成测试-e2e-与测什么.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/深度篇/A5-Layer5深挖-质量/05-红绿-系统排错-与质量流程.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/深度篇/A6-Layer6深挖-运维/01-值班人三问与镜像千层饼.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/深度篇/A6-Layer6深挖-运维/00-索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/深度篇/A6-Layer6深挖-运维/02-真Dockerfile与compose开发环境.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/深度篇/A6-Layer6深挖-运维/03-k3s收敛循环与对象模型.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/深度篇/A6-Layer6深挖-运维/04-Deployment决策-探针-与Service.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/operation-note/知识库/深度篇/A6-Layer6深挖-运维/05-发布-观测-与收官会师.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-从这里开始.md",
+        "adapters",
+        "archive",
+        "core",
+        "AGENTS.md",
+        "CHANGELOG.md",
+        "portable",
+        "docs",
+        "profiles",
+        "projects",
+        "README.md",
+        "reviews",
+        "skills",
+        "templates",
+        "_镜像说明.md"
+      ]
+    },
+    "project/AI治理系统/00-从这里开始.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/AGENTS.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/adapters": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "claude",
+        "codex",
+        "generic"
+      ]
+    },
+    "project/AI治理系统/core": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "01-governance-charter-v2.md"
+      ]
+    },
+    "project/AI治理系统/docs": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "01-v2.2-已批准摘要.md",
+        "00-v2-使用指南.md",
+        "01-全域AI对话治理总宪章-v1.0.md",
+        "03-全量对话盘点迁移与归档手册.md",
+        "02-总管AI运行与应急处置手册.md",
+        "04-Creative-OS专项治理附录.md",
+        "06-总管AI启动提示词.md",
+        "07-明日第一轮全量盘点指令.md",
+        "05-设计系统恢复与冻结规范.md",
+        "08-文件使用与角色分发说明.md",
+        "09-宪章执行纠偏与HTML输出治理手册.md",
+        "evaluations",
+        "10-AI输出文件工程与交付治理手册.md",
+        "11-跨领域可复用的工程治理思维.md",
+        "superpowers"
+      ]
+    },
+    "project/AI治理系统/portable": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "README.md"
+      ]
+    },
+    "project/AI治理系统/CHANGELOG.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/profiles": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "machines",
+        "user"
+      ]
+    },
+    "project/AI治理系统/projects": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "instances",
+        "README.md"
+      ]
+    },
+    "project/AI治理系统/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/archive": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "v1"
+      ]
+    },
+    "project/AI治理系统/reviews": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "01-用户审核清单-v2.1.md",
+        "02-用户批准与项目中立变更记录-v2.2.md",
+        "v2.0-final-review.md",
+        "v2.1-final-review.md"
+      ]
+    },
+    "project/AI治理系统/skills": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "global-ai-dialogue-governor"
+      ]
+    },
+    "project/AI治理系统/templates": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "冲突事故报告.md",
+        "决策记录.md",
+        "开工声明卡-v2.md",
+        "汇报门禁清单.md",
+        "转发与报告格式-v2.md",
+        "项目治理绑定说明-v2.2.md"
+      ]
+    },
+    "project/AI治理系统/_镜像说明.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/adapters/codex": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "README.md"
+      ]
+    },
+    "project/AI治理系统/adapters/claude": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "README.md"
+      ]
+    },
+    "project/AI治理系统/adapters/generic": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "README.md"
+      ]
+    },
+    "project/AI治理系统/core/01-governance-charter-v2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/portable/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/profiles/machines": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "README.md"
+      ]
+    },
+    "project/AI治理系统/profiles/user": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "lqy-working-system.md"
+      ]
+    },
+    "project/AI治理系统/projects/instances": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "README.md"
+      ]
+    },
+    "project/AI治理系统/reviews/02-用户批准与项目中立变更记录-v2.2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/reviews/v2.0-final-review.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/skills/global-ai-dialogue-governor": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "references",
+        "SKILL.md"
+      ]
+    },
+    "project/AI治理系统/archive/v1": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "project-records"
+      ]
+    },
+    "project/AI治理系统/reviews/01-用户审核清单-v2.1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/projects/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/reviews/v2.1-final-review.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/templates/冲突事故报告.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/templates/决策记录.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/templates/开工声明卡-v2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/templates/汇报门禁清单.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/templates/转发与报告格式-v2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/templates/项目治理绑定说明-v2.2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/docs/00-v2-使用指南.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/docs/03-全量对话盘点迁移与归档手册.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/docs/01-v2.2-已批准摘要.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/docs/01-全域AI对话治理总宪章-v1.0.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/docs/04-Creative-OS专项治理附录.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/docs/02-总管AI运行与应急处置手册.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/docs/07-明日第一轮全量盘点指令.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/docs/09-宪章执行纠偏与HTML输出治理手册.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/docs/05-设计系统恢复与冻结规范.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/docs/10-AI输出文件工程与交付治理手册.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/docs/06-总管AI启动提示词.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/docs/11-跨领域可复用的工程治理思维.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/docs/superpowers": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "plans",
+        "specs"
+      ]
+    },
+    "project/AI治理系统/docs/evaluations": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "2026-08-02-governance-v2-1-visual-review.md",
+        "2026-08-02-governance-v2-2-visual-review.md",
+        "2026-07-31-governor-v2-evaluation.md",
+        "2026-08-02-handbook-v2-visual-review.md"
+      ]
+    },
+    "project/AI治理系统/docs/08-文件使用与角色分发说明.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/adapters/codex/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/adapters/claude/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/adapters/generic/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/profiles/user/lqy-working-system.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/profiles/machines/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/projects/instances/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/archive/v1/project-records": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-HTML纠偏系统设计说明.md",
+        "00-Obsidian知识库索引.md",
+        "00-先读我-明日启动说明.md",
+        "README.md",
+        "00-实施计划.md",
+        "00-实施计划-纠偏与输出工程.md"
+      ]
+    },
+    "project/AI治理系统/skills/global-ai-dialogue-governor/references": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "correction-prompts.md",
+        "governance-model.md",
+        "html-output-governance.md",
+        "output-engineering.md",
+        "layered-loading.md",
+        "templates.md",
+        "protocols.md",
+        "hard-permissions.md"
+      ]
+    },
+    "project/AI治理系统/skills/global-ai-dialogue-governor/SKILL.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/docs/evaluations/2026-08-02-handbook-v2-visual-review.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/docs/evaluations/2026-07-31-governor-v2-evaluation.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/docs/superpowers/plans": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "2026-08-02-governance-v2-1-lean-release.md",
+        "2026-07-31-personal-ai-governance-v2.md",
+        "2026-08-02-project-neutral-governance-v2-2.md"
+      ]
+    },
+    "project/AI治理系统/docs/superpowers/specs": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "2026-08-02-governance-v2-1-lean-release-design.md",
+        "2026-08-02-project-neutral-governance-v2-2-design.md",
+        "2026-07-31-personal-ai-governance-v2-design.md"
+      ]
+    },
+    "project/AI治理系统/docs/evaluations/2026-08-02-governance-v2-2-visual-review.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/docs/evaluations/2026-08-02-governance-v2-1-visual-review.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/archive/v1/project-records/00-实施计划-纠偏与输出工程.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/archive/v1/project-records/00-实施计划.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/archive/v1/project-records/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/archive/v1/project-records/00-先读我-明日启动说明.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/skills/global-ai-dialogue-governor/references/correction-prompts.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/archive/v1/project-records/00-Obsidian知识库索引.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/skills/global-ai-dialogue-governor/references/hard-permissions.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/archive/v1/project-records/00-HTML纠偏系统设计说明.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/skills/global-ai-dialogue-governor/references/layered-loading.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/skills/global-ai-dialogue-governor/references/html-output-governance.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/skills/global-ai-dialogue-governor/references/templates.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/skills/global-ai-dialogue-governor/references/protocols.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/docs/superpowers/plans/2026-08-02-governance-v2-1-lean-release.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/docs/superpowers/plans/2026-07-31-personal-ai-governance-v2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/docs/superpowers/specs/2026-07-31-personal-ai-governance-v2-design.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/docs/superpowers/plans/2026-08-02-project-neutral-governance-v2-2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/skills/global-ai-dialogue-governor/references/output-engineering.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/docs/superpowers/specs/2026-08-02-project-neutral-governance-v2-2-design.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/docs/superpowers/specs/2026-08-02-governance-v2-1-lean-release-design.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/AI治理系统/skills/global-ai-dialogue-governor/references/governance-model.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-目录.md",
+        "01-系统是怎么分层的.md",
+        "98-写作规矩.md",
+        "99-我的批注.md",
+        "知识库"
+      ]
+    },
+    "project/creative-os-notes/01-系统是怎么分层的.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/98-写作规矩.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Creative-OS-项目",
+        "全栈基础",
+        "参考",
+        "工作流"
+      ]
+    },
+    "project/creative-os-notes/99-我的批注.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/00-目录.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "1-前端（前厅）",
+        "2-进程通信（传菜口）",
+        "4-数据存储（冰箱）",
+        "3-后端（后厨）",
+        "5-网络（对外电话）",
+        "6-测试与验证",
+        "7-版本控制与协作",
+        "8-SDD规格",
+        "9-词汇与事故"
+      ]
+    },
+    "project/creative-os-notes/知识库/全栈基础": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-全栈地图.md",
+        "01-全栈的全景框架.md",
+        "10-网页是怎么显示出来的.md",
+        "11-前端框架为什么存在.md",
+        "12-源码怎么变成浏览器能跑的.md",
+        "13-前端怎么管住一堆状态.md",
+        "14-界面怎么排版.md",
+        "15-浏览器怎么把页面画出来.md",
+        "16-异步与事件循环.md",
+        "17-React到底怎么工作.md",
+        "20-一次网络请求的全过程.md",
+        "21-前后端怎么约定.md",
+        "22-服务器怎么主动找我.md",
+        "23-HTTP到底是什么.md",
+        "30-后端到底在干嘛.md",
+        "31-登录之后它怎么记得我.md",
+        "32-进程线程和两个世界.md",
+        "33-鉴权机制深挖.md",
+        "41-为什么数据库全是表.md",
+        "42-关系型之外还有什么.md",
+        "43-数据库服务器跟SQLite差在哪.md",
+        "50-部署上线到底在干嘛.md",
+        "51-配置与环境变量.md",
+        "52-日志与监控.md",
+        "60-常见的安全坑.md",
+        "61-性能慢在哪怎么快.md"
+      ]
+    },
+    "project/creative-os-notes/知识库/参考": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "SDD教程-00-起点.md",
+        "SDD教程-01-核心概念.md",
+        "SDD教程-03-自测题库.md",
+        "SDD教程-02-工作原理与边界.md"
+      ]
+    },
+    "project/creative-os-notes/知识库/工作流": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "00-这份手册怎么用.md",
+        "01-花名册.md",
+        "02-宪法与规则体系.md",
+        "03-工作区协同.md",
+        "04-同步与备份.md",
+        "05-知识怎么学.md",
+        "06-干法复盘.md",
+        "07-可粘的启动提示词.md"
+      ]
+    },
+    "project/creative-os-notes/知识库/参考/SDD教程-00-起点.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/参考/SDD教程-01-核心概念.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/参考/SDD教程-02-工作原理与边界.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/参考/SDD教程-03-自测题库.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/全栈基础/00-全栈地图.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/全栈基础/01-全栈的全景框架.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/全栈基础/10-网页是怎么显示出来的.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/全栈基础/11-前端框架为什么存在.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/全栈基础/12-源码怎么变成浏览器能跑的.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/全栈基础/13-前端怎么管住一堆状态.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/全栈基础/14-界面怎么排版.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/全栈基础/16-异步与事件循环.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/全栈基础/17-React到底怎么工作.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/全栈基础/15-浏览器怎么把页面画出来.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/全栈基础/20-一次网络请求的全过程.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/全栈基础/23-HTTP到底是什么.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/全栈基础/21-前后端怎么约定.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/全栈基础/22-服务器怎么主动找我.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/全栈基础/31-登录之后它怎么记得我.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/全栈基础/30-后端到底在干嘛.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/全栈基础/33-鉴权机制深挖.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/全栈基础/41-为什么数据库全是表.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/全栈基础/43-数据库服务器跟SQLite差在哪.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/全栈基础/42-关系型之外还有什么.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/全栈基础/50-部署上线到底在干嘛.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/全栈基础/32-进程线程和两个世界.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/全栈基础/61-性能慢在哪怎么快.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/全栈基础/51-配置与环境变量.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/工作流/01-花名册.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/全栈基础/60-常见的安全坑.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/全栈基础/52-日志与监控.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/工作流/00-这份手册怎么用.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/工作流/02-宪法与规则体系.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/工作流/06-干法复盘.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/工作流/03-工作区协同.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/工作流/07-可粘的启动提示词.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/工作流/04-同步与备份.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/工作流/05-知识怎么学.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/1-前端（前厅）": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "11-我点的那一下.md",
+        "13-界面的样子从哪来.md",
+        "14-我写的字怎么变成能跑的东西.md",
+        "12-为什么要给每样东西贴标签.md"
+      ]
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/2-进程通信（传菜口）": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "21-为什么有两个世界.md",
+        "22-传菜口那道门.md",
+        "23-说好同一种话.md"
+      ]
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/4-数据存储（冰箱）": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "41-数据库到底是什么.md",
+        "43-要么全成要么全不成.md",
+        "44-怎么认出同一张图.md",
+        "42-我的九张表长什么样.md",
+        "45-插头形状对不上.md"
+      ]
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/5-网络（对外电话）": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "51-一次网络请求发生了什么.md",
+        "52-怎么跟AI说话.md",
+        "53-钥匙放哪.md",
+        "54-外面靠不住的时候.md",
+        "55-图片是怎么被处理的.md"
+      ]
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/7-版本控制与协作": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "71-六个对话为什么会互相污染.md",
+        "70-Git-和我的后悔药.md",
+        "72-一个只拦得住记录自己的规则.md"
+      ]
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/6-测试与验证": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "60-代码写完了不等于跑通了.md",
+        "61-三种测试各在测什么.md",
+        "62-怎么让撒谎做不到.md",
+        "63-防护做在想到的方向上.md",
+        "64-什么才算证据.md"
+      ]
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/8-SDD规格": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "80-SDD全流程-从宪法到推送.md",
+        "82-那些门为什么在那儿.md",
+        "81-为什么一份spec好过十轮对话.md",
+        "83-SDD什么时候不该用.md",
+        "84-我们站在哪一级.md"
+      ]
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/9-词汇与事故": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "91-认得出就行.md",
+        "90-事故档案.md"
+      ]
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/3-后端（后厨）": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "31-后厨用的是什么炉子.md",
+        "32-为什么菜谱不认识冰箱.md",
+        "33-一条灵感只能走哪几条路.md",
+        "34-为什么不能当场做完.md"
+      ]
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/2-进程通信（传菜口）/21-为什么有两个世界.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/2-进程通信（传菜口）/22-传菜口那道门.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/2-进程通信（传菜口）/23-说好同一种话.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/4-数据存储（冰箱）/41-数据库到底是什么.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/4-数据存储（冰箱）/42-我的九张表长什么样.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/5-网络（对外电话）/51-一次网络请求发生了什么.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/5-网络（对外电话）/52-怎么跟AI说话.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/5-网络（对外电话）/53-钥匙放哪.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/5-网络（对外电话）/54-外面靠不住的时候.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/4-数据存储（冰箱）/44-怎么认出同一张图.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/5-网络（对外电话）/55-图片是怎么被处理的.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/7-版本控制与协作/71-六个对话为什么会互相污染.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/7-版本控制与协作/72-一个只拦得住记录自己的规则.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/4-数据存储（冰箱）/43-要么全成要么全不成.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/1-前端（前厅）/11-我点的那一下.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/1-前端（前厅）/13-界面的样子从哪来.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/4-数据存储（冰箱）/45-插头形状对不上.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/7-版本控制与协作/70-Git-和我的后悔药.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/1-前端（前厅）/14-我写的字怎么变成能跑的东西.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/1-前端（前厅）/12-为什么要给每样东西贴标签.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/6-测试与验证/60-代码写完了不等于跑通了.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/6-测试与验证/62-怎么让撒谎做不到.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/6-测试与验证/63-防护做在想到的方向上.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/8-SDD规格/81-为什么一份spec好过十轮对话.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/8-SDD规格/80-SDD全流程-从宪法到推送.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/6-测试与验证/61-三种测试各在测什么.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/8-SDD规格/82-那些门为什么在那儿.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/8-SDD规格/83-SDD什么时候不该用.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/9-词汇与事故/90-事故档案.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/9-词汇与事故/91-认得出就行.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/6-测试与验证/64-什么才算证据.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/8-SDD规格/84-我们站在哪一级.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/3-后端（后厨）/31-后厨用的是什么炉子.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/3-后端（后厨）/33-一条灵感只能走哪几条路.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/3-后端（后厨）/32-为什么菜谱不认识冰箱.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/creative-os-notes/知识库/Creative-OS-项目/3-后端（后厨）/34-为什么不能当场做完.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/Linear Calendar Events": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "12weeks 1.md",
+        "birthday.md",
+        "_Linear Calendar Index.md",
+        "丙午.md"
+      ]
+    },
+    "clutter/Linear Calendar Events/12weeks 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/Linear Calendar Events/丙午.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/Linear Calendar Events/birthday.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/Linear Calendar Events/_Linear Calendar Index.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL_FROZEN": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL"
+      ]
+    },
+    "clutter/OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL_FROZEN/OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "TEMPLATE.md",
+        "SOP_WEEKLY_CONTINUATION.md",
+        "SKILL.md",
+        "README.md",
+        "Obsidian_Course_Notes_Standard_v2.1.md",
+        "HANDOFF_PROMPTS.md",
+        "COURSE_STATE_TEMPLATE.yaml"
+      ]
+    },
+    "clutter/OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL_FROZEN/OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL/COURSE_STATE_TEMPLATE.yaml": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL_FROZEN/OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL/HANDOFF_PROMPTS.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL_FROZEN/OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL/Obsidian_Course_Notes_Standard_v2.1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL_FROZEN/OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL_FROZEN/OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL/SKILL.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL_FROZEN/OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL/SOP_WEEKLY_CONTINUATION.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL_FROZEN/OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL/TEMPLATE.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/test/Clash使用与Codex网络稳定手册.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/test/网络故障排查手册-Codex-ChatGPT.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/test/色彩系统预览.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "COURSE_STATE_TEMPLATE.yaml",
+        "SOP_WEEKLY_CONTINUATION.md",
+        "SKILL.md",
+        "README.md",
+        "Obsidian_Course_Notes_Standard_v2.1.md",
+        "TEMPLATE.md",
+        "HANDOFF_PROMPTS.md"
+      ]
+    },
+    "OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL/COURSE_STATE_TEMPLATE.yaml": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL/Obsidian_Course_Notes_Standard_v2.1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL/HANDOFF_PROMPTS.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL/SOP_WEEKLY_CONTINUATION.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL/SKILL.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL/TEMPLATE.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/CSI201_Week01_Delivery/Week01/Lecture 01 - Introduction to the Modern Internet.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/online class": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "reading.md"
+      ]
+    },
+    "English Learning/online class/reading.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/texture-preview": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "11-w-xheavy.png",
+        "11-w-heavy.png",
+        "11-w-mid.png",
+        "10-dark-retoned-same.png",
+        "10-dark-retoned-inv.png",
+        "light-paper-ref.png",
+        "09-fiber2-c.png",
+        "09-fiber2-b.png",
+        "09-fiber2-a.png",
+        "08-felt.png",
+        "07-laid2.png",
+        "06-wove.png",
+        "05-fiber.png",
+        "预览.html",
+        "04-matte-depth.png",
+        "03-linen.png",
+        "02-laid.png",
+        "01-matte.png"
+      ]
+    },
+    "clutter/texture-preview/01-matte.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/texture-preview/02-laid.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/texture-preview/03-linen.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/texture-preview/04-matte-depth.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/texture-preview/预览.html": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/texture-preview/05-fiber.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/texture-preview/06-wove.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/texture-preview/07-laid2.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/texture-preview/08-felt.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/texture-preview/09-fiber2-a.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/texture-preview/09-fiber2-b.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/texture-preview/09-fiber2-c.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/texture-preview/light-paper-ref.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/texture-preview/10-dark-retoned-inv.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/texture-preview/10-dark-retoned-same.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/texture-preview/11-w-mid.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/texture-preview/11-w-heavy.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/texture-preview/11-w-xheavy.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/write/未命名/未命名.md": {
       "isPinned": false,
       "isHidden": false
     }

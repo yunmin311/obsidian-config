@@ -4,7 +4,19 @@
   "soundStyle": "followFileExplorer",
   "releaseSoundEnabled": true,
   "waypoints": {},
-  "readingMemory": {},
+  "readingMemory": {
+    "YEAR3/CSI201_Week01_Delivery/Week01/Lecture 01 - Introduction to the Modern Internet.md": {
+      "progress": 0.2247,
+      "headingText": "二、Protocol：为什么“已经连接”仍然不代表“能正常通信”",
+      "headingLevel": 2,
+      "headingSourceLine": 31,
+      "updatedAt": 1789178833375
+    },
+    "homepage.md": {
+      "progress": 0.213,
+      "updatedAt": 1788791195336
+    }
+  },
   "outlineMaxLevel": 4,
   "outlineScope": "all",
   "licenseCode": "eyJwcm9kdWN0IjoiQ3Jpc3AgU3VpdGUiLCJsaWNlbnNlSWQiOiJDUklTUC1NVEpOUk82ViIsInVzZXJOYW1lIjoieXVubWluIiwiaXNzdWVkQXQiOiIyMDI2LTA5LTAyVDA1OjMxOjE3LjQzMVoiLCJleHBpcmVzQXQiOiIyMTI2LTA4LTA5VDA1OjMxOjE3LjQzMVoiLCJtYXhEZXZpY2VzIjozLCJmZWF0dXJlcyI6WyJhbGwiXX0.-6s_70J6AaORk94Brj6IvozdcBf6JGBXnPfmAoMJpolUPCfTjtGcIo0qvA3EImNoUHl1WkOx4GlFFv1OqHnNDg"
