@@ -96,12 +96,33 @@ if (Test-Path $SnippetsSrc) {
 Write-Host "`n复制插件配置..." -ForegroundColor Cyan
 $PluginsSrc = Join-Path $SourceObsidian "plugins"
 $PluginsDst = Join-Path $TargetObsidian "plugins"
+
+# 自研插件：整体复制（含本体 main.js / styles.css / manifest.json）
+# 其余插件本体按惯例不入库，只恢复 data.json，本体需重装
+$OwnPlugins = @("toolbar-pin-toggle", "reading-rail-sidebar")
+
 if (Test-Path $PluginsSrc) {
     if (-not (Test-Path $PluginsDst)) {
         New-Item -ItemType Directory -Path $PluginsDst -Force | Out-Null
     }
+
+    foreach ($name in $OwnPlugins) {
+        $src = Join-Path $PluginsSrc $name
+        if (Test-Path $src) {
+            $dst = Join-Path $PluginsDst $name
+            if (-not (Test-Path $dst)) {
+                New-Item -ItemType Directory -Path $dst -Force | Out-Null
+            }
+            Copy-Item -Path (Join-Path $src "*") -Destination $dst -Recurse -Force
+            Write-Host "  ✓ $name/ (自研插件，含本体)" -ForegroundColor Green
+        } else {
+            Write-Warning "  ✗ $name (仓库里没有这个自研插件)"
+        }
+    }
+
     Get-ChildItem $PluginsSrc -Directory | ForEach-Object {
         $PluginName = $_.Name
+        if ($OwnPlugins -contains $PluginName) { return }
         $SrcData = Join-Path $_.FullName "data.json"
         $DstDir = Join-Path $PluginsDst $PluginName
         $DstData = Join-Path $DstDir "data.json"
@@ -117,7 +138,7 @@ if (Test-Path $PluginsSrc) {
 
 # 复制模板
 Write-Host "`n复制模板..." -ForegroundColor Cyan
-$TemplatesSrc = Join-Path (Split-Path $ConfigRoot) "templates"
+$TemplatesSrc = Join-Path $ConfigRoot "templates"
 $TemplatesDst = Join-Path $VaultPath "templates"
 if (Test-Path $TemplatesSrc) {
     if (-not (Test-Path $TemplatesDst)) {
@@ -133,8 +154,8 @@ Write-Host "`n=== 安装完成 ====" -ForegroundColor Cyan
 Write-Host "请执行以下步骤：" -ForegroundColor Yellow
 Write-Host "1. 重启 Obsidian"
 Write-Host "2. 设置 → 外观 → 主题 → 选择 Border"
-Write-Host "3. 设置 → 外观 → CSS 代码片段 → 刷新 → 勾选 5 个片段"
-Write-Host "4. 设置 → 社区插件 → 确认 24 个插件已启用（crisp 系列需先经 BRAT 安装）"
+Write-Host "3. 设置 → 外观 → CSS 代码片段 → 刷新 → 勾选 9 个片段（启用清单见 appearance.json）"
+Write-Host "4. 设置 → 社区插件 → 确认 23 个插件已启用（crisp 系列需先经 BRAT 安装；两个自研插件已随脚本装好）"
 Write-Host "5. 设置 → Style Settings → 确认配色（灰青蓝：浅 #5A7F9A / 深 #6B9FE8，深色背景 #0A0E1A）"
 Write-Host "6. 填入 GLM API / Crisp 激活码 / ASR Key"
 Write-Host "7. 重启 Obsidian 验证"
