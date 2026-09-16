@@ -26,8 +26,8 @@ Obsidian 外壳配置包：主题、CSS 片段、插件设置与说明文档。*
 | 大 CSS | `baseline-optimized.minimal.active.css` + `border-polished.active.css`（均为 letschips 作品，勿改） |
 | 覆盖片段 | `blue-gray-dark-fix.css`（暖色→蓝灰）、`graph-blue-gray.css`（关系图蓝灰）、`dark-paper-texture.css`（深色纸纹）、`dense-reading.css`（密排阅读 + 行宽档位），自写可改 |
 | 字体 | 界面：方正屏显雅宋简体 · 正文：iA Writer Quattro S · 等宽：Fira Code |
-| 自研插件 | `toolbar-pin-toggle`（Alt+Q 工具栏常驻双模式 + Editing Toolbar 全套外观修正）、`reading-rail-sidebar`（右侧栏阅读轨道：进度 / 当前标题 / 标题树 / 按文件记忆位置）—— 两者**整体入库** |
-| 插件 | 已装 27 个：**20 个启用** + 7 个备用未启用（crisp 系列经 BRAT 安装）；详见 [docs/plugins.md](docs/plugins.md) |
+| 自研插件 | `toolbar-pin-toggle`（Alt+Q 工具栏常驻双模式 + Editing Toolbar 全套外观修正）、`reading-rail-sidebar`（右侧栏阅读轨道）、`quiet-shelf`（暗格 + 聚焦：左侧文件树的显示层控制）—— 三者**整体入库** |
+| 插件 | 已装 28 个：**21 个启用** + 7 个备用未启用（crisp 系列经 BRAT 安装）；详见 [docs/plugins.md](docs/plugins.md) |
 
 ## 目录结构
 
@@ -41,7 +41,8 @@ Obsidian 外壳配置包：主题、CSS 片段、插件设置与说明文档。*
   plugins/<第三方>/data.json      各插件设置（见 docs/plugins.md）
   plugins/toolbar-pin-toggle/     自研插件本体（整体入库）
   plugins/reading-rail-sidebar/   自研插件本体（整体入库）
-                                 ↑ 含 vault 路径的两个插件配置不入库，见 docs/plugins.md
+  plugins/quiet-shelf/            自研插件本体（整体入库）
+                                 ↑ 含 vault 路径的三个插件配置不入库，见 docs/plugins.md
 docs/
   css-guide.md           CSS 外壳怎么改（逐文件说明）+ 深色蓝灰色板定稿
   plugins.md             插件设置方式 + 来源链接

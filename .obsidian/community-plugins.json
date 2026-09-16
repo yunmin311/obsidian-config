@@ -1,6 +1,5 @@
 [
   "editing-toolbar",
-  "obsidian-plugin-update-tracker",
   "obsidian-git",
   "templater-obsidian",
   "dataview",
@@ -19,5 +18,6 @@
   "calendar",
   "immersive-folder",
   "toolbar-pin-toggle",
-  "reading-rail-sidebar"
+  "reading-rail-sidebar",
+  "quiet-shelf"
 ]

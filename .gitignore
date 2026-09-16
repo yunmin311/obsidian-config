@@ -52,6 +52,8 @@
 !.obsidian/plugins/toolbar-pin-toggle/**
 !.obsidian/plugins/reading-rail-sidebar/
 !.obsidian/plugins/reading-rail-sidebar/**
+!.obsidian/plugins/quiet-shelf/
+!.obsidian/plugins/quiet-shelf/**
 
 # 大文件 / 敏感信息
 *.zip

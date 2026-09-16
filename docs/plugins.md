@@ -10,7 +10,7 @@
 | 自研插件 | **整体入库**（`main.js` + `styles.css` + `manifest.json` + `data.json`） |
 | 含 vault 路径的运行时状态 | **不入库**（见文末「不随仓库备份的配置」） |
 
-## 已启用（20 个）
+## 已启用（21 个）
 
 | 插件 | 版本 | 用途 | 来源 |
 |---|---|---|---|
@@ -34,6 +34,7 @@
 | Crisp Visual | 0.2.2 | 视觉资产画廊 | letschips（BRAT） |
 | **Toolbar Pin Toggle** | 1.0.0 | 自研，见下 | 本地 |
 | **Reading Rail Sidebar** | 0.1.0 | 自研，见下 | 本地 |
+| **Quiet Shelf**（暗格） | 0.1.0 | 自研，见下 | 本地 |
 
 ## 已装未启用（7 个）
 
@@ -57,6 +58,24 @@
 |---|---|---|
 | **Toolbar Pin Toggle** | 一个快捷键（Alt+Q）两种常驻：底部原生常驻工具条 / 顶部工具条常驻；同时收编 Editing Toolbar 的全部外观与行为修正 | `.obsidian/plugins/toolbar-pin-toggle/` |
 | **Reading Rail Sidebar** | 把「阅读进度 + 标题导航」做成右侧栏面板：进度百分比、当前标题跟随、标题树跳转、按文件记忆阅读位置 | `.obsidian/plugins/reading-rail-sidebar/` |
+| **Quiet Shelf**（暗格） | 左侧文件树的显示层控制。① 暗格：把归档 / 索引类文件从文件树收起（物理位置、知识图谱、搜索全不受影响），可手动也可按文件名自动收，手动放回过的不会被再自动收；② 聚焦：跨层级多选文件夹 / 文件，只留选中那一组，可存命名组合 | `.obsidian/plugins/quiet-shelf/` |
+
+### Quiet Shelf 的命令与快捷键
+
+| 命令 | 快捷键 |
+|---|---|
+| 打开暗格 | `Alt+S` |
+| 批量移入 / 移出暗格 | — |
+| 把当前文件移入 / 移出暗格 | `Alt+Shift+S` |
+| 切换聚焦模式 | `Alt+Shift+F` |
+| 聚焦当前文件所在文件夹 | — |
+| 退出聚焦（恢复全部） | — |
+| 把当前聚焦存为组合 | — |
+
+批量界面也可以从 **设置 → Quiet Shelf → 批量管理** 打开：列出整个 vault 的树，勾选后一次处理，
+带筛选框和「选中当前结果」。
+
+> 快捷键写在本仓库的 `.obsidian/hotkeys.json` 里，随配置一起恢复。
 
 两者都是**纯 JS、无构建依赖**（`main.js` + `styles.css` + `manifest.json`），改完重启 Obsidian 即生效。
 样式全部限定在各自前缀（`etb-` / `rrs-`）下，不改动任何主题变量。

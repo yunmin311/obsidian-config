@@ -1,0 +1,9 @@
+{
+  "id": "quiet-shelf",
+  "name": "Quiet Shelf",
+  "version": "0.1.0",
+  "minAppVersion": "1.4.0",
+  "description": "暗格：把归档、索引类文件从左侧文件树收起来（物理位置、知识图谱、搜索全部不变），随时可放回。另含聚焦模式——可跨层级多选文件夹，只留下当前要看的。",
+  "author": "yunmin311",
+  "isDesktopOnly": false
+}

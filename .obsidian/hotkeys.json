@@ -56,5 +56,31 @@
       ],
       "key": "Q"
     }
+  ],
+  "quiet-shelf:open-shelf": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "S"
+    }
+  ],
+  "quiet-shelf:toggle-shelve": [
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": "S"
+    }
+  ],
+  "quiet-shelf:toggle-focus": [
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": "F"
+    }
   ]
 }
