@@ -6,6 +6,17 @@ Obsidian 外壳配置包：主题、CSS 片段、插件设置与说明文档。*
 
 正式项目地址：`E:\1project\obsidian-config`（与日常使用的 vault 分离；vault 只作为配置来源）。
 
+## 两套仓库，别混淆
+
+| 仓库 | 可见性 | 装什么 | 谁在推 |
+|---|---|---|---|
+| `yunmin311/obsidian-notes` | **private** | **整个 vault**（全部笔记 + `.obsidian` 配置） | obsidian-git 插件自动：每 10 分钟 commit、每 30 分钟 push |
+| `yunmin311/obsidian-config` | public（本仓库） | **只放配置框架**：主题、CSS 片段、插件设置、恢复文档 | 手工 push |
+
+- 本仓库是「配置框架」，可供展示与复用；vault 的日常笔记备份走 `obsidian-notes` —— 两者**完全独立、互不干扰**。
+- 从本仓库移出某个文件，只影响这里；vault 那边的备份照常包含它（反之亦然）。
+- 两边的 `.gitignore` 各自维护、规则不同：vault 侧是「完整笔记备份」（只排垃圾与大包），config 侧是「白名单放行」（防止笔记误入本仓库）。
+
 ## 当前配置栈
 
 | 层 | 内容 |

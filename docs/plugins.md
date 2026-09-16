@@ -67,7 +67,7 @@
 
 ## 不随仓库备份的配置
 
-以下两个插件的 `data.json` **含 vault 路径与打开记录**（属运行时状态，不是配置），已从仓库移出并加入 `.gitignore`。
+以下三个插件的 `data.json` 里 **含 vault 路径与打开记录**（属运行时状态，不是配置），已从仓库移出并加入 `.gitignore`。
 本地文件照常保留，不影响使用；换机器时按下面的值手动设一遍即可。
 
 **Flexplorer**（`flexplorer/data.json`，177 KB，其中 `items` 是 1000+ 条笔记/文件夹路径）
@@ -95,11 +95,29 @@
 | `soundStyle` | `"soft"` |
 | `orbStyle` | `"default"` |
 
+**Crisp Reading Rail**（`crisp-reading-rail/data.json`，3.4 KB，其中 `readingMemory` 是每篇笔记的阅读进度与当前标题）
+
+| 键 | 当前值 |
+|---|---|
+| `orbStyle` | `"default"` |
+| `outlineMaxLevel` | `4` |
+| `outlineScope` | `"all"` |
+| `soundEnabled` | `false` |
+| `releaseSoundEnabled` | `true` |
+| `soundStyle` | `"followFileExplorer"` |
+| `waypoints` | `{}` |
+
+> 该插件已停用，功能由自研 Reading Rail Sidebar 接管。`licenseCode`（Crisp 激活码）不入库，恢复时自行填入。
+
 ## 关键插件设置
 
 **Style Settings**（`obsidian-style-settings/data.json`）— 色系微调的唯一入口，改这里而不是改 letschips 的 CSS。深色背景键：`background-underlying-CSS-dark`（当前 `#0A0E1A`）。
 
-**Git**（`obsidian-git/data.json`）— 每天自动 commit 一次（`autoSaveInterval: 1440`），每天自动 pull 一次，**自动 push 关闭**（`autoPushInterval: 0`），提交信息模板 `vault backup: {{date}}`。注意：这个插件备份的是**整个 vault**，与本仓库（只备份配置）是两回事，别把它指向本仓库远端。
+**Git**（`obsidian-git/data.json`）— 备份的是**整个 vault**（笔记 + 配置），推到 `yunmin311/obsidian-notes`（private）。⚠️ 这与本仓库（只备份配置、public）是**两套完全独立的仓库**，不要把它的远端指到本仓库。
+
+当前节奏（2026-09-16 核对）：每 **10 分钟**自动 commit（`autoSaveInterval: 10`）、每 **30 分钟**自动 push（`autoPushInterval: 30`）、每 1440 分钟自动 pull（`autoPullInterval: 1440`）+ 启动时 pull（`autoPullOnBoot: true`）；`disablePush: false`（推送开启）、`showErrorNotices: true`（失败会弹通知）、`updateSubmodules: false`；提交信息模板 `vault backup: {{date}}`。
+
+> vault 根目录的 `.gitignore` 与 config 仓库各自独立维护。2026-09-16 修：vault 侧补上了 `.obsidian/workspace.json` —— 原来只有 `workspace-*.json`，通配匹配不到它（缺横线），导致主工作区状态每 10 分钟被提交一次，纯噪音。
 
 **Editing Toolbar**（`editing-toolbar/data.json`）— 含自定义 AI 配置（GLM）。`toolbarBackgroundColor` / `toolbarIconColor` 保持插件的浅色原值，深色模式由 `toolbar-pin-toggle/styles.css` 用 `!important` 接管。
 
@@ -109,7 +127,7 @@
 
 **BRAT**（`obsidian42-brat/data.json`）— crisp 系列的 9 个仓库已登记。新设备恢复时先装 BRAT，再逐一添加。
 
-> `community-plugins.json` 里还残留一项 `obsidian-plugin-update-tracker`，但对应插件目录已不存在（应为手动删目录留下的）。它不会被加载，重装该插件时会自动生效；想清理的话从该文件里删掉这一项即可。
+> 2026-09-16 已清理 `community-plugins.json` 里 `obsidian-plugin-update-tracker` 的残留项 —— 它一直列在启用清单里，但插件目录早已不存在（手动删目录留下的），属脏数据。
 
 ## 新设备恢复顺序
 
@@ -119,5 +137,5 @@
 4. 复制两个自研插件目录（`toolbar-pin-toggle/`、`reading-rail-sidebar/`，含本体）
 5. 复制 `.obsidian/snippets/`（9 个）+ `appearance.json`
 6. 主题 Border 在内置主题市场安装，重启 Obsidian
-7. 按「不随仓库备份的配置」补设 Flexplorer 与 Crisp File Explorer
+7. 按「不随仓库备份的配置」补设 Flexplorer、Crisp File Explorer、Crisp Reading Rail
 8. 填入 GLM API / Crisp 激活码 / ASR Key
