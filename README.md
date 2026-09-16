@@ -16,7 +16,7 @@ Obsidian 外壳配置包：主题、CSS 片段、插件设置与说明文档。*
 | 覆盖片段 | `blue-gray-dark-fix.css`（暖色→蓝灰）、`graph-blue-gray.css`（关系图蓝灰）、`dark-paper-texture.css`（深色纸纹）、`dense-reading.css`（密排阅读 + 行宽档位），自写可改 |
 | 字体 | 界面：方正屏显雅宋简体 · 正文：iA Writer Quattro S · 等宽：Fira Code |
 | 自研插件 | `toolbar-pin-toggle`（Alt+Q 工具栏常驻双模式 + Editing Toolbar 全套外观修正）、`reading-rail-sidebar`（右侧栏阅读轨道：进度 / 当前标题 / 标题树 / 按文件记忆位置）—— 两者**整体入库** |
-| 插件 | 23 个已启用（crisp 系列经 BRAT 安装，其中 2 个已装未启用），22 个有自定义设置 |
+| 插件 | 已装 27 个：**20 个启用** + 7 个备用未启用（crisp 系列经 BRAT 安装）；详见 [docs/plugins.md](docs/plugins.md) |
 
 ## 目录结构
 
@@ -30,6 +30,7 @@ Obsidian 外壳配置包：主题、CSS 片段、插件设置与说明文档。*
   plugins/<第三方>/data.json      各插件设置（见 docs/plugins.md）
   plugins/toolbar-pin-toggle/     自研插件本体（整体入库）
   plugins/reading-rail-sidebar/   自研插件本体（整体入库）
+                                 ↑ 含 vault 路径的两个插件配置不入库，见 docs/plugins.md
 docs/
   css-guide.md           CSS 外壳怎么改（逐文件说明）+ 深色蓝灰色板定稿
   plugins.md             插件设置方式 + 来源链接
@@ -65,6 +66,7 @@ LICENSE                  MIT
 - `baseline-optimized.minimal.active.css`、`border-polished.active.css` 是 letschips 的原版作品，**不要直接编辑**，改坏了整个外壳会塌。要微调色系走 Style Settings（见 [docs/css-guide.md](docs/css-guide.md)）。
 - 本仓库推送前必须确认没有笔记内容被暂存：`git status` 里只应出现 `.obsidian/`、`docs/`、`scripts/`、`templates/`、根目录文档。
 - `.gitignore` 里自研插件的白名单必须写在 `.obsidian/plugins/*/main.js` / `styles.css` / `manifest.json` 那组通配排除**之后** —— gitignore 后置规则优先，写前面会被盖掉（历史上 `toolbar-pin-toggle` 本体就这么漏过）。
+- `flexplorer` 与 `crisp-file-explorer` 的 `data.json` 里装的是 vault 文件树与打开记录（运行时状态，不是配置），已加入 `.gitignore` **不入库**。本地文件照常保留；换机器时按 [docs/plugins.md](docs/plugins.md)「不随仓库备份的配置」手动补设。
 - 2026-09-13：已清理 `appearance.json` 中失效片段引用 `baseline-translucent-window.active`。
 
 ## 署名

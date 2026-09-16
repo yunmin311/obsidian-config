@@ -1,45 +1,55 @@
 # 插件设置说明 + 来源链接
 
-安装方式两种：**市场** = Obsidian 内置社区插件市场直接搜；**BRAT** = 通过 obsidian42-brat 添加 GitHub 仓库安装。
+安装方式：**市场** = Obsidian 内置社区插件市场直接搜；**BRAT** = 通过 obsidian42-brat 添加 GitHub 仓库安装；**本地** = 自研插件。
 
-第三方插件只备份 `data.json`（设置），不含本体；**自研插件整体入库**，见文末「自研插件」一节。
+备份策略：
 
-## 已启用插件（23 个）
+| 类型 | 备份内容 |
+|---|---|
+| 第三方插件 | 只备份 `data.json`（设置），本体按惯例不入库 |
+| 自研插件 | **整体入库**（`main.js` + `styles.css` + `manifest.json` + `data.json`） |
+| 含 vault 路径的运行时状态 | **不入库**（见文末「不随仓库备份的配置」） |
 
-| 插件 | 用途 | 来源 | 安装方式 |
+## 已启用（20 个）
+
+| 插件 | 版本 | 用途 | 来源 |
 |---|---|---|---|
-| [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) | 主题可视化调参（色系微调入口） | mgmeyers | 市场 |
-| [Editing Toolbar](https://github.com/cumany/obsidian-editing-toolbar) | 编辑工具条 + 自定义 AI（GLM） | cumany | 市场 |
-| [Calendar](https://github.com/liamcain/obsidian-calendar-plugin) | 日历面板 | Liam Cain | 市场 |
-| [Templater](https://github.com/SilentVoid13/Templater) | 模板引擎 | SilentVoid | 市场 |
-| [Dataview](https://github.com/blacksmithgu/obsidian-dataview) | 笔记查询/索引 | blacksmithgu | 市场 |
-| [Tasks](https://github.com/obsidian-tasks-group/obsidian-tasks) | 任务管理 | obsidian-tasks-group | 市场 |
-| [Day Planner](https://github.com/ivan-lednev/obsidian-day-planner) | 日程规划 | ivan-lednev | 市场 |
-| [Git](https://github.com/Vinzent03/obsidian-git) | 配置自动备份到 GitHub | Vinzent03 | 市场 |
-| [BRAT](https://github.com/TfTHacker/obsidian42-brat) | 安装未上架的 beta 插件 | TfTHacker | 市场 |
-| [Omnisearch](https://github.com/scambier/obsidian-omnisearch) | 全文搜索 | scambier | 市场 |
-| [Buttons](https://github.com/shabegom/buttons) | 笔记内按钮 | shabegom | 市场 |
-| [Update Tracker](https://github.com/swar8080/obsidian-plugin-update-tracker) | 插件更新提醒 | swar8080 | 市场 |
-| [Flexplorer](https://github.com/kh4f/flexplorer) | 灵活文件浏览器 | kh4f | 市场 |
-| [Immersive Folder](https://github.com/iBlinkQ/immersive-folder) | 单文件夹沉浸视图 | iBlinkQ | 市场 |
-| Widgets | 桌面小组件 | [Rafael Veiga](https://rafaelveiga.github.io/) | 市场 |
-| Claudian | AI 助手（GLM 4.6V） | [Yishen Tu](https://github.com/YishenTu) | 市场/手动 |
-| **Toolbar Pin Toggle** | 自研，见文末 | — | 本地 |
-| **Reading Rail Sidebar** | 自研，见文末 | — | 本地 |
+| [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) | 1.0.9 | 主题可视化调参（色系微调唯一入口） | mgmeyers |
+| [Editing Toolbar](https://github.com/cumany/obsidian-editing-toolbar) | 4.1.3 | 编辑工具条 + 自定义 AI（GLM） | Cumany |
+| [Calendar](https://github.com/liamcain/obsidian-calendar-plugin) | 1.5.10 | 日历面板 | Liam Cain |
+| [Templater](https://github.com/SilentVoid13/Templater) | 2.25.0 | 模板引擎 | SilentVoid |
+| [Dataview](https://github.com/blacksmithgu/obsidian-dataview) | 0.5.68 | 笔记查询/索引 | blacksmithgu |
+| [Tasks](https://github.com/obsidian-tasks-group/obsidian-tasks) | 8.4.0 | 任务管理 | Clare Macrae / Ilya Landikov |
+| [Git](https://github.com/Vinzent03/obsidian-git) | 2.39.0 | vault 自动备份 | Vinzent03 |
+| [BRAT](https://github.com/TfTHacker/obsidian42-brat) | 2.2.0 | 安装未上架插件 | TfTHacker |
+| [Omnisearch](https://github.com/scambier/obsidian-omnisearch) | 1.31.0 | 全文搜索 | Simon Cambier |
+| [Buttons](https://github.com/shabegom/buttons) | 0.9.13 | 笔记内按钮 | shabegom |
+| [Flexplorer](https://github.com/kh4f/flexplorer) | 4.0.5 | 自定义排序 / 固定 / 隐藏文件 | kh4f |
+| [Immersive Folder](https://github.com/iBlinkQ/immersive-folder) | 0.4.2 | 单文件夹沉浸视图 | iBlinkQ |
+| Widgets | 0.0.11 | 笔记内小组件（时钟/倒计时/引语） | Rafael Veiga |
+| Crisp Base | 0.2.4 | crisp 系列基础依赖 | letschips（BRAT） |
+| Crisp File Explorer | 0.2.63 | 文件浏览器美化 | letschips（BRAT） |
+| Crisp Focus | 1.4.0 | 专注书写（光标动效 / 打字机滚动 / 环境音） | letschips（BRAT） |
+| Crisp Recall | 0.2.4 | 主动回忆 / 挖空复习 | letschips（BRAT） |
+| Crisp Visual | 0.2.2 | 视觉资产画廊 | letschips（BRAT） |
+| **Toolbar Pin Toggle** | 1.0.0 | 自研，见下 | 本地 |
+| **Reading Rail Sidebar** | 0.1.0 | 自研，见下 | 本地 |
 
-### crisp 系列（作者小红书博主 letschips，全部经 BRAT 安装）
+## 已装未启用（7 个）
 
-| 插件 | 用途 | BRAT 仓库 | 状态 |
+保留在 vault 里备用，随时可在设置里打开：
+
+| 插件 | 版本 | 用途 | 备注 |
 |---|---|---|---|
-| Crisp Base | 系列基础依赖 | `letschips/crisp-base` | 启用 |
-| Crisp File Explorer | 文件管理器美化 | `letschips/crisp-file-explorer` | 启用 |
-| Crisp Visual | 视觉增强 | `letschips/crisp-visual` | 启用 |
-| Crisp Focus | 专注模式 | `letschips/crisp-focus` | 启用 |
-| Crisp Reading Rail | 阅读侧栏（进度 + 标题导航） | `letschips/crisp-reading-rail` | 启用 |
-| Crisp Recall | 回忆/复习 | `letschips/crisp-recall` | 启用 |
-| Crisp DSH | 仪表盘 | `letschips/crisp-dsh` | 启用 |
-| Crisp Annotations | 批注 | `letschips/crisp-annotations` | 已装未启用 |
-| Crisp ASR | 语音识别 | `letschips/crisp-asr` | 已装未启用 |
+| Claudian | 2.2.6 | Claude Code / Codex 等编码 agent 接入 vault | 备用 |
+| Contribution Graph | 0.11.0 | 贡献热力图 | 备用 |
+| Crisp Annotations | 1.6.0 | 手绘箭头 + 手写批注 | 引导流程不顺手，暂关 |
+| Crisp ASR | 0.6.0 | 豆包 / Gemini 转写 | 备用 |
+| Crisp DSH | 1.2.0 | DeepSeek Harness 嵌入右侧栏 | 备用 |
+| **Crisp Reading Rail** | 0.4.4 | 阅读进度浮层轨道 | 已被自研 Reading Rail Sidebar 取代 |
+| Day Planner | 0.35.1 | 时间块日程 | 备用 |
+
+> CLI 侧另有一套 AI 编码工具链（Codex / OpenCode / dsh 等）在 Obsidian 之外独立运行，与本仓库无关。
 
 ## 自研插件（整体入库）
 
@@ -55,24 +65,59 @@
 > gitignore 是后置规则优先，白名单放前面会被后面的排除规则重新盖掉 ——
 > 之前 `toolbar-pin-toggle` 就是这样只入库了 `data.json`，本体三件套全漏。
 
-## 关键插件设置（对应 .obsidian/plugins/<id>/data.json）
+## 不随仓库备份的配置
+
+以下两个插件的 `data.json` **含 vault 路径与打开记录**（属运行时状态，不是配置），已从仓库移出并加入 `.gitignore`。
+本地文件照常保留，不影响使用；换机器时按下面的值手动设一遍即可。
+
+**Flexplorer**（`flexplorer/data.json`，177 KB，其中 `items` 是 1000+ 条笔记/文件夹路径）
+
+| 键 | 当前值 |
+|---|---|
+| `showHidden` | `false` |
+| `newItemPlacement` | `"top"` |
+| `persistOrderOnCreateDelete` | `true` |
+| `debugMode` | `false` |
+| `pinnedFiles` | `[]` |
+
+**Crisp File Explorer**（`crisp-file-explorer/data.json`，19 KB，其中 `activity` 是今日/常用文件记录 + 每篇打开次数）
+
+| 键 | 当前值 |
+|---|---|
+| `includeFolders` | `true` |
+| `openOnDragRelease` | `true` |
+| `autoExpandFoldersOnDrag` | `true` |
+| `todayTrailEnabled` | `true` |
+| `frequentMagnetsEnabled` | `true` |
+| `soundEnabled` | `false` |
+| `releaseSoundEnabled` | `false` |
+| `pitchScaleEnabled` | `false` |
+| `soundStyle` | `"soft"` |
+| `orbStyle` | `"default"` |
+
+## 关键插件设置
 
 **Style Settings**（`obsidian-style-settings/data.json`）— 色系微调的唯一入口，改这里而不是改 letschips 的 CSS。深色背景键：`background-underlying-CSS-dark`（当前 `#0A0E1A`）。
 
-**Git**（`obsidian-git/data.json`）— 当前配置：每天自动 commit 一次（`autoSaveInterval: 1440`），每天自动 pull 一次，**自动 push 关闭**（`autoPushInterval: 0`），提交信息模板 `vault backup: {{date}}`。注意：这个插件会备份整个 vault，与「只备份配置」的本仓库是两回事，别把它指向本仓库远端。
+**Git**（`obsidian-git/data.json`）— 每天自动 commit 一次（`autoSaveInterval: 1440`），每天自动 pull 一次，**自动 push 关闭**（`autoPushInterval: 0`），提交信息模板 `vault backup: {{date}}`。注意：这个插件备份的是**整个 vault**，与本仓库（只备份配置）是两回事，别把它指向本仓库远端。
 
 **Editing Toolbar**（`editing-toolbar/data.json`）— 含自定义 AI 配置（GLM）。`toolbarBackgroundColor` / `toolbarIconColor` 保持插件的浅色原值，深色模式由 `toolbar-pin-toggle/styles.css` 用 `!important` 接管。
 
 **Reading Rail Sidebar**（`reading-rail-sidebar/data.json`）— 自研。`settings` 三项：`maxLevel`（2/3/4）、`showProgress`、`rememberPosition`；`memory` 按文件路径记录阅读进度与当前标题，滚动停顿约 0.9 秒落盘，上限 300 条。
 
-**Templater**（`templater-obsidian/data.json`）— 模板目录指向 vault 的 `templates/`（该目录随仓库同步）。
+**Templater**（`templater-obsidian/data.json`）— 模板目录指向 vault 的 `templates/`。
 
-**BRAT**（`obsidian42-brat/data.json`）— 上面 crisp 系列的 9 个仓库已登记，新设备恢复时先装 BRAT，再逐一添加。
+**BRAT**（`obsidian42-brat/data.json`）— crisp 系列的 9 个仓库已登记。新设备恢复时先装 BRAT，再逐一添加。
+
+> `community-plugins.json` 里还残留一项 `obsidian-plugin-update-tracker`，但对应插件目录已不存在（应为手动删目录留下的）。它不会被加载，重装该插件时会自动生效；想清理的话从该文件里删掉这一项即可。
 
 ## 新设备恢复顺序
 
-1. 装市场插件（上表前 15 个）
-2. 装 BRAT → 添加 crisp 系列仓库
+1. 装市场插件（上表「已启用」里的前 13 个，不含 crisp 系列）
+2. 装 BRAT → 添加 crisp 系列 9 个仓库（`letschips/crisp-*`）
 3. 复制 `.obsidian/plugins/*/data.json` 覆盖对应插件设置
-4. 复制两个自研插件目录（`toolbar-pin-toggle/`、`reading-rail-sidebar/`，含本体）到 `.obsidian/plugins/`
-5. 复制 `.obsidian/snippets/` + `appearance.json` → 重启
+4. 复制两个自研插件目录（`toolbar-pin-toggle/`、`reading-rail-sidebar/`，含本体）
+5. 复制 `.obsidian/snippets/`（9 个）+ `appearance.json`
+6. 主题 Border 在内置主题市场安装，重启 Obsidian
+7. 按「不随仓库备份的配置」补设 Flexplorer 与 Crisp File Explorer
+8. 填入 GLM API / Crisp 激活码 / ASR Key

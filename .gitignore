@@ -33,6 +33,13 @@
 .obsidian/plugins/*/manifest.json
 .obsidian/plugins/*/data.json.backup
 
+# 含 vault 路径 / 打开记录，属运行时状态而非配置，不入库：
+# - flexplorer: items 是 1000+ 条笔记与文件夹路径（排序、隐藏、固定状态）
+# - crisp-file-explorer: activity 是今日与常用文件记录 + 每篇的打开次数
+# 本地文件照常保留，仅不备份到远端；这两处真正的配置项已抄录进 docs/plugins.md。
+.obsidian/plugins/flexplorer/data.json
+.obsidian/plugins/crisp-file-explorer/data.json
+
 # 例外：自研插件整体入库（其余插件的 data.json 设置仍按上面规则放行）
 # 注意：这一组必须写在上面那批通配排除【之后】。
 # gitignore 是后置规则优先，白名单若写在前面，会被后面的
