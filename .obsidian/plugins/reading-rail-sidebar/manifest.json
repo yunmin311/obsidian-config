@@ -1,0 +1,9 @@
+{
+  "id": "reading-rail-sidebar",
+  "name": "Reading Rail Sidebar",
+  "version": "0.1.0",
+  "minAppVersion": "1.4.0",
+  "description": "把阅读进度与标题导航做成右侧栏面板：进度百分比、当前标题跟随、标题树跳转，以及按文件记忆阅读位置。",
+  "author": "yunmin311",
+  "isDesktopOnly": false
+}

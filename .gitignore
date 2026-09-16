@@ -21,10 +21,6 @@
 !.obsidian/hotkeys.json
 !.obsidian/snippets/
 !.obsidian/plugins/
-# 插件目录内只排除本体文件，data.json 设置默认放行
-# 例外：自研插件整体入库
-!.obsidian/plugins/toolbar-pin-toggle/
-!.obsidian/plugins/toolbar-pin-toggle/**
 
 # 插件本体与运行时文件（即使被复制进来也不入库）
 .obsidian/workspace.json
@@ -36,6 +32,16 @@
 .obsidian/plugins/*/styles.css
 .obsidian/plugins/*/manifest.json
 .obsidian/plugins/*/data.json.backup
+
+# 例外：自研插件整体入库（其余插件的 data.json 设置仍按上面规则放行）
+# 注意：这一组必须写在上面那批通配排除【之后】。
+# gitignore 是后置规则优先，白名单若写在前面，会被后面的
+# .obsidian/plugins/*/main.js 等规则重新盖掉 —— 之前 toolbar-pin-toggle
+# 就是这样只入库了 data.json，main.js / styles.css / manifest.json 全漏了。
+!.obsidian/plugins/toolbar-pin-toggle/
+!.obsidian/plugins/toolbar-pin-toggle/**
+!.obsidian/plugins/reading-rail-sidebar/
+!.obsidian/plugins/reading-rail-sidebar/**
 
 # 大文件 / 敏感信息
 *.zip

@@ -1,0 +1,150 @@
+/* ============================================================
+   Reading Rail Sidebar — styles
+   全部选择器限定在 .rrs- 前缀下，不改动任何主题变量与全局类，
+   颜色一律取 Obsidian 主题变量，深浅色 / 纸纹主题自动适配。
+   ============================================================ */
+
+.rrs-root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  font-size: var(--font-ui-smaller);
+  color: var(--text-muted);
+}
+
+/* ---------- 顶部：进度 ---------- */
+
+.rrs-head {
+  flex: 0 0 auto;
+  padding: 12px 14px 10px;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.rrs-head-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.rrs-percent {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-normal);
+  font-variant-numeric: tabular-nums;
+}
+
+.rrs-count {
+  font-size: 11px;
+  color: var(--text-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.rrs-bar {
+  height: 3px;
+  margin-top: 8px;
+  border-radius: 999px;
+  background: var(--background-modifier-border);
+  overflow: hidden;
+}
+
+.rrs-bar-fill {
+  width: 0%;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--interactive-accent);
+  transition: width 120ms ease-out;
+}
+
+.rrs-current {
+  margin-top: 9px;
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--text-muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+}
+
+.rrs-resume {
+  margin-top: 7px;
+}
+
+.rrs-resume-btn {
+  font-size: 11px;
+  color: var(--text-accent);
+  cursor: pointer;
+}
+
+.rrs-resume-btn:hover {
+  color: var(--text-accent-hover);
+  text-decoration: underline;
+}
+
+/* ---------- 标题树 ---------- */
+
+.rrs-tree {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 6px 0 10px;
+  scrollbar-gutter: stable;
+}
+
+.rrs-item {
+  display: block;
+  padding: 5px 14px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-radius: 0;
+  transition: background 90ms ease-out, color 90ms ease-out;
+}
+
+.rrs-item:hover {
+  background: var(--background-modifier-hover);
+  color: var(--text-normal);
+}
+
+.rrs-item.is-active {
+  color: var(--text-normal);
+  background: color-mix(in srgb, var(--interactive-accent) 13%, transparent);
+  box-shadow: inset 2px 0 0 var(--interactive-accent);
+}
+
+.rrs-item-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+}
+
+.rrs-l2 {
+  padding-left: 14px;
+}
+
+.rrs-l3 {
+  padding-left: 26px;
+  font-size: 11.5px;
+}
+
+.rrs-l4 {
+  padding-left: 38px;
+  font-size: 11px;
+}
+
+/* ---------- 空态 ---------- */
+
+.rrs-note {
+  padding: 14px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--text-faint);
+}

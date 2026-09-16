@@ -1,0 +1,28 @@
+{
+  "activeSceneId": "custom",
+  "focusModeEnabled": true,
+  "animatedCursorEnabled": true,
+  "cursorSpeed": 80,
+  "blinkRate": 1000,
+  "blinkCount": 10,
+  "typewriterScrollEnabled": false,
+  "typewriterScrollMode": "soft",
+  "typewriterScrollOffset": 42,
+  "typewriterScrollTolerance": 10,
+  "typewriterScrollBottomPadding": true,
+  "typewriterScrollSmooth": true,
+  "typewriterAudioEnabled": false,
+  "soundTheme": "typewriter",
+  "typewriterVolume": 0.7,
+  "typewriterBellEnabled": true,
+  "ambientSound": "off",
+  "ambientVolume": 0.65,
+  "licenseCode": "",
+  "licenseLastOnlineAt": 0,
+  "sessionDurationMinutes": 25,
+  "sessionState": {
+    "status": "idle",
+    "endAt": 0,
+    "remainingMs": 0
+  }
+}

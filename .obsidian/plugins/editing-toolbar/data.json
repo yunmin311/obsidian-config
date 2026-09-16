@@ -1221,8 +1221,8 @@
       "aestheticStyle": "default"
     }
   },
-  "toolbarBackgroundColor": "#2D3033",
-  "toolbarIconColor": "#E2E8F0",
+  "toolbarBackgroundColor": "#F5F8FA",
+  "toolbarIconColor": "#4A5568",
   "toolbarIconSize": 18,
   "useCurrentLineForRegex": false,
   "ai": {

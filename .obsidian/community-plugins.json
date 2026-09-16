@@ -3,7 +3,6 @@
   "obsidian-plugin-update-tracker",
   "obsidian-git",
   "templater-obsidian",
-  "obsidian-day-planner",
   "dataview",
   "obsidian-style-settings",
   "crisp-file-explorer",
@@ -12,14 +11,13 @@
   "obsidian-tasks-plugin",
   "crisp-focus",
   "obsidian42-brat",
-  "crisp-reading-rail",
   "crisp-base",
   "crisp-recall",
   "crisp-visual",
-  "crisp-dsh",
   "widgets",
   "flexplorer",
   "calendar",
   "immersive-folder",
-  "toolbar-pin-toggle"
+  "toolbar-pin-toggle",
+  "reading-rail-sidebar"
 ]

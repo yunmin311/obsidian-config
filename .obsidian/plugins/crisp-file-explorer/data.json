@@ -10,36 +10,192 @@
   "frequentMagnetsEnabled": true,
   "autoExpandFoldersOnDrag": true,
   "activity": {
-    "todayKey": "2026-09-13",
+    "todayKey": "2026-09-16",
     "todayPaths": [
-      "English Learning/online class/reading.md",
-      "clutter/picture/THE_POLYMATH_FIELD_GUIDE_US_Letter.pdf",
-      "clutter/texture-preview/04-matte-depth.png",
-      "clutter/texture-preview/03-linen.png",
-      "clutter/texture-preview/02-laid.png",
-      "clutter/texture-preview/01-matte.png",
-      "clutter/texture-preview/06-wove.png",
-      "clutter/texture-preview/05-fiber.png",
-      "clutter/texture-preview/08-felt.png",
-      "clutter/texture-preview/07-laid2.png",
-      "YEAR3/COS202_Week01_Delivery/Week01/Lecture 01 - Introduction to Signals and Systems.md",
+      "BASE.base",
       "homepage.md",
-      "Compound Interest/write/未命名/1.md",
-      "Compound Interest/write/未命名/未命名.md"
+      "English Learning/listening article/Healthcare Is AI's Hardest Test.md",
+      "English Learning/reading vocabulary/test1.md",
+      "English Learning/reading vocabulary/test2.md",
+      "English Learning/writing part/book/剑桥雅思写作.md",
+      "English Learning/writing part/universities vs colleges.md",
+      "English Learning/online class/reading.md",
+      "Compound Interest/Aesthetic/知识/第二章：电磁波的几何与波动本质 (Phase II - Wave & Geometric Nature of Light).md",
+      "Compound Interest/Aesthetic/软件/清晰度 (Clarity)、锐化 (Sharpening)、纹理 (Texture)、颗粒 +朦胧感 (Grain+ Softness).md",
+      "Compound Interest/AI/project/Claudian + Obsidian Skills.md",
+      "Compound Interest/AI/project/talk-script.md",
+      "Compound Interest/AI/project/Claude Skill.md",
+      "Compound Interest/AI/Cognitive Re-alignment Protocol.md",
+      "Compound Interest/AI/_AI Hub.md",
+      "Compound Interest/Aesthetic/影记/Photos/Rain/_雨天索引.md",
+      "Compound Interest/Aesthetic/影记/Assets/Film_Border/_胶片边框索引.md",
+      "Compound Interest/Aesthetic/知识/第一章：光学的物理真理 (Phase I- Optical Truth).md",
+      "Compound Interest/Aesthetic/积累.md",
+      "YEAR3/SOE205/Week01/Lecture 02 - Mathematics for Computer Graphics.md",
+      "YEAR3/COS202/Week02/Lecture 04 - Introduction to Systems.md",
+      "YEAR3/EEE211/Week01/Tutorial 01 - Diode Circuit Analysis.md",
+      "YEAR3/EEE211/Week01/Lecture 01 - Semiconductor Materials and Diodes.md",
+      "YEAR3/CSI201/Week02/Lecture 02 - Network Performance and Protocol Layers.md",
+      "Compound Interest/Aesthetic/FACE — Facial Aesthetics & Portrait Expression/未命名.md",
+      "English Learning/IELTS备考总纲_2026-09_v2.md"
     ],
     "pinnedPaths": [],
     "fileStats": {
+      "English Learning/IELTS备考总纲_2026-09_v2.md": {
+        "count": 3,
+        "lastOpened": 1789563531940
+      },
+      "Compound Interest/Aesthetic/FACE — Facial Aesthetics & Portrait Expression/未命名.md": {
+        "count": 1,
+        "lastOpened": 1789563309939
+      },
+      "YEAR3/CSI201/Week02/Lecture 02 - Network Performance and Protocol Layers.md": {
+        "count": 1,
+        "lastOpened": 1789562772582
+      },
+      "YEAR3/EEE211/Week01/Lecture 01 - Semiconductor Materials and Diodes.md": {
+        "count": 2,
+        "lastOpened": 1789562760294
+      },
+      "YEAR3/EEE211/Week01/Tutorial 01 - Diode Circuit Analysis.md": {
+        "count": 1,
+        "lastOpened": 1789562707813
+      },
+      "YEAR3/COS202/Week02/Lecture 04 - Introduction to Systems.md": {
+        "count": 1,
+        "lastOpened": 1789562694043
+      },
+      "YEAR3/SOE205/Week01/Lecture 02 - Mathematics for Computer Graphics.md": {
+        "count": 1,
+        "lastOpened": 1789562678674
+      },
+      "Compound Interest/Aesthetic/积累.md": {
+        "count": 3,
+        "lastOpened": 1789561956264
+      },
+      "Compound Interest/Aesthetic/知识/第一章：光学的物理真理 (Phase I- Optical Truth).md": {
+        "count": 2,
+        "lastOpened": 1789561952761
+      },
+      "Compound Interest/Aesthetic/影记/Assets/Film_Border/_胶片边框索引.md": {
+        "count": 1,
+        "lastOpened": 1789561946369
+      },
+      "Compound Interest/Aesthetic/影记/Photos/Rain/_雨天索引.md": {
+        "count": 1,
+        "lastOpened": 1789561940916
+      },
+      "Compound Interest/AI/_AI Hub.md": {
+        "count": 1,
+        "lastOpened": 1789561906719
+      },
+      "Compound Interest/AI/Cognitive Re-alignment Protocol.md": {
+        "count": 1,
+        "lastOpened": 1789561903088
+      },
+      "Compound Interest/AI/project/Claude Skill.md": {
+        "count": 1,
+        "lastOpened": 1789561902635
+      },
+      "Compound Interest/AI/project/talk-script.md": {
+        "count": 1,
+        "lastOpened": 1789561901994
+      },
+      "Compound Interest/AI/project/Claudian + Obsidian Skills.md": {
+        "count": 1,
+        "lastOpened": 1789561901274
+      },
+      "Compound Interest/Aesthetic/软件/清晰度 (Clarity)、锐化 (Sharpening)、纹理 (Texture)、颗粒 +朦胧感 (Grain+ Softness).md": {
+        "count": 1,
+        "lastOpened": 1789561869776
+      },
+      "Compound Interest/Aesthetic/知识/第二章：电磁波的几何与波动本质 (Phase II - Wave & Geometric Nature of Light).md": {
+        "count": 1,
+        "lastOpened": 1789561863347
+      },
+      "English Learning/online class/reading.md": {
+        "count": 4,
+        "lastOpened": 1789561811452
+      },
+      "English Learning/writing part/universities vs colleges.md": {
+        "count": 1,
+        "lastOpened": 1789561797945
+      },
+      "English Learning/writing part/book/剑桥雅思写作.md": {
+        "count": 4,
+        "lastOpened": 1789561793867
+      },
+      "English Learning/reading vocabulary/test2.md": {
+        "count": 1,
+        "lastOpened": 1789561787761
+      },
+      "English Learning/reading vocabulary/test1.md": {
+        "count": 1,
+        "lastOpened": 1789561785473
+      },
+      "English Learning/listening article/Healthcare Is AI's Hardest Test.md": {
+        "count": 1,
+        "lastOpened": 1789561780051
+      },
+      "homepage.md": {
+        "count": 101,
+        "lastOpened": 1789561753385
+      },
+      "BASE.base": {
+        "count": 25,
+        "lastOpened": 1789559801710
+      },
+      "Compound Interest/write/未命名/未命名.md": {
+        "count": 2,
+        "lastOpened": 1789480918765
+      },
+      "Compound Interest/Naming rights/neuroscience/eeg.md": {
+        "count": 1,
+        "lastOpened": 1789480905065
+      },
+      "Compound Interest/Naming rights/Fragment–Resonance Cognitive Iteration System（FRCIS）/Page 0 · Meta-Preface.md": {
+        "count": 1,
+        "lastOpened": 1789480899296
+      },
+      "English Learning/ielts/daily workflow.md": {
+        "count": 2,
+        "lastOpened": 1789393640197
+      },
+      "English Learning/ielts/xjtlu ppt.md": {
+        "count": 2,
+        "lastOpened": 1789393399325
+      },
+      "English Learning/vocabulary article/article1.md": {
+        "count": 1,
+        "lastOpened": 1789387881754
+      },
+      "English Learning/ielts/_IELTS Index.md": {
+        "count": 1,
+        "lastOpened": 1789387854085
+      },
+      "OBSIDIAN_COURSE_NOTES_STANDARD_V2_2_FINAL/Obsidian_Course_Notes_Standard_v2.2.md": {
+        "count": 1,
+        "lastOpened": 1789387583343
+      },
+      "project/project design inbox.md": {
+        "count": 3,
+        "lastOpened": 1789376072384
+      },
+      "project/_Project Index.md": {
+        "count": 4,
+        "lastOpened": 1789376071375
+      },
+      "project/一些手工小玩意/12WY2 项目执行计划.md": {
+        "count": 6,
+        "lastOpened": 1789367209457
+      },
+      "inbox.md": {
+        "count": 9,
+        "lastOpened": 1789367178873
+      },
       "Compound Interest/write/未命名/1.md": {
         "count": 3,
         "lastOpened": 1789312543814
-      },
-      "homepage.md": {
-        "count": 90,
-        "lastOpened": 1789308946356
-      },
-      "YEAR3/COS202_Week01_Delivery/Week01/Lecture 01 - Introduction to Signals and Systems.md": {
-        "count": 4,
-        "lastOpened": 1789305117218
       },
       "clutter/texture-preview/07-laid2.png": {
         "count": 3,
@@ -76,46 +232,6 @@
       "clutter/picture/THE_POLYMATH_FIELD_GUIDE_US_Letter.pdf": {
         "count": 1,
         "lastOpened": 1789303893808
-      },
-      "English Learning/online class/reading.md": {
-        "count": 1,
-        "lastOpened": 1789266163526
-      },
-      "YEAR3/CSI201_Week01_Delivery/Week01/Lecture 01 - Introduction to the Modern Internet.md": {
-        "count": 5,
-        "lastOpened": 1789218916265
-      },
-      "YEAR3/CSI201_Week01_Delivery/Week01/assets/07-llm-request-path.svg": {
-        "count": 1,
-        "lastOpened": 1789218913456
-      },
-      "YEAR3/CSI201_Week01_Delivery/README.md": {
-        "count": 3,
-        "lastOpened": 1789178937187
-      },
-      "YEAR3/SOE205_Week01_Delivery/Week01/Lecture 01 - Introduction, Hardware and Software.md": {
-        "count": 2,
-        "lastOpened": 1789177696365
-      },
-      "YEAR3/COS202_Week01_Delivery/Week01/Lecture 02 - Introduction to Signals Part 1.md": {
-        "count": 2,
-        "lastOpened": 1789177692163
-      },
-      "YEAR3/EEE211_Week01_Delivery/Week01/Lecture 01 - Semiconductor Materials and Diodes.md": {
-        "count": 2,
-        "lastOpened": 1789177669490
-      },
-      "YEAR3/SOE205_Week01_Delivery/Week01/Lecture 02 - Mathematics for Computer Graphics.md": {
-        "count": 1,
-        "lastOpened": 1789105290689
-      },
-      "YEAR3/EEE211_Week01_Delivery/Week01/Tutorial 01 - Diode Circuit Analysis.md": {
-        "count": 1,
-        "lastOpened": 1789105255750
-      },
-      "OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL/SOP_WEEKLY_CONTINUATION.md": {
-        "count": 1,
-        "lastOpened": 1789092963783
       },
       "clutter/杂乱/tenet.md": {
         "count": 1,
@@ -217,10 +333,6 @@
         "count": 1,
         "lastOpened": 1788965358154
       },
-      "project/12WY2 项目执行计划.md": {
-        "count": 5,
-        "lastOpened": 1788965352084
-      },
       "clutter/test/网络故障排查手册-Codex-ChatGPT.md": {
         "count": 3,
         "lastOpened": 1788965332748
@@ -228,14 +340,6 @@
       "project/AI治理系统/00-从这里开始.md": {
         "count": 5,
         "lastOpened": 1788965213894
-      },
-      "BASE.base": {
-        "count": 24,
-        "lastOpened": 1788965180580
-      },
-      "inbox.md": {
-        "count": 8,
-        "lastOpened": 1788965179139
       },
       "project/AI治理系统/archive/v1/project-records/00-Obsidian知识库索引.md": {
         "count": 1,
@@ -245,7 +349,7 @@
         "count": 1,
         "lastOpened": 1788964993726
       },
-      "programming study/000_Index.md": {
+      "project/programming study/000_Index.md": {
         "count": 2,
         "lastOpened": 1788527348322
       },
@@ -273,11 +377,7 @@
         "count": 1,
         "lastOpened": 1788344449114
       },
-      "project/_Project Index.md": {
-        "count": 2,
-        "lastOpened": 1788343470573
-      },
-      "programming study/algorithms/_Algorithms MOC.md": {
+      "project/programming study/algorithms/_Algorithms MOC.md": {
         "count": 1,
         "lastOpened": 1788342717924
       },
@@ -409,10 +509,6 @@
         "count": 1,
         "lastOpened": 1785079569360
       },
-      "English Learning/writing part/book/剑桥雅思写作.md": {
-        "count": 3,
-        "lastOpened": 1784339127480
-      },
       "07-事故档案.md": {
         "count": 1,
         "lastOpened": 1784339070881
@@ -436,10 +532,6 @@
       "05-六个对话为什么会互相污染.md": {
         "count": 1,
         "lastOpened": 1784127411964
-      },
-      "Compound Interest/write/未命名/未命名.md": {
-        "count": 1,
-        "lastOpened": 1789312546171
       }
     }
   },

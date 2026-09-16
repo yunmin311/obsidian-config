@@ -5,13 +5,12 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL",
+        "OBSIDIAN_COURSE_NOTES_STANDARD_V2_2_FINAL",
         "YEAR3",
         "clutter",
         "Compound Interest",
         "English Learning",
         "project",
-        "programming study",
         "year2 final2",
         "inbox.md",
         "BASE.base",
@@ -23,6 +22,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "zcode-sess-472e1db7",
         "texture-preview",
         "OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL_FROZEN",
         "Linear Calendar Events",
@@ -237,6 +237,7 @@
         "CV",
         "exercise",
         "Naming rights",
+        "_Naming Rights Hub.md",
         "write",
         "_Compound Interest Hub.md"
       ]
@@ -246,6 +247,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "FACE — Facial Aesthetics & Portrait Expression",
         "_Aesthetic Index.md",
         "积累.md",
         "知识",
@@ -1168,7 +1170,6 @@
         "neuroscience",
         "niksen",
         "project 0",
-        "_Naming Rights Hub.md",
         "开声",
         "皮肤",
         "语言型",
@@ -1358,10 +1359,6 @@
       "isHidden": false
     },
     "Compound Interest/Naming rights/project 0/Project ∞：The Mirror System.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "Compound Interest/Naming rights/_Naming Rights Hub.md": {
       "isPinned": false,
       "isHidden": false
     },
@@ -1916,6 +1913,7 @@
         "vocabulary article",
         "writing part",
         "YouTube video",
+        "IELTS备考总纲_2026-09_v2.md",
         "_English Learning Hub.md"
       ]
     },
@@ -1924,9 +1922,9 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "books",
         "baicizhan vocabulary.md",
         "baicizhan vocabulary2.md",
-        "books",
         "vocabulary part1.md",
         "vocabulary part10.md",
         "vocabulary part11.md",
@@ -2093,6 +2091,7 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "daily workflow.md",
         "IELTS_worksho_materials.pptx",
         "xjtlu ppt.md",
         "_IELTS Index.md"
@@ -2266,18 +2265,15 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
+        "programming study",
         "creative-os-notes",
         "AI治理系统",
         "operation-note",
         "github项目",
-        "12WY2 项目执行计划.md",
-        "_Project Index.md",
-        "一些手工小玩意"
+        "一些手工小玩意",
+        "project design inbox.md",
+        "_Project Index.md"
       ]
-    },
-    "project/12WY2 项目执行计划.md": {
-      "isPinned": false,
-      "isHidden": false
     },
     "project/github项目": {
       "isPinned": false,
@@ -2348,524 +2344,9 @@
       "isPinned": false,
       "isHidden": false,
       "sortOrder": "custom",
-      "customOrder": []
-    },
-    "programming study": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
       "customOrder": [
-        "000_Index.md",
-        "algorithms",
-        "artificial-intelligence",
-        "assembly",
-        "blockchain",
-        "cloud-computing",
-        "compilers",
-        "computer-organization",
-        "computer-graphics",
-        "computer-networks",
-        "cyber-security",
-        "computer-science",
-        "data-structures",
-        "design-patterns",
-        "database",
-        "distributed-systems",
-        "devops",
-        "embedded-systems",
-        "git",
-        "game-development",
-        "mobile-development",
-        "java",
-        "programming-languages",
-        "linux",
-        "python",
-        "prompt engineering",
-        "operating-systems",
-        "system-design",
-        "software-engineering",
-        "testing",
-        "web-development"
+        "12WY2 项目执行计划.md"
       ]
-    },
-    "programming study/000_Index.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/algorithms": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "_Algorithms MOC.md"
-      ]
-    },
-    "programming study/algorithms/_Algorithms MOC.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/artificial-intelligence": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "_Artificial Intelligence MOC.md"
-      ]
-    },
-    "programming study/artificial-intelligence/_Artificial Intelligence MOC.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/assembly": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "第一章.md",
-        "_Assembly MOC.md"
-      ]
-    },
-    "programming study/assembly/第一章.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/assembly/_Assembly MOC.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/blockchain": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "_Blockchain MOC.md"
-      ]
-    },
-    "programming study/blockchain/_Blockchain MOC.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/cloud-computing": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "_Cloud Computing MOC.md"
-      ]
-    },
-    "programming study/cloud-computing/_Cloud Computing MOC.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/compilers": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "_Compilers MOC.md"
-      ]
-    },
-    "programming study/compilers/_Compilers MOC.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/computer-organization": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "_Computer Organization MOC.md",
-        "cpu.md",
-        "计算机组成原理plan.md",
-        "计算机网络.md"
-      ]
-    },
-    "programming study/computer-organization/_Computer Organization MOC.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/computer-organization/cpu.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/computer-organization/计算机组成原理plan.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/computer-organization/计算机网络.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/computer-graphics": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "专业影视 + 图片调色环境标准化设置与防色彩疲劳全流程工作笔记.md",
-        "图像格式.md",
-        "所有生成 .cube+.np3 文件的方式（完整清单）.md",
-        "_Computer Graphics MOC.md"
-      ]
-    },
-    "programming study/computer-graphics/专业影视 + 图片调色环境标准化设置与防色彩疲劳全流程工作笔记.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/computer-graphics/图像格式.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/computer-graphics/所有生成 .cube+.np3 文件的方式（完整清单）.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/computer-graphics/_Computer Graphics MOC.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/computer-networks": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "_Computer Networks MOC.md"
-      ]
-    },
-    "programming study/computer-networks/_Computer Networks MOC.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/cyber-security": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "_Cyber Security MOC.md"
-      ]
-    },
-    "programming study/cyber-security/_Cyber Security MOC.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/computer-science": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "_Computer Science MOC.md",
-        "计算机核心架构：统一内存 UMA、PCIe 总线与 CPU 指令集详解.md"
-      ]
-    },
-    "programming study/computer-science/_Computer Science MOC.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/computer-science/计算机核心架构：统一内存 UMA、PCIe 总线与 CPU 指令集详解.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/data-structures": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "w1 w2.md",
-        "_Data Structures MOC.md",
-        "cw2.md"
-      ]
-    },
-    "programming study/data-structures/w1 w2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/data-structures/_Data Structures MOC.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/data-structures/cw2.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/design-patterns": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "_Design Patterns MOC.md"
-      ]
-    },
-    "programming study/design-patterns/_Design Patterns MOC.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/database": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "CPT103 Mock Exam 知识点展开笔记.md",
-        "MySQL 常用数据类型表格.md",
-        "_Database MOC.md",
-        "key.md"
-      ]
-    },
-    "programming study/database/CPT103 Mock Exam 知识点展开笔记.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/database/MySQL 常用数据类型表格.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/database/_Database MOC.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/database/key.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/distributed-systems": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "_Distributed Systems MOC.md"
-      ]
-    },
-    "programming study/distributed-systems/_Distributed Systems MOC.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/devops": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "_DevOps MOC.md"
-      ]
-    },
-    "programming study/devops/_DevOps MOC.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/embedded-systems": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "_Embedded Systems MOC.md"
-      ]
-    },
-    "programming study/embedded-systems/_Embedded Systems MOC.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/git": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Git 超详细完整指南（中英双语）.md",
-        "_Git MOC.md"
-      ]
-    },
-    "programming study/git/Git 超详细完整指南（中英双语）.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/git/_Git MOC.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/game-development": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "_Game Development MOC.md"
-      ]
-    },
-    "programming study/game-development/_Game Development MOC.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/mobile-development": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "_Mobile Development MOC.md"
-      ]
-    },
-    "programming study/mobile-development/_Mobile Development MOC.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/java": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "plan.md",
-        "_Java MOC.md",
-        "全周期学习.md",
-        "全栈 + AI.md",
-        "全阶段学习资源精准链接汇总.md",
-        "总体框架.md",
-        "逻辑框架.md",
-        "统一底层逻辑.md"
-      ]
-    },
-    "programming study/java/plan.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/java/_Java MOC.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/java/全周期学习.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/java/全栈 + AI.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/java/全阶段学习资源精准链接汇总.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/java/总体框架.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/java/逻辑框架.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/java/统一底层逻辑.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/programming-languages": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "_Programming Languages MOC.md"
-      ]
-    },
-    "programming study/programming-languages/_Programming Languages MOC.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/linux": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "_Linux MOC.md"
-      ]
-    },
-    "programming study/linux/_Linux MOC.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/python": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "_Python MOC.md"
-      ]
-    },
-    "programming study/python/_Python MOC.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/prompt engineering": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "AI 使用实战清单（提炼自 promptingguide.ai，不用回网站）.md",
-        "Prompt Engineering 学习指南.md",
-        "Prompt Engineering 技术.md"
-      ]
-    },
-    "programming study/prompt engineering/AI 使用实战清单（提炼自 promptingguide.ai，不用回网站）.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/prompt engineering/Prompt Engineering 学习指南.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/prompt engineering/Prompt Engineering 技术.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/operating-systems": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "_Operating Systems MOC.md"
-      ]
-    },
-    "programming study/operating-systems/_Operating Systems MOC.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/system-design": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "_System Design MOC.md"
-      ]
-    },
-    "programming study/system-design/_System Design MOC.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/software-engineering": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "_Software Engineering MOC.md"
-      ]
-    },
-    "programming study/software-engineering/_Software Engineering MOC.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/testing": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "_Testing MOC.md"
-      ]
-    },
-    "programming study/testing/_Testing MOC.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "programming study/web-development": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "_Web Development MOC.md"
-      ]
-    },
-    "programming study/web-development/_Web Development MOC.md": {
-      "isPinned": false,
-      "isHidden": false
     },
     "year2 final2": {
       "isPinned": false,
@@ -3170,397 +2651,11 @@
       "isHidden": false,
       "sortOrder": "custom",
       "customOrder": [
-        "EEE211_Week01_Delivery",
-        "COS202_Week01_Delivery",
-        "SOE205_Week01_Delivery",
-        "CSI201_Week01_Delivery"
+        "COS202",
+        "SOE205",
+        "EEE211",
+        "CSI201"
       ]
-    },
-    "YEAR3/CSI201_Week01_Delivery": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Week01",
-        "README.md",
-        "COURSE_STATE.yaml"
-      ]
-    },
-    "YEAR3/CSI201_Week01_Delivery/COURSE_STATE.yaml": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/CSI201_Week01_Delivery/README.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/CSI201_Week01_Delivery/Week01": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Lecture 01 - Introduction to the Modern Internet.md",
-        "assets"
-      ]
-    },
-    "YEAR3/CSI201_Week01_Delivery/Week01/assets": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "07-llm-request-path.svg",
-        "06-store-and-forward.svg",
-        "05-modern-network-of-networks.png",
-        "04-packet-vs-circuit.png",
-        "03-forwarding-routing.png",
-        "02-tunnel-hybrid-design.png",
-        "01-campus-access-path.png"
-      ]
-    },
-    "YEAR3/CSI201_Week01_Delivery/Week01/assets/01-campus-access-path.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/CSI201_Week01_Delivery/Week01/assets/02-tunnel-hybrid-design.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/CSI201_Week01_Delivery/Week01/assets/03-forwarding-routing.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/CSI201_Week01_Delivery/Week01/assets/04-packet-vs-circuit.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/CSI201_Week01_Delivery/Week01/assets/05-modern-network-of-networks.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/CSI201_Week01_Delivery/Week01/assets/06-store-and-forward.svg": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/CSI201_Week01_Delivery/Week01/assets/07-llm-request-path.svg": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/SOE205_Week01_Delivery": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Week01",
-        "COURSE_STATE.yaml"
-      ]
-    },
-    "YEAR3/SOE205_Week01_Delivery/COURSE_STATE.yaml": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/SOE205_Week01_Delivery/Week01": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Lecture 01 - Introduction, Hardware and Software.md",
-        "Lecture 02 - Mathematics for Computer Graphics.md",
-        "assets"
-      ]
-    },
-    "YEAR3/SOE205_Week01_Delivery/Week01/assets": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "L02-p27-matrix-multiplication.png",
-        "L02-p17-cross-product-normal.png",
-        "L02-p10-vector-components-unit-vector.png",
-        "L02-p04-cartesian-screen-coordinates.png",
-        "L02-p03-object-representation-flow.png",
-        "L01-p43-lcd-light-control.png",
-        "L01-p41-crt-operation.png",
-        "L01-p34-framebuffer-rgb-memory.png",
-        "L01-p27-framebuffer-pixels.png"
-      ]
-    },
-    "YEAR3/SOE205_Week01_Delivery/Week01/assets/L01-p27-framebuffer-pixels.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/SOE205_Week01_Delivery/Week01/assets/L01-p34-framebuffer-rgb-memory.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/SOE205_Week01_Delivery/Week01/assets/L01-p41-crt-operation.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/SOE205_Week01_Delivery/Week01/assets/L01-p43-lcd-light-control.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/SOE205_Week01_Delivery/Week01/assets/L02-p03-object-representation-flow.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/SOE205_Week01_Delivery/Week01/assets/L02-p04-cartesian-screen-coordinates.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/SOE205_Week01_Delivery/Week01/assets/L02-p10-vector-components-unit-vector.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/SOE205_Week01_Delivery/Week01/assets/L02-p17-cross-product-normal.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/SOE205_Week01_Delivery/Week01/assets/L02-p27-matrix-multiplication.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/SOE205_Week01_Delivery/Week01/Lecture 01 - Introduction, Hardware and Software.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/SOE205_Week01_Delivery/Week01/Lecture 02 - Mathematics for Computer Graphics.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/COS202_Week01_Delivery": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Week01",
-        "COURSE_STATE.yaml"
-      ]
-    },
-    "YEAR3/COS202_Week01_Delivery/COURSE_STATE.yaml": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/COS202_Week01_Delivery/Week01": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Lecture 01 - Introduction to Signals and Systems.md",
-        "Lecture 02 - Introduction to Signals Part 1.md",
-        "assets"
-      ]
-    },
-    "YEAR3/COS202_Week01_Delivery/Week01/assets": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "L02-p34-energy-power-classification.png",
-        "L02-p26-even-odd-example.png",
-        "L02-p25-even-odd-decomposition.png",
-        "L02-p19-dt-oscillation-rate.png",
-        "L02-p16-dt-periodic-sequence.png",
-        "L02-p11-sinusoid-parameters.png",
-        "L02-p06-signal-dimensions.png",
-        "L01-p26-adc-chain.png",
-        "L01-p25-ct-dt-sampling.png",
-        "L01-p19-cross-domain-abstraction.png",
-        "L01-p15-input-system-output.png",
-        "L01-p09-course-map.png"
-      ]
-    },
-    "YEAR3/COS202_Week01_Delivery/Week01/assets/L01-p09-course-map.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/COS202_Week01_Delivery/Week01/assets/L01-p15-input-system-output.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/COS202_Week01_Delivery/Week01/assets/L01-p19-cross-domain-abstraction.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/COS202_Week01_Delivery/Week01/assets/L01-p25-ct-dt-sampling.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/COS202_Week01_Delivery/Week01/assets/L01-p26-adc-chain.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/COS202_Week01_Delivery/Week01/assets/L02-p06-signal-dimensions.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/COS202_Week01_Delivery/Week01/assets/L02-p11-sinusoid-parameters.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/COS202_Week01_Delivery/Week01/assets/L02-p16-dt-periodic-sequence.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/COS202_Week01_Delivery/Week01/assets/L02-p19-dt-oscillation-rate.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/COS202_Week01_Delivery/Week01/assets/L02-p25-even-odd-decomposition.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/COS202_Week01_Delivery/Week01/assets/L02-p26-even-odd-example.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/COS202_Week01_Delivery/Week01/assets/L02-p34-energy-power-classification.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/COS202_Week01_Delivery/Week01/Lecture 01 - Introduction to Signals and Systems.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/COS202_Week01_Delivery/Week01/Lecture 02 - Introduction to Signals Part 1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/EEE211_Week01_Delivery": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Week01",
-        "COURSE_STATE.yaml"
-      ]
-    },
-    "YEAR3/EEE211_Week01_Delivery/COURSE_STATE.yaml": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/EEE211_Week01_Delivery/Week01": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Lecture 01 - Semiconductor Materials and Diodes.md",
-        "Tutorial 01 - Diode Circuit Analysis.md",
-        "sources",
-        "assets"
-      ]
-    },
-    "YEAR3/EEE211_Week01_Delivery/Week01/assets": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "T01-p16-mixed-circuit.png",
-        "T01-p10-piecewise-equivalent.png",
-        "T01-p08-load-line.png",
-        "L01-p35-dc-ac-equivalent.png",
-        "L01-p30-piecewise-model.png",
-        "L01-p29-load-line-qpoint.png",
-        "L01-p27-rectifier.png",
-        "L01-p25-diode-iv.png",
-        "L01-p24-forward-bias.png",
-        "L01-p23-reverse-bias.png",
-        "L01-p22-pn-junction.png",
-        "L01-p20-p-type.png",
-        "L01-p19-n-type.png",
-        "L01-p18-hole-motion.png",
-        "L01-p17-bandgap.png",
-        "L01-p15-covalent-bond.png"
-      ]
-    },
-    "YEAR3/EEE211_Week01_Delivery/Week01/assets/L01-p15-covalent-bond.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/EEE211_Week01_Delivery/Week01/assets/L01-p17-bandgap.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/EEE211_Week01_Delivery/Week01/assets/L01-p18-hole-motion.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/EEE211_Week01_Delivery/Week01/assets/L01-p19-n-type.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/EEE211_Week01_Delivery/Week01/assets/L01-p20-p-type.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/EEE211_Week01_Delivery/Week01/assets/L01-p22-pn-junction.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/EEE211_Week01_Delivery/Week01/assets/L01-p23-reverse-bias.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/EEE211_Week01_Delivery/Week01/assets/L01-p24-forward-bias.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/EEE211_Week01_Delivery/Week01/assets/L01-p25-diode-iv.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/EEE211_Week01_Delivery/Week01/assets/L01-p27-rectifier.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/EEE211_Week01_Delivery/Week01/assets/L01-p29-load-line-qpoint.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/EEE211_Week01_Delivery/Week01/assets/L01-p30-piecewise-model.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/EEE211_Week01_Delivery/Week01/assets/L01-p35-dc-ac-equivalent.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/EEE211_Week01_Delivery/Week01/assets/T01-p08-load-line.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/EEE211_Week01_Delivery/Week01/assets/T01-p10-piecewise-equivalent.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/EEE211_Week01_Delivery/Week01/assets/T01-p16-mixed-circuit.png": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/EEE211_Week01_Delivery/Week01/Lecture 01 - Semiconductor Materials and Diodes.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/EEE211_Week01_Delivery/Week01/sources": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "Tutorial01.pdf",
-        "Lecture01.pdf"
-      ]
-    },
-    "YEAR3/EEE211_Week01_Delivery/Week01/sources/Lecture01.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/EEE211_Week01_Delivery/Week01/sources/Tutorial01.pdf": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/EEE211_Week01_Delivery/Week01/Tutorial 01 - Diode Circuit Analysis.md": {
-      "isPinned": false,
-      "isHidden": false
     },
     "project/operation-note": {
       "isPinned": false,
@@ -5208,52 +4303,6 @@
       "isPinned": false,
       "isHidden": false
     },
-    "OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL": {
-      "isPinned": false,
-      "isHidden": false,
-      "sortOrder": "custom",
-      "customOrder": [
-        "COURSE_STATE_TEMPLATE.yaml",
-        "SOP_WEEKLY_CONTINUATION.md",
-        "SKILL.md",
-        "README.md",
-        "Obsidian_Course_Notes_Standard_v2.1.md",
-        "TEMPLATE.md",
-        "HANDOFF_PROMPTS.md"
-      ]
-    },
-    "OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL/COURSE_STATE_TEMPLATE.yaml": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL/Obsidian_Course_Notes_Standard_v2.1.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL/HANDOFF_PROMPTS.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL/README.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL/SOP_WEEKLY_CONTINUATION.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL/SKILL.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "OBSIDIAN_COURSE_NOTES_STANDARD_V2_1_FINAL/TEMPLATE.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
-    "YEAR3/CSI201_Week01_Delivery/Week01/Lecture 01 - Introduction to the Modern Internet.md": {
-      "isPinned": false,
-      "isHidden": false
-    },
     "English Learning/online class": {
       "isPinned": false,
       "isHidden": false,
@@ -5364,6 +4413,1215 @@
       "isHidden": false
     },
     "Compound Interest/write/未命名/未命名.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/project design inbox.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/一些手工小玩意/12WY2 项目执行计划.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "OBSIDIAN_COURSE_NOTES_STANDARD_V2_2_FINAL": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "SOP_WEEKLY_CONTINUATION.md",
+        "TEMPLATE.md",
+        "README.md",
+        "SKILL.md",
+        "Obsidian_Course_Notes_Standard_v2.2.md",
+        "HANDOFF_PROMPTS.md",
+        "COURSE_STATE_TEMPLATE.yaml"
+      ]
+    },
+    "OBSIDIAN_COURSE_NOTES_STANDARD_V2_2_FINAL/COURSE_STATE_TEMPLATE.yaml": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "OBSIDIAN_COURSE_NOTES_STANDARD_V2_2_FINAL/HANDOFF_PROMPTS.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "OBSIDIAN_COURSE_NOTES_STANDARD_V2_2_FINAL/Obsidian_Course_Notes_Standard_v2.2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "OBSIDIAN_COURSE_NOTES_STANDARD_V2_2_FINAL/SKILL.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "OBSIDIAN_COURSE_NOTES_STANDARD_V2_2_FINAL/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "OBSIDIAN_COURSE_NOTES_STANDARD_V2_2_FINAL/TEMPLATE.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "OBSIDIAN_COURSE_NOTES_STANDARD_V2_2_FINAL/SOP_WEEKLY_CONTINUATION.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/ielts/daily workflow.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/_Naming Rights Hub.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "English Learning/IELTS备考总纲_2026-09_v2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/zcode-sess-472e1db7": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "HANDOFF.md",
+        "session-db-transcript.md",
+        "extract_db.py",
+        "full-transcript.md",
+        "extract.py"
+      ]
+    },
+    "clutter/zcode-sess-472e1db7/extract.py": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/zcode-sess-472e1db7/full-transcript.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/zcode-sess-472e1db7/extract_db.py": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/zcode-sess-472e1db7/session-db-transcript.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "clutter/zcode-sess-472e1db7/HANDOFF.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "000_Index.md",
+        "algorithms",
+        "artificial-intelligence",
+        "assembly",
+        "blockchain",
+        "cloud-computing",
+        "compilers",
+        "computer-organization",
+        "computer-graphics",
+        "computer-networks",
+        "cyber-security",
+        "computer-science",
+        "data-structures",
+        "design-patterns",
+        "database",
+        "distributed-systems",
+        "devops",
+        "embedded-systems",
+        "git",
+        "game-development",
+        "mobile-development",
+        "java",
+        "programming-languages",
+        "linux",
+        "python",
+        "prompt engineering",
+        "operating-systems",
+        "system-design",
+        "software-engineering",
+        "testing",
+        "web-development"
+      ]
+    },
+    "project/programming study/algorithms": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Algorithms MOC.md"
+      ]
+    },
+    "project/programming study/artificial-intelligence": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Artificial Intelligence MOC.md"
+      ]
+    },
+    "project/programming study/assembly": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "第一章.md",
+        "_Assembly MOC.md"
+      ]
+    },
+    "project/programming study/cloud-computing": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Cloud Computing MOC.md"
+      ]
+    },
+    "project/programming study/blockchain": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Blockchain MOC.md"
+      ]
+    },
+    "project/programming study/compilers": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Compilers MOC.md"
+      ]
+    },
+    "project/programming study/computer-graphics": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "专业影视 + 图片调色环境标准化设置与防色彩疲劳全流程工作笔记.md",
+        "图像格式.md",
+        "所有生成 .cube+.np3 文件的方式（完整清单）.md",
+        "_Computer Graphics MOC.md"
+      ]
+    },
+    "project/programming study/000_Index.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/computer-networks": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Computer Networks MOC.md"
+      ]
+    },
+    "project/programming study/computer-organization": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Computer Organization MOC.md",
+        "cpu.md",
+        "计算机组成原理plan.md",
+        "计算机网络.md"
+      ]
+    },
+    "project/programming study/computer-science": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Computer Science MOC.md",
+        "计算机核心架构：统一内存 UMA、PCIe 总线与 CPU 指令集详解.md"
+      ]
+    },
+    "project/programming study/data-structures": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "w1 w2.md",
+        "_Data Structures MOC.md",
+        "cw2.md"
+      ]
+    },
+    "project/programming study/cyber-security": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Cyber Security MOC.md"
+      ]
+    },
+    "project/programming study/database": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "CPT103 Mock Exam 知识点展开笔记.md",
+        "MySQL 常用数据类型表格.md",
+        "_Database MOC.md",
+        "key.md"
+      ]
+    },
+    "project/programming study/design-patterns": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Design Patterns MOC.md"
+      ]
+    },
+    "project/programming study/devops": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_DevOps MOC.md"
+      ]
+    },
+    "project/programming study/embedded-systems": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Embedded Systems MOC.md"
+      ]
+    },
+    "project/programming study/distributed-systems": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Distributed Systems MOC.md"
+      ]
+    },
+    "project/programming study/game-development": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Game Development MOC.md"
+      ]
+    },
+    "project/programming study/git": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Git 超详细完整指南（中英双语）.md",
+        "_Git MOC.md"
+      ]
+    },
+    "project/programming study/linux": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Linux MOC.md"
+      ]
+    },
+    "project/programming study/mobile-development": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Mobile Development MOC.md"
+      ]
+    },
+    "project/programming study/operating-systems": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Operating Systems MOC.md"
+      ]
+    },
+    "project/programming study/java": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "plan.md",
+        "_Java MOC.md",
+        "全周期学习.md",
+        "全栈 + AI.md",
+        "全阶段学习资源精准链接汇总.md",
+        "总体框架.md",
+        "逻辑框架.md",
+        "统一底层逻辑.md"
+      ]
+    },
+    "project/programming study/programming-languages": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Programming Languages MOC.md"
+      ]
+    },
+    "project/programming study/prompt engineering": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "AI 使用实战清单（提炼自 promptingguide.ai，不用回网站）.md",
+        "Prompt Engineering 学习指南.md",
+        "Prompt Engineering 技术.md"
+      ]
+    },
+    "project/programming study/python": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Python MOC.md"
+      ]
+    },
+    "project/programming study/software-engineering": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Software Engineering MOC.md"
+      ]
+    },
+    "project/programming study/system-design": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_System Design MOC.md"
+      ]
+    },
+    "project/programming study/testing": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Testing MOC.md"
+      ]
+    },
+    "project/programming study/web-development": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "_Web Development MOC.md"
+      ]
+    },
+    "project/programming study/algorithms/_Algorithms MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/blockchain/_Blockchain MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/artificial-intelligence/_Artificial Intelligence MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/cloud-computing/_Cloud Computing MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/computer-networks/_Computer Networks MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/compilers/_Compilers MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/computer-organization/_Computer Organization MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/computer-organization/计算机组成原理plan.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/computer-organization/计算机网络.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/assembly/_Assembly MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/assembly/第一章.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/computer-organization/cpu.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/data-structures/_Data Structures MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/data-structures/w1 w2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/database/key.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/database/CPT103 Mock Exam 知识点展开笔记.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/computer-science/_Computer Science MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/computer-science/计算机核心架构：统一内存 UMA、PCIe 总线与 CPU 指令集详解.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/design-patterns/_Design Patterns MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/database/MySQL 常用数据类型表格.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/cyber-security/_Cyber Security MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/embedded-systems/_Embedded Systems MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/database/_Database MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/data-structures/cw2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/computer-graphics/_Computer Graphics MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/computer-graphics/专业影视 + 图片调色环境标准化设置与防色彩疲劳全流程工作笔记.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/distributed-systems/_Distributed Systems MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/computer-graphics/所有生成 .cube+.np3 文件的方式（完整清单）.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/git/Git 超详细完整指南（中英双语）.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/git/_Git MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/mobile-development/_Mobile Development MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/computer-graphics/图像格式.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/devops/_DevOps MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/prompt engineering/AI 使用实战清单（提炼自 promptingguide.ai，不用回网站）.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/prompt engineering/Prompt Engineering 学习指南.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/operating-systems/_Operating Systems MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/software-engineering/_Software Engineering MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/programming-languages/_Programming Languages MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/game-development/_Game Development MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/python/_Python MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/system-design/_System Design MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/testing/_Testing MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/linux/_Linux MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/prompt engineering/Prompt Engineering 技术.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/java/plan.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/java/全周期学习.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/java/_Java MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/java/全阶段学习资源精准链接汇总.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/java/总体框架.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/java/全栈 + AI.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/java/统一底层逻辑.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/java/逻辑框架.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "project/programming study/web-development/_Web Development MOC.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/CSI201": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "COURSE_STATE.yaml",
+        "Week02",
+        "Week01",
+        "README.md"
+      ]
+    },
+    "YEAR3/CSI201/README.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/CSI201/Week01": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Lecture 01 - Introduction to the Modern Internet.md",
+        "assets"
+      ]
+    },
+    "YEAR3/CSI201/Week01/assets": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "07-llm-request-path.svg",
+        "05-modern-network-of-networks.png",
+        "06-store-and-forward.svg",
+        "03-forwarding-routing.png",
+        "02-tunnel-hybrid-design.png",
+        "04-packet-vs-circuit.png",
+        "01-campus-access-path.png"
+      ]
+    },
+    "YEAR3/CSI201/Week01/Lecture 01 - Introduction to the Modern Internet.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/CSI201/Week01/assets/01-campus-access-path.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/CSI201/Week01/assets/04-packet-vs-circuit.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/CSI201/Week01/assets/02-tunnel-hybrid-design.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/CSI201/Week01/assets/03-forwarding-routing.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/CSI201/Week01/assets/06-store-and-forward.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/CSI201/Week01/assets/05-modern-network-of-networks.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/CSI201/Week01/assets/07-llm-request-path.svg": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Week01"
+      ]
+    },
+    "YEAR3/EEE211/Week01": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Tutorial 01 - Diode Circuit Analysis.md",
+        "sources",
+        "Lecture 01 - Semiconductor Materials and Diodes.md",
+        "assets"
+      ]
+    },
+    "YEAR3/EEE211/Week01/assets": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "T01-p10-piecewise-equivalent.png",
+        "T01-p16-mixed-circuit.png",
+        "T01-p08-load-line.png",
+        "L01-p30-piecewise-model.png",
+        "L01-p35-dc-ac-equivalent.png",
+        "L01-p19-n-type.png",
+        "L01-p29-load-line-qpoint.png",
+        "L01-p27-rectifier.png",
+        "L01-p25-diode-iv.png",
+        "L01-p24-forward-bias.png",
+        "L01-p23-reverse-bias.png",
+        "L01-p17-bandgap.png",
+        "L01-p20-p-type.png",
+        "L01-p22-pn-junction.png",
+        "L01-p18-hole-motion.png",
+        "L01-p15-covalent-bond.png"
+      ]
+    },
+    "YEAR3/EEE211/Week01/Lecture 01 - Semiconductor Materials and Diodes.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211/Week01/sources": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Tutorial01.pdf",
+        "Lecture01.pdf"
+      ]
+    },
+    "YEAR3/EEE211/Week01/Tutorial 01 - Diode Circuit Analysis.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211/Week01/assets/L01-p15-covalent-bond.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211/Week01/assets/L01-p18-hole-motion.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211/Week01/assets/L01-p22-pn-junction.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211/Week01/assets/L01-p20-p-type.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211/Week01/assets/L01-p17-bandgap.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211/Week01/assets/L01-p23-reverse-bias.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211/Week01/assets/L01-p24-forward-bias.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211/Week01/assets/L01-p25-diode-iv.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211/Week01/assets/L01-p27-rectifier.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211/Week01/assets/L01-p29-load-line-qpoint.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211/Week01/assets/L01-p19-n-type.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211/Week01/assets/L01-p35-dc-ac-equivalent.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211/Week01/assets/L01-p30-piecewise-model.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211/Week01/assets/T01-p08-load-line.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211/Week01/assets/T01-p16-mixed-circuit.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211/Week01/sources/Lecture01.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211/Week01/sources/Tutorial01.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/EEE211/Week01/assets/T01-p10-piecewise-equivalent.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Week02",
+        "Week01",
+        "COURSE_STATE.yaml"
+      ]
+    },
+    "YEAR3/SOE205/COURSE_STATE.yaml": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205/Week01": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Lecture 02 - Mathematics for Computer Graphics.md",
+        "Lecture 01 - Introduction, Hardware and Software.md",
+        "assets"
+      ]
+    },
+    "YEAR3/SOE205/Week01/assets": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "L02-p04-cartesian-screen-coordinates.png",
+        "L02-p17-cross-product-normal.png",
+        "L02-p27-matrix-multiplication.png",
+        "L02-p10-vector-components-unit-vector.png",
+        "L01-p43-lcd-light-control.png",
+        "L02-p03-object-representation-flow.png",
+        "L01-p41-crt-operation.png",
+        "L01-p34-framebuffer-rgb-memory.png",
+        "L01-p27-framebuffer-pixels.png"
+      ]
+    },
+    "YEAR3/SOE205/Week01/Lecture 01 - Introduction, Hardware and Software.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205/Week01/Lecture 02 - Mathematics for Computer Graphics.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205/Week01/assets/L01-p27-framebuffer-pixels.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205/Week01/assets/L01-p34-framebuffer-rgb-memory.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205/Week01/assets/L01-p41-crt-operation.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205/Week01/assets/L02-p03-object-representation-flow.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205/Week01/assets/L01-p43-lcd-light-control.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205/Week01/assets/L02-p10-vector-components-unit-vector.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205/Week01/assets/L02-p27-matrix-multiplication.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205/Week01/assets/L02-p17-cross-product-normal.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205/Week01/assets/L02-p04-cartesian-screen-coordinates.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "COURSE_STATE_COS202_updated.yaml",
+        "Week02",
+        "Week01"
+      ]
+    },
+    "YEAR3/COS202/Week01": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Lecture 01 - Introduction to Signals and Systems.md",
+        "Lecture 02 - Introduction to Signals Part 1.md",
+        "assets"
+      ]
+    },
+    "YEAR3/COS202/Week01/assets": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "L02-p34-energy-power-classification.png",
+        "L02-p26-even-odd-example.png",
+        "L02-p25-even-odd-decomposition.png",
+        "L02-p16-dt-periodic-sequence.png",
+        "L02-p19-dt-oscillation-rate.png",
+        "L02-p11-sinusoid-parameters.png",
+        "L01-p19-cross-domain-abstraction.png",
+        "L02-p06-signal-dimensions.png",
+        "L01-p26-adc-chain.png",
+        "L01-p25-ct-dt-sampling.png",
+        "L01-p15-input-system-output.png",
+        "L01-p09-course-map.png"
+      ]
+    },
+    "YEAR3/COS202/Week01/Lecture 02 - Introduction to Signals Part 1.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202/Week01/Lecture 01 - Introduction to Signals and Systems.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202/Week01/assets/L01-p09-course-map.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202/Week01/assets/L01-p15-input-system-output.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202/Week01/assets/L01-p25-ct-dt-sampling.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202/Week01/assets/L01-p26-adc-chain.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202/Week01/assets/L02-p06-signal-dimensions.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202/Week01/assets/L01-p19-cross-domain-abstraction.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202/Week01/assets/L02-p11-sinusoid-parameters.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202/Week01/assets/L02-p19-dt-oscillation-rate.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202/Week01/assets/L02-p16-dt-periodic-sequence.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202/Week01/assets/L02-p25-even-odd-decomposition.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202/Week01/assets/L02-p26-even-odd-example.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202/Week01/assets/L02-p34-energy-power-classification.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202/Week02": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Lecture 04 - Introduction to Systems.md",
+        "assets",
+        "Lecture 03 - Introduction to Signals Part 2.md"
+      ]
+    },
+    "YEAR3/COS202/Week02/Lecture 03 - Introduction to Signals Part 2.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202/Week02/assets": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "L04-p19-linearity.png",
+        "L04-p24-time-invariance.png",
+        "L04-p08-io-types.png",
+        "L04-p16-bibo-stability.png",
+        "L04-p11-memory.png",
+        "L03-p36-dt-complex-exponential.png",
+        "L03-p30-dt-impulse-step.png",
+        "L03-p27-impulse-properties.png",
+        "L03-p21-unit-step.png",
+        "L03-p24-rectangular-pulse.png",
+        "L03-p12-dt-time-scaling.png"
+      ]
+    },
+    "YEAR3/COS202/Week02/Lecture 04 - Introduction to Systems.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202/Week02/assets/L03-p12-dt-time-scaling.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202/Week02/assets/L03-p24-rectangular-pulse.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202/Week02/assets/L03-p21-unit-step.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202/Week02/assets/L03-p27-impulse-properties.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202/Week02/assets/L03-p30-dt-impulse-step.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202/Week02/assets/L03-p36-dt-complex-exponential.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202/Week02/assets/L04-p11-memory.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202/Week02/assets/L04-p16-bibo-stability.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202/Week02/assets/L04-p08-io-types.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202/Week02/assets/L04-p24-time-invariance.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202/Week02/assets/L04-p19-linearity.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/COS202/COURSE_STATE_COS202_updated.yaml": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205/Week02": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "assets",
+        "Lecture 03 - Geometric Primitives.md"
+      ]
+    },
+    "YEAR3/SOE205/Week02/Lecture 03 - Geometric Primitives.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205/Week02/assets": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "L03-p06-2d-primitives-resolution.png",
+        "L03-p16-dda-sampling-axis.png",
+        "L03-p37-opengl-primitives.png",
+        "L03-p26-circle-octant-symmetry.png",
+        "L03-p32-antialiasing-area-averaging.png",
+        "L03-p19-dda-example.png",
+        "L03-p11-mesh-level-of-detail.png"
+      ]
+    },
+    "YEAR3/SOE205/Week02/assets/L03-p11-mesh-level-of-detail.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205/Week02/assets/L03-p19-dda-example.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205/Week02/assets/L03-p32-antialiasing-area-averaging.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205/Week02/assets/L03-p26-circle-octant-symmetry.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205/Week02/assets/L03-p37-opengl-primitives.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205/Week02/assets/L03-p16-dda-sampling-axis.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/SOE205/Week02/assets/L03-p06-2d-primitives-resolution.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/CSI201/Week02": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "Lecture 02 - Network Performance and Protocol Layers.md",
+        "sources",
+        "assets"
+      ]
+    },
+    "YEAR3/CSI201/Week02/assets": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "L02-p52-encapsulation.png",
+        "L02-p36-bottleneck-link.png",
+        "L02-p46-osi-vs-internet-stack.png",
+        "L02-p51-device-layer-coverage.png",
+        "L02-p31-traffic-intensity-queueing.png",
+        "L02-p16-transmission-vs-propagation.png"
+      ]
+    },
+    "YEAR3/CSI201/Week02/sources": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "CSI201_Lecture_2_2026.pdf"
+      ]
+    },
+    "YEAR3/CSI201/Week02/Lecture 02 - Network Performance and Protocol Layers.md": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/CSI201/Week02/assets/L02-p16-transmission-vs-propagation.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/CSI201/Week02/assets/L02-p31-traffic-intensity-queueing.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/CSI201/Week02/assets/L02-p51-device-layer-coverage.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/CSI201/Week02/assets/L02-p46-osi-vs-internet-stack.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/CSI201/Week02/assets/L02-p36-bottleneck-link.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/CSI201/Week02/assets/L02-p52-encapsulation.png": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/CSI201/Week02/sources/CSI201_Lecture_2_2026.pdf": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "YEAR3/CSI201/COURSE_STATE.yaml": {
+      "isPinned": false,
+      "isHidden": false
+    },
+    "Compound Interest/Aesthetic/FACE — Facial Aesthetics & Portrait Expression": {
+      "isPinned": false,
+      "isHidden": false,
+      "sortOrder": "custom",
+      "customOrder": [
+        "未命名.md"
+      ]
+    },
+    "Compound Interest/Aesthetic/FACE — Facial Aesthetics & Portrait Expression/未命名.md": {
       "isPinned": false,
       "isHidden": false
     }
