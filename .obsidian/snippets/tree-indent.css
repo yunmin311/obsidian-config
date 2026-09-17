@@ -1,0 +1,46 @@
+/* ============================================================
+   文件树层级缩进（收紧）
+   ------------------------------------------------------------
+   症状：文件夹展开多层后，右侧内容被层层推到很靠右，标题看不清。
+   原因：Obsidian 每级缩进 = padding-start(4px) + margin-start(12px) = 16px，
+        5 级就吃掉 80px，10 级 160px。
+
+   做法：只覆盖「子级容器」的两个变量，不动项自身的左内边距。
+        所以最上层永远不会贴到最左边 —— 这正是手动压间距时最常踩的坑：
+        如果去改 .tree-item-self 的 padding-left，顶层会跟着一起往左跑。
+
+   --nav-item-children-padding-start   原生 4px
+   --nav-item-children-margin-start    原生 12px
+   两者之和就是「每一级的缩进」。下面按 1:3 的原比例重新分配。
+
+   想再紧一点 / 松一点：用 Style Settings 里的「每级缩进」滑条，
+   或者在下面把 --tree-indent-step 的默认值改掉。原生值是 16px。
+   ============================================================ */
+
+/* @settings
+
+name: 文件树缩进
+id: tree-indent
+settings:
+  - id: tree-indent-step
+    title: 每级缩进
+    description: 文件夹嵌套时每一级向右缩进的像素数。Obsidian 原生为 16px，默认已收窄到 8px。
+    type: variable-number-slider
+    default: 8
+    min: 4
+    max: 18
+    step: 1
+    format: px
+*/
+
+.nav-files-container {
+  /* 1 : 3 —— 与原生 4px : 12px 的比例一致，只是总量变小 */
+  --nav-item-children-padding-start: calc(var(--tree-indent-step, 8px) * 0.25);
+  --nav-item-children-margin-start: calc(var(--tree-indent-step, 8px) * 0.75);
+}
+
+/* 兜底：万一有主题把缩进写死在属性上而不是走变量，这条同样生效 */
+.nav-files-container .tree-item-children {
+  padding-inline-start: calc(var(--tree-indent-step, 8px) * 0.25);
+  margin-inline-start: calc(var(--tree-indent-step, 8px) * 0.75);
+}
