@@ -734,9 +734,6 @@ class ReadingRailSidebarPlugin extends Plugin {
     if (count !== this.ticksCount || !el.childElementCount) {
       el.empty();
 
-      // 最底层那条竖向渐变线
-      el.createDiv({ cls: "rrs-ticks__line" });
-
       const base = el.createDiv({ cls: "rrs-ticks__base" });
       for (let i = 0; i < count; i++) {
         base.createDiv({ cls: "rrs-ticks__tick" });
