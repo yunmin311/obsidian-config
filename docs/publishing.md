@@ -23,36 +23,71 @@
 
 ---
 
-## 1. 目标架构
+## 1. 目标：只有插件单独出仓库，其余仍在 config
+
+配置仓库 `obsidian-config` **保持不变** —— 主题、CSS 片段、第三方插件设置、文档都还在这一个仓库里，
+不必拆。要单独提走的**只有三个自研插件**（只有它们才谈得上被别人"安装"、才够格进市场）。
+
+### 位置：跟你的其他项目平级
+
+`E:\1project\` 下面 30 个项目，**清一色的约定**：**本地目录名 == GitHub 仓库名**
+（`pixel-panels` → `yunmin311/pixel-panels.git`，一个个都对得上）。插件也照这条办：
 
 ```
-GitHub:
-  yunmin311/obsidian-config           已 public → 瘦身为「纯配置」
-  yunmin311/obsidian-quiet-shelf      新建 → 按官方可发布格式准备
-  yunmin311/obsidian-reading-rail-sidebar   新建 → 按官方可发布格式准备
-  yunmin311/obsidian-toolbar-pin-toggle     新建 → 按官方可发布格式准备
-  yunmin311/obsidian-css-snippets     新建（可选）→ 片段合集
+E:\1project\
+  zheng-tally-obsidian\              ← 你已发布的同款插件，现成模板
+  quiet-shelf-obsidian\              ← 新建（源码唯一真身）
+  reading-rail-sidebar-obsidian\     ← 新建
+  toolbar-pin-toggle-obsidian\       ← 新建
+  obsidian-config\                   ← 配置仓库，保持不变
 
-**命名决定（已拍板）**：`obsidian-<id>` 前缀。
-仓库名可以含 `obsidian`（`manifest.json` 里的 `id` 才禁止），这样 GitHub 上一眼能看出
-是 Obsidian 插件，社区多数插件也这么做。本地开发目录与仓库同名，
-vault 里的安装目录仍用 `<id>`（若目录名与 id 不一致，`onExternalSettingsChange` 之类
-可能不被调用；但那只影响开发副本，vault 里的运行副本名永远是 id，不受影响）。
-
-本地:
-  E:\1project\obsidian-config\                 配置仓库
-  E:\1project\obsidian-quiet-shelf\            插件源码仓库 ← 唯一真身
-  E:\1project\obsidian-reading-rail-sidebar\
-  E:\1project\obsidian-toolbar-pin-toggle\
-  E:\1obsidian\Obsidian Vault\.obsidian\plugins\<id>\   运行副本（脚本同步过去）
+E:\1obsidian\Obsidian Vault\.obsidian\plugins\<id>\     ← 运行副本（脚本同步过去）
 ```
 
-### ⚠️ 不要用 git submodule 串起来
+**命名是 `<插件 id>-obsidian` 后缀，不是 `obsidian-` 前缀。**
+依据是你自己的先例 `zheng-tally-obsidian` —— manifest 里 `id: "zheng-tally"`，
+仓库名加 `-obsidian` 后缀。**和自己已有项目保持一致，比跟社区多数派一致更重要。**
 
-两条本机实测过的硬理由：
+> 顺带：`zheng-tally` 目前**还不在官方目录**（查过 `community-plugins.json`，7717 条里没有）。
+> 所以这次提 PR 是你第一次走官方审核，更该照着自己已经跑通的那套骨架来。
 
-1. **E 盘 git 嵌套引用不落盘**：`E:\1project\**` 下 git 无法创建嵌套分支引用（exit 0 但 ref 不落盘），submodule 重度依赖这套机制。
-2. **vault 里已有前车之鉴**：`project/` 下两个内嵌仓库因为没有 `.gitmodules`，任何 submodule 解析都直接 fatal。
+### 照抄 zheng-tally-obsidian 的骨架
+
+那个仓库已经是完整形态，直接复用除构建以外的部分：
+
+| 文件/目录 | zheng-tally 有 | 我们的插件 |
+|---|---|---|
+| `manifest.json` | ✅ `authorUrl: "https://github.com/yunmin311"` | ✅ 照抄，补同一个 `authorUrl` |
+| `README.md` | ✅ 首屏即产品页（徽章 + 动图 + Why + How it works） | ✅ 市场详情页抓的就是它，值得认真写 |
+| `LICENSE` | ✅ MIT | ✅ **政策硬要求** |
+| `CHANGELOG.md` | ✅ | ✅ 建议有，用户看版本记录 |
+| `versions.json` | ✅ `{"1.0.0":"1.5.12"}` | ⭕ 提高 `minAppVersion` 时才需要 |
+| `.github/workflows/` | ✅ CI（lint / typecheck / test / build） | ✅ 换成 release workflow，见 §4.4 |
+| `.gitignore` | ✅ `node_modules/ dist/ *.log` | ✅ 再加一条 `data.json` |
+| `src/` + `esbuild` + `dist/` | ✅ TypeScript 构建 | ❌ **不照抄**，见下 |
+
+### 无构建 vs TypeScript：保持现状
+
+你的三个插件是**纯 JS、手写 `main.js`、直接 `require("obsidian")`**，没有构建步骤；
+zheng-tally 是 TypeScript + esbuild。**建议保持纯 JS 无构建**：
+
+- 官方市场只认 Release 里的三件套，**不要求 TS，也不要求构建**
+- 这三个插件刚调完好几轮（尤其 `reading-rail-sidebar` 的刻度算法），现在重写风险远大于收益
+- 没有 `dist/` 这一层，仓库里的 `main.js` 就是源文件，改完直接同步进 vault 验证，链条最短
+
+代价是没有类型检查和 lint —— 插件结构简单且已实机反复验证过，可接受。
+
+### ⚠️ 不要用 submodule（理由已更新）
+
+之前文档里写的"E 盘嵌套 git 引用不落盘"是**错的，已实测证伪**：
+`work-capsule` 的 `.git/refs/heads/codex/` 目录就好端端在盘上。
+（`work-capsule-local-obsolete`、`creative-os-canonical-fact-adoption` 也都 checkout
+在 `feat/xxx`、`codex/xxx` 这样的嵌套分支上。）真正不用的理由是：
+
+1. Obsidian 需要插件是 **vault 里 `.obsidian\plugins\<id>\` 的真实文件**；
+   submodule 只解决"源码归属"，不解决"同步进 vault" —— 反正还得配一个脚本
+2. 多一层间接（config 仓库 → submodule → vault）却不省掉任何一步，纯增心智负担
+3. vault 里 `project/` 下那两个内嵌仓库的 fatal 是真麻烦，但根因是**缺 `.gitmodules`**，与 E 盘无关
 
 **改用「源码仓库 + 单向同步脚本」**（见 §6）。
 
@@ -113,29 +148,30 @@ You are not logged into any GitHub hosts. To log in, run: gh auth login
 ### 4.1 建仓库
 
 ```bash
-# 名字约定：社区里 7717 个插件，30% 用「repo 名 == 插件 id」，多数用 obsidian- 前缀。
-# 建议用 obsidian- 前缀 —— GitHub 上一眼能看出是 Obsidian 插件，可发现性更好。
-# manifest 里的 id 保持不动（id 里不许出现 obsidian，仓库名可以）。
-gh repo create yunmin311/obsidian-reading-rail-sidebar --public --license MIT
+# 名字：<id>-obsidian 后缀（沿用你自己的 zheng-tally-obsidian），
+#       本地目录名与仓库名一致 —— 你和 E:\1project 下 30 个项目一个规矩。
+# manifest 里的 id 保持原样（id 里不许出现 obsidian，仓库名可以）。
+gh repo create yunmin311/reading-rail-sidebar-obsidian --public --license MIT
 ```
 
 ### 4.2 初始化目录并推第一版
 
 ```bash
-mkdir -p /e/1project/obsidian-reading-rail-sidebar
-cd /e/1project/obsidian-reading-rail-sidebar
-git init && git remote add origin git@github.com:yunmin311/obsidian-reading-rail-sidebar.git
+mkdir -p /e/1project/reading-rail-sidebar-obsidian
+cd /e/1project/reading-rail-sidebar-obsidian
+git init && git remote add origin https://github.com/yunmin311/reading-rail-sidebar-obsidian.git
 
 # 从配置仓库把三件套搬过来（搬完配置仓库里那份就删，避免两份真身）
 cp "/e/1project/obsidian-config/.obsidian/plugins/reading-rail-sidebar/main.js" .
 cp "/e/1project/obsidian-config/.obsidian/plugins/reading-rail-sidebar/manifest.json" .
 cp "/e/1project/obsidian-config/.obsidian/plugins/reading-rail-sidebar/styles.css" .
 
-# 补 authorUrl（marketplace 详情页会用它做作者链接）
+# 补 authorUrl —— 与 zheng-tally-obsidian 保持同一个值
 # manifest.json 里加一行："authorUrl": "https://github.com/yunmin311"
 
-# 写 README.md（必写：市场详情页就是抓它）
+# 写 README.md（必写：市场详情页就是抓它）、CHANGELOG.md
 # LICENSE 已由 --license MIT 生成
+# .gitignore 加一条 data.json
 
 git add -A && git commit -m "feat: initial release 0.1.0"
 git branch -M main && git push -u origin main
@@ -153,6 +189,53 @@ gh release create 0.1.0 main.js manifest.json styles.css --title "0.1.0" --notes
 - 详情页抓你**仓库根**的 `manifest.json` + `README.md`
 - 安装时按 `manifest.json` 里的 version 去找**同名 tag 的 Release**
 - 从 Release 下载 `manifest.json` / `main.js` / `styles.css`
+
+### 4.4 用 GitHub Actions 自动打 Release（强烈建议）
+
+手动打 Release 迟早漏东西 —— 你自己的 `zheng-tally-obsidian` 里就已经漂出
+`1.0.1` 和 `v1.0.1` **两个 tag 并存**（带 v 前缀那个市场找不到）。
+
+放一份 `.github/workflows/release.yml`，以后只需两步：**改 manifest version → 打同名 tag → push**，
+剩下全自动，而且**会校验 tag 与 manifest 是否一致**，不一致直接失败：
+
+```yaml
+name: Release plugin
+
+on:
+  push:
+    tags: ["*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Read version from manifest
+        id: ver
+        run: echo "version=$(node -p "require('./manifest.json').version")" >> "$GITHUB_OUTPUT"
+
+      - name: Tag must equal manifest version
+        run: |
+          if [ "${{ github.ref_name }}" != "${{ steps.ver.outputs.version }}" ]; then
+            echo "tag=${{ github.ref_name }} 与 manifest version=${{ steps.ver.outputs.version }} 不一致"
+            exit 1
+          fi
+
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "${{ github.ref_name }}" \
+            --title "${{ github.ref_name }}" \
+            --generate-notes \
+            manifest.json main.js styles.css
+```
+
+这样 `styles.css` 漏传的问题从机制上消失（写死在工作流里）。
 
 ---
 
@@ -184,11 +267,11 @@ param(
     [string]$SrcRoot   = "E:\1project"
 )
 
-# GitHub 仓库名（obsidian- 前缀） → vault 里的插件目录名（= manifest id）
+# 源码仓库目录（<id>-obsidian） → vault 里的插件目录（= manifest id）
 $map = @{
-    "obsidian-quiet-shelf"          = "quiet-shelf"
-    "obsidian-reading-rail-sidebar" = "reading-rail-sidebar"
-    "obsidian-toolbar-pin-toggle"   = "toolbar-pin-toggle"
+    "quiet-shelf-obsidian"          = "quiet-shelf"
+    "reading-rail-sidebar-obsidian" = "reading-rail-sidebar"
+    "toolbar-pin-toggle-obsidian"   = "toolbar-pin-toggle"
 }
 
 foreach ($repo in $map.Keys) {
@@ -208,12 +291,12 @@ foreach ($repo in $map.Keys) {
 }
 ```
 
-**改插件的新流程**：
-1. 改 `E:\1project\obsidian-<id>\` 里的源码
-2. `scripts/sync-plugins.ps1` 同步进 vault → 在 Obsidian 里 `Ctrl+P → Reload app without saving` 验证
-3. **bump `manifest.json` 的 version**
-4. 提交 + 打同名 tag + `gh release create` 挂三件套
-5. 通知用户更新（BRAT 用户点一下即可）
+**改插件的新流程**（替代现在的"改配置仓库副本 → 手工 cp 两处"）：
+1. 改 `E:\1project\<id>-obsidian\` 里的源码 ← **唯一真身**
+2. `scripts/sync-plugins.ps1` 同步进 vault → `Ctrl+P → Reload app without saving` 验证
+3. **bump `manifest.json` 的 version**（不改这一步用户端收不到更新）
+4. `git commit` + `git tag <version>` + `git push --follow-tags`
+5. Release 由 Actions 自动生成并挂好三件套（§4.4）
 
 ---
 
@@ -282,24 +365,26 @@ BRAT 只当作**提交前的自检通道**（打完 Release 自己装一遍，�
 ## 8. 待办清单（按官方发布格式）
 
 **准备（本地，无需 GitHub）**
-- [ ] `gh auth login`（`gh` 未登录，与 git 是两套凭据）
-- [ ] 三个插件补 `authorUrl: "https://github.com/yunmin311"`
-- [ ] 按 §7.2 改写 `quiet-shelf` 与 `toolbar-pin-toggle` 的 description
-- [ ] 各写一个 README.md（市场详情页就是它；中文为主 + 英文简介更友好）
+- [ ] `gh auth login`（`gh` 未登录，与 git 走的两套凭据）
+- [ ] 建 3 个源码目录 `E:\1project\<id>-obsidian\`，把三件套从配置仓库搬过去
+- [ ] 三个插件补 `"authorUrl": "https://github.com/yunmin311"`（与 zheng-tally 同值）
+- [ ] 按 §7.2 改写 `quiet-shelf` 与 `toolbar-pin-toggle` 的 description（官方偏好动作开头）
+- [ ] 各写 README.md（市场详情页就是它）+ CHANGELOG.md
 - [ ] 各补 LICENSE（MIT）
-- [ ] 各补 `.gitignore`（排除 `data.json` —— 含笔记路径，属运行时状态）
+- [ ] 各补 `.gitignore`（**必须排除 `data.json`** —— 含笔记路径，属运行时状态）
+- [ ] 各放 `.github/workflows/release.yml`（§4.4）
 
 **建库与发布**
-- [ ] 建 3 个仓库（`obsidian-quiet-shelf` / `obsidian-reading-rail-sidebar` / `obsidian-toolbar-pin-toggle`）
-- [ ] 各打首个 Release（tag == manifest version，挂三件套）
-- [ ] 用 BRAT 装一遍，验证拉取链路没问题
+- [ ] GitHub 上建 3 个同名仓库（public，选 MIT）
+- [ ] 各推首个 commit，**打首个 Release**（tag == manifest version），actions 自动挂三件套
+- [ ] 用 BRAT 装一遍，验证拉取链路
 
 **收尾**
-- [ ] 写 `scripts/sync-plugins.ps1`，替换现在的手工 `cp`
+- [ ] 写 `scripts/sync-plugins.ps1`（已在 §6 写好），替换现在的手工 `cp`
 - [ ] 从 `obsidian-config` 移除三个插件的本体 + 清 `.gitignore` 里对应的白名单段
 - [ ] 提 `obsidian-releases` 的 PR（往 `community-plugins.json` 加条目）
-- [ ] （可选）建 `obsidian-css-snippets` 仓库，把 10 个片段单独发布
 - [ ] （可选）`obsidian-config` 的 README 里加「我的插件」索引
+- [ ] （可选）回头把 `zheng-tally-obsidian` 那个多余的 `v1.0.1` tag 删掉，统一成不带 v
 
 ---
 
