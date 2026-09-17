@@ -724,7 +724,7 @@ class ReadingRailSidebarPlugin extends Plugin {
     this.updateTicks();
   }
 
-  /** 铺刻度：基础刻度按容器高度均匀分布，标题刻度按各自在文中的位置落点 */
+  /** 铺刻度：轨道线 + 基础刻度（均匀）+ 标题刻度（按文中位置落点） */
   paintTicks() {
     const el = this.ticksEl;
     if (!el) return;
@@ -734,10 +734,14 @@ class ReadingRailSidebarPlugin extends Plugin {
     if (count !== this.ticksCount || !el.childElementCount) {
       el.empty();
 
+      // 最底层那条竖向渐变线
+      el.createDiv({ cls: "rrs-ticks__line" });
+
       const base = el.createDiv({ cls: "rrs-ticks__base" });
       for (let i = 0; i < count; i++) {
         base.createDiv({ cls: "rrs-ticks__tick" });
       }
+      this.ticksBaseEl = base;
       this.ticksHeadEl = el.createDiv({ cls: "rrs-ticks__heads" });
       this.ticksNowEl = el.createDiv({ cls: "rrs-ticks__now" });
       this.ticksCount = count;
@@ -750,6 +754,7 @@ class ReadingRailSidebarPlugin extends Plugin {
    * 标题刻度：取阅读视图里的全部 h1–h6，按它们在文档中的像素位置换算成
    * 百分比落点；长度按层级区分（H1 最长，越深越短）。
    * 标题扎堆的地方刻度自然就密 —— 这就是「按文字密度区分」的来源。
+   * 同时把每根的位置存进 ticksHeadings，供滚动时判定「当前是哪一杠」。
    */
   paintHeads() {
     const scroller = this.ticksScroller;
@@ -761,6 +766,7 @@ class ReadingRailSidebarPlugin extends Plugin {
     const scrollTop = scroller.scrollTop;
     const heads = this.collectHeadingEls(scroller);
 
+    const positions = [];
     box.empty();
     for (const node of heads) {
       const level = Number(String(node.tagName).slice(1)) || 2;
@@ -769,7 +775,9 @@ class ReadingRailSidebarPlugin extends Plugin {
       const tick = box.createDiv({ cls: "rrs-ticks__head" });
       tick.dataset.level = String(Math.min(level, 4));
       tick.style.top = p * 100 + "%";
+      positions.push(p);
     }
+    this.ticksHeadings = positions;
 
     // 阅读视图的正文是异步渲染的：首次挂载时可能一个标题都还没进 DOM。
     // 这时延迟再算一次，否则刻度会一直空着，而且不会自己恢复。
@@ -803,14 +811,50 @@ class ReadingRailSidebarPlugin extends Plugin {
     return out;
   }
 
-  /** 让高亮杠跟着滚动位置走 */
+  /**
+   * 滚动时更新三样东西：
+   *   ① 当前位置的高亮杠
+   *   ② 基础刻度的「读过」状态（缩短 + 变淡，留下阅读痕迹）
+   *   ③ 当前所在标题那一杠的高亮
+   */
   updateTicks() {
     const scroller = this.ticksScroller;
     const now = this.ticksNowEl;
     if (!scroller || !now) return;
+
     const max = scroller.scrollHeight - scroller.clientHeight;
     const p = max > 0 ? Math.min(1, Math.max(0, scroller.scrollTop / max)) : 0;
     now.style.top = p * 100 + "%";
+
+    const base = this.ticksBaseEl;
+    if (base) {
+      const ticks = base.children;
+      const last = ticks.length - 1;
+      for (let i = 0; i < ticks.length; i++) {
+        const at = last > 0 ? i / last : 0;
+        ticks[i].classList.toggle("is-read", at < p - 0.005);
+      }
+    }
+
+    this.updateActiveHead(p);
+  }
+
+  /** 当前所在的那个标题，让对应的刻度亮起来 */
+  updateActiveHead(p) {
+    const box = this.ticksHeadEl;
+    const positions = this.ticksHeadings;
+    if (!box || !positions) return;
+
+    let idx = -1;
+    for (let i = 0; i < positions.length; i++) {
+      if (positions[i] <= p + 0.001) idx = i;
+      else break;
+    }
+
+    const nodes = box.children;
+    for (let i = 0; i < nodes.length; i++) {
+      nodes[i].classList.toggle("is-active", i === idx);
+    }
   }
 
   /** 点刻度条任意高度 → 平滑滚到全篇对应百分比 */
@@ -842,6 +886,8 @@ class ReadingRailSidebarPlugin extends Plugin {
     this.ticksEl = null;
     this.ticksNowEl = null;
     this.ticksHeadEl = null;
+    this.ticksBaseEl = null;
+    this.ticksHeadings = null;
     this.ticksOnScroll = null;
     this.ticksCount = 0;
   }
