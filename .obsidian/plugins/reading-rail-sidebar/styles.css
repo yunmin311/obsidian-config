@@ -169,7 +169,7 @@
    视觉规格对齐 crisp-reading-rail —— 它好看的几个点：
    ① 一条 1px 竖向渐变轨道线，中段最亮、两端透明（不是硬邦邦的实线）
    ② 刻度用 color-mix 调出的柔和色，不是生硬的 --text-faint
-   ③ 读过的刻度会缩短到 64% 并淡到 0.14，形成「读过的痕迹」
+   ③ 读过的刻度缩短变淡 —— 默认关闭（设置里可开），留着是因为它是 crisp 的招牌效果
    ④ 当前所在标题那一杠变成 accent 色、加粗到 2px
    ⑤ 上下各留 18px、离右边 10px，不顶天立地
    ============================================================ */
@@ -185,7 +185,9 @@
   right: 10px;
   bottom: 20px;
   height: 46%;
-  width: 30px;
+  /* 最长刻度 34px + 右侧 7px 边距 + 1px 余量 —— 容器必须装得下，
+     否则长刻度会溢出到正文上去（指针命中区也跟着对不上） */
+  width: 42px;
   z-index: 1;
   cursor: pointer;
   /* 拖动时不让浏览器把手指/指针手势抢去当滚动 */
@@ -196,11 +198,11 @@
   cursor: grabbing;
 }
 
-/* ②③ 基础刻度：柔和色；读过的缩短变淡 */
+/* ②③ 基础刻度：柔和色；读过的缩短变淡（默认关闭，见设置项） */
 .rrs-ticks__base {
   position: absolute;
   inset: 0 7px 0 auto;
-  width: 14px;
+  width: 35px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -209,18 +211,25 @@
 }
 
 .rrs-ticks__tick {
-  /* 所有刻度统一长度（取原来最短的那一档），不再按文本密度变化 */
+  /* 长度由 JS 按「该处的文本密度」设置（8–34px，见 main.js 的 MIN_W / MAX_W）；
+     这里只是 JS 还没跑时的兜底值。
+     粗细（height）所有刻度统一 1px —— 只有长度随密度变，线宽不变。 */
   width: 8px;
   height: 1px;
   border-radius: 999px;
   background: var(--rrs-muted);
-  opacity: 0.45;
+  /* 原来 0.45 偏淡：之前是「读过变灰」把它压到了 0.2，关掉该功能后
+     整列回到 0.45 仍偏虚，这里提到 0.55 —— 再深就开始抢正文了。 */
+  opacity: 0.55;
   transform-origin: right center;
   transition:
     opacity 110ms cubic-bezier(0.23, 1, 0.32, 1),
+    width 140ms cubic-bezier(0.23, 1, 0.32, 1),
     transform 110ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
+/* 「读过的刻度变灰」—— 设置项默认关闭（qy：开着会让整列都不明显）。
+   打开后：已滚过部分缩短到 64%、淡到 0.2，留下阅读痕迹。 */
 .rrs-ticks__tick.is-read {
   transform: scaleX(0.64);
   opacity: 0.2;

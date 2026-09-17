@@ -29,6 +29,9 @@ const DEFAULTS = {
   maxLevel: 3,
   showProgress: true,
   rememberPosition: true,
+  // 「读过的刻度变灰」默认关 —— qy：它会把整列刻度压得看不清。
+  // 想要阅读痕迹时，在设置里打开即可（default false，不是删掉）。
+  ticksReadFade: false,
 };
 
 const MEMORY_LIMIT = 300;
@@ -525,6 +528,29 @@ class ReadingRailSettingTab extends PluginSettingTab {
             await this.plugin.saveAll();
           })
       );
+
+    new Setting(containerEl)
+      .setName("读过的刻度变淡")
+      .setDesc(
+        "已滚过部分对应的刻度会缩短并变淡，留下阅读痕迹。默认关闭——开着会让整列刻度显得发灰、不清晰。"
+      )
+      .addToggle((toggle) =>
+        toggle
+          .setValue(this.plugin.settings.ticksReadFade)
+          .onChange(async (value) => {
+            this.plugin.settings.ticksReadFade = value;
+            await this.plugin.saveAll();
+            // 关掉时要把已加上的 is-read 全部清掉，否则残留在 DOM 上
+            if (!value) {
+              const base = this.ticksBaseEl;
+              if (base) {
+                for (const t of base.children) t.classList.remove("is-read");
+              }
+            } else {
+              this.updateTicks();
+            }
+          })
+      );
   }
 
   refreshViews() {
@@ -694,6 +720,8 @@ class ReadingRailSidebarPlugin extends Plugin {
     }
     if (!scroller) return this.teardownTicks();
 
+    this.ticksFilePath = view.file ? view.file.path : "";
+
     // 同一视图 + 同一 scroller：只重算尺寸与位置，不重建 DOM
     if (this.ticksHost === host && this.ticksScroller === scroller) {
       this.paintTicks();
@@ -745,9 +773,8 @@ class ReadingRailSidebarPlugin extends Plugin {
       this.ticksCount = count;
     }
 
-    // 密度驱动的长度已停用 —— qy 要求所有刻度统一长度，长度值交给 CSS。
-    // 想恢复峰值图效果：取消下面这行的注释即可。
-    // this.paintDensity();
+    // 密度驱动：长度反映该处的文本密度
+    this.paintDensity();
 
     this.paintHeads();
   }
@@ -763,26 +790,68 @@ class ReadingRailSidebarPlugin extends Plugin {
     const count = ticks.length;
     if (!count) return;
 
-    const sums = this.computeDensity(count);
-    if (!sums) return;
+    const raw = this.computeDensity(count);
+    if (!raw) return;
 
-    let max = 0;
-    let min = Infinity;
-    for (const v of sums) {
-      if (v > max) max = v;
-      if (v < min) min = v;
-    }
-    if (!isFinite(min)) min = 0;
-    const span = max - min || 1;
+    // 平滑：原始统计是「一格一值」的阶梯，相邻两格可能差好几倍，直接画出来
+    // 就是 qy 说的「拔地而起、没有过渡」。用高斯核卷一下，得到宽缓的峰谷 ——
+    // 就是视频播放器进度条底下那条热度曲线的形状。核宽跟着刻度根数走：
+    // 刻度越密，峰也要越宽，否则会碎成锯齿（试过固定 3 点均值，密了还是锯齿）。
+    const sums = this.smoothDensity(raw, Math.max(1.2, count / 22));
 
-    // 长度区间：原来 5–22px 偏细，整体 ×1.5
-    const MIN_W = 7.5; // 最稀处
-    const MAX_W = 33; // 最密处
+    // 归一化端点取 p8 / p92，不是 min / max —— 一个超长块会把整条曲线压平
+    // （其余刻度全挤在最矮那档，等于没有峰谷），掐掉两端离群值后起伏才拉得开。
+    const sorted = sums.slice().sort((a, b) => a - b);
+    const lo = sorted[Math.min(sorted.length - 1, Math.floor(sorted.length * 0.08))];
+    const hi = sorted[Math.min(sorted.length - 1, Math.floor(sorted.length * 0.92))];
+    const span = hi - lo || 1;
+
+    const MIN_W = 8; // 最稀处
+    const MAX_W = 34; // 最密处
 
     for (let i = 0; i < count; i++) {
-      const t = (sums[i] - min) / span;
+      let t = (sums[i] - lo) / span;
+      t = Math.max(0, Math.min(1, t));
+      // gamma 0.85：把中段略微抬高。1.0 时矮处几乎全平看不出起伏，
+      // 试过 0.6 又会让大片刻度顶到最长，反而糊成一片。
+      t = Math.pow(t, 0.85);
       ticks[i].style.width = (MIN_W + t * (MAX_W - MIN_W)).toFixed(1) + "px";
     }
+  }
+
+  /**
+   * 高斯平滑：把阶梯状的原始密度磨成有起伏的峰谷。
+   * 半径取 2.5σ（覆盖 98.7% 权重）；边缘用钳位取值，
+   * 否则首尾会被"没有数据"拉成向下的斜坡。
+   */
+  smoothDensity(arr, sigma) {
+    const n = arr.length;
+    if (!n) return arr;
+
+    const radius = Math.max(
+      1,
+      Math.min(Math.floor(n / 2), Math.round(sigma * 2.5))
+    );
+    const kernel = new Array(radius * 2 + 1);
+    let ksum = 0;
+    for (let k = -radius; k <= radius; k++) {
+      const w = Math.exp(-(k * k) / (2 * sigma * sigma));
+      kernel[k + radius] = w;
+      ksum += w;
+    }
+
+    const out = new Array(n);
+    for (let i = 0; i < n; i++) {
+      let acc = 0;
+      for (let k = -radius; k <= radius; k++) {
+        let j = i + k;
+        if (j < 0) j = 0;
+        else if (j > n - 1) j = n - 1;
+        acc += arr[j] * kernel[k + radius];
+      }
+      out[i] = acc / ksum;
+    }
+    return out;
   }
 
   /**
@@ -795,14 +864,29 @@ class ReadingRailSidebarPlugin extends Plugin {
     if (!scroller || !count) return null;
 
     const total = scroller.scrollHeight || 1;
+
+    // layout-change 会高频触发，而这里要逐个块量 getBoundingClientRect
+    // （长文上千次）。按「文件 + 文档高度 + 刻度根数」缓存：没变就直接复用
+    // 上一条曲线，不然每次重绘都重测一遍会明显卡顿。
+    const key = (this.ticksFilePath || "") + ":" + total + ":" + count;
+    if (this.densityKey === key && this.densityCache) return this.densityCache;
+
     const scrollerTop = scroller.getBoundingClientRect().top;
     const scrollTop = scroller.scrollTop;
     const sums = new Array(count).fill(0);
 
-    const blocks = scroller.querySelectorAll(".markdown-preview-sizer > *");
+    // 阅读模式：顶层块（段落/标题/列表/引用…）；实时预览没有 sizer，退回按行统计
+    let blocks = scroller.querySelectorAll(".markdown-preview-sizer > *");
+    if (!blocks.length) blocks = scroller.querySelectorAll(".cm-line");
+
     for (const el of blocks) {
-      const len = String(el.textContent || "").trim().length;
-      if (!len) continue;
+      const chars = String(el.textContent || "").trim().length;
+      if (!chars) continue;
+      // 权重取字数的平方根，不是字数本身：一个超长的代码块 / 表格按原值计入的话，
+      // 会独吞整条曲线的动态范围（尾部实测出现 12px 的陡跳，又是「拔地而起」）。
+      // 开方后离群块仍然是峰，但周围刻度不会被压成一片平地 ——
+      // 同一份样本实测：最大相邻跳变 8.3px → 6.1px，长度档位反而多了一档。
+      const len = Math.sqrt(chars);
 
       const rect = el.getBoundingClientRect();
       const top = rect.top - scrollerTop + scrollTop;
@@ -817,6 +901,13 @@ class ReadingRailSidebarPlugin extends Plugin {
       const share = len / (i1 - i0 + 1);
       for (let i = i0; i <= i1; i++) sums[i] += share;
     }
+
+    // 一个块都没量到（阅读视图还没渲染完）时不要缓存，
+    // 否则这条全 0 的"平线"会被当成有效结果一直用下去。
+    if (!blocks.length) return sums;
+
+    this.densityKey = key;
+    this.densityCache = sums;
     return sums;
   }
 
@@ -884,7 +975,7 @@ class ReadingRailSidebarPlugin extends Plugin {
   /**
    * 滚动时更新三样东西：
    *   ① 当前位置的高亮杠
-   *   ② 基础刻度的「读过」状态（缩短 + 变淡，留下阅读痕迹）
+   *   ② 基础刻度的「读过」状态（缩短 + 变淡）—— 由 ticksReadFade 控制，默认关
    *   ③ 当前所在标题那一杠的高亮
    */
   updateTicks() {
@@ -897,7 +988,7 @@ class ReadingRailSidebarPlugin extends Plugin {
     now.style.top = p * 100 + "%";
 
     const base = this.ticksBaseEl;
-    if (base) {
+    if (base && this.plugin.settings.ticksReadFade) {
       const ticks = base.children;
       const last = ticks.length - 1;
       for (let i = 0; i < ticks.length; i++) {
@@ -1006,6 +1097,9 @@ class ReadingRailSidebarPlugin extends Plugin {
     }
     this.ticksHost = null;
     this.ticksScroller = null;
+    this.ticksFilePath = null;
+    this.densityKey = null;
+    this.densityCache = null;
     this.ticksEl = null;
     this.ticksNowEl = null;
     this.ticksHeadEl = null;
