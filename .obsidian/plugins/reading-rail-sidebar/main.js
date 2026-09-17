@@ -806,8 +806,10 @@ class ReadingRailSidebarPlugin extends Plugin {
     const hi = sorted[Math.min(sorted.length - 1, Math.floor(sorted.length * 0.92))];
     const span = hi - lo || 1;
 
-    const MIN_W = 8; // 最稀处
-    const MAX_W = 34; // 最密处
+    // 最短的那档（MIN_W）不动，只把「超出最短的部分」整体压短 ——
+    // 压的是幅度（26px → 20px），不是等比缩放整根，所以最长档从 34 收到 28。
+    const MIN_W = 8; // 最稀处（保持不变）
+    const MAX_W = 28; // 最密处（原 34，qy 要求整体缩短）
 
     for (let i = 0; i < count; i++) {
       let t = (sums[i] - lo) / span;

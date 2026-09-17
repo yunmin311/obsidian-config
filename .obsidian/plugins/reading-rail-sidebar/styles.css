@@ -185,9 +185,9 @@
   right: 10px;
   bottom: 20px;
   height: 46%;
-  /* 最长刻度 34px + 右侧 7px 边距 + 1px 余量 —— 容器必须装得下，
+  /* 最长刻度 28px + 右侧 7px 边距 + 1px 余量 —— 容器必须装得下，
      否则长刻度会溢出到正文上去（指针命中区也跟着对不上） */
-  width: 42px;
+  width: 36px;
   z-index: 1;
   cursor: pointer;
   /* 拖动时不让浏览器把手指/指针手势抢去当滚动 */
@@ -202,7 +202,7 @@
 .rrs-ticks__base {
   position: absolute;
   inset: 0 7px 0 auto;
-  width: 35px;
+  width: 29px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -211,7 +211,7 @@
 }
 
 .rrs-ticks__tick {
-  /* 长度由 JS 按「该处的文本密度」设置（8–34px，见 main.js 的 MIN_W / MAX_W）；
+  /* 长度由 JS 按「该处的文本密度」设置（8–28px，见 main.js 的 MIN_W / MAX_W）；
      这里只是 JS 还没跑时的兜底值。
      粗细（height）所有刻度统一 1px —— 只有长度随密度变，线宽不变。 */
   width: 8px;
