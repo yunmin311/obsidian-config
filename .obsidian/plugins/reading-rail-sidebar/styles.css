@@ -185,7 +185,8 @@
   right: 10px;
   bottom: 20px;
   height: 46%;
-  width: 30px;
+  /* 刻度最长 33px + 右侧 7px 边距，容器要放得下 */
+  width: 42px;
   z-index: 1;
   cursor: pointer;
   /* 拖动时不让浏览器把手指/指针手势抢去当滚动 */

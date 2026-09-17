@@ -771,8 +771,9 @@ class ReadingRailSidebarPlugin extends Plugin {
     if (!isFinite(min)) min = 0;
     const span = max - min || 1;
 
-    const MIN_W = 5; // 最稀处
-    const MAX_W = 22; // 最密处
+    // 长度区间：原来 5–22px 偏细，整体 ×1.5
+    const MIN_W = 7.5; // 最稀处
+    const MAX_W = 33; // 最密处
 
     for (let i = 0; i < count; i++) {
       const t = (sums[i] - min) / span;
