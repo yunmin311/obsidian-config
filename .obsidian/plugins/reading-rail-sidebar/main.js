@@ -730,7 +730,8 @@ class ReadingRailSidebarPlugin extends Plugin {
     if (!el) return;
 
     const h = el.clientHeight || 0;
-    const count = Math.max(16, Math.min(60, Math.round(h / 24) || 24));
+    // 每约 16px 一根（原 24px，qy 要求根数 ×1.5）
+    const count = Math.max(24, Math.min(120, Math.round(h / 16) || 24));
     if (count !== this.ticksCount || !el.childElementCount) {
       el.empty();
 
@@ -744,7 +745,10 @@ class ReadingRailSidebarPlugin extends Plugin {
       this.ticksCount = count;
     }
 
-    this.paintDensity();
+    // 密度驱动的长度已停用 —— qy 要求所有刻度统一长度，长度值交给 CSS。
+    // 想恢复峰值图效果：取消下面这行的注释即可。
+    // this.paintDensity();
+
     this.paintHeads();
   }
 

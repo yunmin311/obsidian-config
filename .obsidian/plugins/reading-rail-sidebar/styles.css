@@ -185,8 +185,7 @@
   right: 10px;
   bottom: 20px;
   height: 46%;
-  /* 刻度最长 33px + 右侧 7px 边距，容器要放得下 */
-  width: 42px;
+  width: 30px;
   z-index: 1;
   cursor: pointer;
   /* 拖动时不让浏览器把手指/指针手势抢去当滚动 */
@@ -210,8 +209,8 @@
 }
 
 .rrs-ticks__tick {
-  /* 宽度由 JS 按「该处的文本密度」动态设置，这里只给个兜底值 */
-  width: 12px;
+  /* 所有刻度统一长度（取原来最短的那一档），不再按文本密度变化 */
+  width: 8px;
   height: 1px;
   border-radius: 999px;
   background: var(--rrs-muted);
