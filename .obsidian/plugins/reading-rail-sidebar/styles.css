@@ -175,7 +175,8 @@
    ============================================================ */
 
 .rrs-ticks {
-  --rrs-muted: color-mix(in srgb, var(--text-muted) 48%, transparent);
+  /* 之前用 text-muted 48% 太淡，几乎看不见；换成 text-normal 的 62% 透明版 */
+  --rrs-muted: color-mix(in srgb, var(--text-normal) 62%, transparent);
   --rrs-accent: var(--interactive-accent);
 
   position: absolute;
@@ -211,7 +212,7 @@
   height: 1px;
   border-radius: 999px;
   background: var(--rrs-muted);
-  opacity: 0.28;
+  opacity: 0.6;
   transform-origin: right center;
   transition:
     opacity 110ms cubic-bezier(0.23, 1, 0.32, 1),
@@ -220,7 +221,7 @@
 
 .rrs-ticks__tick.is-read {
   transform: scaleX(0.64);
-  opacity: 0.14;
+  opacity: 0.28;
 }
 
 /* ④ 标题刻度：按层级变长；当前那条高亮 */
@@ -228,19 +229,16 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  /* 暂时不显示标题刻度 —— 它是按标题在文中的位置落点的，屏幕上会疏密不均，
-     而 qy 要的是「均匀铺开」的尺子感。整块代码保留着，想恢复删掉这行即可。 */
-  display: none;
 }
 
 .rrs-ticks__head {
   position: absolute;
   right: 7px;
   width: 16px;
-  height: 1px;
+  height: 2px;
   border-radius: 999px;
   background: var(--rrs-muted);
-  opacity: 0.56;
+  opacity: 0.85;
   transform: translateY(-50%);
   transform-origin: right center;
   transition:
@@ -248,13 +246,17 @@
     background-color 110ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.rrs-ticks__head[data-level="1"],
+/* 层级越浅越长，且拉大级差 —— 原来 16/24/20 之间只差 4px，看不出来 */
+.rrs-ticks__head[data-level="1"] {
+  width: 28px;
+}
+
 .rrs-ticks__head[data-level="2"] {
   width: 24px;
 }
 
 .rrs-ticks__head[data-level="3"] {
-  width: 20px;
+  width: 19px;
 }
 
 .rrs-ticks__head[data-level="4"] {
