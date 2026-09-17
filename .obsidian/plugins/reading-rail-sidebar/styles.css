@@ -186,6 +186,12 @@
   width: 30px;
   z-index: 1;
   cursor: pointer;
+  /* 拖动时不让浏览器把手指/指针手势抢去当滚动 */
+  touch-action: none;
+}
+
+.rrs-ticks.is-dragging {
+  cursor: grabbing;
 }
 
 /* ②③ 基础刻度：柔和色；读过的缩短变淡 */

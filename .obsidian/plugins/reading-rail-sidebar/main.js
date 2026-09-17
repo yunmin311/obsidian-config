@@ -707,9 +707,9 @@ class ReadingRailSidebarPlugin extends Plugin {
 
     const el = document.createElement("div");
     el.className = "rrs-ticks";
-    el.addEventListener("click", (ev) => this.jumpByTicks(ev));
     host.appendChild(el);
     this.ticksEl = el;
+    this.attachTicksDrag();
 
     this.ticksOnScroll = () => {
       if (this.ticksFrame !== null) return;
@@ -855,22 +855,75 @@ class ReadingRailSidebarPlugin extends Plugin {
   }
 
   /** 点刻度条任意高度 → 平滑滚到全篇对应百分比 */
-  jumpByTicks(ev) {
+  /* ---------- 刻度条拖拽 ----------
+     按住刻度条上下拖，页面跟着走 —— 等价于拖原生的滚动条。
+     按下即定位（所以「点击跳转」也一并包含了），拖动过程直接设 scrollTop，
+     不做平滑动画，保证跟手。 */
+
+  attachTicksDrag() {
+    const el = this.ticksEl;
+    if (!el) return;
+
+    this.ticksOnDown = (ev) => {
+      if (ev.button !== 0) return;
+      if (!this.ticksScroller) return;
+      ev.preventDefault();
+      ev.stopPropagation();
+      this.ticksDragging = true;
+      el.classList.add("is-dragging");
+      try {
+        el.setPointerCapture(ev.pointerId);
+      } catch (e) {
+        /* 指针捕获失败也不影响后续 move */
+      }
+      this.scrollToTicksY(ev.clientY);
+    };
+
+    this.ticksOnMove = (ev) => {
+      if (!this.ticksDragging) return;
+      ev.preventDefault();
+      this.scrollToTicksY(ev.clientY);
+    };
+
+    this.ticksOnUp = (ev) => {
+      if (!this.ticksDragging) return;
+      this.ticksDragging = false;
+      el.classList.remove("is-dragging");
+      try {
+        el.releasePointerCapture(ev.pointerId);
+      } catch (e) {
+        /* 忽略 */
+      }
+    };
+
+    el.addEventListener("pointerdown", this.ticksOnDown);
+    el.addEventListener("pointermove", this.ticksOnMove);
+    el.addEventListener("pointerup", this.ticksOnUp);
+    el.addEventListener("pointercancel", this.ticksOnUp);
+  }
+
+  /** 把指针的纵向位置换算成文档百分比，直接设 scrollTop（拖动时不做平滑动画） */
+  scrollToTicksY(clientY) {
     const el = this.ticksEl;
     const scroller = this.ticksScroller;
     if (!el || !scroller) return;
     const rect = el.getBoundingClientRect();
     if (!rect.height) return;
-    const p = Math.min(1, Math.max(0, (ev.clientY - rect.top) / rect.height));
+    const p = Math.min(1, Math.max(0, (clientY - rect.top) / rect.height));
     const max = scroller.scrollHeight - scroller.clientHeight;
     if (max <= 0) return;
-    scroller.scrollTo({ top: Math.round(p * max), behavior: "smooth" });
+    scroller.scrollTop = Math.round(p * max);
   }
 
   teardownTicks() {
     if (this.ticksScroller && this.ticksOnScroll) {
       this.ticksScroller.removeEventListener("scroll", this.ticksOnScroll);
     }
+    // 刻度条元素被移除后，挂在它身上的 pointer 监听会自然失效，这里只复位状态
+    this.ticksDragging = false;
+    this.ticksOnDown = null;
+    this.ticksOnMove = null;
+    this.ticksOnUp = null;
     if (this.ticksFrame !== null) {
       window.cancelAnimationFrame(this.ticksFrame);
       this.ticksFrame = null;
