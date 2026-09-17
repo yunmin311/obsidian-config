@@ -7,7 +7,7 @@
 | 类型 | 备份内容 |
 |---|---|
 | 第三方插件 | 只备份 `data.json`（设置），本体按惯例不入库 |
-| 自研插件 | **整体入库**（`main.js` + `styles.css` + `manifest.json` + `data.json`） |
+| 自研插件 | **不入本仓库** —— 源码在 `E:\1project\<id>-obsidian\`，各自独立仓库并发布到社区市场。详见 `docs/publishing.md` |
 | 含 vault 路径的运行时状态 | **不入库**（见文末「不随仓库备份的配置」） |
 
 ## 已启用（21 个）
@@ -52,13 +52,27 @@
 
 > CLI 侧另有一套 AI 编码工具链（Codex / OpenCode / dsh 等）在 Obsidian 之外独立运行，与本仓库无关。
 
-## 自研插件（整体入库）
+## 自研插件（源码在独立仓库）
 
-| 插件 | 用途 | 位置 |
+源码位于 `E:\1project\<id>-obsidian\`，各自是独立的 GitHub 仓库，目标发布到官方社区市场
+（`docs/publishing.md`）。本仓库不再保存插件本体；vault 里的副本由
+`scripts/sync-plugins.ps1` 从源码仓库单向同步。
+
+| 插件 | 源码仓库 | vault 目录 |
 |---|---|---|
-| **Toolbar Pin Toggle** | 一个快捷键（Alt+Q）两种常驻：底部原生常驻工具条 / 顶部工具条常驻；同时收编 Editing Toolbar 的全部外观与行为修正 | `.obsidian/plugins/toolbar-pin-toggle/` |
-| **Reading Rail Sidebar** | 把「阅读进度 + 标题导航」做成右侧栏面板：进度百分比、当前标题跟随、标题树跳转、按文件记忆阅读位置 | `.obsidian/plugins/reading-rail-sidebar/` |
-| **Quiet Shelf**（暗格） | 左侧文件树的显示层控制。① 暗格：把归档 / 索引类文件从文件树收起（物理位置、知识图谱、搜索全不受影响），可手动也可按文件名自动收，手动放回过的不会被再自动收；② 聚焦：跨层级多选文件夹 / 文件，只留选中那一组，可存命名组合 | `.obsidian/plugins/quiet-shelf/` |
+| **Toolbar Pin Toggle** | `E:\1project\toolbar-pin-toggle-obsidian\` | `.obsidian/plugins/toolbar-pin-toggle/` |
+| **Reading Rail Sidebar** | `E:\1project\reading-rail-sidebar-obsidian\` | `.obsidian/plugins/reading-rail-sidebar/` |
+| **Quiet Shelf**（暗格） | `E:\1project\quiet-shelf-obsidian\` | `.obsidian/plugins/quiet-shelf/` |
+| **Zheng Tally**（已在市场提交流程中） | `E:\1project\zheng-tally-obsidian\` | `.obsidian/plugins/zheng-tally/` |
+
+用途简述：
+
+- **Toolbar Pin Toggle** — 一个快捷键（`Alt+Q`）两种常驻：底部原生常驻工具条 / 顶部工具条常驻
+- **Reading Rail Sidebar** — 右侧栏面板：进度百分比、当前标题跟随、标题树跳转、按文件记忆阅读位置；
+  右缘刻度条用长度反映文本密度
+- **Quiet Shelf**（暗格）— ① 暗格：归档 / 索引类文件从文件树收起（物理位置、知识图谱、搜索不受影响）；
+  ② 聚焦：跨层级多选，只留选中那一组
+- **Zheng Tally** — 编辑器内联的正字计数器（TypeScript 构建，产物在 `dist/`）
 
 ### Quiet Shelf 的命令与快捷键
 
@@ -77,12 +91,16 @@
 
 > 快捷键写在本仓库的 `.obsidian/hotkeys.json` 里，随配置一起恢复。
 
-两者都是**纯 JS、无构建依赖**（`main.js` + `styles.css` + `manifest.json`），改完重启 Obsidian 即生效。
-样式全部限定在各自前缀（`etb-` / `rrs-`）下，不改动任何主题变量。
+三者都是**纯 JS、无构建依赖**（`main.js` + `styles.css` + `manifest.json`），改完重启 Obsidian 即生效。
+样式全部限定在各自前缀（`rrs-` / `qs-` / `tbpt-`）下，不改动任何主题变量。
 
-> **`.gitignore` 注意**：自研插件白名单必须写在 `.obsidian/plugins/*/main.js` 那组通配排除**之后**。
-> gitignore 是后置规则优先，白名单放前面会被后面的排除规则重新盖掉 ——
-> 之前 `toolbar-pin-toggle` 就是这样只入库了 `data.json`，本体三件套全漏。
+> **`.gitignore`**：自研插件已改为**整目录排除**（`.obsidian/plugins/<id>/`）。
+> 它们不在本仓库里了，改代码请去 `E:\1project\<id>-obsidian\`，改完跑
+> `scripts\sync-plugins.ps1` 同步进 vault。
+>
+> 历史教训：早先用白名单（`!`）方式入库，因为 gitignore 是后置规则优先，
+> 白名单写在通配排除之前会被盖掉 —— `toolbar-pin-toggle` 曾因此只入库了
+> `data.json`，本体三件套全漏。现在改成整目录排除，不再需要白名单。
 
 ## 不随仓库备份的配置
 
@@ -153,8 +171,10 @@
 1. 装市场插件（上表「已启用」里的前 13 个，不含 crisp 系列）
 2. 装 BRAT → 添加 crisp 系列 9 个仓库（`letschips/crisp-*`）
 3. 复制 `.obsidian/plugins/*/data.json` 覆盖对应插件设置
-4. 复制两个自研插件目录（`toolbar-pin-toggle/`、`reading-rail-sidebar/`，含本体）
-5. 复制 `.obsidian/snippets/`（9 个）+ `appearance.json`
+4. 自研插件：在 BRAT 里添加 `yunmin311/<id>-obsidian`（发布后），
+   或从各自的 GitHub Release 下载三件套放进 `.obsidian/plugins/<id>/`；
+   本机则直接 `git clone` 对应仓库后用 `scripts\sync-plugins.ps1` 同步
+5. 复制 `.obsidian/snippets/`（10 个）+ `appearance.json`
 6. 主题 Border 在内置主题市场安装，重启 Obsidian
 7. 按「不随仓库备份的配置」补设 Flexplorer、Crisp File Explorer、Crisp Reading Rail
 8. 填入 GLM API / Crisp 激活码 / ASR Key
