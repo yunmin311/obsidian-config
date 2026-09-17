@@ -712,20 +712,52 @@ class ReadingRailSidebarPlugin extends Plugin {
     this.updateTicks();
   }
 
-  /** 按容器高度铺均匀刻度：每约 24px 一杠，限制在 16–60 根之间 */
+  /** 铺刻度：基础刻度按容器高度均匀分布，标题刻度按各自在文中的位置落点 */
   paintTicks() {
     const el = this.ticksEl;
     if (!el) return;
+
     const h = el.clientHeight || 0;
     const count = Math.max(16, Math.min(60, Math.round(h / 24) || 24));
-    if (count === this.ticksCount && el.childElementCount) return;
+    if (count !== this.ticksCount || !el.childElementCount) {
+      el.empty();
 
-    el.empty();
-    for (let i = 0; i < count; i++) {
-      el.createDiv({ cls: "rrs-ticks__tick" });
+      const base = el.createDiv({ cls: "rrs-ticks__base" });
+      for (let i = 0; i < count; i++) {
+        base.createDiv({ cls: "rrs-ticks__tick" });
+      }
+      this.ticksHeadEl = el.createDiv({ cls: "rrs-ticks__heads" });
+      this.ticksNowEl = el.createDiv({ cls: "rrs-ticks__now" });
+      this.ticksCount = count;
     }
-    this.ticksNowEl = el.createDiv({ cls: "rrs-ticks__now" });
-    this.ticksCount = count;
+
+    this.paintHeads();
+  }
+
+  /**
+   * 标题刻度：取阅读视图里的全部 h1–h6，按它们在文档中的像素位置换算成
+   * 百分比落点；长度按层级区分（H1 最长，越深越短）。
+   * 标题扎堆的地方刻度自然就密 —— 这就是「按文字密度区分」的来源。
+   */
+  paintHeads() {
+    const scroller = this.ticksScroller;
+    const box = this.ticksHeadEl;
+    if (!scroller || !box) return;
+
+    const total = scroller.scrollHeight || 1;
+    const scrollerTop = scroller.getBoundingClientRect().top;
+    const scrollTop = scroller.scrollTop;
+    const heads = scroller.querySelectorAll("h1, h2, h3, h4, h5, h6");
+
+    box.empty();
+    for (const node of heads) {
+      const level = Number(String(node.tagName).slice(1)) || 2;
+      const offset = node.getBoundingClientRect().top - scrollerTop + scrollTop;
+      const p = Math.min(1, Math.max(0, offset / total));
+      const tick = box.createDiv({ cls: "rrs-ticks__head" });
+      tick.dataset.level = String(Math.min(level, 4));
+      tick.style.top = p * 100 + "%";
+    }
   }
 
   /** 让高亮杠跟着滚动位置走 */
@@ -766,6 +798,7 @@ class ReadingRailSidebarPlugin extends Plugin {
     this.ticksScroller = null;
     this.ticksEl = null;
     this.ticksNowEl = null;
+    this.ticksHeadEl = null;
     this.ticksOnScroll = null;
     this.ticksCount = 0;
   }

@@ -166,18 +166,24 @@
 .rrs-ticks {
   position: absolute;
   /* 相对 .view-content 铺满整个正文区 —— 这个容器不含 view-header，
-     所以不用担心越界盖住顶部的文件名与模式切换按钮。 */
+     所以不会越界盖住顶部的文件名与模式切换按钮。 */
   top: 0;
   right: 4px;
   bottom: 0;
-  width: 20px;
+  width: 22px;
   z-index: 1;
   cursor: pointer;
+  padding: 0 4px;
+}
+
+/* 基础刻度：按屏幕高度均匀铺满，当尺子用 */
+.rrs-ticks__base {
+  position: absolute;
+  inset: 0 4px 0 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 0 4px;
 }
 
 .rrs-ticks__tick {
@@ -185,34 +191,65 @@
   height: 1px;
   border-radius: 999px;
   background: var(--text-faint);
-  opacity: 0.32;
+  opacity: 0.3;
   transition: opacity 120ms ease-out;
 }
 
 .rrs-ticks:hover .rrs-ticks__tick {
-  opacity: 0.55;
+  opacity: 0.5;
 }
 
+/* 标题刻度：按标题在文中的位置落点，长度随层级变化。
+   标题扎堆处自然就密 —— 这就是「按文字密度区分」。 */
+.rrs-ticks__heads {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.rrs-ticks__head {
+  position: absolute;
+  right: 4px;
+  height: 1px;
+  border-radius: 999px;
+  background: var(--text-faint);
+  opacity: 0.62;
+  transform: translateY(-50%);
+}
+
+/* 层级越浅越长。9px 基础刻度对应原插件 14px，按同比例折算 24 / 20。 */
+.rrs-ticks__head[data-level="1"] { width: 15px; }
+.rrs-ticks__head[data-level="2"] { width: 15px; }
+.rrs-ticks__head[data-level="3"] { width: 13px; }
+.rrs-ticks__head[data-level="4"] { width: 11px; }
+
+/* 当前位置 */
 .rrs-ticks__now {
   position: absolute;
   right: 4px;
-  width: 15px;
+  width: 18px;
   height: 2px;
   border-radius: 999px;
   background: var(--interactive-accent);
-  opacity: 0.85;
+  opacity: 0.9;
   transform: translateY(-50%);
   transition: top 90ms ease-out;
   pointer-events: none;
 }
 
-/* 隐掉原生上下滚动条（Windows 下那条又宽又抢眼）。
-   滚轮、键盘、以及点上面的刻度条都不受影响。 */
-.workspace-leaf-content[data-type="markdown"] .markdown-preview-view::-webkit-scrollbar {
+/* ---------- 隐掉原生上下滚动条 ----------
+   ⚠️ 阅读视图真正滚动的容器是 .view-content（border-polished 片段就是给它
+   设的滚动条样式），不是 .markdown-preview-view —— 只写后者不会命中。
+   三个一起覆盖，编辑视图也顺带照顾到。 */
+.workspace-leaf-content[data-type="markdown"] .view-content::-webkit-scrollbar,
+.workspace-leaf-content[data-type="markdown"] .markdown-preview-view::-webkit-scrollbar,
+.workspace-leaf-content[data-type="markdown"] .cm-scroller::-webkit-scrollbar {
   display: none !important;
   width: 0 !important;
 }
 
-.workspace-leaf-content[data-type="markdown"] .markdown-preview-view {
+.workspace-leaf-content[data-type="markdown"] .view-content,
+.workspace-leaf-content[data-type="markdown"] .markdown-preview-view,
+.workspace-leaf-content[data-type="markdown"] .cm-scroller {
   scrollbar-width: none !important;
 }
