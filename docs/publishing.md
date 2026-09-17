@@ -28,10 +28,16 @@
 ```
 GitHub:
   yunmin311/obsidian-config           已 public → 瘦身为「纯配置」
-  yunmin311/obsidian-quiet-shelf      新建 → 独立发布
-  yunmin311/obsidian-reading-rail-sidebar   新建 → 独立发布
-  yunmin311/obsidian-toolbar-pin-toggle     新建 → 独立发布
+  yunmin311/obsidian-quiet-shelf      新建 → 按官方可发布格式准备
+  yunmin311/obsidian-reading-rail-sidebar   新建 → 按官方可发布格式准备
+  yunmin311/obsidian-toolbar-pin-toggle     新建 → 按官方可发布格式准备
   yunmin311/obsidian-css-snippets     新建（可选）→ 片段合集
+
+**命名决定（已拍板）**：`obsidian-<id>` 前缀。
+仓库名可以含 `obsidian`（`manifest.json` 里的 `id` 才禁止），这样 GitHub 上一眼能看出
+是 Obsidian 插件，社区多数插件也这么做。本地开发目录与仓库同名，
+vault 里的安装目录仍用 `<id>`（若目录名与 id 不一致，`onExternalSettingsChange` 之类
+可能不被调用；但那只影响开发副本，vault 里的运行副本名永远是 id，不受影响）。
 
 本地:
   E:\1project\obsidian-config\                 配置仓库
@@ -211,39 +217,89 @@ foreach ($repo in $map.Keys) {
 
 ---
 
-## 7. 两条分发路径
+## 7. 已定目标：直接冲官方社区市场
 
-| | **BRAT**（你已装 `obsidian42-brat`） | **官方社区市场** |
+BRAT 只当作**提交前的自检通道**（打完 Release 自己装一遍，验证三件套能被正确拉取），
+最终向 `obsidianmd/obsidian-releases` 提 PR，进官方目录。
+
+### 7.1 提交前自检清单（官方政策 + 提交要求合并）
+
+来源：`obsidian-releases/README.md`、`Community directory/Developer policies`、
+`Submission requirements for plugins` —— 三份都核对过，不是记忆。
+
+**① 开发者政策（违反会直接下架）**
+
+| 检查项 | 要求 | 我们 |
 |---|---|---|
-| 门槛 | 有 Release 即可，**零审核** | 需向 `obsidianmd/obsidian-releases` 提 PR，**人工审核** |
-| 时效 | 立刻 | 数周～数月（队列很长） |
-| 受众 | 拿到你链接的人 | 全部 Obsidian 用户（可搜索、可一键安装） |
-| 要求 | Release 带三件套 | 全部合规 + README + LICENSE + 无恶意代码 |
-| 适合 | 自用 / 小范围分发 / 抢先体验 | 想让所有人用 |
+| 代码混淆 | 禁止（不得隐藏用途） | ✅ 无 `eval` / `new Function`，源码直读 |
+| 动态广告 | 禁止（联网加载的广告） | ✅ 无 |
+| 静态广告 | 不得出现在插件自身界面之外 | ✅ 无 |
+| 客户端遥测 | 禁止 | ✅ 无 |
+| 自行安装/更新依赖 | 禁止 | ✅ 无 |
+| 网络访问 | 允许，但**必须在 README 明确说明**用的是哪些远程服务、为什么 | ✅ 零网络访问（`requestUrl`/`fetch`/`XHR` 均为 0 处）→ 无需披露 |
+| 访问 vault 外的文件 | 允许，但必须在 README 说明原因 | ✅ 无 → 无需披露 |
+| 付费/注册才能用全功能 | 允许，但必须写明 | ✅ 无 → 无需披露 |
+| LICENSE | **必须有**，且明确标注许可证 | ⚠️ 待补（MIT） |
+| 商标 | 不得让用户误以为是官方出品 | ✅ 命名 `obsidian-<id>` 属于社区惯例用法，README 里注明非官方即可 |
 
-**推荐节奏**：先建仓库 + 打 Release → 自己用 BRAT 装一遍验证链路
-→ 稳定后再提市场 PR。官方 README 也明确建议先发 public beta 收集反馈。
+**② 提交要求（Submissions 会被逐条挑）**
 
-提 PR 时要往 `community-plugins.json` 加一条：
+| 检查项 | 要求 | 我们 |
+|---|---|---|
+| 样例代码 | 必须删干净 | ✅ 三个插件都是手写的，非样例模板 |
+| `minAppVersion` | 与所用 API 匹配 | ⚠️ 现填 `1.4.0`，建议提到当前稳定版更稳（或保持 1.4.0 也合规） |
+| `fundingUrl` | 不接受赞助就必须**删掉**（不是留空） | ✅ 本来就没有 |
+| description 写法 | 好的描述**以动作开头**；不要以 "This is a plugin" 开头 | ⚠️ 三个里有 2 个是名词开头，见 §7.2 |
+| 命令 id | 不得包含插件 id | ✅ 全部合规 |
+
+**③ 仓库文件**：`manifest.json` / `main.js` / `styles.css` / `README.md` / `LICENSE` / `.gitignore`
+（README 会被市场详情页直接抓取，等于你的产品页）
+
+### 7.2 description 建议改写（官方偏好"动作开头"）
+
+| 插件 | 现在 | 建议 |
+|---|---|---|
+| `quiet-shelf` | 暗格：把归档、索引类文件从左侧文件树收起来（物理位置、知识图谱、搜索全部不变），随时可放回。另含聚焦模式——可跨层级多选文件夹，只留下当前要看的。 | **把归档与索引类文件从左侧文件树收起来**，物理位置、知识图谱、搜索全部不变，随时可放回。另含聚焦模式：跨层级多选文件夹，只留下当前要看的。 |
+| `toolbar-pin-toggle` | 一个快捷键两种常驻：切换底部原生常驻工具条，或让顶部工具条保持常驻。模式可在设置里选择。 | **用一个快捷键切换两种工具条常驻**：底部原生常驻工具条，或顶部工具条保持常驻。模式可在设置里选择。 |
+| `reading-rail-sidebar` | 把阅读进度与标题导航做成右侧栏面板：… | 已经是动作开头 ✅ 不用改 |
+
+（改写只动了开头语序，长度仍在 250 字符内。）
+
+### 7.3 提 PR
+
+往 `obsidianmd/obsidian-releases` 的 `community-plugins.json` 加一条（注意保持文件按 id 排序）：
 
 ```json
 { "id": "reading-rail-sidebar", "name": "Reading Rail Sidebar",
   "author": "yunmin311", "description": "...", "repo": "yunmin311/obsidian-reading-rail-sidebar" }
 ```
 
+提完等人工审核（队列很长，数周～数月）。**期间插件照常可用**（BRAT 装的就是同一份 Release），
+不影响自己用。审核意见通常集中在命名与 description，按意见改完在同一 PR 里推新 commit 即可。
+
 ---
 
-## 8. 待办清单
+## 8. 待办清单（按官方发布格式）
 
-- [ ] 决定仓库命名（`obsidian-<id>` 还是 `<id>`）
-- [ ] 决定先发哪个（建议先发最稳的 `toolbar-pin-toggle`，2.9KB 最小、逻辑最简单）
-- [ ] 建 3 个仓库 + 补 `authorUrl` / README / LICENSE
-- [ ] 每个打首个 Release，用 BRAT 装一遍验证
-- [ ] 写 `scripts/sync-plugins.ps1` 并替换现有手工 `cp` 流程
-- [ ] 从 `obsidian-config` 移除三个插件的本体 + 清 `.gitignore` 白名单段
+**准备（本地，无需 GitHub）**
+- [ ] `gh auth login`（`gh` 未登录，与 git 是两套凭据）
+- [ ] 三个插件补 `authorUrl: "https://github.com/yunmin311"`
+- [ ] 按 §7.2 改写 `quiet-shelf` 与 `toolbar-pin-toggle` 的 description
+- [ ] 各写一个 README.md（市场详情页就是它；中文为主 + 英文简介更友好）
+- [ ] 各补 LICENSE（MIT）
+- [ ] 各补 `.gitignore`（排除 `data.json` —— 含笔记路径，属运行时状态）
+
+**建库与发布**
+- [ ] 建 3 个仓库（`obsidian-quiet-shelf` / `obsidian-reading-rail-sidebar` / `obsidian-toolbar-pin-toggle`）
+- [ ] 各打首个 Release（tag == manifest version，挂三件套）
+- [ ] 用 BRAT 装一遍，验证拉取链路没问题
+
+**收尾**
+- [ ] 写 `scripts/sync-plugins.ps1`，替换现在的手工 `cp`
+- [ ] 从 `obsidian-config` 移除三个插件的本体 + 清 `.gitignore` 里对应的白名单段
+- [ ] 提 `obsidian-releases` 的 PR（往 `community-plugins.json` 加条目）
 - [ ] （可选）建 `obsidian-css-snippets` 仓库，把 10 个片段单独发布
 - [ ] （可选）`obsidian-config` 的 README 里加「我的插件」索引
-- [ ] 稳定后提 `obsidian-releases` 的 PR
 
 ---
 
