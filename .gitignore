@@ -43,17 +43,13 @@
 .obsidian/plugins/crisp-file-explorer/data.json
 .obsidian/plugins/crisp-reading-rail/data.json
 
-# 例外：自研插件整体入库（其余插件的 data.json 设置仍按上面规则放行）
-# 注意：这一组必须写在上面那批通配排除【之后】。
-# gitignore 是后置规则优先，白名单若写在前面，会被后面的
-# .obsidian/plugins/*/main.js 等规则重新盖掉 —— 之前 toolbar-pin-toggle
-# 就是这样只入库了 data.json，main.js / styles.css / manifest.json 全漏了。
-!.obsidian/plugins/toolbar-pin-toggle/
-!.obsidian/plugins/toolbar-pin-toggle/**
-!.obsidian/plugins/reading-rail-sidebar/
-!.obsidian/plugins/reading-rail-sidebar/**
-!.obsidian/plugins/quiet-shelf/
-!.obsidian/plugins/quiet-shelf/**
+# 自研插件已拆到独立仓库（E:\1project\<id>-obsidian\，各自发布到社区市场）。
+# 这里只留 vault 里的运行副本，不再入库 —— 否则同一份代码两个真身必然漂移。
+# 想改插件请去独立仓库，改完跑 scripts/sync-plugins.ps1 同步回来。
+.obsidian/plugins/quiet-shelf/
+.obsidian/plugins/reading-rail-sidebar/
+.obsidian/plugins/toolbar-pin-toggle/
+.obsidian/plugins/zheng-tally/
 
 # 大文件 / 敏感信息
 *.zip

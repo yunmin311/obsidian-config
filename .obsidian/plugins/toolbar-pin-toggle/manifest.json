@@ -1,9 +1,0 @@
-{
-  "id": "toolbar-pin-toggle",
-  "name": "Toolbar Pin Toggle",
-  "version": "1.0.0",
-  "minAppVersion": "1.4.0",
-  "description": "一个快捷键两种常驻：切换底部原生常驻工具条，或让顶部工具条保持常驻。模式可在设置里选择。",
-  "author": "yunmin311",
-  "isDesktopOnly": false
-}
