@@ -175,8 +175,9 @@
    ============================================================ */
 
 .rrs-ticks {
-  /* 之前用 text-muted 48% 太淡，几乎看不见；换成 text-normal 的 62% 透明版 */
-  --rrs-muted: color-mix(in srgb, var(--text-normal) 62%, transparent);
+  /* 上上轮 text-muted 48% 太淡（看不见），上轮 text-normal 62% 太深（发黑），
+     这里取中间：text-muted 提到 78%，既有分量又不抢眼 */
+  --rrs-muted: color-mix(in srgb, var(--text-muted) 78%, transparent);
   --rrs-accent: var(--interactive-accent);
 
   position: absolute;
@@ -208,11 +209,12 @@
 }
 
 .rrs-ticks__tick {
-  width: 14px;
+  /* 宽度由 JS 按「该处的文本密度」动态设置，这里只给个兜底值 */
+  width: 12px;
   height: 1px;
   border-radius: 999px;
   background: var(--rrs-muted);
-  opacity: 0.6;
+  opacity: 0.45;
   transform-origin: right center;
   transition:
     opacity 110ms cubic-bezier(0.23, 1, 0.32, 1),
@@ -221,7 +223,7 @@
 
 .rrs-ticks__tick.is-read {
   transform: scaleX(0.64);
-  opacity: 0.28;
+  opacity: 0.2;
 }
 
 /* ④ 标题刻度：按层级变长；当前那条高亮 */
@@ -229,6 +231,9 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
+  /* 层级分级已弃用 —— 刻度长度改由「该处的文本密度」决定（类似视频进度条
+     底下的峰值图）。这块代码保留着，想恢复层级分级删掉这行即可。 */
+  display: none;
 }
 
 .rrs-ticks__head {

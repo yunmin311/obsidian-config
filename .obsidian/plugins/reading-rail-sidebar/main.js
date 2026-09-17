@@ -744,7 +744,75 @@ class ReadingRailSidebarPlugin extends Plugin {
       this.ticksCount = count;
     }
 
+    this.paintDensity();
     this.paintHeads();
+  }
+
+  /**
+   * 按「该处的文本密度」给每根刻度定长 —— 内容密的地方长、稀的地方短，
+   * 效果类似 B站 / YouTube 进度条底下那条峰值曲线，但仍以刻度的形式呈现。
+   */
+  paintDensity() {
+    const base = this.ticksBaseEl;
+    if (!base) return;
+    const ticks = base.children;
+    const count = ticks.length;
+    if (!count) return;
+
+    const sums = this.computeDensity(count);
+    if (!sums) return;
+
+    let max = 0;
+    let min = Infinity;
+    for (const v of sums) {
+      if (v > max) max = v;
+      if (v < min) min = v;
+    }
+    if (!isFinite(min)) min = 0;
+    const span = max - min || 1;
+
+    const MIN_W = 5; // 最稀处
+    const MAX_W = 22; // 最密处
+
+    for (let i = 0; i < count; i++) {
+      const t = (sums[i] - min) / span;
+      ticks[i].style.width = (MIN_W + t * (MAX_W - MIN_W)).toFixed(1) + "px";
+    }
+  }
+
+  /**
+   * 统计文档沿纵向的文本密度。
+   * 做法：取正文的每个顶层块（段落 / 标题 / 列表 / 引用…），把它的字符数均摊到
+   * 它纵向覆盖到的那些刻度位置上，累加得到一条密度曲线。
+   */
+  computeDensity(count) {
+    const scroller = this.ticksScroller;
+    if (!scroller || !count) return null;
+
+    const total = scroller.scrollHeight || 1;
+    const scrollerTop = scroller.getBoundingClientRect().top;
+    const scrollTop = scroller.scrollTop;
+    const sums = new Array(count).fill(0);
+
+    const blocks = scroller.querySelectorAll(".markdown-preview-sizer > *");
+    for (const el of blocks) {
+      const len = String(el.textContent || "").trim().length;
+      if (!len) continue;
+
+      const rect = el.getBoundingClientRect();
+      const top = rect.top - scrollerTop + scrollTop;
+      const h = rect.height || 1;
+
+      let i0 = Math.floor((top / total) * count);
+      let i1 = Math.floor(((top + h) / total) * count);
+      i0 = Math.max(0, Math.min(count - 1, i0));
+      i1 = Math.max(0, Math.min(count - 1, i1));
+      if (i1 < i0) i1 = i0;
+
+      const share = len / (i1 - i0 + 1);
+      for (let i = i0; i <= i1; i++) sums[i] += share;
+    }
+    return sums;
   }
 
   /**
