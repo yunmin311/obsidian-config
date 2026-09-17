@@ -168,9 +168,9 @@
   /* 相对 .view-content 铺满整个正文区 —— 这个容器不含 view-header，
      所以不会越界盖住顶部的文件名与模式切换按钮。 */
   top: 0;
-  right: 4px;
+  right: 2px;
   bottom: 0;
-  width: 22px;
+  width: 34px;
   z-index: 1;
   cursor: pointer;
   padding: 0 4px;
@@ -187,16 +187,16 @@
 }
 
 .rrs-ticks__tick {
-  width: 9px;
+  width: 10px;
   height: 1px;
   border-radius: 999px;
   background: var(--text-faint);
-  opacity: 0.3;
+  opacity: 0.28;
   transition: opacity 120ms ease-out;
 }
 
 .rrs-ticks:hover .rrs-ticks__tick {
-  opacity: 0.5;
+  opacity: 0.45;
 }
 
 /* 标题刻度：按标题在文中的位置落点，长度随层级变化。
@@ -210,24 +210,25 @@
 .rrs-ticks__head {
   position: absolute;
   right: 4px;
-  height: 1px;
+  height: 2px;
   border-radius: 999px;
-  background: var(--text-faint);
-  opacity: 0.62;
+  background: var(--text-muted);
+  opacity: 0.7;
   transform: translateY(-50%);
 }
 
-/* 层级越浅越长。9px 基础刻度对应原插件 14px，按同比例折算 24 / 20。 */
-.rrs-ticks__head[data-level="1"] { width: 15px; }
-.rrs-ticks__head[data-level="2"] { width: 15px; }
-.rrs-ticks__head[data-level="3"] { width: 13px; }
-.rrs-ticks__head[data-level="4"] { width: 11px; }
+/* 层级越浅越长。直接沿用原插件的绝对尺度（14 / 20 / 24），
+   而不是按容器宽度等比压缩 —— 压缩后 6px 的差别肉眼看不出来。 */
+.rrs-ticks__head[data-level="1"] { width: 28px; }
+.rrs-ticks__head[data-level="2"] { width: 24px; }
+.rrs-ticks__head[data-level="3"] { width: 19px; }
+.rrs-ticks__head[data-level="4"] { width: 15px; }
 
 /* 当前位置 */
 .rrs-ticks__now {
   position: absolute;
   right: 4px;
-  width: 18px;
+  width: 30px;
   height: 2px;
   border-radius: 999px;
   background: var(--interactive-accent);
