@@ -533,6 +533,8 @@ class ReadingRailSidebarPlugin extends Plugin {
 
     this.registerView(VIEW_TYPE, (leaf) => new ReadingRailView(leaf, this));
 
+    this.setupTicks();
+
     this.addRibbonIcon(RIBBON_ICON, "打开阅读轨道面板", () => {
       this.activateView();
     });
@@ -559,6 +561,7 @@ class ReadingRailSidebarPlugin extends Plugin {
   }
 
   onunload() {
+    this.teardownTicks();
     // 插件被禁用时把面板一并收掉，避免留下一个渲染不出来的空 leaf。
     // 面板位置由 workspace 自己记；重新启用后从 ribbon / 命令再打开即可。
     this.app.workspace.detachLeavesOfType(VIEW_TYPE);
@@ -639,6 +642,132 @@ class ReadingRailSidebarPlugin extends Plugin {
     } else {
       new Notice("上次读到 " + Math.round(mem.progress * 100) + "%");
     }
+  }
+
+  /* ---------- 右侧刻度条 ----------
+     在阅读视图右缘铺一列均匀的短横线，用来取代原生的上下滚动条
+     （原生滚动条由 styles.css 隐掉）。刻度不带语义，就是一把尺子：
+     点任意高度即跳到全篇对应百分比，当前所在位置有一条高亮杠跟着走。 */
+
+  setupTicks() {
+    this.app.workspace.onLayoutReady(() => this.refreshTicks());
+    this.registerEvent(
+      this.app.workspace.on("active-leaf-change", () => this.refreshTicks())
+    );
+    this.registerEvent(
+      this.app.workspace.on("layout-change", () => this.refreshTicks())
+    );
+  }
+
+  /** 找到当前 Markdown 视图与它的 scroller，必要时重挂刻度条 */
+  refreshTicks() {
+    const view = this.app.workspace.getActiveViewOfType(MarkdownView);
+    if (!view || !view.containerEl) return this.teardownTicks();
+
+    // 关键：挂在 .view-content 上，而不是 view.containerEl。
+    // containerEl 里包含着顶部的 view-header（文件名 + 编辑/阅读切换按钮），
+    // 浮层挂在它上面，一旦位置算不准就会盖住那排按钮、连点都点不到。
+    // .view-content 是纯正文容器，边界干净。找不到就干脆不挂。
+    const host = view.containerEl.querySelector(".view-content");
+    if (!host) return this.teardownTicks();
+
+    let scroller = null;
+    try {
+      scroller =
+        view.getMode && view.getMode() === "preview"
+          ? view.previewMode.containerEl.querySelector(".markdown-preview-view")
+          : view.containerEl.querySelector(".cm-scroller");
+    } catch (e) {
+      scroller = null;
+    }
+    if (!scroller) return this.teardownTicks();
+
+    // 同一视图 + 同一 scroller：只重算尺寸与位置，不重建 DOM
+    if (this.ticksHost === host && this.ticksScroller === scroller) {
+      this.paintTicks();
+      this.updateTicks();
+      return;
+    }
+
+    this.teardownTicks();
+    this.ticksHost = host;
+    this.ticksScroller = scroller;
+
+    const el = document.createElement("div");
+    el.className = "rrs-ticks";
+    el.addEventListener("click", (ev) => this.jumpByTicks(ev));
+    host.appendChild(el);
+    this.ticksEl = el;
+
+    this.ticksOnScroll = () => {
+      if (this.ticksFrame !== null) return;
+      this.ticksFrame = window.requestAnimationFrame(() => {
+        this.ticksFrame = null;
+        this.updateTicks();
+      });
+    };
+    scroller.addEventListener("scroll", this.ticksOnScroll, { passive: true });
+
+    this.paintTicks();
+    this.updateTicks();
+  }
+
+  /** 按容器高度铺均匀刻度：每约 24px 一杠，限制在 16–60 根之间 */
+  paintTicks() {
+    const el = this.ticksEl;
+    if (!el) return;
+    const h = el.clientHeight || 0;
+    const count = Math.max(16, Math.min(60, Math.round(h / 24) || 24));
+    if (count === this.ticksCount && el.childElementCount) return;
+
+    el.empty();
+    for (let i = 0; i < count; i++) {
+      el.createDiv({ cls: "rrs-ticks__tick" });
+    }
+    this.ticksNowEl = el.createDiv({ cls: "rrs-ticks__now" });
+    this.ticksCount = count;
+  }
+
+  /** 让高亮杠跟着滚动位置走 */
+  updateTicks() {
+    const scroller = this.ticksScroller;
+    const now = this.ticksNowEl;
+    if (!scroller || !now) return;
+    const max = scroller.scrollHeight - scroller.clientHeight;
+    const p = max > 0 ? Math.min(1, Math.max(0, scroller.scrollTop / max)) : 0;
+    now.style.top = p * 100 + "%";
+  }
+
+  /** 点刻度条任意高度 → 平滑滚到全篇对应百分比 */
+  jumpByTicks(ev) {
+    const el = this.ticksEl;
+    const scroller = this.ticksScroller;
+    if (!el || !scroller) return;
+    const rect = el.getBoundingClientRect();
+    if (!rect.height) return;
+    const p = Math.min(1, Math.max(0, (ev.clientY - rect.top) / rect.height));
+    const max = scroller.scrollHeight - scroller.clientHeight;
+    if (max <= 0) return;
+    scroller.scrollTo({ top: Math.round(p * max), behavior: "smooth" });
+  }
+
+  teardownTicks() {
+    if (this.ticksScroller && this.ticksOnScroll) {
+      this.ticksScroller.removeEventListener("scroll", this.ticksOnScroll);
+    }
+    if (this.ticksFrame !== null) {
+      window.cancelAnimationFrame(this.ticksFrame);
+      this.ticksFrame = null;
+    }
+    if (this.ticksEl && this.ticksEl.parentNode) {
+      this.ticksEl.parentNode.removeChild(this.ticksEl);
+    }
+    this.ticksHost = null;
+    this.ticksScroller = null;
+    this.ticksEl = null;
+    this.ticksNowEl = null;
+    this.ticksOnScroll = null;
+    this.ticksCount = 0;
   }
 }
 

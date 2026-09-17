@@ -148,3 +148,71 @@
   line-height: 1.5;
   color: var(--text-faint);
 }
+
+/* ============================================================
+   右侧刻度条（取代原生滚动条）
+   ------------------------------------------------------------
+   一列均匀的短横线，浮在阅读视图右缘。点任意高度跳转到全篇对应
+   百分比；当前位置用一根高亮杠标示。
+   原生滚动条在末尾被隐掉 —— 想恢复，注释掉那两条即可。
+   ============================================================ */
+
+/* 让 .view-content 成为定位基准（它本身没有 position）。
+   限定在 markdown leaf 内，不影响其它视图。 */
+.workspace-leaf-content[data-type="markdown"] > .view-content {
+  position: relative;
+}
+
+.rrs-ticks {
+  position: absolute;
+  /* 相对 .view-content 铺满整个正文区 —— 这个容器不含 view-header，
+     所以不用担心越界盖住顶部的文件名与模式切换按钮。 */
+  top: 0;
+  right: 4px;
+  bottom: 0;
+  width: 20px;
+  z-index: 1;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 4px;
+}
+
+.rrs-ticks__tick {
+  width: 9px;
+  height: 1px;
+  border-radius: 999px;
+  background: var(--text-faint);
+  opacity: 0.32;
+  transition: opacity 120ms ease-out;
+}
+
+.rrs-ticks:hover .rrs-ticks__tick {
+  opacity: 0.55;
+}
+
+.rrs-ticks__now {
+  position: absolute;
+  right: 4px;
+  width: 15px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--interactive-accent);
+  opacity: 0.85;
+  transform: translateY(-50%);
+  transition: top 90ms ease-out;
+  pointer-events: none;
+}
+
+/* 隐掉原生上下滚动条（Windows 下那条又宽又抢眼）。
+   滚轮、键盘、以及点上面的刻度条都不受影响。 */
+.workspace-leaf-content[data-type="markdown"] .markdown-preview-view::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+}
+
+.workspace-leaf-content[data-type="markdown"] .markdown-preview-view {
+  scrollbar-width: none !important;
+}
