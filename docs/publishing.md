@@ -11,9 +11,9 @@
 
 | 类别 | 内容 | 数量 | 该不该发布 | 归宿 |
 |---|---|---|---|---|
-| **① 自研插件** | `quiet-shelf` / `reading-rail-sidebar` / `toolbar-pin-toggle` | 3 | ✅ 完全可以 | **各自独立仓库** |
-| **② 自写 CSS 片段** | `tree-indent` `dense-reading` `pin-spacing` `border-polished` `dark-paper-texture` `graph-blue-gray` `blue-gray-dark-fix` `hide-embed-titles` `hide-editing-toolbar` `baseline-optimized.minimal` | 10 | ✅ 可以（作为片段合集） | 一个 `obsidian-css-snippets` 仓库（可选） |
-| **③ 配置框架** | `appearance.json` `hotkeys.json` `community-plugins.json` + 第三方插件 `data.json` + 文档 | — | ✅ 已在发布（就是本仓库） | 保持，但要**瘦身** |
+| **① 自研插件** | `quiet-shelf` / `reading-rail-sidebar` / `toolbar-pin-toggle` / `zheng-tally` | 4 | ✅ 完全可以 | **各自独立仓库**（config 里留备份副本） |
+| **② 自写 CSS 片段** | `tree-indent` `dense-reading` `pin-spacing` `border-polished` `dark-paper-texture` `graph-blue-gray` `blue-gray-dark-fix` `hide-embed-titles` `hide-editing-toolbar` `baseline-optimized.minimal` | 10 | ✅ 可以（作为片段合集） | 留在本仓库 |
+| **③ 配置框架** | `appearance.json` `hotkeys.json` `community-plugins.json` + 第三方插件 `data.json` + 文档 | — | ✅ 已在发布（就是本仓库） | 保持 |
 | **④ 运行时状态** | `flexplorer` / `crisp-file-explorer` 的 `data.json` | — | ❌ 已排除 | 保持排除 |
 
 **核心问题**：①和③挤在一个仓库里，导致
@@ -21,12 +21,21 @@
 - 插件没有 Release，别人无法用 BRAT 安装，更进不了社区市场
 - 插件版本和"配置备份"的版本混在一个 commit 流里，无法单独追溯
 
+**解决**：源码搬到独立仓库并各自发 Release；config 里保留一份副本纯粹为了「换机器一份恢复全部」，
+不再作为插件源码使用。两边由 `scripts\sync-plugins.ps1` 单向同步并校验一致。
+
 ---
 
 ## 1. 目标：只有插件单独出仓库，其余仍在 config
 
 配置仓库 `obsidian-config` **保持不变** —— 主题、CSS 片段、第三方插件设置、文档都还在这一个仓库里，
-不必拆。要单独提走的**只有三个自研插件**（只有它们才谈得上被别人"安装"、才够格进市场）。
+不必拆。要单独提走的**只有四个自研插件**（只有它们才谈得上被别人"安装"、才够格进市场）。
+
+> **config 仓库里仍然保留插件本体三件套**（白名单放行），职责是「换机器时一份恢复全部」。
+> 这不与"插件单独出仓库"冲突 —— 源码真身在插件仓库，config 里是备份副本，
+> vault 里是运行副本，三处由 `scripts\sync-plugins.ps1` 一次同步。
+> 当初考虑过把插件从 config 里摘干净，结论是**没必要**：多一份廉价备份不花成本，
+> 而摘掉之后换机器就得先去 GitHub 找四个仓库，反而多一步。
 
 ### 位置：跟你的其他项目平级
 
@@ -161,7 +170,8 @@ mkdir -p /e/1project/reading-rail-sidebar-obsidian
 cd /e/1project/reading-rail-sidebar-obsidian
 git init && git remote add origin https://github.com/yunmin311/reading-rail-sidebar-obsidian.git
 
-# 从配置仓库把三件套搬过来（搬完配置仓库里那份就删，避免两份真身）
+# 从配置仓库把三件套搬过来 —— 这是「源码从哪来的」；
+# 搬完配置仓库里那份【保留】，它是备份副本，由脚本负责保持一致。
 cp "/e/1project/obsidian-config/.obsidian/plugins/reading-rail-sidebar/main.js" .
 cp "/e/1project/obsidian-config/.obsidian/plugins/reading-rail-sidebar/manifest.json" .
 cp "/e/1project/obsidian-config/.obsidian/plugins/reading-rail-sidebar/styles.css" .
@@ -251,52 +261,61 @@ jobs:
 
 ---
 
-## 6. 与现有工作流衔接（避免两份 main.js 漂移）
+## 6. 与现有工作流衔接（避免三份 main.js 漂移）
 
-源码搬到独立仓库后，**唯一真身是 `E:\1project\obsidian-<id>\`**，配置仓库里的那份要删掉
-（同时清掉 `.gitignore` 里对应的白名单段），vault 里的只是运行副本。
+源码搬到独立仓库后，**唯一真身是 `E:\1project\<id>-obsidian\`**。
+下游有两个副本，都由脚本一次同步：
 
-`scripts/sync-plugins.ps1`：
+| 副本 | 路径 | 作用 |
+|---|---|---|
+| **运行副本** | `E:\1obsidian\Obsidian Vault\.obsidian\plugins\<id>\` | Obsidian 真正加载的那份，Reload 后生效 |
+| **备份副本** | `E:\1project\obsidian-config\.obsidian\plugins\<id>\` | 随 config 仓库备份，换机器时一份恢复全部 |
+
+`scripts/sync-plugins.ps1` 的真实形态（比早期草稿多了几层保护）：
 
 ```powershell
-<#
-.SYNOPSIS 把各插件源码仓库的三件套单向同步进 vault（源码仓库 → vault）
-#>
 param(
-    [string]$VaultPath = "E:\1obsidian\Obsidian Vault",
-    [string]$SrcRoot   = "E:\1project"
+    [string]  $VaultPath  = "E:\1obsidian\Obsidian Vault",
+    [string]  $ConfigPath = "E:\1project\obsidian-config",  # 传 "" 则只同步 vault
+    [string]  $SrcRoot    = "E:\1project",
+    [string[]]$PluginId,                                    # 只同步指定插件
+    [switch]  $DryRun                                       # 只打印，不复制
 )
-
-# 源码仓库目录（<id>-obsidian） → vault 里的插件目录（= manifest id）
-$map = @{
-    "quiet-shelf-obsidian"          = "quiet-shelf"
-    "reading-rail-sidebar-obsidian" = "reading-rail-sidebar"
-    "toolbar-pin-toggle-obsidian"   = "toolbar-pin-toggle"
-}
-
-foreach ($repo in $map.Keys) {
-    $id  = $map[$repo]
-    $src = Join-Path $SrcRoot $repo
-    $dst = Join-Path $VaultPath ".obsidian\plugins\$id"
-
-    if (-not (Test-Path $src)) { Write-Warning "跳过 $id：$src 不存在"; continue }
-    New-Item -ItemType Directory -Force -Path $dst | Out-Null
-
-    foreach ($f in @("main.js", "manifest.json", "styles.css")) {
-        $s = Join-Path $src $f
-        if (Test-Path $s) { Copy-Item $s $dst -Force }
-        else              { Write-Warning "$repo 缺少 $f" }
-    }
-    Write-Host "  ✓ $id ← $repo" -ForegroundColor Green
-}
 ```
 
-**改插件的新流程**（替代现在的"改配置仓库副本 → 手工 cp 两处"）：
+关键行为：
+
+- **复制前校验 `manifest.json` 的 `id` 与目标目录名一致** —— 对不上插件会装上但加载不了，
+  且报错很难懂，所以直接跳过并告警
+- **只复制三件套**（`main.js` / `manifest.json` / `styles.css`），
+  **`data.json` 永不触碰** —— 各副本的设置互不干扰
+- `styles.css` 缺失不算错误（`zheng-tally` 就没有，样式内联在 TS 里）
+- **复制完再按 SHA256 逐字节复核**「源码 ↔ vault ↔ config」，不一致就列出来并 `exit 2`。
+  手工 `cp` 过、或改了源码忘了跑脚本时，这里会立刻暴露
+- 试运行开关叫 `-DryRun`，**刻意不叫 `-WhatIf`** —— 那是 `[CmdletBinding()]` 的保留参数名，
+  拿它当普通变量名会让脚本在 `param` 之后静默退出（踩过：日志一片空白，查了半天）
+
+```powershell
+# 日常：改完源码跑这个，两个副本一起更新 + 校验
+.\scripts\sync-plugins.ps1
+
+# 只动某一个插件
+.\scripts\sync-plugins.ps1 -PluginId reading-rail-sidebar
+
+# 先看看会动什么
+.\scripts\sync-plugins.ps1 -DryRun
+```
+
+**改插件的新流程**：
 1. 改 `E:\1project\<id>-obsidian\` 里的源码 ← **唯一真身**
-2. `scripts/sync-plugins.ps1` 同步进 vault → `Ctrl+P → Reload app without saving` 验证
-3. **bump `manifest.json` 的 version**（不改这一步用户端收不到更新）
-4. `git commit` + `git tag <version>` + `git push --follow-tags`
-5. Release 由 Actions 自动生成并挂好三件套（§4.4）
+2. 跑 `scripts\sync-plugins.ps1` → vault 与 config 两个副本一起更新并校验一致
+3. vault 里 `Ctrl+P → Reload app without saving` 验证
+4. **bump `manifest.json` 的 version**（不改这一步用户端收不到更新）
+5. `git commit` + `git tag <version>` + `git push --follow-tags`（**tag 名必须严格等于 version**）
+6. Release 由 Actions 自动生成并挂好三件套（§4.4）
+7. config 仓库同步提交一次（脚本已经改好了工作区，`git add` + `commit` 即可）
+
+> ⚠️ 第 5、7 步的**推送必须等明确批准**，不自动推。
 
 ---
 
@@ -323,7 +342,7 @@ BRAT 只当作**提交前的自检通道**（打完 Release 自己装一遍，�
 | 访问 vault 外的文件 | 允许，但必须在 README 说明原因 | ✅ 无 → 无需披露 |
 | 付费/注册才能用全功能 | 允许，但必须写明 | ✅ 无 → 无需披露 |
 | LICENSE | **必须有**，且明确标注许可证 | ⚠️ 待补（MIT） |
-| 商标 | 不得让用户误以为是官方出品 | ✅ 命名 `obsidian-<id>` 属于社区惯例用法，README 里注明非官方即可 |
+| 商标 | 不得让用户误以为是官方出品 | ✅ 命名是 `<id>-obsidian` 后缀（先例 `zheng-tally-obsidian`），且 manifest 的 `id` 里不含 `obsidian`；README 里注明非官方即可 |
 
 **② 提交要求（Submissions 会被逐条挑）**
 
@@ -350,12 +369,18 @@ BRAT 只当作**提交前的自检通道**（打完 Release 自己装一遍，�
 
 ### 7.3 提 PR
 
-往 `obsidianmd/obsidian-releases` 的 `community-plugins.json` 加一条（注意保持文件按 id 排序）：
+往 `obsidianmd/obsidian-releases` 的 `community-plugins.json` 加**四条**（注意保持文件按 id 排序）。
+`repo` 字段填的就是仓库全名，正是 `<id>-obsidian` 这个后缀命名的用处：
 
 ```json
-{ "id": "reading-rail-sidebar", "name": "Reading Rail Sidebar",
-  "author": "yunmin311", "description": "...", "repo": "yunmin311/obsidian-reading-rail-sidebar" }
+{ "id": "zheng-tally",            "repo": "yunmin311/zheng-tally-obsidian" },
+{ "id": "quiet-shelf",            "repo": "yunmin311/quiet-shelf-obsidian" },
+{ "id": "reading-rail-sidebar",   "repo": "yunmin311/reading-rail-sidebar-obsidian" },
+{ "id": "toolbar-pin-toggle",     "repo": "yunmin311/toolbar-pin-toggle-obsidian" }
 ```
+
+（实际提交时 `name` / `author` / `description` 要与各自仓库根目录 `manifest.json` 完全一致 ——
+维护者会核对，不一致会被要求改。）
 
 提完等人工审核（队列很长，数周～数月）。**期间插件照常可用**（BRAT 装的就是同一份 Release），
 不影响自己用。审核意见通常集中在命名与 description，按意见改完在同一 PR 里推新 commit 即可。
@@ -364,27 +389,23 @@ BRAT 只当作**提交前的自检通道**（打完 Release 自己装一遍，�
 
 ## 8. 待办清单（按官方发布格式）
 
-**准备（本地，无需 GitHub）**
-- [ ] `gh auth login`（`gh` 未登录，与 git 走的两套凭据）
-- [ ] 建 3 个源码目录 `E:\1project\<id>-obsidian\`，把三件套从配置仓库搬过去
-- [ ] 三个插件补 `"authorUrl": "https://github.com/yunmin311"`（与 zheng-tally 同值）
-- [ ] 按 §7.2 改写 `quiet-shelf` 与 `toolbar-pin-toggle` 的 description（官方偏好动作开头）
-- [ ] 各写 README.md（市场详情页就是它）+ CHANGELOG.md
-- [ ] 各补 LICENSE（MIT）
-- [ ] 各补 `.gitignore`（**必须排除 `data.json`** —— 含笔记路径，属运行时状态）
-- [ ] 各放 `.github/workflows/release.yml`（§4.4）
+**已完成（2026-09-17）**
+- [x] 建 4 个源码仓库 `E:\1project\<id>-obsidian\`（含 `zheng-tally-obsidian` 既有仓）
+- [x] 四个插件补 `"authorUrl": "https://github.com/yunmin311"`
+- [x] 按 §7.2 改写 description（英文、动作开头、句末带句点）
+- [x] 各写 README.md + CHANGELOG.md + LICENSE（MIT）+ `.gitignore`（已排除 `data.json`）
+- [x] 各放 `.github/workflows/release.yml`（§4.4，含 tag↔version 硬校验）
+- [x] 三仓已建（public）并推首版，**Actions 全部 success**，Release 三件套齐全
+- [x] `zheng-tally-obsidian` 的 `v1.0.0` / `v1.0.1` tag 已从远端删除，只留 `1.0.1`
+- [x] `scripts/sync-plugins.ps1` 写完并实跑通过（vault + config 双目标 + SHA256 校验）
+- [x] config 仓库保留插件本体（白名单放行），作为换机器时的备份副本
 
-**建库与发布**
-- [ ] GitHub 上建 3 个同名仓库（public，选 MIT）
-- [ ] 各推首个 commit，**打首个 Release**（tag == manifest version），actions 自动挂三件套
-- [ ] 用 BRAT 装一遍，验证拉取链路
-
-**收尾**
-- [ ] 写 `scripts/sync-plugins.ps1`（已在 §6 写好），替换现在的手工 `cp`
-- [ ] 从 `obsidian-config` 移除三个插件的本体 + 清 `.gitignore` 里对应的白名单段
-- [ ] 提 `obsidian-releases` 的 PR（往 `community-plugins.json` 加条目）
+**待办**
+- [ ] `gh auth login`（`gh` 未登录，与 git 走的两套凭据；提 PR 前需要）
+- [ ] 用 BRAT 装一遍，验证用户在别处拉取 Release 的链路
+- [ ] 提 `obsidian-releases` 的 PR（往 `community-plugins.json` 加**四条**：`zheng-tally` + 三个新插件）
 - [ ] （可选）`obsidian-config` 的 README 里加「我的插件」索引
-- [ ] （可选）回头把 `zheng-tally-obsidian` 那个多余的 `v1.0.1` tag 删掉，统一成不带 v
+- [ ] （可选）考虑是否把 `crisp-reading-rail` / `reading-rail-sidebar` 的 `data.json` 也移出仓库（见 §9）
 
 ---
 
@@ -395,5 +416,15 @@ BRAT 只当作**提交前的自检通道**（打完 Release 自己装一遍，�
 - 7 个 crisp 插件的 **Crisp Suite 授权码**（`licenseCode`，`maxDevices: 3`）
 - `flexplorer` / `crisp-file-explorer` 的 `data.json` 已排除，但 **`crisp-reading-rail/data.json` 的 `readingMemory`** 与 **`reading-rail-sidebar/data.json` 的 `memory`** 仍含笔记路径，尚未移出
 
-**新建的插件仓库是干净的**（只有 main.js / manifest.json / styles.css / README / LICENSE，
-`data.json` 必须进 `.gitignore`），所以拆分本身就能顺带解决这个历史问题。
+**插件的源码仓库是干净的** —— 只有 `main.js` / `manifest.json` / `styles.css` / `README.md` /
+`LICENSE` / `CHANGELOG.md`，`data.json` 已进各自 `.gitignore`。所以正式发布的通道不泄任何 vault 路径。
+
+但**本仓库（config）里的备份副本仍会带 `data.json`**（它们含笔记路径与阅读记录）。
+这与 §1 的取舍有关：config 的定位是「换机器一份恢复全部」，含 `data.json` 才恢复得出设置。
+当前只有两处尚未移出：
+
+- `crisp-reading-rail/data.json` → `readingMemory`（该插件已停用）
+- `reading-rail-sidebar/data.json` → `memory`
+
+两者各 2.2 KB / 0.3 KB，且仓库本来就 public（qy 已知悉）。**要移出随时可以** ——
+把路径加进 `.gitignore` 的「运行时状态」那一段即可，代价是换机器时这两个插件的阅读记忆要重建。

@@ -1,0 +1,68 @@
+/* ============================================================
+   Toolbar Pin Toggle — styles
+   Editing Toolbar 的全部外观/行为修正，原维护于
+   editing-toolbar-tweaks.css 代码片段，现收编进本插件，
+   启用本插件即可，无需任何额外 snippet。
+   ------------------------------------------------------------
+   1. 全屏专注模式背景修正（元素级 requestFullscreen 黑屏问题）
+   2. 深色模式工具栏皮肤（插件写死浅色底/图标色，深色下刺眼）
+   3. 自动隐藏节奏：移走约 3 秒后淡出；淡入与位置变化平滑化
+   4. 深色模式按钮悬停柔化
+   5. body.etb-pinned 顶栏常驻（本插件命令切换，Alt+Q）
+      ——注意 transition 不带延迟，否则常驻显示会被 3s 延迟拦截
+   ============================================================ */
+
+/* ---- 1. 全屏专注模式：背景跟随主题纸面 ---- */
+
+body.theme-dark .workspace-tab-container:fullscreen {
+  background: var(--background-underlying-CSS-dark, #0A0E1A) !important;
+}
+
+body.theme-light .workspace-tab-container:fullscreen {
+  background: var(--background-underlying-CSS-light, #fffcf0) !important;
+}
+
+body.theme-dark .workspace-tab-container:fullscreen::backdrop {
+  background: #06080F;
+}
+
+body.theme-light .workspace-tab-container:fullscreen::backdrop {
+  background: #f2efe6;
+}
+
+/* ---- 2. 深色模式工具栏皮肤（覆盖插件写死的 #F5F8FA / #4A5568）---- */
+
+body.theme-dark #editingToolbarModalBar.top {
+  background: color-mix(in srgb, var(--background-secondary, #141A26) 85%, transparent) !important;
+  border: 1px solid var(--background-modifier-border, #263042) !important;
+}
+
+body.theme-dark #editingToolbarModalBar.top :is(.editingToolbarCommandItem, button) {
+  color: var(--text-normal, #E8E8E8) !important;
+}
+
+/* ---- 3. 自动隐藏节奏与平滑化 ---- */
+
+#editingToolbarModalBar.top.autohide {
+  opacity: 0;
+  transition: opacity 0.3s ease-out 3s, top 0.18s ease-out, margin 0.18s ease-out, left 0.18s ease-out !important;
+}
+
+#editingToolbarModalBar.top.autohide:hover {
+  opacity: 1;
+  transition: opacity 0.15s ease-out, top 0.18s ease-out, margin 0.18s ease-out, left 0.18s ease-out !important;
+}
+
+/* ---- 4. 深色模式按钮悬停柔化 ---- */
+
+body.theme-dark #editingToolbarModalBar.top :is(.editingToolbarCommandItem, button):hover {
+  background: var(--background-modifier-hover, rgba(255, 255, 255, 0.05)) !important;
+  border-radius: 6px;
+}
+
+/* ---- 5. 顶栏常驻（Alt+Q，top 模式）---- */
+
+body.etb-pinned :is(#editingToolbarModalBar, .editingToolbarModalBar).top.autohide {
+  opacity: 1 !important;
+  transition: opacity 0.15s ease-out, top 0.18s ease-out, margin 0.18s ease-out, left 0.18s ease-out !important;
+}

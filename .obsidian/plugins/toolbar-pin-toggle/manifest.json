@@ -1,0 +1,10 @@
+{
+  "id": "toolbar-pin-toggle",
+  "name": "Toolbar Pin Toggle",
+  "version": "1.0.0",
+  "minAppVersion": "1.4.0",
+  "description": "Keep a toolbar always visible with one hotkey, choosing between the native bottom toolbar and the top toolbar.",
+  "author": "yunmin311",
+  "authorUrl": "https://github.com/yunmin311",
+  "isDesktopOnly": false
+}

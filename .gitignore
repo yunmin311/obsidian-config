@@ -36,6 +36,7 @@
 # 含 vault 路径 / 打开记录，属运行时状态而非配置，不入库：
 # - flexplorer: items 是 1000+ 条笔记与文件夹路径（排序、隐藏、固定状态）
 # - crisp-file-explorer: activity 是今日与常用文件记录 + 每篇的打开次数
+#   （该插件已停用，功能由自研 quiet-shelf 接管）
 # - crisp-reading-rail: readingMemory 是每篇笔记的阅读进度与当前标题
 #   （该插件已停用，功能由自研 reading-rail-sidebar 接管）
 # 本地文件照常保留，仅不备份到远端；真正的配置项已抄录进 docs/plugins.md。
@@ -43,13 +44,24 @@
 .obsidian/plugins/crisp-file-explorer/data.json
 .obsidian/plugins/crisp-reading-rail/data.json
 
-# 自研插件已拆到独立仓库（E:\1project\<id>-obsidian\，各自发布到社区市场）。
-# 这里只留 vault 里的运行副本，不再入库 —— 否则同一份代码两个真身必然漂移。
-# 想改插件请去独立仓库，改完跑 scripts/sync-plugins.ps1 同步回来。
-.obsidian/plugins/quiet-shelf/
-.obsidian/plugins/reading-rail-sidebar/
-.obsidian/plugins/toolbar-pin-toggle/
-.obsidian/plugins/zheng-tally/
+# 例外：自研插件整体入库（其余插件的 data.json 设置仍按上面规则放行）
+# 注意：这一组必须写在上面那批通配排除【之后】。
+# gitignore 是后置规则优先，白名单若写在前面，会被后面的
+# .obsidian/plugins/*/main.js 等规则重新盖掉 —— 之前 toolbar-pin-toggle
+# 就是这样只入库了 data.json，main.js / styles.css / manifest.json 全漏了。
+#
+# 插件的「源码唯一真身」在 E:\1project\<id>-obsidian\（独立仓库，发布到市场）。
+# 这里入库的是 vault 运行副本，作用是「换机器时一份恢复全部」。
+# 改插件请去独立仓库，改完跑 scripts/sync-plugins.ps1 同步回 vault，
+# 再把这边的副本一起提交（两处内容应保持一致）。
+!.obsidian/plugins/toolbar-pin-toggle/
+!.obsidian/plugins/toolbar-pin-toggle/**
+!.obsidian/plugins/reading-rail-sidebar/
+!.obsidian/plugins/reading-rail-sidebar/**
+!.obsidian/plugins/quiet-shelf/
+!.obsidian/plugins/quiet-shelf/**
+!.obsidian/plugins/zheng-tally/
+!.obsidian/plugins/zheng-tally/**
 
 # 大文件 / 敏感信息
 *.zip

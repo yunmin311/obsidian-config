@@ -1,0 +1,10 @@
+{
+  "id": "zheng-tally",
+  "name": "Zheng Tally",
+  "version": "1.0.1",
+  "minAppVersion": "1.5.12",
+  "description": "Count with traditional five-stroke Zheng tallies inline in Obsidian and resume them later.",
+  "author": "yunmin311",
+  "authorUrl": "https://github.com/yunmin311",
+  "isDesktopOnly": true
+}

@@ -54,11 +54,14 @@
 
 ## 自研插件（源码在独立仓库）
 
-源码位于 `E:\1project\<id>-obsidian\`，各自是独立的 GitHub 仓库，目标发布到官方社区市场
-（`docs/publishing.md`）。本仓库不再保存插件本体；vault 里的副本由
-`scripts/sync-plugins.ps1` 从源码仓库单向同步。
+源码**唯一真身**位于 `E:\1project\<id>-obsidian\`，各自是独立的 GitHub 仓库，
+目标发布到官方社区市场（见 `docs/publishing.md`）。
 
-| 插件 | 源码仓库 | vault 目录 |
+本仓库里保存的是**备份副本**，作用是「换机器时一份恢复全部」；vault 里的是**运行副本**。
+改插件一律去源码仓库，改完跑 `scripts\sync-plugins.ps1`，一次把 vault 与 config 两处副本
+都更新并校验逐字节一致。
+
+| 插件 | 源码仓库 | vault / config 目录 |
 |---|---|---|
 | **Toolbar Pin Toggle** | `E:\1project\toolbar-pin-toggle-obsidian\` | `.obsidian/plugins/toolbar-pin-toggle/` |
 | **Reading Rail Sidebar** | `E:\1project\reading-rail-sidebar-obsidian\` | `.obsidian/plugins/reading-rail-sidebar/` |
@@ -91,16 +94,18 @@
 
 > 快捷键写在本仓库的 `.obsidian/hotkeys.json` 里，随配置一起恢复。
 
-三者都是**纯 JS、无构建依赖**（`main.js` + `styles.css` + `manifest.json`），改完重启 Obsidian 即生效。
-样式全部限定在各自前缀（`rrs-` / `qs-` / `tbpt-`）下，不改动任何主题变量。
+前三个是**纯 JS、无构建依赖**（`main.js` + `styles.css` + `manifest.json`），改完重启 Obsidian 即生效；
+zheng-tally 是 TypeScript 构建，产物在 `dist/`。样式全部限定在各自前缀（`rrs-` / `qs-` / `tbpt-`）下，
+不改动任何主题变量。
 
-> **`.gitignore`**：自研插件已改为**整目录排除**（`.obsidian/plugins/<id>/`）。
-> 它们不在本仓库里了，改代码请去 `E:\1project\<id>-obsidian\`，改完跑
-> `scripts\sync-plugins.ps1` 同步进 vault。
+> **`.gitignore`**：自研插件用**白名单**（`!.obsidian/plugins/<id>/**`）整目录放行，
+> 其余插件的 `main.js` / `styles.css` / `manifest.json` 仍被通配规则排除（只留 `data.json`）。
 >
-> 历史教训：早先用白名单（`!`）方式入库，因为 gitignore 是后置规则优先，
-> 白名单写在通配排除之前会被盖掉 —— `toolbar-pin-toggle` 曾因此只入库了
-> `data.json`，本体三件套全漏。现在改成整目录排除，不再需要白名单。
+> ⚠️ 白名单必须写在 `.obsidian/plugins/*/main.js` 这组通配排除**之后** ——
+> gitignore 是后置规则优先，顺序写反白名单会被盖掉。
+> 历史教训：`toolbar-pin-toggle` 曾因此只入库了 `data.json`，本体三件套全漏。
+>
+> `data.json` 不在同步范围里（脚本只复制三件套），所以各副本的设置互不干扰，手工改过的设置不会被覆盖。
 
 ## 不随仓库备份的配置
 
@@ -171,9 +176,10 @@
 1. 装市场插件（上表「已启用」里的前 13 个，不含 crisp 系列）
 2. 装 BRAT → 添加 crisp 系列 9 个仓库（`letschips/crisp-*`）
 3. 复制 `.obsidian/plugins/*/data.json` 覆盖对应插件设置
-4. 自研插件：在 BRAT 里添加 `yunmin311/<id>-obsidian`（发布后），
-   或从各自的 GitHub Release 下载三件套放进 `.obsidian/plugins/<id>/`；
+4. 自研插件：从各自的 GitHub Release 下载三件套放进 `.obsidian/plugins/<id>/`，
+   或在 BRAT 里添加 `yunmin311/<id>-obsidian`；
    本机则直接 `git clone` 对应仓库后用 `scripts\sync-plugins.ps1` 同步
+   （四个插件的三件套也随本仓库备份，见「自研插件」一节）
 5. 复制 `.obsidian/snippets/`（10 个）+ `appearance.json`
 6. 主题 Border 在内置主题市场安装，重启 Obsidian
 7. 按「不随仓库备份的配置」补设 Flexplorer、Crisp File Explorer、Crisp Reading Rail
