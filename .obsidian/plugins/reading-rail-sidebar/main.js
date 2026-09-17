@@ -230,11 +230,23 @@ class ReadingRailView extends ItemView {
     for (let i = 0; i < this.headings.length; i++) {
       const h = this.headings[i];
       const el = this.treeEl.createDiv({ cls: "rrs-item rrs-l" + h.level });
-      el.createSpan({ cls: "rrs-item-text", text: h.heading });
+      // metadataCache 给的是原始 markdown 文本：[[页|别名]] 要显示成「别名」、
+      // [[页]] 显示成「页」，否则面板里会直接露出双链语法。
+      el.createSpan({
+        cls: "rrs-item-text",
+        text: this.displayHeading(h.heading),
+      });
       el.dataset.line = String(h.position.start.line);
       el.addEventListener("click", () => this.goTo(i));
       this.itemEls.push(el);
     }
+  }
+
+  /** 把标题里的 wiki 链接还原成可读文本 */
+  displayHeading(raw) {
+    return String(raw || "")
+      .replace(/\[\[[^\]|]*\|([^\]]+)\]\]/g, "$1")
+      .replace(/\[\[([^\]]+)\]\]/g, "$1");
   }
 
   /* ---------- 滚动跟踪 ---------- */
@@ -747,7 +759,7 @@ class ReadingRailSidebarPlugin extends Plugin {
     const total = scroller.scrollHeight || 1;
     const scrollerTop = scroller.getBoundingClientRect().top;
     const scrollTop = scroller.scrollTop;
-    const heads = scroller.querySelectorAll("h1, h2, h3, h4, h5, h6");
+    const heads = this.collectHeadingEls(scroller);
 
     box.empty();
     for (const node of heads) {
@@ -758,6 +770,37 @@ class ReadingRailSidebarPlugin extends Plugin {
       tick.dataset.level = String(Math.min(level, 4));
       tick.style.top = p * 100 + "%";
     }
+
+    // 阅读视图的正文是异步渲染的：首次挂载时可能一个标题都还没进 DOM。
+    // 这时延迟再算一次，否则刻度会一直空着，而且不会自己恢复。
+    if (!heads.length && !this.ticksHeadRetry) {
+      this.ticksHeadRetry = true;
+      window.setTimeout(() => {
+        this.ticksHeadRetry = false;
+        if (this.ticksEl) this.paintHeads();
+      }, 400);
+    }
+  }
+
+  /**
+   * 收集正文里的标题元素。主路径是 h1–h6，再兜一层带 data-heading 的元素
+   * （Obsidian 的标题都带这个属性），但只认标签名确实是 H1–H6 的，
+   * 免得把别的 data-heading 元素也算进来。
+   */
+  collectHeadingEls(scroller) {
+    const out = [];
+    const seen = new Set();
+    const nodes = scroller.querySelectorAll(
+      "h1, h2, h3, h4, h5, h6, [data-heading]"
+    );
+    for (const node of nodes) {
+      if (seen.has(node)) continue;
+      seen.add(node);
+      const tag = String(node.tagName || "").toUpperCase();
+      if (!/^H[1-6]$/.test(tag)) continue;
+      out.push(node);
+    }
+    return out;
   }
 
   /** 让高亮杠跟着滚动位置走 */
