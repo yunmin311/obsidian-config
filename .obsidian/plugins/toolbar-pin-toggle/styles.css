@@ -66,3 +66,30 @@ body.etb-pinned :is(#editingToolbarModalBar, .editingToolbarModalBar).top.autohi
   opacity: 1 !important;
   transition: opacity 0.15s ease-out, top 0.18s ease-out, margin 0.18s ease-out, left 0.18s ease-out !important;
 }
+
+/* ---- 6. 设置页的依赖缺失提示 ---- */
+
+/* 本插件两种模式都作用于 Editing Toolbar 提供的工具条，该插件缺失时整页设置都是空的。
+   这里刻意不用 !important —— 它不跟任何第三方样式竞争，
+   顺带避开目录 CSS lint 对 !important 的告警。 */
+
+.tpt-missing-dependency {
+  margin: 0.5em 0 1.25em;
+  padding: 0.75em 1em;
+  border-left: 3px solid var(--text-error, #d64545);
+  border-radius: 4px;
+  background: var(--background-secondary);
+}
+
+.tpt-missing-dependency strong {
+  display: block;
+  margin-bottom: 0.3em;
+  color: var(--text-error, #d64545);
+}
+
+.tpt-missing-dependency div {
+  color: var(--text-muted);
+  font-size: var(--font-ui-smaller, 0.9em);
+  line-height: 1.45;
+}
+
