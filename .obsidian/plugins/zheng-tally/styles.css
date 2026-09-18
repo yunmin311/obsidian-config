@@ -1,0 +1,40 @@
+/* Zheng Tally — styles moved out of per-element assignments.
+ *
+ * Why this file exists: the community-directory review requires styling to
+ * come from CSS classes instead of style assignments
+ * (obsidianmd/no-static-styles-assignment). Only the properties that used to
+ * be written inline live here. The remaining geometry is still written
+ * per element on purpose: it is derived from the host editor's computed
+ * typography at render time and cannot be expressed as a static rule.
+ *
+ * Deliberately free of `!important` and `:has()` — the directory's CSS lint
+ * flags both (broad selector invalidation / specificity escalation).
+ */
+
+/* Total-count suffix on a tally chip.
+ * Font size is relative to the chip, which carries the host editor's font
+ * size inline, so `em` resolves against the editor font rather than the
+ * browser default. */
+.zt-total {
+  font-size: 0.75em;
+  opacity: 0.65;
+  font-variant-numeric: tabular-nums;
+  background: transparent;
+}
+
+/* Committed tallies keep the total hidden until hovered or selected.
+ * Uses visibility (not display) so revealing it never shifts the line. */
+.zt-total--hidden {
+  visibility: hidden;
+}
+
+/* Transient hover badge, rendered outside the editor layout entirely:
+ * fixed positioning keeps it out of the document flow and pointer-events
+ * is off so it can never swallow clicks meant for the note. */
+.zt-count-badge-popup {
+  position: fixed;
+  z-index: 1000;
+  pointer-events: none;
+  margin: 0;
+  transform: translate(0, -110%);
+}
