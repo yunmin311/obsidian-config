@@ -93,3 +93,33 @@ body.etb-pinned :is(#editingToolbarModalBar, .editingToolbarModalBar).top.autohi
   line-height: 1.45;
 }
 
+/* ---- 7. 设置页的使用说明 ---- */
+
+/* 与缺依赖警告框同族：左缘细线 + 弱化文字。放在模式下拉框上方，
+   教的是「Alt+Q 切换、去 Hotkeys 改键」这两件下拉框本身说不清的事。 */
+
+.tpt-usage {
+  margin: 0.5em 0 1.25em;
+  padding: 0.75em 1em;
+  border-left: 3px solid var(--interactive-accent, #7f6df2);
+  border-radius: 4px;
+  background: var(--background-secondary);
+}
+
+.tpt-usage p {
+  margin: 0.25em 0;
+  color: var(--text-muted);
+  font-size: var(--font-ui-smaller, 0.9em);
+  line-height: 1.55;
+}
+
+.tpt-usage kbd {
+  padding: 1px 5px;
+  border: 1px solid var(--background-modifier-border);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  background: var(--background-primary);
+  font-size: 0.85em;
+}
+
+

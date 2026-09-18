@@ -31,6 +31,11 @@ class ToolbarPinTogglePlugin extends Plugin {
     this.addCommand({
       id: "toggle-pin",
       name: "Toggle toolbar pin",
+      // Ship the default binding the README has always advertised. Without
+      // this field the command exists but has NO hotkey on a fresh install,
+      // so "Default hotkey: Alt+Q" was only true for users who bound it by
+      // hand. An explicit user binding (hotkeys.json) still wins over this.
+      hotkeys: [{ modifiers: ["Alt"], key: "Q" }],
       callback: async () => {
         if (!this.hasEditingToolbar()) {
           this.warnMissingEditingToolbar();
@@ -122,6 +127,25 @@ class ToolbarPinToggleSettingTab extends PluginSettingTab {
         });
       });
     }
+
+    // Usage block, placed above the mode dropdown. The plugin has exactly one
+    // interaction, so this page is the right place to teach it: a bare
+    // dropdown never told anyone that Alt+Q is the toggle, or that rebinding
+    // lives in Settings → Hotkeys rather than here.
+    containerEl.createDiv({ cls: "tpt-usage" }, (el) => {
+      const intro = el.createEl("p");
+      intro.appendText("Press ");
+      intro.createEl("kbd", { text: "Alt+Q" });
+      intro.appendText(
+        ' — or run "Toggle toolbar pin" from the command palette — to pin or ' +
+          "unpin the toolbar chosen below."
+      );
+      el.createEl("p", {
+        text:
+          "Alt+Q is only the default. To rebind it, go to Settings → Hotkeys " +
+          'and search for "Toolbar Pin Toggle".',
+      });
+    });
 
     new Setting(containerEl)
       .setName("Pin mode")
