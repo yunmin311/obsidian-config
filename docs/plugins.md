@@ -32,7 +32,7 @@
 | Crisp Focus | 1.4.0 | 专注书写（光标动效 / 打字机滚动 / 环境音） | letschips（BRAT） |
 | Crisp Recall | 0.2.4 | 主动回忆 / 挖空复习 | letschips（BRAT） |
 | Crisp Visual | 0.2.2 | 视觉资产画廊 | letschips（BRAT） |
-| **Toolbar Pin Toggle** | 1.0.1 | 自研，见下 | 本地 |
+| **Toolbar Pin Toggle** | 1.0.2 | 自研，见下 | 本地 |
 | **Reading Rail Sidebar** | 0.1.1 | 自研，见下 | 本地 |
 | **Quiet Shelf**（暗格） | 0.1.0 | 自研，见下 | 本地 |
 | **Zheng Tally**（正字计数） | 1.0.2 | 自研，见下 | 本地 |
