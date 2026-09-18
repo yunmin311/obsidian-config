@@ -32,11 +32,12 @@
 | Crisp Focus | 1.4.0 | 专注书写（光标动效 / 打字机滚动 / 环境音） | letschips（BRAT） |
 | Crisp Recall | 0.2.4 | 主动回忆 / 挖空复习 | letschips（BRAT） |
 | Crisp Visual | 0.2.2 | 视觉资产画廊 | letschips（BRAT） |
-| **Toolbar Pin Toggle** | 1.0.0 | 自研，见下 | 本地 |
-| **Reading Rail Sidebar** | 0.1.0 | 自研，见下 | 本地 |
+| **Toolbar Pin Toggle** | 1.0.1 | 自研，见下 | 本地 |
+| **Reading Rail Sidebar** | 0.1.1 | 自研，见下 | 本地 |
 | **Quiet Shelf**（暗格） | 0.1.0 | 自研，见下 | 本地 |
+| **Zheng Tally**（正字计数） | 1.0.2 | 自研，见下 | 本地 |
 
-## 已装未启用（7 个）
+## 已装未启用（9 个）
 
 保留在 vault 里备用，随时可在设置里打开：
 
@@ -109,7 +110,7 @@ zheng-tally 是 TypeScript 构建，产物在 `dist/`。样式全部限定在各
 
 ## 不随仓库备份的配置
 
-以下三个插件的 `data.json` 里 **含 vault 路径与打开记录**（属运行时状态，不是配置），已从仓库移出并加入 `.gitignore`。
+以下四个插件的 `data.json` 里 **含 vault 路径与打开记录**（属运行时状态，不是配置），已从仓库移出并加入 `.gitignore`。
 本地文件照常保留，不影响使用；换机器时按下面的值手动设一遍即可。
 
 **Flexplorer**（`flexplorer/data.json`，177 KB，其中 `items` 是 1000+ 条笔记/文件夹路径）

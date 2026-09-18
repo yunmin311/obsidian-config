@@ -43,6 +43,8 @@
 .obsidian/plugins/flexplorer/data.json
 .obsidian/plugins/crisp-file-explorer/data.json
 .obsidian/plugins/crisp-reading-rail/data.json
+# - crisp-pulse: daily 是逐日活动/贡献记录，files 键含具体笔记路径
+.obsidian/plugins/crisp-pulse/data.json
 
 # 例外：自研插件整体入库（其余插件的 data.json 设置仍按上面规则放行）
 # 注意：这一组必须写在上面那批通配排除【之后】。
