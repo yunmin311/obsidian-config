@@ -1,0 +1,63 @@
+name: Release config snapshot
+
+# The config repo has no versioned artifact — a "release" here is a dated
+# snapshot archive of the shell configuration (theme settings, snippets, plugin
+# *settings*, docs, scripts, templates). Notes are never included: the repo's
+# .gitignore is a whitelist, and this workflow deliberately enumerates the
+# paths it packs instead of using `git archive`, so a future .gitignore mistake
+# cannot leak note content into a public download.
+#
+# Trigger: push a tag. Use a date-based tag, e.g. `snapshot-2026-09-19`.
+on:
+  push:
+    tags:
+      - "snapshot-*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pack config snapshot
+        id: pack
+        run: |
+          set -euo pipefail
+          NAME="obsidian-config-${GITHUB_REF_NAME}"
+          mkdir -p "/tmp/${NAME}"
+
+          # Explicit allow-list. Only these paths exist in the archive.
+          for p in .obsidian docs scripts templates \
+                   README.md ATTRIBUTION.md LICENSE; do
+            if [ -e "$p" ]; then
+              cp -r "$p" "/tmp/${NAME}/"
+            fi
+          done
+
+          # Safety net: fail loudly if anything note-shaped slipped in.
+          if grep -rIl --exclude-dir=node_modules \
+               --exclude="workspace*.json" \
+               -E '^---$' "/tmp/${NAME}/docs" 2>/dev/null | head -5; then
+            echo "::warning::front-matter-looking content found in docs/"
+          fi
+
+          cd /tmp
+          zip -qr "${NAME}.zip" "${NAME}"
+          echo "files=${NAME}.zip" >> "$GITHUB_OUTPUT"
+          ls -l "${NAME}.zip"
+
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Idempotent: gh release create fails outright if a release with the
+          # same tag already exists, which turns a routine re-tag-and-push into
+          # a red build. Delete any existing release for this tag first.
+          gh release delete "${GITHUB_REF_NAME}" --yes --cleanup-tag=false || true
+          gh release create "${GITHUB_REF_NAME}" \
+            --title "Config snapshot ${GITHUB_REF_NAME#snapshot-}" \
+            --generate-notes \
+            "${{ steps.pack.outputs.files }}"

@@ -1,0 +1,264 @@
+/* ============================================================
+   Dense Reading（密排阅读）— 插件版样式
+   ------------------------------------------------------------
+   与原来的 dense-reading.css 片段内容等价，类名完全一致：
+   插件只负责「往 body 上挂 / 摘 class」，样式仍由 CSS 承担。
+   这样两套可以共存，用户迁移时不会出现「插件装好了但样式没了」。
+
+   沿用原片段的三条约束：
+   - 不写死任何颜色，一律 currentColor / 主题变量
+   - 所有间距规则包在 body.dense-reading-mode 下，关闭时零生效
+   - 行宽档位独立于总开关，单独生效
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   行宽档位：只改主题变量，独立于总开关生效
+   注意：必须定义在视图层级（与 border-polished 的接管逻辑同层），
+   写在 body 上会被 Obsidian 的内联 --file-line-width: 700px 压掉。
+   选择器优先级 (0,4,1) > border-polished 的 (0,2,0)，稳定生效。
+   ------------------------------------------------------------ */
+body.dense-w44 :is(.markdown-source-view.mod-cm6, .markdown-preview-view, .markdown-rendered) { --file-line-width: 44rem; }
+body.dense-w54 :is(.markdown-source-view.mod-cm6, .markdown-preview-view, .markdown-rendered) { --file-line-width: 54rem; }
+body.dense-w66 :is(.markdown-source-view.mod-cm6, .markdown-preview-view, .markdown-rendered) { --file-line-width: 66rem; }
+body.dense-w78 :is(.markdown-source-view.mod-cm6, .markdown-preview-view, .markdown-rendered) { --file-line-width: 78rem; }
+body.dense-w-custom :is(.markdown-source-view.mod-cm6, .markdown-preview-view, .markdown-rendered) { --file-line-width: var(--dense-width-value, 54rem); }
+
+/* ------------------------------------------------------------
+   总开关开启时：阅读视图密排
+   （仅 .markdown-preview-view / .markdown-rendered，
+    不触碰实时预览的编辑结构）
+   ------------------------------------------------------------ */
+
+/* 段落 */
+body.dense-reading-mode :is(.markdown-preview-view, .markdown-rendered) p {
+  margin: 0.45em 0;
+  line-height: 1.65;
+}
+
+/* 标题 */
+body.dense-reading-mode :is(.markdown-preview-view, .markdown-rendered) h2 {
+  margin: 1.15em 0 0.45em;
+  font-size: 1.15em;
+}
+
+body.dense-reading-mode :is(.markdown-preview-view, .markdown-rendered) h3 {
+  margin: 0.9em 0 0.35em;
+  font-size: 1.05em;
+}
+
+/* 列表 */
+body.dense-reading-mode :is(.markdown-preview-view, .markdown-rendered) :is(ul, ol) {
+  margin-top: 0.35em;
+  margin-bottom: 0.45em;
+}
+
+body.dense-reading-mode :is(.markdown-preview-view, .markdown-rendered) li {
+  margin: 0.12em 0;
+}
+
+/* 水平线：跟随文字颜色，18% 透明度 */
+body.dense-reading-mode :is(.markdown-preview-view, .markdown-rendered) hr {
+  border: none;
+  height: 1px;
+  background-color: color-mix(in srgb, currentColor 18%, transparent);
+}
+
+/* 行内代码：跟随文字颜色，5% 透明度底色（排除代码块内的 code） */
+body.dense-reading-mode :is(.markdown-preview-view, .markdown-rendered) :not(pre) > code {
+  background-color: color-mix(in srgb, currentColor 5%, transparent);
+  padding: 0.08em 0.28em;
+  border-radius: 4px;
+}
+
+/* ------------------------------------------------------------
+   实时预览：只放宽 .cm-line 行距，不动任何结构、间距、边距
+   （如觉编辑手感异常，删除此块即可，不影响其余功能）
+   ------------------------------------------------------------ */
+body.dense-reading-mode .markdown-source-view.mod-cm6 .cm-line {
+  line-height: 1.65;
+}
+
+/* ------------------------------------------------------------
+   设置页专用样式（前缀 dr-，只作用于本插件的设置页）
+   ------------------------------------------------------------ */
+
+.dr-usage {
+  margin: 0.5em 0 1.25em;
+  padding: 0.75em 1em;
+  border-left: 3px solid var(--interactive-accent, #7f6df2);
+  border-radius: 4px;
+  background: var(--background-secondary);
+}
+
+.dr-usage p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: var(--font-ui-smaller, 0.9em);
+  line-height: 1.55;
+}
+
+.dr-pinned {
+  margin: 0.5em 0 1.25em;
+  padding: 0.75em 1em;
+  border-radius: 4px;
+  background: var(--background-secondary);
+}
+
+.dr-pinned-title {
+  margin-bottom: 0.5em;
+  color: var(--text-muted);
+  font-size: var(--font-ui-smaller, 0.9em);
+}
+
+.dr-pinned-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75em;
+  padding: 0.2em 0;
+  font-size: var(--font-ui-smaller, 0.9em);
+}
+
+.dr-pinned-row span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dr-pinned-more {
+  margin-top: 0.4em;
+  color: var(--text-faint);
+  font-size: var(--font-ui-smaller, 0.9em);
+}
+
+.dr-preview {
+  margin-top: 1.5em;
+  padding: 1em;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 8px;
+  background: var(--background-primary);
+}
+
+.dr-preview-label {
+  margin-bottom: 0.75em;
+  color: var(--text-muted);
+  font-size: var(--font-ui-smaller, 0.9em);
+}
+
+.dr-preview-stage {
+  padding: 1em 0;
+  border-top: 1px dashed var(--background-modifier-border);
+  border-bottom: 1px dashed var(--background-modifier-border);
+}
+
+/* 标尺：一条横条，宽度 = 当前档位在 44–96rem 区间里的相对位置。
+   为什么需要它：真实行宽（44–96rem）全部超出设置页宽度，
+   光看预览块本身会「每档都一样宽」，标尺把差异显式画出来。 */
+.dr-preview-ruler {
+  position: relative;
+  height: 4px;
+  margin: 0 auto 0.9em;
+  width: 100%;
+  border-radius: 2px;
+  background: var(--background-modifier-border);
+}
+
+.dr-preview-bar {
+  position: absolute;
+  inset: 0 auto 0 0;
+  height: 100%;
+  border-radius: 2px;
+  background: var(--interactive-accent);
+  transition: width 120ms ease-out;
+}
+
+/* 预览块本身不设死宽度，只给 max-width（由 JS 按比例设百分比），
+   这样窄档位能看出收敛效果。 */
+.dr-preview-sample {
+  padding: 0.6em 0.9em;
+  border-radius: 6px;
+  background: var(--background-secondary);
+  color: var(--text-normal);
+  font-size: 0.95em;
+  line-height: 1.7;
+  transition: max-width 120ms ease-out;
+}
+
+.dr-preview-readout {
+  margin-top: 0.7em;
+  color: var(--text-faint, var(--text-muted));
+  font-size: var(--font-ui-smaller, 0.9em);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- 页脚：版本 / 仓库信息 ---- */
+
+.dr-about {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid var(--background-modifier-border);
+}
+
+.dr-about-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  align-items: baseline;
+  color: var(--text-faint);
+  font-size: var(--font-ui-smaller, 0.9em);
+}
+
+.dr-about-meta a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.dr-about-meta a:hover {
+  text-decoration: underline;
+}
+
+.dr-about-sep {
+  opacity: 0.5;
+}
+
+/* ---- 赞助区块 ---- */
+
+.sp-box {
+  margin-top: 1em;
+  padding: 0.9em 1em;
+  border-radius: 6px;
+  background: var(--background-secondary);
+}
+
+.sp-title {
+  margin-bottom: 0.35em;
+  color: var(--text-normal);
+  font-weight: 600;
+  font-size: var(--font-ui-small, 0.95em);
+}
+
+.sp-body {
+  margin-bottom: 0.7em;
+  color: var(--text-muted);
+  font-size: var(--font-ui-smaller, 0.9em);
+  line-height: 1.55;
+}
+
+/* 单一入口（GitHub Sponsors）。做成一行链接，
+   不再有国内 / 海外分列 —— 见 sponsor.js 顶部注释。 */
+.sp-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+}
+
+.sp-row a.sp-link {
+  display: block;
+  padding: 0.15em 0;
+  color: var(--text-accent);
+  text-decoration: none;
+}
+
+.sp-row a.sp-link:hover {
+  text-decoration: underline;
+}

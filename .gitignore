@@ -3,6 +3,10 @@
 
 # --- 全部忽略，然后白名单放行（防笔记泄漏的写法）---
 /*
+!/.github/
+.github/*
+!.github/workflows/
+!.github/workflows/**
 
 # 允许入库
 !.gitignore
@@ -62,6 +66,8 @@
 !.obsidian/plugins/reading-rail-sidebar/**
 !.obsidian/plugins/quiet-shelf/
 !.obsidian/plugins/quiet-shelf/**
+!.obsidian/plugins/dense-reading/
+!.obsidian/plugins/dense-reading/**
 !.obsidian/plugins/zheng-tally/
 !.obsidian/plugins/zheng-tally/**
 
