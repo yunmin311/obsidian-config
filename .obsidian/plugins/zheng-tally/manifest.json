@@ -1,7 +1,7 @@
 {
   "id": "zheng-tally",
   "name": "Zheng Tally",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "minAppVersion": "1.5.12",
   "description": "Count with traditional five-stroke Zheng tallies inline and resume them later.",
   "author": "yunmin311",

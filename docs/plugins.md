@@ -32,10 +32,11 @@
 | Crisp Focus | 1.4.0 | 专注书写（光标动效 / 打字机滚动 / 环境音） | letschips（BRAT） |
 | Crisp Recall | 0.2.4 | 主动回忆 / 挖空复习 | letschips（BRAT） |
 | Crisp Visual | 0.2.2 | 视觉资产画廊 | letschips（BRAT） |
-| **Toolbar Pin Toggle** | 1.0.2 | 自研，见下 | 本地 |
-| **Reading Rail Sidebar** | 0.1.1 | 自研，见下 | 本地 |
-| **Quiet Shelf**（暗格） | 0.1.0 | 自研，见下 | 本地 |
-| **Zheng Tally**（正字计数） | 1.0.2 | 自研，见下 | 本地 |
+| **Toolbar Pin Toggle** | 1.1.0 | 自研，见下 | 本地 |
+| **Reading Rail Sidebar** | 0.2.0 | 自研，见下 | 本地 |
+| **Quiet Shelf**（暗格） | 0.2.0 | 自研，见下 | 本地 |
+| **Dense Reading**（密排阅读） | 0.2.0 | 自研，见下 | 本地 |
+| **Zheng Tally**（正字计数） | 1.0.3 | 自研，见下 | 本地 |
 
 ## 已装未启用（9 个）
 
@@ -67,6 +68,7 @@
 | **Toolbar Pin Toggle** | `E:\1project\toolbar-pin-toggle-obsidian\` | `.obsidian/plugins/toolbar-pin-toggle/` |
 | **Reading Rail Sidebar** | `E:\1project\reading-rail-sidebar-obsidian\` | `.obsidian/plugins/reading-rail-sidebar/` |
 | **Quiet Shelf**（暗格） | `E:\1project\quiet-shelf-obsidian\` | `.obsidian/plugins/quiet-shelf/` |
+| **Dense Reading**（密排阅读） | `E:\1project\dense-reading-obsidian\` | `.obsidian/plugins/dense-reading/` |
 | **Zheng Tally**（已在市场提交流程中） | `E:\1project\zheng-tally-obsidian\` | `.obsidian/plugins/zheng-tally/` |
 
 用途简述：
@@ -76,7 +78,40 @@
   右缘刻度条用长度反映文本密度
 - **Quiet Shelf**（暗格）— ① 暗格：归档 / 索引类文件从文件树收起（物理位置、知识图谱、搜索不受影响）；
   ② 聚焦：跨层级多选，只留选中那一组
+- **Dense Reading**（密排阅读）— 阅读视图密排间距 + 可调行宽（五档 + 自定义滑条）+ 按笔记固定档位。
+  前身是 `dense-reading.css` 片段，2026-09-19 退休（见下）
 - **Zheng Tally** — 编辑器内联的正字计数器（TypeScript 构建，产物在 `dist/`）
+
+### 双语与赞助区块（2026-09-19 起）
+
+四个纯 JS 自研插件的设置页都支持**中英双语**，语言下拉在设置页顶部：
+`跟随 Obsidian / 简体中文 / English`。加一门语言只是往 `locales.js` 加一条数据，无构建步骤。
+
+| 文件 | 职责 |
+|---|---|
+| `i18n.js` | 运行时：`t()` 取词。缺键回落英语、再回落键名本身，**永不抛异常** |
+| `locales.js` | 字符串表：公共键（语言/赞助/页脚）+ 本插件专属键 |
+| `sponsor.js` | 赞助区块：国内 / 海外**分列**（两条链路可用性差别大），纯链接、零网络请求 |
+
+> ⚠️ `i18n.js` 在四个插件里是**同一份复制**（插件是独立仓库，不能互相 require）。
+> 改一处必须四处同步，文件头注释里也写了这句。
+
+设置页统一有：语言下拉 → 使用说明 → 功能项 → **恢复默认** → 页脚（版本 + 仓库链接 + 赞助区块）。
+「恢复默认」**刻意保留语言选择** —— 那是关于这一页本身的偏好，不是插件行为。
+
+### Dense Reading 与 dense-reading.css 片段（2026-09-19 退休）
+
+原来的 `dense-reading.css` 片段靠 Style Settings 存值、靠笔记 frontmatter 的 `cssclasses: dense-w54` 生效，
+用起来绕。现已整体搬进插件：
+
+- 片段文件已改名为 `dense-reading.css.retired`（**保留不删**，便于回滚）
+- `appearance.json` 的 `enabledCssSnippets` 已移出 `dense-reading`
+- `community-plugins.json` 已加入 `dense-reading`
+- 插件 `data.json` 预写了原档位（`widthPreset: w78` / `customWidth: 96`），启用后行宽与之前一致
+- **类名与片段完全一致**（`dense-w44`…`dense-w-custom`、`dense-reading-mode`），两者可并存不打架
+
+> `obsidian-style-settings/data.json` 里还留着 `dense-reading@@dense-width` 与 `@@dense-width-value`
+> 两个键。**确认插件工作正常后再删** —— 现在删掉万一要回滚就没档位记录了。
 
 ### Quiet Shelf 的命令与快捷键
 
@@ -95,9 +130,13 @@
 
 > 快捷键写在本仓库的 `.obsidian/hotkeys.json` 里，随配置一起恢复。
 
-前三个是**纯 JS、无构建依赖**（`main.js` + `styles.css` + `manifest.json`），改完重启 Obsidian 即生效；
-zheng-tally 是 TypeScript 构建，产物在 `dist/`。样式全部限定在各自前缀（`rrs-` / `qs-` / `tbpt-`）下，
-不改动任何主题变量。
+前四个是**纯 JS、无构建依赖**（`main.js` + `styles.css` + `manifest.json` + `i18n.js` / `locales.js` / `sponsor.js`），
+改完重启 Obsidian 即生效；zheng-tally 是 TypeScript 构建，产物在 `dist/`。
+样式全部限定在各自前缀（`rrs-` / `qs-` / `dr-` / `tpt-`）下，不改动任何主题变量。
+
+> ⚠️ **Release 资产清单不能写死。** 工作流按 `*.js` 通配收集根目录所有脚本 + `manifest.json` + `styles.css`。
+> 之前写死成三件套，加了 `i18n.js` 后 Release 里少三个文件 —— 从 Release 安装会 `MODULE_NOT_FOUND`，
+> 而且是打开设置页才炸。2026-09-19 已改为通配。
 
 > **`.gitignore`**：自研插件用**白名单**（`!.obsidian/plugins/<id>/**`）整目录放行，
 > 其余插件的 `main.js` / `styles.css` / `manifest.json` 仍被通配规则排除（只留 `data.json`）。
@@ -106,7 +145,8 @@ zheng-tally 是 TypeScript 构建，产物在 `dist/`。样式全部限定在各
 > gitignore 是后置规则优先，顺序写反白名单会被盖掉。
 > 历史教训：`toolbar-pin-toggle` 曾因此只入库了 `data.json`，本体三件套全漏。
 >
-> `data.json` 不在同步范围里（脚本只复制三件套），所以各副本的设置互不干扰，手工改过的设置不会被覆盖。
+> `data.json` 不在同步范围里（脚本只复制固定清单里的文件），所以各副本的设置互不干扰，手工改过的设置不会被覆盖。
+> 同步脚本会顺手清理副本里源码已删掉的 `*.js`（幽灵文件很难查），但**绝不碰 `data.json`**。
 
 ## 不随仓库备份的配置
 
@@ -177,11 +217,12 @@ zheng-tally 是 TypeScript 构建，产物在 `dist/`。样式全部限定在各
 1. 装市场插件（上表「已启用」里的前 13 个，不含 crisp 系列）
 2. 装 BRAT → 添加 crisp 系列 9 个仓库（`letschips/crisp-*`）
 3. 复制 `.obsidian/plugins/*/data.json` 覆盖对应插件设置
-4. 自研插件：从各自的 GitHub Release 下载三件套放进 `.obsidian/plugins/<id>/`，
+4. 自研插件：从各自的 GitHub Release 下载**全部** `.js` + `manifest.json` + `styles.css`
+   （五个仓库共 6 个文件；`i18n.js` / `locales.js` / `sponsor.js` 缺一不可）放进 `.obsidian/plugins/<id>/`，
    或在 BRAT 里添加 `yunmin311/<id>-obsidian`；
    本机则直接 `git clone` 对应仓库后用 `scripts\sync-plugins.ps1` 同步
-   （四个插件的三件套也随本仓库备份，见「自研插件」一节）
-5. 复制 `.obsidian/snippets/`（10 个）+ `appearance.json`
+   （五个插件的文件也随本仓库备份，见「自研插件」一节）
+5. 复制 `.obsidian/snippets/`（现为 9 个启用 + 1 个已退休的 `dense-reading.css.retired`）+ `appearance.json`
 6. 主题 Border 在内置主题市场安装，重启 Obsidian
 7. 按「不随仓库备份的配置」补设 Flexplorer、Crisp File Explorer、Crisp Reading Rail
 8. 填入 GLM API / Crisp 激活码 / ASR Key

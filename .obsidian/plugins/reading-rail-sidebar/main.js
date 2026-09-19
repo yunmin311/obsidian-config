@@ -22,6 +22,262 @@ const {
   MarkdownView,
 } = require("obsidian");
 
+
+/* ============================================================
+   【内联模块 · 自动生成，请勿手改这一段】
+   ------------------------------------------------------------
+   以下三段来自仓库里的 locales.js / i18n.js / sponsor.js，
+   由打包脚本 bundle-inline.js 拼接到此（脚本在 _scratch/_i18n/）。
+
+   为什么不写 require("./locales")：
+   Obsidian 注入的 require 是白名单函数，只认 obsidian / @codemirror /
+   @lezer 与 Electron 的 window.require，**不解析插件的相对路径** ——
+   require("./x") 会返回 undefined，插件直接加载失败。
+
+   改动流程：改源文件 → node bundle-inline.js <插件目录> → 跑 sync-plugins.ps1
+   ============================================================ */
+
+/* ---------- 来自 locales.js ---------- */
+/* Reading Rail Sidebar —— 界面字符串表。
+   含面板内、弹窗内、Notice 与设置页的全部界面文字。 */
+
+const COMMON = {
+  zh: {
+    "settings.language.name": "界面语言",
+    "settings.language.desc":
+      "设置页、命令与提示的显示语言。「跟随 Obsidian」会随界面语言自动切换。",
+    "sponsor.title": "赞助支持",
+    "sponsor.body":
+      "这些插件都是独立开发并免费开源的，没有任何商业绑定。如果它确实省下了时间，可以通过 GitHub Sponsors 支持后续维护。",
+    "meta.version": "版本",
+    "meta.repository": "仓库",
+    "common.reset": "恢复默认",
+    "common.reset.done": "已恢复默认设置",
+    "common.clear": "清除",
+  },
+  en: {
+    "settings.language.name": "Interface language",
+    "settings.language.desc":
+      'Language for this settings page, commands and notices. "Follow Obsidian" tracks the app language.',
+    "sponsor.title": "Sponsorship",
+    "sponsor.body":
+      "These plugins are built independently and released free and open-source, with no commercial tie-in. If one of them saves you time, you can support ongoing maintenance via GitHub Sponsors.",
+    "meta.version": "Version",
+    "meta.repository": "Repository",
+    "common.reset": "Restore defaults",
+    "common.reset.done": "Settings restored to defaults",
+    "common.clear": "Clear",
+  },
+};
+
+const OWN = {
+  zh: {
+    "meta.desc": "把阅读进度、标题导航与位置记忆放进右侧栏面板，并在正文右缘铺一列刻度。",
+
+    "view.name": "轨道",
+
+    "command.open": "打开阅读轨道面板",
+    "command.toggle": "切换阅读轨道面板",
+    "command.resume": "跳回本篇上次阅读位置",
+
+    "notice.noRightLeaf": "无法打开右侧栏",
+    "notice.noNote": "没有打开的笔记",
+    "notice.noMemory": "这篇笔记还没有阅读记录",
+    "notice.lastRead": "上次读到 {pct}%",
+    "notice.previewOnly": "切到阅读视图后才能定位",
+
+    "panel.empty": "打开一篇 Markdown 笔记以启用阅读轨道",
+    "panel.noHeadings": "这篇笔记里没有可用的 H2 标题",
+    "panel.previewHint": "实时预览下不跟踪进度，切到阅读视图即可",
+    "panel.sectionCount": "{i} / {n} 节",
+    "panel.sectionCountUnknown": "— / {n} 节",
+    "panel.atTop": "（文首）",
+    "panel.resumeHint": "上次读到 {pct}% · 跳回",
+
+    "settings.usage":
+      "面板只读地跟踪滚动，不修改正文。刻度条挂在正文容器上，点任意高度即跳到全篇对应位置。",
+    "settings.level.name": "标题层级",
+    "settings.level.desc": "面板里显示到哪一级标题（从 H2 起）。",
+    "settings.level.opt2": "仅 H2",
+    "settings.level.opt3": "H2–H3",
+    "settings.level.opt4": "H2–H4",
+    "settings.progress.name": "显示进度",
+    "settings.progress.desc": "在面板顶部显示阅读百分比与进度条。",
+    "settings.memory.name": "记忆阅读位置",
+    "settings.memory.desc": "按文件保存读到的位置，下次打开时提示跳回。",
+    "settings.fade.name": "读过的刻度变淡",
+    "settings.fade.desc":
+      "已滚过部分对应的刻度会缩短并变淡，留下阅读痕迹。默认关闭——开着会让整列刻度显得发灰、不清晰。",
+    "settings.reset.name": "恢复默认设置",
+    "settings.reset.desc": "把标题层级、进度显示、位置记忆与刻度变淡清回初始值。",
+  },
+
+  en: {
+    "meta.desc":
+      "Reading progress, heading navigation and position memory in a right-sidebar panel, plus a tick ruler along the note's right edge.",
+
+    "view.name": "Rail",
+
+    "command.open": "Open reading rail panel",
+    "command.toggle": "Toggle reading rail panel",
+    "command.resume": "Jump to last reading position",
+
+    "notice.noRightLeaf": "Could not open the right sidebar",
+    "notice.noNote": "No note is open",
+    "notice.noMemory": "This note has no saved reading position yet",
+    "notice.lastRead": "Last read {pct}%",
+    "notice.previewOnly": "Switch to reading view before jumping",
+
+    "panel.empty": "Open a Markdown note to enable the reading rail",
+    "panel.noHeadings": "This note has no usable H2 headings",
+    "panel.previewHint": "Progress is not tracked in live preview — switch to reading view",
+    "panel.sectionCount": "{i} / {n} sections",
+    "panel.sectionCountUnknown": "— / {n} sections",
+    "panel.atTop": "(top of note)",
+    "panel.resumeHint": "Last read {pct}% · jump back",
+
+    "settings.usage":
+      "The panel tracks scrolling read-only and never edits the note. The tick ruler hangs off the content container; click any height to jump to that position.",
+    "settings.level.name": "Heading levels",
+    "settings.level.desc": "How deep the panel lists headings (starting at H2).",
+    "settings.level.opt2": "H2 only",
+    "settings.level.opt3": "H2–H3",
+    "settings.level.opt4": "H2–H4",
+    "settings.progress.name": "Show progress",
+    "settings.progress.desc": "Show the reading percentage and progress bar at the top of the panel.",
+    "settings.memory.name": "Remember reading position",
+    "settings.memory.desc":
+      "Save the position per file and offer to jump back next time it opens.",
+    "settings.fade.name": "Fade read ticks",
+    "settings.fade.desc":
+      "Ticks you have scrolled past shrink and fade, leaving a reading trail. Off by default — it makes the whole ruler look washed out.",
+    "settings.reset.name": "Restore defaults",
+    "settings.reset.desc":
+      "Reset heading levels, progress display, position memory and tick fading.",
+  },
+};
+const LOCALES = buildLocales();
+/** 把公共表与本插件表合并；插件缺某语言时回落到英语。 */
+function buildLocales() {
+  const out = {};
+  const langs = new Set([...Object.keys(COMMON), ...Object.keys(OWN)]);
+  for (const lang of langs) {
+    out[lang] = Object.assign(
+      {},
+      COMMON[lang] || COMMON.en,
+      OWN[lang] || OWN.en
+    );
+  }
+  return out;
+}
+
+/* ---------- 来自 i18n.js ---------- */
+/* i18n —— 多语言运行时。
+
+   为什么不用 Obsidian 的 moment.locale()：moment 只管日期格式化，不提供
+   界面字符串表；而且用户在设置页切语言要即时生效，moment 的切换要等界面重建。
+
+   设计约束：
+   - t() 永不抛异常：缺键回落到英语，英语也缺就返回键名本身。
+     设置页少一行字，好过整页白屏。
+   - 支持 {name} 占位符；参数没给就原样保留，方便定位漏传。
+   - 界面字符串全部集中在 locales.js，main.js 里不留字面量。
+
+   这份 i18n.js 在四个自研插件里是同一份（各自复制，因为插件是独立仓库、
+   不能互相 require）。改动请四处同步。 */
+
+/** 设置页语言下拉框的定义顺序。 */
+const LANGUAGE_OPTIONS = [
+  { id: "auto", label: "跟随 Obsidian / Follow Obsidian" },
+  { id: "zh", label: "简体中文" },
+  { id: "en", label: "English" },
+];
+
+/**
+ * 把偏好解析成实际语言 id。
+ * "auto" 时读 Obsidian 的界面语言；任何异常都回落到英语 ——
+ * 语言探测失败不值得让设置页打不开。
+ */
+function resolveLanguage(pref) {
+  if (pref && pref !== "auto" && LOCALES[pref]) return pref;
+  try {
+    const raw =
+      window.localStorage.getItem("language") ||
+      document.documentElement.lang ||
+      "";
+    const short = String(raw).toLowerCase().slice(0, 2);
+    if (short && LOCALES[short]) return short;
+  } catch (e) {
+    /* 忽略：回落英语 */
+  }
+  return "en";
+}
+
+function translate(lang, key, vars) {
+  const table = LOCALES[lang] || LOCALES.en;
+  let s = table[key];
+  if (s === undefined) {
+    const fb = LOCALES.en[key];
+    s = fb === undefined ? key : fb;
+  }
+  if (!vars) return s;
+  return String(s).replace(/\{(\w+)\}/g, (m, name) =>
+    vars[name] === undefined ? m : String(vars[name])
+  );
+}
+
+/** 绑定插件实例：读 settings.language，暴露 t()。 */
+function bindI18n(plugin) {
+  const current = () =>
+    resolveLanguage(plugin && plugin.settings ? plugin.settings.language : "auto");
+
+  plugin.i18n = {
+    get resolved() {
+      return current();
+    },
+    t(key, vars) {
+      return translate(current(), key, vars);
+    },
+    options: LANGUAGE_OPTIONS,
+  };
+  return plugin.i18n;
+}
+
+/* ---------- 来自 sponsor.js ---------- */
+/* 赞助区块。
+ *
+ * 刻意做成一个独立小节而不是塞进说明文字里：设置页是用户唯一会认真读的
+ * 地方，藏起来等于没有。区块只渲染链接，不引任何外部脚本或图片 ——
+ * 插件必须保持零网络请求，否则会在社区市场审核时被质疑。
+ *
+ * 为什么只有 GitHub Sponsors 一条：
+ *   最初国内 / 海外分列（爱发电 + Ko-fi），但 qy 决定统一走 GitHub ——
+ *   单一入口便于维护，也避免在插件里出现多个可能失效/需要实名认证的平台。
+ *   保留 SPONSORS 数组结构（而不是塌成一个字符串），是为了将来真要加
+ *   第二条时改数据即可，不用动渲染代码。
+ */
+
+const SPONSORS = [
+  { label: "GitHub Sponsors", url: "https://github.com/sponsors/yunmin311" },
+];
+
+function linkRow(parent, label, url) {
+  const a = parent.createEl("a", { cls: "sp-link", text: label, href: url });
+  a.setAttr("target", "_blank");
+  a.setAttr("rel", "noopener");
+}
+
+/** 在 parent 里渲染赞助区块。t 是当前语言的取词函数。 */
+function renderSponsor(parent, t) {
+  const box = parent.createDiv({ cls: "sp-box" });
+  box.createDiv({ cls: "sp-title", text: t("sponsor.title") });
+  box.createDiv({ cls: "sp-body", text: t("sponsor.body") });
+
+  const row = box.createDiv({ cls: "sp-row" });
+  for (const l of SPONSORS) linkRow(row, l.label, l.url);
+}
+
+/* ======================== 内联模块结束 ======================== */
 const VIEW_TYPE = "reading-rail-sidebar";
 const RIBBON_ICON = "align-vertical-space-around";
 
@@ -32,6 +288,8 @@ const DEFAULTS = {
   // 「读过的刻度变灰」默认关 —— qy：它会把整列刻度压得看不清。
   // 想要阅读痕迹时，在设置里打开即可（default false，不是删掉）。
   ticksReadFade: false,
+  // 界面语言：auto / zh / en（见 i18n.js）。
+  language: "auto",
 };
 
 const MEMORY_LIMIT = 300;
@@ -63,7 +321,7 @@ class ReadingRailView extends ItemView {
   }
 
   getDisplayText() {
-    return "轨道";
+    return this.plugin.i18n.t("view.name");
   }
 
   getIcon() {
@@ -187,7 +445,7 @@ class ReadingRailView extends ItemView {
       this.file = null;
       this.docView = null;
       this.detachScroll();
-      this.renderEmpty("打开一篇 Markdown 笔记以启用阅读轨道");
+      this.renderEmpty(this.plugin.i18n.t("panel.empty"));
       return;
     }
 
@@ -225,7 +483,7 @@ class ReadingRailView extends ItemView {
     if (!this.headings.length) {
       this.treeEl.createDiv({
         cls: "rrs-note",
-        text: "这篇笔记里没有可用的 H2 标题",
+        text: this.plugin.i18n.t("panel.noHeadings"),
       });
       return;
     }
@@ -333,7 +591,7 @@ class ReadingRailView extends ItemView {
       this.percentEl.setText("—");
       this.setBarFill(0);
       this.countEl.setText("");
-      this.currentEl.setText("实时预览下不跟踪进度，切到阅读视图即可");
+      this.currentEl.setText(this.plugin.i18n.t("panel.previewHint"));
       this.resumeEl.empty();
       return;
     }
@@ -370,12 +628,21 @@ class ReadingRailView extends ItemView {
       this.scrollItemIntoView(el);
       this.currentEl.setText(this.headings[index].heading);
       this.countEl.setText(
-        index + 1 + " / " + this.headings.length + " 节"
+        this.plugin.i18n.t("panel.sectionCount", {
+          i: index + 1,
+          n: this.headings.length,
+        })
       );
     } else {
-      this.currentEl.setText(this.headings.length ? "（文首）" : "");
+      this.currentEl.setText(
+        this.headings.length ? this.plugin.i18n.t("panel.atTop") : ""
+      );
       this.countEl.setText(
-        this.headings.length ? "— / " + this.headings.length + " 节" : ""
+        this.headings.length
+          ? this.plugin.i18n.t("panel.sectionCountUnknown", {
+              n: this.headings.length,
+            })
+          : ""
       );
     }
   }
@@ -421,7 +688,7 @@ class ReadingRailView extends ItemView {
   resumeTo(progress) {
     const scroller = this.scroller;
     if (!scroller) {
-      new Notice("切到阅读视图后才能定位");
+      new Notice(this.plugin.i18n.t("notice.previewOnly"));
       return;
     }
     const maxScroll = scroller.scrollHeight - scroller.clientHeight;
@@ -455,7 +722,7 @@ class ReadingRailView extends ItemView {
     this.resumeEl.empty();
     const btn = this.resumeEl.createSpan({
       cls: "rrs-resume-btn",
-      text: "上次读到 " + key + "% · 跳回",
+      text: this.plugin.i18n.t("panel.resumeHint", { pct: key }),
     });
     btn.addEventListener("click", () => this.resumeTo(mem.progress));
   }
@@ -496,17 +763,39 @@ class ReadingRailSettingTab extends PluginSettingTab {
 
   display() {
     const { containerEl } = this;
+    const t = (k, v) => this.plugin.i18n.t(k, v);
     containerEl.empty();
-    containerEl.createEl("h3", { text: "阅读轨道面板" });
+    containerEl.createEl("h3", { text: "Reading Rail" });
 
     new Setting(containerEl)
-      .setName("标题层级")
-      .setDesc("面板里显示到哪一级标题（从 H2 起）。")
+      .setName(t("settings.language.name"))
+      .setDesc(t("settings.language.desc"))
+      .addDropdown((drop) => {
+        for (const opt of this.plugin.i18n.options) {
+          drop.addOption(opt.id, opt.label);
+        }
+        drop.setValue(this.plugin.settings.language || "auto").onChange(
+          async (value) => {
+            this.plugin.settings.language = value;
+            await this.plugin.saveAll();
+            this.refreshViews();
+            this.display();
+          }
+        );
+      });
+
+    containerEl.createDiv({ cls: "rrs-usage" }, (el) => {
+      el.createEl("p", { text: t("settings.usage") });
+    });
+
+    new Setting(containerEl)
+      .setName(t("settings.level.name"))
+      .setDesc(t("settings.level.desc"))
       .addDropdown((drop) =>
         drop
-          .addOption("2", "仅 H2")
-          .addOption("3", "H2–H3")
-          .addOption("4", "H2–H4")
+          .addOption("2", t("settings.level.opt2"))
+          .addOption("3", t("settings.level.opt3"))
+          .addOption("4", t("settings.level.opt4"))
           .setValue(String(this.plugin.settings.maxLevel))
           .onChange(async (value) => {
             this.plugin.settings.maxLevel = Number(value);
@@ -516,8 +805,8 @@ class ReadingRailSettingTab extends PluginSettingTab {
       );
 
     new Setting(containerEl)
-      .setName("显示进度")
-      .setDesc("在面板顶部显示阅读百分比与进度条。")
+      .setName(t("settings.progress.name"))
+      .setDesc(t("settings.progress.desc"))
       .addToggle((toggle) =>
         toggle
           .setValue(this.plugin.settings.showProgress)
@@ -529,8 +818,8 @@ class ReadingRailSettingTab extends PluginSettingTab {
       );
 
     new Setting(containerEl)
-      .setName("记忆阅读位置")
-      .setDesc("按文件保存读到的位置，下次打开时提示跳回。")
+      .setName(t("settings.memory.name"))
+      .setDesc(t("settings.memory.desc"))
       .addToggle((toggle) =>
         toggle
           .setValue(this.plugin.settings.rememberPosition)
@@ -541,10 +830,8 @@ class ReadingRailSettingTab extends PluginSettingTab {
       );
 
     new Setting(containerEl)
-      .setName("读过的刻度变淡")
-      .setDesc(
-        "已滚过部分对应的刻度会缩短并变淡，留下阅读痕迹。默认关闭——开着会让整列刻度显得发灰、不清晰。"
-      )
+      .setName(t("settings.fade.name"))
+      .setDesc(t("settings.fade.desc"))
       .addToggle((toggle) =>
         toggle
           .setValue(this.plugin.settings.ticksReadFade)
@@ -555,13 +842,52 @@ class ReadingRailSettingTab extends PluginSettingTab {
             if (!value) {
               const base = this.ticksBaseEl;
               if (base) {
-                for (const t of base.children) t.classList.remove("is-read");
+                for (const tk of base.children) tk.classList.remove("is-read");
               }
             } else {
               this.updateTicks();
             }
           })
       );
+
+    new Setting(containerEl)
+      .setName(t("settings.reset.name"))
+      .setDesc(t("settings.reset.desc"))
+      .addButton((b) =>
+        b.setButtonText(t("common.reset")).onClick(async () => {
+          // 语言是「这一页本身」的偏好，恢复默认时刻意保留，
+          // 否则中文用户点一下按钮界面就变成英文了。
+          const keepLang = this.plugin.settings.language;
+          this.plugin.settings = Object.assign({}, DEFAULTS, {
+            language: keepLang,
+          });
+          await this.plugin.saveAll();
+          this.refreshViews();
+          new Notice(t("common.reset.done"));
+          this.display();
+        })
+      );
+
+    this.renderFooter(containerEl, t);
+  }
+
+  /** 版本 + 仓库 + 赞助。四个插件共用同一套结构与文案。 */
+  renderFooter(containerEl, t) {
+    const wrap = containerEl.createDiv({ cls: "rrs-about" });
+
+    const meta = wrap.createDiv({ cls: "rrs-about-meta" });
+    meta.createSpan({
+      text: `${t("meta.version")} ${this.plugin.manifest.version}`,
+    });
+    meta.createSpan({ cls: "rrs-about-sep", text: "·" });
+    const repo = meta.createEl("a", {
+      text: this.plugin.manifest.id,
+      href: `https://github.com/yunmin311/${this.plugin.manifest.id}-obsidian`,
+    });
+    repo.setAttr("target", "_blank");
+    repo.setAttr("rel", "noopener");
+
+    renderSponsor(wrap, t);
   }
 
   refreshViews() {
@@ -580,29 +906,32 @@ class ReadingRailSidebarPlugin extends Plugin {
     this.settings = Object.assign({}, DEFAULTS, saved.settings || {});
     this.memory = saved.memory || {};
 
+    bindI18n(this);
+    const t = (k, v) => this.i18n.t(k, v);
+
     this.registerView(VIEW_TYPE, (leaf) => new ReadingRailView(leaf, this));
 
     this.setupTicks();
 
-    this.addRibbonIcon(RIBBON_ICON, "打开阅读轨道面板", () => {
+    this.addRibbonIcon(RIBBON_ICON, t("command.open"), () => {
       this.activateView();
     });
 
     this.addCommand({
       id: "open-rail-panel",
-      name: "打开阅读轨道面板",
+      name: t("command.open"),
       callback: () => this.activateView(),
     });
 
     this.addCommand({
       id: "toggle-rail-panel",
-      name: "切换阅读轨道面板",
+      name: t("command.toggle"),
       callback: () => this.toggleView(),
     });
 
     this.addCommand({
       id: "resume-last-position",
-      name: "跳回本篇上次阅读位置",
+      name: t("command.resume"),
       callback: () => this.resumeActiveFile(),
     });
 
@@ -651,7 +980,7 @@ class ReadingRailSidebarPlugin extends Plugin {
     if (!leaf) {
       leaf = workspace.getRightLeaf(false);
       if (!leaf) {
-        new Notice("无法打开右侧栏");
+        new Notice(this.i18n.t("notice.noRightLeaf"));
         return;
       }
       await leaf.setViewState({ type: VIEW_TYPE, active: true });
@@ -672,12 +1001,12 @@ class ReadingRailSidebarPlugin extends Plugin {
     const view = this.app.workspace.getActiveViewOfType(MarkdownView);
     const file = view ? view.file : this.app.workspace.getActiveFile();
     if (!file || !file.path) {
-      new Notice("没有打开的笔记");
+      new Notice(this.i18n.t("notice.noNote"));
       return;
     }
     const mem = this.getMemory(file.path);
     if (!mem || typeof mem.progress !== "number") {
-      new Notice("这篇笔记还没有阅读记录");
+      new Notice(this.i18n.t("notice.noMemory"));
       return;
     }
 
@@ -689,7 +1018,9 @@ class ReadingRailSidebarPlugin extends Plugin {
       // 面板可能是刚创建的，等它走完 onOpen 与首次定位再跳
       window.setTimeout(() => rail.resumeTo(mem.progress), 120);
     } else {
-      new Notice("上次读到 " + Math.round(mem.progress * 100) + "%");
+      new Notice(
+        this.i18n.t("notice.lastRead", { pct: Math.round(mem.progress * 100) })
+      );
     }
   }
 
@@ -1001,7 +1332,12 @@ class ReadingRailSidebarPlugin extends Plugin {
     now.style.top = p * 100 + "%";
 
     const base = this.ticksBaseEl;
-    if (base && this.plugin.settings.ticksReadFade) {
+    // ⚠️ 这里是**插件类**的方法，this 就是插件实例 ——
+    // 不能再写 this.plugin.settings（那是 View / SettingTab 里的写法），
+    // 会抛 "Cannot read properties of undefined (reading 'settings')"。
+    // 之前没暴露：paintTicks 在 clientHeight 为 0 时不建 baseEl，
+    // && 短路让右边永远不执行；真机上 clientHeight 不为 0，于是必崩。
+    if (base && this.settings.ticksReadFade) {
       const ticks = base.children;
       const last = ticks.length - 1;
       for (let i = 0; i < ticks.length; i++) {
