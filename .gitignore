@@ -70,6 +70,8 @@
 !.obsidian/plugins/dense-reading/**
 !.obsidian/plugins/zheng-tally/
 !.obsidian/plugins/zheng-tally/**
+!.obsidian/plugins/paper-desk/
+!.obsidian/plugins/paper-desk/**
 
 # 大文件 / 敏感信息
 *.zip

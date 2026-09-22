@@ -66,7 +66,10 @@ $map = [ordered]@{
     "reading-rail-sidebar-obsidian" = "reading-rail-sidebar"
     "toolbar-pin-toggle-obsidian"   = "toolbar-pin-toggle"
     "dense-reading-obsidian"        = "dense-reading"
+    "paper-desk-obsidian"           = "paper-desk"
 }
+# 注：ym-homepage 曾在这里，2026-09-22 合并进 paper-desk 后已移除。
+#    那个插件只存在了一天、从未发布，vault 里三个副本也一并按上面 §「清理」删掉了。
 
 # 插件本体。前三个是核心三件套，styles.css 不是每个插件都有 —— 没有就跳过，不是错误。
 #

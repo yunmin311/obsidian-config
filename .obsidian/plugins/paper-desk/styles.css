@@ -1,0 +1,415 @@
+/* ============================================================
+   Paper Desk（案头）— styles
+
+   两条准则，从上一轮的设计讨论里定下来的：
+   1. 颜色一律取主题变量（含 color-mix 混色）；只有【几何】是硬编码的。
+      几何与主题无关，写死才对；颜色若写死，别人换个深色主题就看不见。
+   2. 装饰只出现在时钟这一处。像素只做冒号、手写只做一条线 ——
+      两者都不许再出现第二次，否则页面会从「一枚印章」变成「贴纸册」。
+
+   所有类名前缀固定 .pd-
+   ============================================================ */
+
+/* ============================ 时钟 ============================ */
+
+.pd-clock {
+  /* 唯一的几何刻度来源：改这一个值，数字、方块、下划线按比例全部跟着走。 */
+  --pd-clock-size: 3.5rem; /* = 56px */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* 上大下小。刻意不对称 —— 上下等距会让它读作「居中的一块内容」，
+     上方留得多才有「落在纸上」的重量，这是它成为锚点的来源。 */
+  padding: 5rem 0 3rem;
+
+  /* 墨色。
+     不用纯黑：纸上的墨是带色调的，纯黑会像屏幕上贴的一块。
+     也不能硬编码：#2A3B45 这种浅色墨在深色主题下直接看不见。
+     混一点用户自己的主色，深浅两套主题与换主题都自动成立。 */
+  color: color-mix(in srgb, var(--text-normal) 92%, var(--interactive-accent) 8%);
+}
+
+.pd-clock-time {
+  display: flex;
+  align-items: baseline;
+  font-family: var(--font-monospace);
+  font-size: var(--pd-clock-size);
+  line-height: 1;
+  /* 比例数字每个宽度都不同，不锁等宽的话时钟每分钟会左右抖一下。 */
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+/* ---- 上下午标记（仅 12 小时制出现）----
+
+   和同一个格子里的时间数字共用一套等宽字体、字号压到三分之一、
+   颜色取最淡的一档：它是时间的一个部分，不是一处装饰。
+   一旦写成手绘体或拉到主色，页面上就会出现第二个视觉重心，
+   而这一页只该有一个 —— 数字本身。 */
+.pd-clock-meridiem {
+  margin-left: calc(var(--pd-clock-size) * 0.12);
+  font-size: calc(var(--pd-clock-size) * 0.32);
+  letter-spacing: 0.06em;
+  color: var(--text-faint);
+}
+
+/* 24 小时制下这个 span 的文字是空串（见 splitHM），这里把它整块拿掉。
+   不用 visibility / opacity：那两者会留下它占的宽度，数字会因此偏出中线 ——
+   而这行是靠十几个像素的等宽对齐撑住的，偏一点就看得出来。 */
+.pd-clock-meridiem:empty {
+  display: none;
+}
+
+/* ---- 冒号 = 两个像素方块 ----
+   这里有一个必须守住的约束：方块占的宽度必须【正好等于一个等宽字符】，
+   否则数字会跟着抖。所以不放任推算 0.6em（那是 Fira Code 的比例，
+   换成别的等宽字体就不对了），而是用一个不可见的真冒号把宽度撑出来，
+   两个方块绝对定位盖上去。这样对任何等宽字体都成立。 */
+
+.pd-clock-colon {
+  position: relative;
+  display: inline-block;
+}
+
+.pd-clock-colon-ghost {
+  visibility: hidden;
+}
+
+.pd-clock-colon-dots {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--pd-clock-size) * 0.09);
+}
+
+.pd-colon-dot {
+  width: calc(var(--pd-clock-size) * 0.16); /* 56px 字号下 = 9px */
+  height: calc(var(--pd-clock-size) * 0.16);
+  background: currentColor;
+  /* steps(1, end)：每段保持起始值不变，于是正好是 1 秒亮、1 秒灭。
+     linear 会在临界处插值，看着像「渐隐了一下」。 */
+  animation: pd-blink 2s steps(1, end) infinite;
+}
+
+@keyframes pd-blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* 关掉动效偏好时保持常亮 —— 闪烁是装饰，不该强加给会不适的人。 */
+@media (prefers-reduced-motion: reduce) {
+  .pd-colon-dot {
+    animation: none;
+  }
+}
+
+/* ---- 手绘横线 ---- */
+
+.pd-clock-stroke {
+  width: calc(var(--pd-clock-size) * 2.6);
+  height: 6px;
+  margin-top: calc(var(--pd-clock-size) * 0.34);
+  overflow: visible;
+}
+
+.pd-clock-stroke path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  opacity: 0.45;
+  /* viewBox 被非等比拉伸，non-scaling-stroke 保证线宽不被一起拉歪。 */
+  vector-effect: non-scaling-stroke;
+}
+
+/* ============================ 首页 ============================ */
+
+/* 藏掉正文顶部那行文件名 —— 但只对首页。
+   选择器不是本插件的前缀，这是 Obsidian 自己的元素（.inline-title），
+   所以要写清楚为什么在这里覆盖它：Obsidian 只提供了一个全局开关，
+   改了会影响库里每一篇笔记，做不到「只在这一篇上不显示」。
+   标记 .pd-is-home 由插件打在「当前是首页」的那个 view 上。
+
+   用 display:none 而不是 visibility 或透明度：后者会留下那一行占的高度，
+   首页顶部就还是有一块对不齐的空白。 */
+.pd-is-home .inline-title {
+  display: none;
+}
+
+/* ---- 手写句 ---- */
+
+/* 上边距刻意很小：时钟自己带着下留白，这里再叠一层就会把两者推开成两块。
+   手写句要读作「附在时钟上的一句话」，不是另一个独立区块。 */
+.pd-note {
+  margin: 0.5rem auto 0;
+  max-width: 26em;
+  text-align: center;
+}
+
+.pd-note-text {
+  /* 与计时器的阶段名共用同一个手写体变量 —— 它们本来就该是同一支笔。 */
+  font-family: var(--pd-handwriting, var(--font-text));
+  font-size: var(--pd-note-size, 24px);
+  /* 比正文淡一档：它是陪伴时钟的，不是要和时钟争焦点。 */
+  color: var(--text-muted);
+  line-height: 1.55;
+  /* 楷体的字面比无衬线紧，松一点才不发闷。 */
+  letter-spacing: 0.02em;
+}
+
+/* 手绘引号：装饰，所以比字更淡 —— 装饰不该比内容显眼。
+   顶部对齐而不是垂直居中：引号属于第一行的起笔位置，居中会飘到句子中间去。 */
+.pd-quote {
+  flex: 0 0 auto;
+  margin-top: 0.3em;
+  color: var(--text-faint);
+  opacity: 0.7;
+}
+
+.pd-note-quotes {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.45em;
+}
+
+/* 只有 0.8 度。再多就读作「排版歪了」而不是「随手写的」——
+   这一点倾斜是为了破掉「数字和文字都端端正正」的那股规整感。 */
+.pd-note-tilt .pd-note-text {
+  display: inline-block;
+  transform: rotate(-0.8deg);
+}
+
+/* ---- 链接 ---- */
+
+/* 上边距由插件写进 body 的变量提供，单位是「视口高度的百分比」。
+   用 vh 而不是固定 rem：要保证「往下滚才看得到」这件事在任何屏幕上成立 ——
+   固定值在小屏上会刚好露出来、在大屏上又不够远，两头都不对。 */
+.pd-links {
+  margin-top: var(--pd-links-gap, 55vh);
+  padding-bottom: 6rem;
+}
+
+/* 去列表符号。首页上任何装饰符号都是噪音 —— 链接自己就是内容。 */
+.pd-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* 条目间距给得比常规大：留白是这里唯一的分隔手段。 */
+.pd-item {
+  margin: 0 0 1.75rem;
+}
+
+.pd-item:last-child {
+  margin-bottom: 0;
+}
+
+.pd-link {
+  color: var(--text-normal);
+  font-size: 1rem;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.pd-link:hover {
+  color: var(--text-accent);
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
+
+/* ============================ 窄屏 ============================ */
+
+/* 手机竖屏，以及桌面端把笔记拖到很窄的一栏 —— 两种情况的解法是同一个。
+
+   要收敛的其实只有一件事：--pd-clock-size。这个文件里所有几何（数字、方块、
+   手绘横线）都由它算出来，所以改这一个值就按比例全部变小，
+   不必为每条规则各写一个断点 —— 那正是变量存在的理由。
+
+   用 clamp 而不是固定值：在 320px 到 560px 之间让它连续变化。
+   在某一点突跳会让「手机转到竖屏」看起来像出了故障。
+   下限 2.25rem（36px）是数字还能清楚读出的尺寸，再小就退回正文了；
+   上限 3.25rem 让竖屏的平板不至于跟桌面一样占地方。 */
+@media (max-width: 560px) {
+  .pd-clock {
+    --pd-clock-size: clamp(2.25rem, 11vw, 3.25rem);
+
+    /* 上下留白也要一起收。桌面那 5rem 是为了让时钟「落在纸上」的那份重量，
+       在小屏上那份重量会变成半屏空白，把内容顶下去。 */
+    padding: 3.25rem 0 2.25rem;
+  }
+
+  /* 手写句在窄屏上一行装不下，贴到屏幕边缘会显得局促。
+     加左右内边距而不是缩小字号 —— 字号是使用者自己设的，不该由我来收。 */
+  .pd-note {
+    padding-inline: 1.25rem;
+    box-sizing: border-box;
+  }
+
+  /* 链接区底部那 6rem 同理：滚动到底时小屏不需要那么多余的空。 */
+  .pd-links {
+    padding-bottom: 3.5rem;
+  }
+}
+
+/* ======================= 专注计时器（侧栏） ======================= */
+
+.pd-timer {
+  padding: 1.2em 1em 1em;
+  text-align: center;
+}
+
+/* 手写体只出现在这一个地方 —— 阶段名。
+   刻意选短词：手写体在长句上可读性会塌。
+   变量留空时回落到正文字体（见 main.js 的 applyFont）。 */
+.pd-timer-phase {
+  font-family: var(--pd-handwriting, var(--font-text));
+  font-size: 1.05em;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+}
+
+.pd-timer-time {
+  margin: 0.2em 0 0.5em;
+  font-family: var(--font-monospace);
+  font-size: 2.6em;
+  line-height: 1.15;
+  color: color-mix(in srgb, var(--text-normal) 92%, var(--interactive-accent) 8%);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+.pd-timer-rounds {
+  margin-bottom: 0.5em;
+  font-size: var(--font-ui-smaller);
+  color: var(--text-faint);
+}
+
+.pd-hidden {
+  display: none;
+}
+
+/* 状态栏里的剩余时间。
+   和时钟同一个道理：不锁等宽数字的话，每秒都会左右抖一下 ——
+   在状态栏那种细长的区域里尤其明显。 */
+.pd-statusbar {
+  font-variant-numeric: tabular-nums;
+}
+
+.pd-timer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7em;
+}
+
+/* 极简按钮：无边框、无底色，只留文字。
+   侧栏本来就只有两百多像素宽，一加边框立刻变成「一个小应用」，
+   而这一页要的是「纸上写了三个字」。 */
+.pd-timer-btn {
+  padding: 0.15em 0.2em;
+  border: none;
+  background: none;
+  box-shadow: none;
+  font-size: var(--font-ui-smaller);
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.pd-timer-btn:hover {
+  background: none;
+  color: var(--text-normal);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.pd-timer-btn:focus-visible {
+  outline: 1px solid var(--interactive-accent);
+  outline-offset: 2px;
+}
+
+/* ---- 设置页页脚 + 赞助区块（自研插件共用同一套结构与文案）---- */
+
+.pd-about {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid var(--background-modifier-border);
+}
+
+.pd-about-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  align-items: baseline;
+  color: var(--text-faint);
+  font-size: var(--font-ui-smaller, 0.9em);
+}
+
+.pd-about-meta a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.pd-about-meta a:hover {
+  text-decoration: underline;
+}
+
+.pd-about-sep {
+  opacity: 0.5;
+}
+
+/* 设置页里几个小节上方的说明文字 */
+.pd-setting-note {
+  margin: -0.4em 0 1.2em;
+  color: var(--text-muted);
+  font-size: var(--font-ui-smaller, 0.9em);
+  line-height: 1.55;
+}
+
+.sp-box {
+  margin-top: 1em;
+  padding: 0.9em 1em;
+  border-radius: 6px;
+  background: var(--background-secondary);
+}
+
+.sp-title {
+  margin-bottom: 0.35em;
+  color: var(--text-normal);
+  font-weight: 600;
+  font-size: var(--font-ui-small, 0.95em);
+}
+
+.sp-body {
+  margin-bottom: 0.7em;
+  color: var(--text-muted);
+  font-size: var(--font-ui-smaller, 0.9em);
+  line-height: 1.55;
+}
+
+.sp-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+}
+
+.sp-row a.sp-link {
+  display: block;
+  padding: 0.15em 0;
+  color: var(--text-accent);
+  text-decoration: none;
+}
+
+.sp-row a.sp-link:hover {
+  text-decoration: underline;
+}
