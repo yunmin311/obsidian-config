@@ -7,10 +7,10 @@
 | 类型 | 备份内容 |
 |---|---|
 | 第三方插件 | 只备份 `data.json`（设置），本体按惯例不入库 |
-| 自研插件 | **不入本仓库** —— 源码在 `E:\1project\<id>-obsidian\`，各自独立仓库并发布到社区市场。详见 `docs/publishing.md` |
+| 自研插件 | 源码在 `E:\1project\<id>-obsidian\`；本仓库保留可恢复的插件副本，`data.json` 不由同步脚本覆盖 |
 | 含 vault 路径的运行时状态 | **不入库**（见文末「不随仓库备份的配置」） |
 
-## 已启用（21 个）
+## 插件参考（启用状态以 `community-plugins.json` 为准）
 
 | 插件 | 版本 | 用途 | 来源 |
 |---|---|---|---|
@@ -32,13 +32,14 @@
 | Crisp Focus | 1.4.0 | 专注书写（光标动效 / 打字机滚动 / 环境音） | letschips（BRAT） |
 | Crisp Recall | 0.2.4 | 主动回忆 / 挖空复习 | letschips（BRAT） |
 | Crisp Visual | 0.2.2 | 视觉资产画廊 | letschips（BRAT） |
-| **Toolbar Pin Toggle** | 1.1.0 | 自研，见下 | 本地 |
-| **Reading Rail Sidebar** | 0.2.0 | 自研，见下 | 本地 |
-| **Quiet Shelf**（暗格） | 0.2.0 | 自研，见下 | 本地 |
-| **Dense Reading**（密排阅读） | 0.2.0 | 自研，见下 | 本地 |
-| **Zheng Tally**（正字计数） | 1.0.3 | 自研，见下 | 本地 |
+| **Toolbar Pin Toggle** | 1.1.2 | 自研，见下 | 本地 |
+| **Reading Rail Sidebar** | 0.2.2 | 自研，见下 | 本地 |
+| **Quiet Shelf**（暗格） | 0.3.0 | 自研，见下 | 本地 |
+| **Dense Reading**（密排阅读） | 0.2.2 | 自研，见下 | 本地 |
+| **Zheng Tally**（正字计数） | 1.0.5 | 自研，见下 | 本地 |
+| **Paper Desk** | 0.4.0 | 自研，时钟/计时器/首页 | 本地 |
 
-## 已装未启用（9 个）
+## 备用插件
 
 保留在 vault 里备用，随时可在设置里打开：
 
@@ -56,12 +57,13 @@
 
 ## 自研插件（源码在独立仓库）
 
-源码**唯一真身**位于 `E:\1project\<id>-obsidian\`，各自是独立的 GitHub 仓库，
-目标发布到官方社区市场（见 `docs/publishing.md`）。
+源码**唯一真身**位于 `E:\1project\<id>-obsidian\`，各自是独立的 GitHub 仓库。
+前五个插件已在官方社区目录；Paper Desk 当前通过 GitHub Release 手动安装。
+`docs/publishing.md` 记录了此前的上架流程，不是当前上架状态清单。
 
 本仓库里保存的是**备份副本**，作用是「换机器时一份恢复全部」；vault 里的是**运行副本**。
-改插件一律去源码仓库，改完跑 `scripts\sync-plugins.ps1`，一次把 vault 与 config 两处副本
-都更新并校验逐字节一致。
+改插件一律去源码仓库，改完跑 `scripts\sync-plugins.ps1`，一次把 vault、本仓库与演示库
+三处副本都更新并校验逐字节一致。
 
 | 插件 | 源码仓库 | vault / config 目录 |
 |---|---|---|
@@ -69,7 +71,8 @@
 | **Reading Rail Sidebar** | `E:\1project\reading-rail-sidebar-obsidian\` | `.obsidian/plugins/reading-rail-sidebar/` |
 | **Quiet Shelf**（暗格） | `E:\1project\quiet-shelf-obsidian\` | `.obsidian/plugins/quiet-shelf/` |
 | **Dense Reading**（密排阅读） | `E:\1project\dense-reading-obsidian\` | `.obsidian/plugins/dense-reading/` |
-| **Zheng Tally**（已在市场提交流程中） | `E:\1project\zheng-tally-obsidian\` | `.obsidian/plugins/zheng-tally/` |
+| **Zheng Tally** | `E:\1project\zheng-tally-obsidian\` | `.obsidian/plugins/zheng-tally/` |
+| **Paper Desk** | `E:\1project\paper-desk-obsidian\` | `.obsidian/plugins/paper-desk/` |
 
 用途简述：
 
@@ -81,23 +84,30 @@
 - **Dense Reading**（密排阅读）— 阅读视图密排间距 + 可调行宽（五档 + 自定义滑条）+ 按笔记固定档位。
   前身是 `dense-reading.css` 片段，2026-09-19 退休（见下）
 - **Zheng Tally** — 编辑器内联的正字计数器（TypeScript 构建，产物在 `dist/`）
+- **Paper Desk** — 笔记时钟、侧栏专注计时器，以及按需启用的首页行为与代码块
 
-### 双语与赞助区块（2026-09-19 起）
+### 双语与赞助入口
 
-四个纯 JS 自研插件的设置页都支持**中英双语**，语言下拉在设置页顶部：
-`跟随 Obsidian / 简体中文 / English`。加一门语言只是往 `locales.js` 加一条数据，无构建步骤。
+五个原生 JS 插件的设置页支持**中英双语**，语言下拉在设置页顶部：
+`跟随 Obsidian / 简体中文 / English`。改 `locales.js` 后必须重打包内联到 `main.js`；
+只改源码表而不打包，运行中的设置页不会更新。
 
 | 文件 | 职责 |
 |---|---|
 | `i18n.js` | 运行时：`t()` 取词。缺键回落英语、再回落键名本身，**永不抛异常** |
 | `locales.js` | 字符串表：公共键（语言/赞助/页脚）+ 本插件专属键 |
-| `sponsor.js` | 赞助区块：国内 / 海外**分列**（两条链路可用性差别大），纯链接、零网络请求 |
+| `sponsor.js` | 赞助区块的链接与渲染；只在用户点击链接时离开 Obsidian，不加载外部脚本 |
 
-> ⚠️ `i18n.js` 在四个插件里是**同一份复制**（插件是独立仓库，不能互相 require）。
-> 改一处必须四处同步，文件头注释里也写了这句。
+> `i18n.js` 在五个原生 JS 插件中各有一份，修改公共行为时须逐仓库核对并重新打包。
 
-设置页统一有：语言下拉 → 使用说明 → 功能项 → **恢复默认** → 页脚（版本 + 仓库链接 + 赞助区块）。
+设置页包括语言下拉、功能项、**恢复默认**及版本/仓库信息；赞助入口另行核对可用性。
 「恢复默认」**刻意保留语言选择** —— 那是关于这一页本身的偏好，不是插件行为。
+
+> **赞助入口核查（2026-09-24）：** Paper Desk、Dense Reading、Quiet Shelf、Reading Rail Sidebar
+> 和 Toolbar Pin Toggle 的设置页均指向 `https://github.com/sponsors/yunmin311`，但公开访问会
+> 重定向到普通个人主页，GitHub API 也没有返回该账号的公开 Sponsors 页面。Zheng Tally 没有设置页
+> 赞助入口；六个源码仓库均没有 `.github/FUNDING.yml`。这只是现状记录，不代表已开通收款，
+> 也不替换为其他收款平台。公开赞助页启用后再核验链接与仓库按钮。
 
 ### Dense Reading 与 dense-reading.css 片段（2026-09-19 退休）
 
@@ -130,9 +140,10 @@
 
 > 快捷键写在本仓库的 `.obsidian/hotkeys.json` 里，随配置一起恢复。
 
-前四个是**纯 JS、无构建依赖**（`main.js` + `styles.css` + `manifest.json` + `i18n.js` / `locales.js` / `sponsor.js`），
-改完重启 Obsidian 即生效；zheng-tally 是 TypeScript 构建，产物在 `dist/`。
-样式全部限定在各自前缀（`rrs-` / `qs-` / `dr-` / `tpt-`）下，不改动任何主题变量。
+除 Zheng Tally 外的五个插件为原生 JavaScript。修改 `i18n.js`、`locales.js` 或 `sponsor.js` 后，
+须先运行 `_scratch/_i18n/bundle-inline.js` 把伴随模块内联进 `main.js`，再运行同步脚本；
+Zheng Tally 则先构建 `dist/`。各插件的样式限定在自己的前缀（`rrs-` / `qs-` / `dr-` /
+`tpt-` / `pd-`）下，不应改变主题或其他插件的文件树行为。
 
 > ⚠️ **Release 资产清单不能写死。** 工作流按 `*.js` 通配收集根目录所有脚本 + `manifest.json` + `styles.css`。
 > 之前写死成三件套，加了 `i18n.js` 后 Release 里少三个文件 —— 从 Release 安装会 `MODULE_NOT_FOUND`，
@@ -214,14 +225,12 @@
 
 ## 新设备恢复顺序
 
-1. 装市场插件（上表「已启用」里的前 13 个，不含 crisp 系列）
+1. 按 `community-plugins.json` 安装对应市场插件（不含 crisp 系列）
 2. 装 BRAT → 添加 crisp 系列 9 个仓库（`letschips/crisp-*`）
 3. 复制 `.obsidian/plugins/*/data.json` 覆盖对应插件设置
-4. 自研插件：从各自的 GitHub Release 下载**全部** `.js` + `manifest.json` + `styles.css`
-   （五个仓库共 6 个文件；`i18n.js` / `locales.js` / `sponsor.js` 缺一不可）放进 `.obsidian/plugins/<id>/`，
-   或在 BRAT 里添加 `yunmin311/<id>-obsidian`；
-   本机则直接 `git clone` 对应仓库后用 `scripts\sync-plugins.ps1` 同步
-   （五个插件的文件也随本仓库备份，见「自研插件」一节）
+4. 自研插件：直接复制本仓库 `.obsidian/plugins/<id>/` 里需要的六个插件目录，或从各自的
+   GitHub Release 下载对应资产放进同名目录；也可以在 BRAT 中添加各插件的独立仓库。
+   从源码仓库安装前须按上节说明完成打包或构建，不要漏掉伴随文件。
 5. 复制 `.obsidian/snippets/`（现为 9 个启用 + 1 个已退休的 `dense-reading.css.retired`）+ `appearance.json`
 6. 主题 Border 在内置主题市场安装，重启 Obsidian
 7. 按「不随仓库备份的配置」补设 Flexplorer、Crisp File Explorer、Crisp Reading Rail

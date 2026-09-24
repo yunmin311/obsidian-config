@@ -26,10 +26,10 @@ Obsidian 外壳配置包：主题、CSS 片段、插件设置与说明文档。*
 | 大 CSS | `baseline-optimized.minimal.active.css` + `border-polished.active.css`（均为 letschips 作品，勿改） |
 | 覆盖片段 | `blue-gray-dark-fix.css`（暖色→蓝灰）、`graph-blue-gray.css`（关系图蓝灰）、`dark-paper-texture.css`（深色纸纹）、`tree-indent.css`（文件树缩进）、`hide-embed-titles.css`、`hide-editing-toolbar.css`、`pin-spacing.css`，自写可改 |
 | 字体 | 界面：方正屏显雅宋简体 · 正文：iA Writer Quattro S · 等宽：Fira Code |
-| 自研插件 | 5 个，**本体整体入库**：`toolbar-pin-toggle` · `quiet-shelf` · `reading-rail-sidebar` · `dense-reading` · `zheng-tally`（详见下节） |
-| 第三方插件 | 已装 28 个：21 个启用 + 9 个未启用（含 crisp 系列、dense-reading、zheng-tally）；详见 [docs/plugins.md](docs/plugins.md) |
+| 自研插件 | 6 个，**本体整体入库**：`toolbar-pin-toggle` · `quiet-shelf` · `reading-rail-sidebar` · `dense-reading` · `zheng-tally` · `paper-desk`（详见下节） |
+| 第三方插件 | 配置与安装方式见 [docs/plugins.md](docs/plugins.md)；启用清单以 `.obsidian/community-plugins.json` 为准 |
 
-### 五个自研插件
+### 六个自研插件
 
 | 插件 | 版本 | 作用 |
 |---|---|---|
@@ -38,9 +38,12 @@ Obsidian 外壳配置包：主题、CSS 片段、插件设置与说明文档。*
 | `reading-rail-sidebar`（轨道） | 0.2.2 | 右侧栏阅读面板 + 正文右侧浮层刻度条（文本密度驱动） |
 | `dense-reading` | 0.2.2 | 行宽档位 + 密集阅读模式（原 `dense-reading.css` 片段转成的插件） |
 | `zheng-tally`（正） | 1.0.5 | 内联「正」字计数芯片，编辑/阅读双视图渲染 |
+| `paper-desk` | 0.4.0 | 笔记时钟、侧栏计时器，以及可选的首页行为与区块 |
 
-全部发布在 GitHub 上的独立公开仓库（`yunmin311/<id>-obsidian`），可从 Obsidian 社区插件市场安装。
-本地三处副本（源码仓库 / vault / 本仓库）由 [scripts/sync-plugins.ps1](scripts/sync-plugins.ps1) 统一同步。
+六个插件各有独立的公开源码仓库与 GitHub Release。前五个已在 Obsidian 社区目录；
+`paper-desk` 目前需从 GitHub Release 手动安装（2026-09-24 核对）。
+源码仓库是唯一修改处。[scripts/sync-plugins.ps1](scripts/sync-plugins.ps1) 把构建好的文件同步到 vault、
+本仓库和演示 vault，并逐字节校验；它不覆盖各处的 `data.json`。
 
 > **`dense-reading` 已从 CSS 片段转为插件。** 片段文件与类名保留（`dense-w44` … `dense-w-custom`、
 > `dense-reading-mode`），所以迁移是无缝的；但推荐用插件，因为它有设置界面且能按笔记记住档位。
@@ -50,13 +53,13 @@ Obsidian 外壳配置包：主题、CSS 片段、插件设置与说明文档。*
 ```
 .obsidian/
   appearance.json        主题 + 启用的 CSS 片段 + 字体
-  community-plugins.json 已启用插件清单（21 个）
+  community-plugins.json 已启用插件清单
   graph.json             关系图配色
   hotkeys.json           快捷键
   snippets/              CSS 片段（见 docs/css-guide.md）
   plugins/<第三方>/data.json      各插件设置（见 docs/plugins.md）
-  plugins/<自研插件>/             5 个自研插件本体，整体入库
-                                 ↑ 含 vault 路径的三个插件配置不入库，见 docs/plugins.md
+  plugins/<自研插件>/             6 个自研插件本体，整体入库
+                                 ↑ 含 vault 路径的运行时配置不入库，见 docs/plugins.md
 docs/
   css-guide.md           CSS 外壳怎么改（逐文件说明）+ 深色蓝灰色板定稿
   plugins.md             插件设置方式 + 来源链接 + 不随仓库备份的配置清单
@@ -94,8 +97,8 @@ LICENSE                  MIT
 1. 装市场插件（清单见 [docs/plugins.md](docs/plugins.md)）。
 2. 装 BRAT → 逐一添加需要的 crisp 系列仓库（`letschips/crisp-*`）。
 3. 复制 `.obsidian/plugins/*/data.json` 覆盖对应插件设置（或直接跑 install.ps1）。
-4. 复制 **5 个自研插件目录**（`toolbar-pin-toggle/`、`quiet-shelf/`、`reading-rail-sidebar/`、
-   `dense-reading/`、`zheng-tally/`）—— 这些含本体，复制过去即可用。
+4. 复制 **6 个自研插件目录**（`toolbar-pin-toggle/`、`quiet-shelf/`、`reading-rail-sidebar/`、
+   `dense-reading/`、`zheng-tally/`、`paper-desk/`）—— 这些含本体，复制过去即可用。
 5. 复制 `snippets/` + `appearance.json`。
 6. 主题 Border 在内置主题市场安装，重启 Obsidian。
 
