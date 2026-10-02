@@ -33,7 +33,7 @@
 | Crisp Recall | 0.2.4 | 主动回忆 / 挖空复习 | letschips（BRAT） |
 | Crisp Visual | 0.2.2 | 视觉资产画廊 | letschips（BRAT） |
 | **Toolbar Pin Toggle** | 1.1.2 | 自研，见下 | 本地 |
-| **Reading Rail Sidebar** | 0.2.2 | 自研，见下 | 本地 |
+| **Reading Rail Sidebar** | 0.2.3 | 自研，见下 | 本地 |
 | **Quiet Shelf**（暗格） | 0.3.1 | 自研，见下 | 本地 |
 | **Dense Reading**（密排阅读） | 0.2.2 | 自研，见下 | 本地 |
 | **Zheng Tally**（正字计数） | 1.0.5 | 自研，见下 | 本地 |

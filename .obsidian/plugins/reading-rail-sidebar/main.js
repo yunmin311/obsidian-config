@@ -1037,6 +1037,14 @@ class ReadingRailSidebarPlugin extends Plugin {
     this.registerEvent(
       this.app.workspace.on("layout-change", () => this.refreshTicks())
     );
+    // Obsidian may change a Markdown view's mode without changing the active leaf.
+    // Compare only the active view/mode here; do not repaint on every interval.
+    this.registerInterval(window.setInterval(() => {
+      const view = this.app.workspace.getActiveViewOfType(MarkdownView);
+      if (view && (view !== this.ticksView || view.getMode() !== this.ticksMode)) {
+        this.refreshTicks();
+      }
+    }, 500));
   }
 
   /** 找到当前 Markdown 视图与它的 scroller，必要时重挂刻度条 */
@@ -1053,10 +1061,14 @@ class ReadingRailSidebarPlugin extends Plugin {
 
     let scroller = null;
     try {
-      scroller =
-        view.getMode && view.getMode() === "preview"
-          ? view.previewMode.containerEl.querySelector(".markdown-preview-view")
-          : view.containerEl.querySelector(".cm-scroller");
+      if (view.getMode && view.getMode() === "preview") {
+        const preview = view.previewMode && view.previewMode.containerEl;
+        scroller = preview && (preview.matches(".markdown-preview-view")
+          ? preview : preview.querySelector(".markdown-preview-view"));
+        if (!scroller) scroller = view.containerEl.querySelector(".markdown-preview-view");
+      } else {
+        scroller = view.containerEl.querySelector(".cm-scroller");
+      }
     } catch (e) {
       scroller = null;
     }
@@ -1074,6 +1086,8 @@ class ReadingRailSidebarPlugin extends Plugin {
     this.teardownTicks();
     this.ticksHost = host;
     this.ticksScroller = scroller;
+    this.ticksView = view;
+    this.ticksMode = view.getMode && view.getMode();
 
     const el = createDiv();
     el.className = "rrs-ticks";
@@ -1141,8 +1155,8 @@ class ReadingRailSidebarPlugin extends Plugin {
     // 刻度越密，峰也要越宽，否则会碎成锯齿（试过固定 3 点均值，密了还是锯齿）。
     const sums = this.smoothDensity(raw, Math.max(1.2, count / 22));
 
-    // 归一化端点取 p8 / p92，不是 min / max —— 一个超长块会把整条曲线压平
-    // （其余刻度全挤在最矮那档，等于没有峰谷），掐掉两端离群值后起伏才拉得开。
+    // p8 / p92 保留同一篇内部的峰谷；再混入固定密度标尺，
+    // 避免整篇都稀疏和整篇都密集时被各自归一化成同样的长度。
     const sorted = sums.slice().sort((a, b) => a - b);
     const lo = sorted[Math.min(sorted.length - 1, Math.floor(sorted.length * 0.08))];
     const hi = sorted[Math.min(sorted.length - 1, Math.floor(sorted.length * 0.92))];
@@ -1154,8 +1168,9 @@ class ReadingRailSidebarPlugin extends Plugin {
     const MAX_W = 28; // 最密处（原 34，qy 要求整体缩短）
 
     for (let i = 0; i < count; i++) {
-      let t = (sums[i] - lo) / span;
-      t = Math.max(0, Math.min(1, t));
+      const local = Math.max(0, Math.min(1, (sums[i] - lo) / span));
+      const absolute = 1 - Math.exp(-Math.max(0, sums[i]) / 5);
+      let t = 0.45 * local + 0.55 * absolute;
       // gamma 0.85：把中段略微抬高。1.0 时矮处几乎全平看不出起伏，
       // 试过 0.6 又会让大片刻度顶到最长，反而糊成一片。
       t = Math.pow(t, 0.85);
@@ -1446,6 +1461,8 @@ class ReadingRailSidebarPlugin extends Plugin {
     }
     this.ticksHost = null;
     this.ticksScroller = null;
+    this.ticksView = null;
+    this.ticksMode = null;
     this.ticksFilePath = null;
     this.densityKey = null;
     this.densityCache = null;
