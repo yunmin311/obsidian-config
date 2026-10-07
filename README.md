@@ -38,7 +38,7 @@ Obsidian 外壳配置包：主题、CSS 片段、插件设置与说明文档。*
 | `reading-rail-sidebar`（轨道） | 0.2.3 | 右侧栏阅读面板 + 阅读/编辑模式刻度条（固定密度标尺与局部峰谷共同驱动） |
 | `dense-reading` | 0.2.2 | 行宽档位 + 密集阅读模式（原 `dense-reading.css` 片段转成的插件） |
 | `zheng-tally`（正） | 1.0.5 | 内联「正」字计数芯片，编辑/阅读双视图渲染 |
-| `paper-desk` | 0.5.0 | 笔记时钟、侧栏计时器，以及可选的首页行为与区块 |
+| `paper-desk` | 0.5.1 | 笔记时钟、侧栏计时器，以及可选的首页行为与区块 |
 
 六个插件各有独立的公开源码仓库与 GitHub Release。前五个已在 Obsidian 社区目录；
 `paper-desk` 目前需从 GitHub Release 手动安装（2026-09-24 核对）。

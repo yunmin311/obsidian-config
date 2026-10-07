@@ -17,9 +17,9 @@
 | Toolbar Pin Toggle | 1.1.2 | 1.1.2 | 无 |
 | Dense Reading | 0.2.2 | 0.2.2 | 无 |
 | Zheng Tally | 1.0.5 | 1.0.5 | 无 |
-| Paper Desk | 0.5.0 + 本地后续修复 | 0.5.0 | 当前现用代码已纳入本次配置备份 |
+| Paper Desk | 0.5.1 | 0.5.1 | 已发布并同步 |
 
-Paper Desk 后续修复尚未作为独立插件新版本发布；本次推送只更新配置仓库，不代表其源码仓库或 Release 已更新。已废弃的 `ym-homepage` 不纳入同步或安装。
+首次配置备份后，Paper Desk 后续修复已正式发布为 [0.5.1](https://github.com/yunmin311/paper-desk-obsidian/releases/tag/0.5.1)，源码与标签已推送。发布流程成功，重新下载的六件资产与本地逐字节一致，vault/config/demo 已同步，用户 `data.json` 保持不变。已废弃的 `ym-homepage` 不纳入同步或安装。
 
 ## 验证范围
 
