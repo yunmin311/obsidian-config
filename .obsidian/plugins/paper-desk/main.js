@@ -184,6 +184,19 @@ const OWN = {
     "settings.threadCount.desc": "显示 1–4 条，默认 3 条。",
     "settings.threadExcludes.name": "最近线索排除路径",
     "settings.threadExcludes.desc": "每行一个文件夹路径前缀；隐藏文件夹、首页和库根笔记会自动排除。",
+    "settings.pins.heading": "常驻固定入口",
+    "settings.pins.desc": "下方每条对应首页固定入口的一行：左侧分类、右侧笔记名称均可编辑，离开输入框后自动保存。新选笔记会带入分类与名称，可继续修改或清空。首页使用空的 home-pins 代码块读取这些设置；home-threads 是自动最近线索，不受这里控制。代码块已有内容时以代码块为准。",
+    "settings.pins.choose": "选择笔记",
+    "settings.pins.search": "搜索笔记名称或路径（最多显示 100 条）",
+    "settings.pins.noMatches": "没有匹配的笔记",
+    "settings.pins.area": "左侧分类（可选）",
+    "settings.pins.title": "显示名称（可选）",
+    "settings.pins.unselected": "尚未选择笔记，此条暂不显示",
+    "settings.pins.missing": "笔记已移动或不存在，请重新选择；首页暂不显示此条。",
+    "settings.pins.up": "上移",
+    "settings.pins.down": "下移",
+    "settings.pins.remove": "移除入口",
+    "settings.pins.add": "添加固定入口",
 
     "settings.note.heading": "首页手写句",
     "settings.note.desc":
@@ -356,6 +369,19 @@ const OWN = {
     "settings.threadCount.desc": "Show 1–4 threads; the default is 3.",
     "settings.threadExcludes.name": "Paths excluded from recent threads",
     "settings.threadExcludes.desc": "One folder-path prefix per line. Hidden folders, the homepage, and vault-root notes are excluded automatically.",
+    "settings.pins.heading": "Pinned note entries",
+    "settings.pins.desc": "Each entry below is one homepage row: edit its left category and right note name. Changes save when you leave the field. Choosing a new note fills in editable category and name values. An empty home-pins block reads these settings; home-threads shows automatic recent notes and is not controlled here. Non-empty block content takes priority.",
+    "settings.pins.choose": "Choose note",
+    "settings.pins.search": "Search note names or paths (up to 100 results)",
+    "settings.pins.noMatches": "No matching notes",
+    "settings.pins.area": "Left category (optional)",
+    "settings.pins.title": "Display name (optional)",
+    "settings.pins.unselected": "No note selected; this entry is not displayed yet",
+    "settings.pins.missing": "This note moved or no longer exists. Choose it again; the entry is hidden for now.",
+    "settings.pins.up": "Move up",
+    "settings.pins.down": "Move down",
+    "settings.pins.remove": "Remove entry",
+    "settings.pins.add": "Add pinned entry",
 
     "settings.note.heading": "Homepage line",
     "settings.note.desc":
@@ -621,6 +647,7 @@ const DEFAULTS = {
   showActionFixed: false,
   fixedActionLabel: "",
   fixedActionPath: "",
+  pinnedEntries: [],
   showBrief: true,
   briefOutline: true,
   actionsOutline: true,
@@ -1488,15 +1515,27 @@ class PinsBlock extends MarkdownRenderChild {
   }
 
   onload() {
-    const items = parsePinnedLinks(this.source);
+    // Explicit source remains authoritative, even if it only contains comments.
+    const configured = !String(this.source || "").trim();
+    const entries = Array.isArray(this.plugin.settings.pinnedEntries) ? this.plugin.settings.pinnedEntries : [];
+    const items = configured ? entries.flatMap((entry) => {
+      if (!entry || typeof entry.path !== "string" || !entry.path.trim()) return [];
+      const file = this.plugin.app.vault.getAbstractFileByPath(entry.path.trim());
+      if (!file || file.extension !== "md") return [];
+      return [{ path: file.path, area: String(entry.area || "").trim(),
+        title: String(entry.title || "").trim() || file.basename }];
+    }) : parsePinnedLinks(this.source);
     if (!items.length) return;
-    const root = this.containerEl.createDiv({ cls: CSS_PREFIX + "pins" });
+    const root = this.containerEl.createDiv({ cls: CSS_PREFIX + (configured ? "pins-list" : "pins") });
     for (const item of items) {
-      const link = root.createEl("a", {
-        cls: CSS_PREFIX + "pin",
+      const row = configured ? root.createDiv({ cls: CSS_PREFIX + "pin-row" }) : root;
+      if (configured) row.createSpan({ cls: CSS_PREFIX + "pin-area", text: item.area });
+      const link = row.createEl("a", {
+        cls: CSS_PREFIX + (configured ? "pin-link" : "pin"),
         text: item.title,
         href: item.path,
       });
+      link.setAttribute("title", item.title);
       link.onclick = (event) => {
         event.preventDefault();
         this.plugin.app.workspace.openLinkText(item.path, "", false);
@@ -1619,6 +1658,112 @@ class PomodoroView extends ItemView {
 /* ============================ 设置页 ============================ */
 
 /** 只读 vault 文件树并保存本插件的路径列表，不调用文件树插件的任何 API。 */
+class PinFilePicker extends Modal {
+  constructor(app, plugin, onChoose) {
+    super(app);
+    this.plugin = plugin;
+    this.onChoose = onChoose;
+  }
+  onOpen() {
+    const t = (key) => this.plugin.i18n.t(key);
+    this.contentEl.createEl("h3", { text: t("settings.pins.choose") });
+    const search = this.contentEl.createEl("input", { cls: CSS_PREFIX + "pins-search", type: "search" });
+    search.placeholder = t("settings.pins.search");
+    search.setAttribute("aria-label", t("settings.pins.search"));
+    const results = this.contentEl.createDiv({ cls: CSS_PREFIX + "pins-results" });
+    const draw = () => {
+      results.empty();
+      const query = String(search.value || "").trim().toLocaleLowerCase();
+      const files = this.app.vault.getMarkdownFiles()
+        .filter((file) => file.path.toLocaleLowerCase().includes(query))
+        .sort((a, b) => a.path.localeCompare(b.path));
+      if (!files.length) results.createDiv({ text: t("settings.pins.noMatches") });
+      for (const file of files.slice(0, 100)) {
+        const button = results.createEl("button", { cls: CSS_PREFIX + "pins-result", text: file.path });
+        button.addEventListener("click", async () => {
+          await this.onChoose(file);
+          this.close();
+        });
+      }
+    };
+    search.addEventListener("input", draw);
+    draw();
+  }
+  onClose() { this.contentEl.empty(); }
+}
+
+// Only this editor's own container and Paper Desk settings are updated.
+function renderPinnedSettings(containerEl, plugin) {
+  const t = (key) => plugin.i18n.t(key);
+  const entries = (Array.isArray(plugin.settings.pinnedEntries) ? plugin.settings.pinnedEntries : [])
+    .filter((entry) => entry && typeof entry === "object")
+    .map((entry) => ({ path: String(entry.path || ""), area: String(entry.area || ""), title: String(entry.title || "") }));
+  const persist = async (redraw = false) => {
+    plugin.settings.pinnedEntries = entries;
+    await plugin.save();
+    plugin.refreshBlocks();
+    if (redraw) renderPinnedSettings(containerEl, plugin);
+  };
+  const button = (parent, cls, label, action) => {
+    const el = parent.createEl("button", { cls: CSS_PREFIX + cls, text: label });
+    el.setAttribute("type", "button");
+    el.addEventListener("click", action);
+    return el;
+  };
+  containerEl.empty();
+  containerEl.addClass(CSS_PREFIX + "pins-editor");
+  containerEl.createEl("h4", { text: t("settings.pins.heading") });
+  containerEl.createDiv({ cls: CSS_PREFIX + "setting-note", text: t("settings.pins.desc") });
+  for (const [index, entry] of entries.entries()) {
+    const row = containerEl.createDiv({ cls: CSS_PREFIX + "pins-edit-row" });
+    const fields = row.createDiv({ cls: CSS_PREFIX + "pins-fields" });
+    const field = (key, cls, label) => {
+      const wrap = fields.createEl("label");
+      wrap.createSpan({ text: label });
+      const input = wrap.createEl("input", { cls: CSS_PREFIX + cls, type: "text" });
+      input.value = entry[key];
+      if (key === "title") input.placeholder = plugin.app.vault.getAbstractFileByPath(entry.path)?.basename || "";
+      input.addEventListener("change", async () => { entry[key] = input.value.trim(); await persist(); });
+    };
+    field("area", "pins-area-input", t("settings.pins.area"));
+    field("title", "pins-title-input", t("settings.pins.title"));
+    row.createDiv({ cls: CSS_PREFIX + "pins-path", text: entry.path || t("settings.pins.unselected") });
+    if (entry.path && !plugin.app.vault.getAbstractFileByPath(entry.path)) {
+      row.createDiv({ cls: CSS_PREFIX + "setting-note", text: t("settings.pins.missing") });
+    }
+    const controls = row.createDiv({ cls: CSS_PREFIX + "pins-controls" });
+    button(controls, "pins-choose", t("settings.pins.choose"), () => {
+      new PinFilePicker(plugin.app, plugin, async (file) => {
+        const firstSelection = !entry.path;
+        entry.path = file.path;
+        if (firstSelection) {
+          if (!entry.area && file.path.includes("/")) entry.area = file.path.split("/")[0];
+          if (!entry.title) entry.title = file.basename;
+        }
+        await persist(true);
+      }).open();
+    });
+    button(controls, "pins-up", t("settings.pins.up"), async () => {
+      if (index === 0) return;
+      [entries[index - 1], entries[index]] = [entries[index], entries[index - 1]];
+      await persist(true);
+    }).disabled = index === 0;
+    button(controls, "pins-down", t("settings.pins.down"), async () => {
+      if (index === entries.length - 1) return;
+      [entries[index + 1], entries[index]] = [entries[index], entries[index + 1]];
+      await persist(true);
+    }).disabled = index === entries.length - 1;
+    button(controls, "pins-remove", t("settings.pins.remove"), async () => {
+      entries.splice(index, 1);
+      await persist(true);
+    });
+  }
+  button(containerEl, "pins-add", t("settings.pins.add"), async () => {
+    entries.push({ path: "", area: "", title: "" });
+    await persist(true);
+  });
+}
+
 class PreviewPathsModal extends Modal {
   constructor(app, plugin, onSaved) {
     super(app);
@@ -1931,6 +2076,8 @@ class PaperDeskSettingTab extends PluginSettingTab {
         });
         txt.inputEl.rows = 3;
       });
+
+    renderPinnedSettings(containerEl.createDiv(), this.plugin);
 
     /* ---- 首页手写句 ---- */
     containerEl.createEl("h3", { text: t("settings.note.heading") });
@@ -2349,6 +2496,7 @@ class PaperDeskPlugin extends Plugin {
     for (const leaf of this.app.workspace.getLeavesOfType("markdown")) {
       if (leaf.view && leaf.view.containerEl) {
         leaf.view.containerEl.classList.remove(CSS_PREFIX + "is-home");
+        leaf.view.containerEl.classList.remove(CSS_PREFIX + "home-layout");
       }
       if (leaf.tabHeaderEl) {
         leaf.tabHeaderEl.classList.remove(CSS_PREFIX + "is-home-tab");
@@ -2478,6 +2626,7 @@ class PaperDeskPlugin extends Plugin {
       const view = leaf.view;
       if (!view || !view.containerEl) continue;
       const isHome = !!home && !!view.file && isHomePath(home, view.file.path);
+      view.containerEl.classList.toggle(CSS_PREFIX + "home-layout", isHome);
       view.containerEl.classList.toggle(
         CSS_PREFIX + "is-home",
         !!this.settings.hideTitle && isHome
@@ -2502,7 +2651,7 @@ class PaperDeskPlugin extends Plugin {
     });
   }
 
-  /** Obsidian 的标签条和视图标题各自居中；主题可能让两者的可用宽度不同。
+  /** 以首页视图中心为基准，不依赖 Obsidian 的文件名默认对齐方式。
       只在首页独占一个标签组时移动这一枚标签，不碰兄弟标签的布局。 */
   alignHomeTabTitle() {
     const home = String(this.settings.homePath || "").trim();
@@ -2514,12 +2663,12 @@ class PaperDeskPlugin extends Plugin {
       tab.style.removeProperty("--pd-home-tab-offset");
       if (!leaf.parent || leaf.parent.children.length !== 1) continue;
       const tabTitle = leaf.tabHeaderInnerTitleEl;
-      const viewTitle = view.containerEl && view.containerEl.querySelector(".view-header-title");
-      if (!tabTitle || !viewTitle ||
+      const pane = view.containerEl;
+      if (!tabTitle || !pane ||
           typeof tabTitle.getBoundingClientRect !== "function" ||
-          typeof viewTitle.getBoundingClientRect !== "function") continue;
+          typeof pane.getBoundingClientRect !== "function") continue;
       const tabRect = tabTitle.getBoundingClientRect();
-      const viewRect = viewTitle.getBoundingClientRect();
+      const viewRect = pane.getBoundingClientRect();
       const offset = Math.round((viewRect.left + viewRect.right - tabRect.left - tabRect.right) / 2);
       if (Number.isFinite(offset)) tab.style.setProperty("--pd-home-tab-offset", offset + "px");
     }

@@ -11,6 +11,7 @@
 | `pin-spacing.css` | 文件树 pin 图标间距：文件 12px、文件夹 8px | 自写 | ✅ 只改数值 |
 | `hide-editing-toolbar.css` | 带 `no-editing-toolbar` 标签的笔记隐藏顶部编辑工具条 | 自写 | ✅ 只加选择器 |
 | `hide-embed-titles.css` | 隐藏嵌入文件（图片等）的标题 | 自写 | ✅ |
+| `border-1.14-compat.css` | 兼容 Obsidian 1.14 的主图标栏类名，保留底层材质；沿用 Border 自动隐藏开关，文件树收起时不占宽，左边缘悬停或键盘聚焦唤出 | 自写 | ✅ 仅兼容规则，不修改主题原文件 |
 
 > **启用顺序重要**：`blue-gray-dark-fix` 和 `graph-blue-gray` 必须排在两个 letschips 文件之后（当前 appearance.json 已排好），靠加载顺序完成覆盖。
 >

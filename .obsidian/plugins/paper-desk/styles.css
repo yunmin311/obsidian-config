@@ -148,6 +148,30 @@
 
 /* 首页保留原生标签标题与关闭按钮，但标题的中心不再被右侧按钮挤偏。
    只标记首页对应的 tabHeaderEl，绝不改变其他标签页。 */
+.pd-home-layout .view-header {
+  position: relative;
+}
+
+/* Obsidian 1.14 默认靠左；首页始终以完整视图的中心为准。
+   给两侧原生导航和动作留出空间，不改变其他笔记的标题。 */
+.pd-home-layout .view-header-title-container {
+  --file-header-justify: center;
+  position: absolute;
+  left: 50%;
+  right: auto;
+  top: 0;
+  bottom: 0;
+  width: fit-content;
+  max-width: calc(100% - 10rem);
+  transform: translateX(-50%);
+  justify-content: center;
+}
+
+/* The centered title is out of flex flow; retain the native right action edge. */
+.pd-home-layout .view-header > .view-actions {
+  margin-inline-start: auto;
+}
+
 .pd-is-home-tab {
   translate: var(--pd-home-tab-offset, 0px) 0;
 }
@@ -434,12 +458,14 @@
 }
 
 /* 最近线索放在首屏之后；它是回访用的索引，不与时钟争首屏。 */
-.pd-threads {
+.pd-threads,
+.pd-pins-list {
   width: min(35rem, calc(100% - 3rem));
   margin: clamp(7rem, 20vh, 13rem) auto 0;
 }
 
-.pd-thread {
+.pd-thread,
+.pd-pin-row {
   display: grid;
   grid-template-columns: 8.5rem minmax(0, 1fr);
   gap: 1rem;
@@ -448,7 +474,8 @@
   line-height: 1.5;
 }
 
-.pd-thread-area {
+.pd-thread-area,
+.pd-pin-area {
   overflow: hidden;
   color: var(--text-faint);
   font-size: var(--font-ui-smaller, 0.78rem);
@@ -457,7 +484,8 @@
   white-space: nowrap;
 }
 
-.pd-thread-link {
+.pd-thread-link,
+.pd-pin-link {
   overflow: hidden;
   color: var(--text-muted);
   font-size: 0.9rem;
@@ -466,10 +494,53 @@
   white-space: nowrap;
 }
 
-.pd-thread-link:hover {
+.pd-thread-link:hover,
+.pd-pin-link:hover {
   color: var(--text-normal);
   text-decoration: underline;
   text-underline-offset: 0.25em;
+}
+
+/* Settings and picker styles are confined to Paper Desk-owned elements. */
+.pd-pins-editor { margin-block: 1.5rem; }
+.pd-pins-edit-row {
+  padding-block: 1rem;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+.pd-pins-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.pd-pins-fields label {
+  display: flex;
+  flex: 1 1 10rem;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.4rem;
+  color: var(--text-muted);
+  font-size: var(--font-ui-small);
+}
+.pd-pins-fields input { width: 100%; }
+.pd-pins-path {
+  margin-block: 0.65rem;
+  overflow-wrap: anywhere;
+  color: var(--text-muted);
+  font-size: var(--font-ui-small);
+}
+.pd-pins-controls { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.pd-pins-add { margin-top: 1rem; }
+.pd-pins-search { width: 100%; margin-bottom: 0.75rem; }
+.pd-pins-results { max-height: 50vh; overflow-y: auto; }
+.pd-pins-results .pd-pins-result {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-block: 0.25rem;
+  padding: 0.65rem;
+  text-align: start;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 /* ---- 手写句 ---- */
@@ -574,11 +645,13 @@
   }
 
   .pd-brief,
-  .pd-threads {
+  .pd-threads,
+  .pd-pins-list {
     width: calc(100% - 1rem);
   }
 
-  .pd-thread {
+  .pd-thread,
+  .pd-pin-row {
     grid-template-columns: 5.5rem minmax(0, 1fr);
     gap: 0.75rem;
   }

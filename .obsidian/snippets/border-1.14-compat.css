@@ -1,0 +1,84 @@
+/* Border 1.13.7 + Obsidian 1.14 compatibility.
+   Obsidian renamed the primary ribbon from mod-left to mod-primary.
+   Keep Border's existing Style Settings switch, widths and hover behavior.
+   This separate snippet leaves the upstream theme unchanged. */
+
+/* Closing the file tree adds is-collapsed. Native 1.14 paints an opaque
+   background here; Border's transparent override still targets mod-left.
+   Let the existing underlying texture show through, without duplicating it. */
+body:not(.is-mobile)
+  .workspace-ribbon.side-dock-ribbon.mod-primary.is-collapsed {
+  background-color: transparent;
+}
+
+body:not(.is-mobile).Ribbon-autohide.show-ribbon
+  .workspace-ribbon.side-dock-ribbon.mod-primary {
+  --ribbon-width: 16px;
+  transition: all var(--anim-out);
+}
+
+body:not(.is-mobile).Ribbon-autohide.show-ribbon
+  .workspace-ribbon.side-dock-ribbon.mod-primary:hover {
+  --ribbon-width: 44px;
+  transition: all var(--anim-in);
+}
+
+body:not(.is-mobile).Ribbon-autohide.show-ribbon
+  .workspace-ribbon.side-dock-ribbon.mod-primary > * {
+  opacity: 0;
+  transition: all var(--anim-out);
+}
+
+body:not(.is-mobile).Ribbon-autohide.show-ribbon
+  .workspace-ribbon.side-dock-ribbon.mod-primary:hover > * {
+  opacity: 1;
+  transition: all var(--anim-in);
+}
+
+/* Border normally reserves 16px. With the file tree closed, reserve none;
+   a transparent edge target keeps hover access without moving note content. */
+body:not(.is-mobile).Ribbon-autohide.show-ribbon
+  .workspace-ribbon.side-dock-ribbon.mod-primary.is-collapsed {
+  position: relative;
+  overflow: visible;
+}
+
+body:not(.is-mobile).Ribbon-autohide.show-ribbon
+  .workspace-ribbon.side-dock-ribbon.mod-primary.is-collapsed:not(:hover):not(:focus-within) {
+  --ribbon-width: 0px;
+  padding-inline: 0;
+  border-inline-end-width: 0;
+}
+
+body:not(.is-mobile).Ribbon-autohide.show-ribbon
+  .workspace-ribbon.side-dock-ribbon.mod-primary.is-collapsed::before {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  width: 4px;
+  height: 100%;
+  background: transparent;
+  border: none;
+  pointer-events: auto;
+}
+
+body:not(.is-mobile).Ribbon-autohide.show-ribbon
+  .workspace-ribbon.side-dock-ribbon.mod-primary.is-collapsed:not(:hover):not(:focus-within) > * {
+  pointer-events: none;
+}
+
+body:not(.is-mobile).Ribbon-autohide.show-ribbon
+  .workspace-ribbon.side-dock-ribbon.mod-primary.is-collapsed:focus-within {
+  --ribbon-width: 44px;
+}
+
+body:not(.is-mobile).Ribbon-autohide.show-ribbon
+  .workspace-ribbon.side-dock-ribbon.mod-primary.is-collapsed:focus-within > * {
+  opacity: 1;
+}
+
+body:not(.is-mobile).Ribbon-autohide.show-ribbon
+  .workspace:has(> .workspace-ribbon.side-dock-ribbon.mod-primary.is-collapsed:not(:hover):not(:focus-within))::before {
+  width: 100%;
+}
