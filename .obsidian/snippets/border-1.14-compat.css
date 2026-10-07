@@ -11,6 +11,14 @@ body:not(.is-mobile)
   background-color: transparent;
 }
 
+/* Match Border's old mod-left title-bar cap styling, but preserve its native
+   height and drag behavior. Never reuse this draggable cap as a hover target. */
+body:not(.is-mobile)
+  .workspace-ribbon.side-dock-ribbon.mod-primary::before {
+  background-color: transparent;
+  border-bottom-color: transparent;
+}
+
 body:not(.is-mobile).Ribbon-autohide.show-ribbon
   .workspace-ribbon.side-dock-ribbon.mod-primary {
   --ribbon-width: 16px;
@@ -35,39 +43,7 @@ body:not(.is-mobile).Ribbon-autohide.show-ribbon
   transition: all var(--anim-in);
 }
 
-/* Border normally reserves 16px. With the file tree closed, reserve none;
-   a transparent edge target keeps hover access without moving note content. */
-body:not(.is-mobile).Ribbon-autohide.show-ribbon
-  .workspace-ribbon.side-dock-ribbon.mod-primary.is-collapsed {
-  position: relative;
-  overflow: visible;
-}
-
-body:not(.is-mobile).Ribbon-autohide.show-ribbon
-  .workspace-ribbon.side-dock-ribbon.mod-primary.is-collapsed:not(:hover):not(:focus-within) {
-  --ribbon-width: 0px;
-  padding-inline: 0;
-  border-inline-end-width: 0;
-}
-
-body:not(.is-mobile).Ribbon-autohide.show-ribbon
-  .workspace-ribbon.side-dock-ribbon.mod-primary.is-collapsed::before {
-  content: "";
-  position: absolute;
-  inset-block: 0;
-  inset-inline-start: 0;
-  width: 4px;
-  height: 100%;
-  background: transparent;
-  border: none;
-  pointer-events: auto;
-}
-
-body:not(.is-mobile).Ribbon-autohide.show-ribbon
-  .workspace-ribbon.side-dock-ribbon.mod-primary.is-collapsed:not(:hover):not(:focus-within) > * {
-  pointer-events: none;
-}
-
+/* Keep Border's real 16px hover area. Keyboard focus can reveal it too. */
 body:not(.is-mobile).Ribbon-autohide.show-ribbon
   .workspace-ribbon.side-dock-ribbon.mod-primary.is-collapsed:focus-within {
   --ribbon-width: 44px;
@@ -76,9 +52,4 @@ body:not(.is-mobile).Ribbon-autohide.show-ribbon
 body:not(.is-mobile).Ribbon-autohide.show-ribbon
   .workspace-ribbon.side-dock-ribbon.mod-primary.is-collapsed:focus-within > * {
   opacity: 1;
-}
-
-body:not(.is-mobile).Ribbon-autohide.show-ribbon
-  .workspace:has(> .workspace-ribbon.side-dock-ribbon.mod-primary.is-collapsed:not(:hover):not(:focus-within))::before {
-  width: 100%;
 }
