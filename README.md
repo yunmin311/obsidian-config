@@ -79,6 +79,17 @@ LICENSE                  MIT
 
 ## 新设备恢复方法
 
+### 可选：纸质 PDF 导出
+
+纸纹导出不随普通安装自动开启。页边距 None 只需在当前 vault 选一次，Obsidian 会记住；
+新设备可使用独立工具只恢复这一字段，不覆盖整份 `app.json`。
+启用、撤销、字体依赖和分页边界见 [纸质 PDF 导出说明](docs/print-paper.md)。
+现已包含可选的 `print-paper.css` 和 [Native PDF Theme Bridge 0.2.0](https://github.com/yunmin311/native-pdf-theme-bridge/releases/tag/0.2.0)：保留原生导出流程，
+配色跟随 Obsidian，双语设置页可调整每页四边留白（默认各 12 mm）。已验证当前 Border 配置的 A4/A5 浅深色共 182 页；不等于所有主题、纸张均通过。
+这两项不默认开启；桥接插件是上述六个插件之外的独立可选项目，需按说明手动复制并启用，尚未进入社区插件市场。
+
+### 常规配置安装
+
 **方式一：一键脚本（Windows）**
 
 ```powershell

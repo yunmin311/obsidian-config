@@ -1,0 +1,10 @@
+{
+  "id": "native-pdf-theme-bridge",
+  "name": "Native PDF Theme Bridge",
+  "version": "0.2.0",
+  "minAppVersion": "1.9.0",
+  "description": "Keep the current reading palette in native PDF exports. 保留原生 PDF 导出，并沿用当前阅读配色。",
+  "author": "yunmin311",
+  "authorUrl": "https://github.com/yunmin311",
+  "isDesktopOnly": true
+}

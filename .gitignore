@@ -73,6 +73,10 @@
 !.obsidian/plugins/paper-desk/
 !.obsidian/plugins/paper-desk/**
 
+# 可选的原生 PDF 配色桥接；独立发布，不默认启用。
+!.obsidian/plugins/native-pdf-theme-bridge/
+!.obsidian/plugins/native-pdf-theme-bridge/**
+
 # 大文件 / 敏感信息
 *.zip
 *.rar
