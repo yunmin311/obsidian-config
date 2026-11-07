@@ -131,10 +131,10 @@ const OWN = {
     "settings.homePath.desc":
       "从库根目录算起的完整路径，要带 .md。留空会关掉首页的打开、藏标题与阅读模式；下方单独选择的默认阅读笔记不受影响。",
     "settings.openOnStartup.name": "启动时打开",
-    "settings.openOnStartup.desc": "Obsidian 启动后自动打开上面那篇笔记。",
-    "settings.openMode.name": "打开方式",
+    "settings.openOnStartup.desc": "布局恢复后切到主区已有的首页标签；没有时新开一页，保留其他标签和侧栏笔记。",
+    "settings.openMode.name": "手动打开方式",
     "settings.openMode.desc":
-      "启动时打开首页，选择复用当前标签页或新建标签页。",
+      "执行「打开首页」命令时，选择替换当前标签页或新建标签页。",
     "settings.openMode.replace": "替换当前标签",
     "settings.openMode.newTab": "在新标签页打开",
     "settings.forcePreview.name": "首页始终用阅读模式打开",
@@ -316,10 +316,10 @@ const OWN = {
     "settings.homePath.desc":
       "Full path from the vault root, including .md. Leave it empty to disable homepage opening, title hiding, and its reading-mode rule. Separately selected reading-mode notes are unaffected.",
     "settings.openOnStartup.name": "Open on startup",
-    "settings.openOnStartup.desc": "Open that note once Obsidian has started.",
-    "settings.openMode.name": "How to open it",
+    "settings.openOnStartup.desc": "Once the layout is restored, switch to the homepage tab in the main workspace or open one there. Other tabs and sidebar notes are preserved.",
+    "settings.openMode.name": "How to open it manually",
     "settings.openMode.desc":
-      "When opening the homepage on startup, reuse the current tab or create a new one.",
+      "Choose whether the Open the homepage command replaces the current tab or opens a new one.",
     "settings.openMode.replace": "Replace the current tab",
     "settings.openMode.newTab": "Open in a new tab",
     "settings.forcePreview.name": "Always open the homepage in reading mode",
@@ -2446,7 +2446,7 @@ class PaperDeskPlugin extends Plugin {
     this.addCommand({
       id: "open-home",
       name: t("command.openHome"),
-      callback: () => this.openHome(false),
+      callback: () => this.openHome(),
     });
 
     this.addCommand({
@@ -2476,7 +2476,9 @@ class PaperDeskPlugin extends Plugin {
     }
 
     if (this.settings.openOnStartup) {
-      this.app.workspace.onLayoutReady(() => this.openHome(true));
+      this.app.workspace.onLayoutReady(() => this.openStartupHome().catch((error) => {
+        console.error("Paper Desk could not open the homepage on startup", error);
+      }));
     }
   }
 
@@ -2583,18 +2585,42 @@ class PaperDeskPlugin extends Plugin {
 
   /* ---- 首页 ---- */
 
-  /**
-   * 打开首页。
-   * silent=true 是启动时那条路径：路径不存在就安静跳过 ——
-   * 启动时弹一个「找不到笔记」的报错，比不打开更烦人。
-   */
-  async openHome(silent) {
+  async openStartupHome() {
+    if (this._startupHomeHandled) return;
+    this._startupHomeHandled = true;
+
+    const path = String(this.settings.homePath || "").trim();
+    if (!path) return;
+    const file = this.app.vault.getAbstractFileByPath(path);
+    if (!file || file.extension !== "md") return;
+
+    const workspace = this.app.workspace;
+    let homeLeaf;
+    // Read saved state so background tabs still match before their views load.
+    workspace.iterateRootLeaves((leaf) => {
+      if (homeLeaf) return;
+      const viewState = leaf.getViewState();
+      if (viewState.type === "markdown" && viewState.state?.file === file.path) {
+        homeLeaf = leaf;
+      }
+    });
+    if (!homeLeaf) {
+      homeLeaf = workspace.getLeaf("tab");
+      await homeLeaf.openFile(file);
+    }
+    if (typeof workspace.revealLeaf === "function") await workspace.revealLeaf(homeLeaf);
+    workspace.setActiveLeaf(homeLeaf, { focus: true });
+    this.markHomeViews();
+    await this.enforcePreview(file, homeLeaf);
+  }
+
+  async openHome() {
     const path = String(this.settings.homePath || "").trim();
     if (!path) return;
 
     const file = this.app.vault.getAbstractFileByPath(path);
     if (!file || !file.path) {
-      if (!silent) new Notice(this.i18n.t("notice.notFound", { path }));
+      new Notice(this.i18n.t("notice.notFound", { path }));
       return;
     }
 
@@ -2775,7 +2801,7 @@ class PaperDeskPlugin extends Plugin {
    * 都会在 currentMode.onResize / getEphemeralState 上崩溃。这里走 Obsidian 自己
    * 切换阅读模式所用的公开路径：leaf.getViewState() → leaf.setViewState()。
    */
-  async enforcePreview(file) {
+  async enforcePreview(file, targetLeaf) {
     if (!shouldForcePreview(this.settings.forcePreview, this.settings.homePath, file && file.path, this.settings.previewPaths)) {
       return;
     }
@@ -2785,7 +2811,7 @@ class PaperDeskPlugin extends Plugin {
        一次 file-open 只允许真正动手一次。 */
     if (this._forcingPreview) return this._previewPromise;
     this._forcingPreview = true;
-    this._previewPromise = this._forcePreviewNow(file);
+    this._previewPromise = this._forcePreviewNow(file, targetLeaf);
     try {
       await this._previewPromise;
     } finally {
@@ -2794,10 +2820,10 @@ class PaperDeskPlugin extends Plugin {
     }
   }
 
-  async _forcePreviewNow(file) {
+  async _forcePreviewNow(file, targetLeaf) {
     const targetPath = file && file.path;
     const modeChanges = [];
-    const activeLeaf = this.app.workspace.activeLeaf;
+    const activeLeaf = targetLeaf || this.app.workspace.activeLeaf;
     const candidates = activeLeaf ? [activeLeaf] : this.app.workspace.getLeavesOfType("markdown");
 
     for (const leaf of candidates) {

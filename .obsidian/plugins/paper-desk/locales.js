@@ -92,10 +92,10 @@ const OWN = {
     "settings.homePath.desc":
       "从库根目录算起的完整路径，要带 .md。留空会关掉首页的打开、藏标题与阅读模式；下方单独选择的默认阅读笔记不受影响。",
     "settings.openOnStartup.name": "启动时打开",
-    "settings.openOnStartup.desc": "Obsidian 启动后自动打开上面那篇笔记。",
-    "settings.openMode.name": "打开方式",
+    "settings.openOnStartup.desc": "布局恢复后切到主区已有的首页标签；没有时新开一页，保留其他标签和侧栏笔记。",
+    "settings.openMode.name": "手动打开方式",
     "settings.openMode.desc":
-      "启动时打开首页，选择复用当前标签页或新建标签页。",
+      "执行「打开首页」命令时，选择替换当前标签页或新建标签页。",
     "settings.openMode.replace": "替换当前标签",
     "settings.openMode.newTab": "在新标签页打开",
     "settings.forcePreview.name": "首页始终用阅读模式打开",
@@ -277,10 +277,10 @@ const OWN = {
     "settings.homePath.desc":
       "Full path from the vault root, including .md. Leave it empty to disable homepage opening, title hiding, and its reading-mode rule. Separately selected reading-mode notes are unaffected.",
     "settings.openOnStartup.name": "Open on startup",
-    "settings.openOnStartup.desc": "Open that note once Obsidian has started.",
-    "settings.openMode.name": "How to open it",
+    "settings.openOnStartup.desc": "Once the layout is restored, switch to the homepage tab in the main workspace or open one there. Other tabs and sidebar notes are preserved.",
+    "settings.openMode.name": "How to open it manually",
     "settings.openMode.desc":
-      "When opening the homepage on startup, reuse the current tab or create a new one.",
+      "Choose whether the Open the homepage command replaces the current tab or opens a new one.",
     "settings.openMode.replace": "Replace the current tab",
     "settings.openMode.newTab": "Open in a new tab",
     "settings.forcePreview.name": "Always open the homepage in reading mode",
