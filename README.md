@@ -10,7 +10,7 @@ Obsidian 外壳配置包：主题、CSS 片段、插件设置与说明文档。*
 
 | 仓库 | 可见性 | 装什么 | 谁在推 |
 |---|---|---|---|
-| `yunmin311/obsidian-notes` | **private** | **整个 vault**（全部笔记 + `.obsidian` 配置） | obsidian-git 插件自动：每 10 分钟 commit、每 30 分钟 push |
+| `yunmin311/obsidian-notes` | **private** | **整个 vault**（全部笔记 + `.obsidian` 配置） | obsidian-git 插件自动：每 2 小时自动提交、每 3 小时自动推送 |
 | `yunmin311/obsidian-config` | public（本仓库） | **只放配置框架**：主题、CSS 片段、插件设置、恢复文档 | 手工 push |
 
 - 本仓库是「配置框架」，可供展示与复用；vault 的日常笔记备份走 `obsidian-notes` —— 两者**完全独立、互不干扰**。
@@ -37,7 +37,7 @@ Obsidian 外壳配置包：主题、CSS 片段、插件设置与说明文档。*
 | `quiet-shelf`（暗格） | 0.3.1 | 左侧文件树的**显示层**控制：自动收起归档/索引文件、跨层级多选聚焦与可靠放回 |
 | `reading-rail-sidebar`（轨道） | 0.2.3 | 右侧栏阅读面板 + 阅读/编辑模式刻度条（固定密度标尺与局部峰谷共同驱动） |
 | `dense-reading` | 0.2.2 | 行宽档位 + 密集阅读模式（原 `dense-reading.css` 片段转成的插件） |
-| `zheng-tally`（正） | 1.0.5 | 内联「正」字计数芯片，编辑/阅读双视图渲染 |
+| `zheng-tally`（正） | 1.0.7 | 内联「正」字计数芯片，编辑/阅读双视图渲染 |
 | `paper-desk` | 0.5.2 | 笔记时钟、侧栏计时器，以及可选的首页行为与区块 |
 
 六个插件各有独立的公开源码仓库与 GitHub Release。前五个已在 Obsidian 社区目录；
@@ -84,7 +84,7 @@ LICENSE                  MIT
 纸纹导出不随普通安装自动开启。页边距 None 只需在当前 vault 选一次，Obsidian 会记住；
 新设备可使用独立工具只恢复这一字段，不覆盖整份 `app.json`。
 启用、撤销、字体依赖和分页边界见 [纸质 PDF 导出说明](docs/print-paper.md)。
-现已包含可选的 `print-paper.css` 和 [Native PDF Theme Bridge 0.2.0](https://github.com/yunmin311/native-pdf-theme-bridge/releases/tag/0.2.0)：保留原生导出流程，
+仓库附带可选的 `print-paper.css` 和基于 [Native PDF Theme Bridge 0.2.0](https://github.com/yunmin311/native-pdf-theme-bridge/releases/tag/0.2.0) 的配置包副本，包含其发布后的双语设置界面改进。插件保留原生导出流程，
 配色跟随 Obsidian，双语设置页可调整每页四边留白（默认各 12 mm）。已验证当前 Border 配置的 A4/A5 浅深色共 182 页；不等于所有主题、纸张均通过。
 这两项不默认开启；桥接插件是上述六个插件之外的独立可选项目，需按说明手动复制并启用，尚未进入社区插件市场。
 

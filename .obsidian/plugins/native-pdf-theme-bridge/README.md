@@ -10,6 +10,8 @@ Download `main.js` and `manifest.json` from a Release. Create `.obsidian/plugins
 
 Use the normal **Export to PDF** command. No system print dialog or replacement export command is added. Open the plugin's settings tab to configure:
 
+The settings page follows Obsidian’s language: Chinese for Chinese locales, English otherwise. Palette, page layout and export guidance are grouped separately. Spacing inputs are disabled when per-page spacing is off; invalid values are not saved and revert to the saved value when you leave the field.
+
 | Setting                     | Default    | Behavior                                                                 |
 | --------------------------- | ---------- | ------------------------------------------------------------------------ |
 | Follow current palette      | On         | Use Obsidian's active light/dark palette, independently of the OS scheme |
@@ -33,6 +35,8 @@ For full-bleed textures, select **Margins: None** in the native export dialog. O
 为 Obsidian 原生「导出为 PDF」保留当前浅深色配色，并在每一页重复正文留白。作者：**yunmin311**。不调用系统打印窗口，不另造导出流程。
 
 从 Release 下载 `main.js`、`manifest.json`，放进仓库的 `.obsidian/plugins/native-pdf-theme-bridge/`，重启并在第三方插件中启用。升级只替换这两个文件，保留自己的 `data.json`。目前尚未进入社区插件市场。
+
+设置页随 Obsidian 的语言显示中文或英文，按配色、逐页留白、导出须知分组。关闭逐页留白时四边输入框禁用；无效数值不会保存，离开输入框时恢复已保存值。
 
 | 设置              | 默认值   | 作用                                       |
 | ----------------- | -------- | ------------------------------------------ |

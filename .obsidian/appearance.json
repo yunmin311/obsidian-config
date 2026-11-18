@@ -9,11 +9,11 @@
     "border-polished.active",
     "blue-gray-dark-fix",
     "graph-blue-gray",
-    "dense-reading",
     "dark-paper-texture",
     "tree-indent",
     "border-1.14-compat"
   ],
+  "showRibbon": true,
   "accentColor": "",
   "interfaceFontFamily": "方正屏显雅宋简体",
   "textFontFamily": "iA Writer Quattro S",

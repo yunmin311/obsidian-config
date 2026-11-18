@@ -36,8 +36,8 @@
 | **Reading Rail Sidebar** | 0.2.3 | 自研，见下 | 本地 |
 | **Quiet Shelf**（暗格） | 0.3.1 | 自研，见下 | 本地 |
 | **Dense Reading**（密排阅读） | 0.2.2 | 自研，见下 | 本地 |
-| **Zheng Tally**（正字计数） | 1.0.5 | 自研，见下 | 本地 |
-| **Paper Desk** | 0.5.0 | 自研，时钟/计时器/首页 | 本地 |
+| **Zheng Tally**（正字计数） | 1.0.7 | 自研，见下 | 本地 |
+| **Paper Desk** | 0.5.2 | 自研，时钟/计时器/首页 | 本地 |
 
 ## 备用插件
 
@@ -213,7 +213,7 @@ Zheng Tally 则先构建 `dist/`。各插件的样式限定在自己的前缀（
 
 **Git**（`obsidian-git/data.json`）— 备份的是**整个 vault**（笔记 + 配置），推到 `yunmin311/obsidian-notes`（private）。⚠️ 这与本仓库（只备份配置、public）是**两套完全独立的仓库**，不要把它的远端指到本仓库。
 
-当前节奏（2026-09-16 核对）：每 **10 分钟**自动 commit（`autoSaveInterval: 10`）、每 **30 分钟**自动 push（`autoPushInterval: 30`）、每 1440 分钟自动 pull（`autoPullInterval: 1440`）+ 启动时 pull（`autoPullOnBoot: true`）；`disablePush: false`（推送开启）、`showErrorNotices: true`（失败会弹通知）、`updateSubmodules: false`；提交信息模板 `vault backup: {{date}}`。
+当前节奏：每 **2 小时**自动提交（`autoSaveInterval: 120`）、每 **3 小时**自动推送（`autoPushInterval: 180`）、每 1440 分钟自动 pull（`autoPullInterval: 1440`）+ 启动时 pull（`autoPullOnBoot: true`）；`disablePush: false`（推送开启）、`showErrorNotices: true`（失败会弹通知）、`updateSubmodules: false`；提交信息模板 `vault backup: {{date}}`。
 
 > vault 根目录的 `.gitignore` 与 config 仓库各自独立维护。2026-09-16 修：vault 侧补上了 `.obsidian/workspace.json` —— 原来只有 `workspace-*.json`，通配匹配不到它（缺横线），导致主工作区状态每 10 分钟被提交一次，纯噪音。
 
@@ -235,7 +235,7 @@ Zheng Tally 则先构建 `dist/`。各插件的样式限定在自己的前缀（
 4. 自研插件：直接复制本仓库 `.obsidian/plugins/<id>/` 里需要的六个插件目录，或从各自的
    GitHub Release 下载对应资产放进同名目录；也可以在 BRAT 中添加各插件的独立仓库。
    从源码仓库安装前须按上节说明完成打包或构建，不要漏掉伴随文件。
-5. 复制 `.obsidian/snippets/`（现为 9 个启用 + 1 个已退休的 `dense-reading.css.retired`）+ `appearance.json`
+5. 复制 `.obsidian/snippets/`（默认启用项见 `appearance.json`，`dense-reading.css` 保留供手动回退）+ `appearance.json`
 6. 主题 Border 在内置主题市场安装，重启 Obsidian
 7. 按「不随仓库备份的配置」补设 Flexplorer、Crisp File Explorer、Crisp Reading Rail
 8. 填入 GLM API / Crisp 激活码 / ASR Key

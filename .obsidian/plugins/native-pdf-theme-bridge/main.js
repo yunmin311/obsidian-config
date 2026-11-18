@@ -1,4 +1,4 @@
-const { Plugin, PluginSettingTab, Setting } = require("obsidian");
+const { Plugin, PluginSettingTab, Setting, getLanguage } = require("obsidian");
 
 const DEFAULTS = Object.freeze({
   followTheme: true,
@@ -34,65 +34,91 @@ function normalizeSettings(saved) {
 class ExportSettingsTab extends PluginSettingTab {
   display() {
     const { containerEl, plugin } = this;
+    const zh = /^zh(?:[-_]|$)/i.test(typeof getLanguage === "function" ? getLanguage() : "en");
+    const t = (chinese, english) => zh ? chinese : english;
+    const heading = (name) => new Setting(containerEl).setName(name).setHeading();
     containerEl.empty();
-    containerEl.createEl("h2", { text: "PDF 导出 / PDF export" });
+    containerEl.createEl("h2", { text: t("PDF 导出", "PDF export") });
     containerEl.createEl("p", {
-      text: "保留原生导出流程。满版纸纹请在导出弹窗选择「页边距：无」。设置在下次导出时生效。 / Keep native export. For full-bleed paper, select Margins: None in the export dialog. Changes apply to the next export.",
+      cls: "setting-item-description",
+      text: t("使用 Obsidian 原生「导出为 PDF」。设置自动保存，下次导出时生效。", "Use Obsidian’s native Export to PDF. Changes save automatically and apply to the next export."),
     });
-    for (const [key, name, desc] of [
-      [
-        "followTheme",
-        "跟随当前配色 / Follow current palette",
-        "沿用 Obsidian 当前浅深色，而不是系统配色。关闭后不修正配色，主题和片段仍生效。 / Use the active Obsidian palette, not the OS scheme. Off skips palette corrections; theme/snippet rules still apply.",
-      ],
-      [
-        "pageSpacing",
-        "逐页留白 / Per-page spacing",
-        "在每一页重复四边内边距，不裁切纸纹。关闭后沿用现有主题和片段。 / Repeat content spacing on every page without cropping paper. Off leaves spacing to the theme and snippets.",
-      ],
-    ])
-      new Setting(containerEl)
-        .setName(name)
-        .setDesc(desc)
-        .addToggle((toggle) =>
-          toggle.setValue(plugin.settings[key]).onChange(async (value) => {
-            plugin.settings[key] = value;
-            await plugin.saveData(plugin.settings);
-          }),
-        );
+    heading(t("配色", "Palette"));
+    new Setting(containerEl)
+      .setName(t("跟随当前配色", "Follow current palette"))
+      .setDesc(t("跟随 Obsidian 的浅色或深色外观，而非系统外观。关闭后不修正导出配色。", "Follow Obsidian’s light or dark appearance, not the system appearance. Turn off to skip export color corrections."))
+      .addToggle(toggle => toggle.setValue(plugin.settings.followTheme).onChange(async value => {
+        plugin.settings.followTheme = value;
+        await plugin.saveData(plugin.settings);
+      }));
+    heading(t("逐页留白", "Page layout"));
+    const spacingInputs = [];
+    new Setting(containerEl)
+      .setName(t("逐页留白", "Per-page spacing"))
+      .setDesc(t("每一页都保留正文留白，纸纹仍铺满纸面。关闭后使用主题和片段的布局。", "Repeat content spacing on every page while keeping paper full-bleed. Turn off to use theme and snippet layout."))
+      .addToggle(toggle => toggle.setValue(plugin.settings.pageSpacing).onChange(async value => {
+        plugin.settings.pageSpacing = value;
+        spacingInputs.forEach(input => input.setDisabled(!value));
+        await plugin.saveData(plugin.settings);
+      }));
+    containerEl.createEl("p", {
+      cls: "setting-item-description",
+      text: t("四边独立设置，单位：毫米。范围 0–40，默认各 12；不改变纸张尺寸。", "Set each side independently in millimeters. Range: 0–40; default: 12 each. Paper size is unchanged."),
+    });
     for (const [side, label] of [
-      ["top", "上 / Top"],
-      ["right", "右 / Right"],
-      ["bottom", "下 / Bottom"],
-      ["left", "左 / Left"],
+      ["top", t("上方留白", "Top spacing")],
+      ["right", t("右侧留白", "Right spacing")],
+      ["bottom", t("下方留白", "Bottom spacing")],
+      ["left", t("左侧留白", "Left spacing")],
     ]) {
-      new Setting(containerEl)
+      const row = new Setting(containerEl);
+      row
         .setName(`${label} (mm)`)
-        .setDesc(
-          "0–40 毫米，仅作用于导出正文。 / 0–40 mm, export content only.",
-        )
         .addText((text) => {
+          spacingInputs.push(text);
+          text.setDisabled(!plugin.settings.pageSpacing);
           text.inputEl.type = "number";
+          text.inputEl.setAttribute("aria-label", `${label} (mm)`);
           text.inputEl.setAttribute("min", "0");
           text.inputEl.setAttribute("max", "40");
           text.inputEl.setAttribute("step", "0.5");
           text
             .setValue(String(plugin.settings[side]))
             .onChange(async (value) => {
-              if (!value.trim()) return;
               const number = Number(value);
-              if (!Number.isFinite(number) || number < 0 || number > 40) return;
+              if (!value.trim() || !Number.isFinite(number) || number < 0 || number > 40) {
+                const message = t("请输入 0–40 之间的毫米数值。", "Enter a value from 0 to 40 mm.");
+                row.setDesc(message);
+                text.inputEl.setCustomValidity(message);
+                text.inputEl.setAttribute("aria-invalid", "true");
+                return;
+              }
+              text.inputEl.setCustomValidity("");
+              row.setDesc("");
+              text.inputEl.setAttribute("aria-invalid", "false");
               plugin.settings[side] = number;
               await plugin.saveData(plugin.settings);
             });
+          text.inputEl.addEventListener("blur", () => {
+            text.setValue(String(plugin.settings[side]));
+            text.inputEl.setCustomValidity("");
+            row.setDesc("");
+            text.inputEl.setAttribute("aria-invalid", "false");
+          });
         });
     }
+    heading(t("导出须知", "Before exporting"));
+    new Setting(containerEl)
+      .setName(t("满版纸纹：页边距选「无」", "Full-bleed paper: choose Margins: None"))
+      .setDesc(t("在原生导出弹窗设置一次，Obsidian 会记住。插件不会替你修改此选项；其他页边距会裁切背景。", "Select this once in the native export dialog; Obsidian remembers it. The plugin does not change this option. Other margins crop the background."));
     containerEl.createEl("p", {
-      text: "纸纹与字体仍由你的主题和 CSS 片段提供。大图、超高代码块和复杂第三方嵌入仍受原生分页限制。 / Textures and fonts come from your theme/snippets. Oversized images, code blocks and third-party embeds remain subject to native pagination limits.",
+      cls: "setting-item-description",
+      text: t("纸纹和字体由主题及 CSS 片段提供，本插件不内置素材。超大图片、代码块和第三方嵌入仍受原生分页限制。", "Textures and fonts come from your theme and CSS snippets; no assets are bundled. Oversized images, code blocks and third-party embeds retain native pagination limits."),
     });
     if (typeof window !== "undefined" && !supportsRepeatedPadding(window)) {
       containerEl.createEl("p", {
-        text: "当前浏览器内核不支持逐页留白，已保留原有分页。请更新 Obsidian 安装程序（仅应用内更新可能不会升级内核）。 / Per-page spacing is unavailable in this browser engine; original pagination is retained. Update the Obsidian installer, not only the in-app package.",
+        cls: "mod-warning",
+        text: t("当前内核不支持逐页留白，导出仍保留原有分页。请更新 Obsidian 桌面安装程序，仅应用内更新可能不会升级内核。", "This browser engine cannot repeat per-page spacing; exports retain original pagination. Update the Obsidian desktop installer, not only the in-app package."),
       });
     }
   }
